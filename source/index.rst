@@ -1,0 +1,20 @@
+Lời tác giả
+===========
+
+Tài liệu này được dịch từ Python.org. Nội dung có thêm các phần giải thích của tác giả để người đọc có thể hiểu hết các ý trong tài liệu. 
+Hiện tại tác giả mới dịch phần tutorial, và đang tiếp tục phần Python library. Bác nào muốn tham gia cùng thì báo em nhé, dịch một mình lâu quá.
+
+Nội dung tài liệu
+=================
+
+
+.. include:: ../../README.rst
+
+
+.. toctree::
+   :maxdepth: 2
+   
+   contents.rst
+   README.rst
+
+

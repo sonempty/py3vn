@@ -1,0 +1,24 @@
+{% extends "!layout.html" %}
+
+
+{% block rootrellink %}
+		<li><img src="_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: 4px"/></li>
+        <li><a href="{{ pathto('index') }}">Trang chủ</a>|&nbsp;</li>
+        <li><a href="{{ pathto('search') }}">Tìm kiếm</a>|&nbsp;</li>
+        <li><a href="{{ pathto('contents') }}">Mục lục </a> &raquo;</li>
+{% endblock %}
+
+
+{% block relbar1 %}
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="{{ pathto('index') }}"><img src="{{
+pathto("_static/logo.png", 1) }}" border="0" alt="Python tiếng Việt"/></a>
+</div>
+{{ super() }}
+{% endblock %}
+
+{# put the sidebar before the body #}
+{% block sidebar1 %}{{ sidebar() }}{% endblock %}
+{% block sidebar2 %}{% endblock %}
