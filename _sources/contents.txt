@@ -1,0 +1,25 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ Python 3.5.2 documentation contents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+.. toctree::
+   :maxdepth: 2
+   
+   index1.txt
+   appetite.txt
+   interpreter.txt
+   introduction.txt
+   controlflow.txt
+   datastructures.txt
+   modules.txt
+   inputoutput.txt
+   errors.txt
+   classes.txt
+   stdlib.txt
+   stdlib2.txt
+   venv.txt
+   whatnow.txt
+   interactive.txt
+   floatingpoint.txt
+   appendix.txt
+

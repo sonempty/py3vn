@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>24. Chỉnh sửa input, lưu lại history &#8212; Dich tieng Viet Python  3.5.2 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '3.5.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Dich tieng Viet Python  3.5.2 documentation" href="index.html" />
+    <link rel="up" title="Python 3.5.2 documentation contents" href="contents.html" />
+    <link rel="next" title="25. Floating Point Arithmetic: Issues and Limitations" href="floatingpoint.html" />
+    <link rel="prev" title="23. What Now?" href="whatnow.html" /> 
+  </head>
+  <body role="document">
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/logo.png" border="0" alt="Python tiếng Việt"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="floatingpoint.html" title="25. Floating Point Arithmetic: Issues and Limitations"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="whatnow.html" title="23. What Now?"
+             accesskey="P">previous</a> |</li>
+		<li><img src="_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: 4px"/></li>
+        <li><a href="index.html">Trang chủ</a>|&nbsp;</li>
+        <li><a href="search.html">Tìm kiếm</a>|&nbsp;</li>
+        <li><a href="contents.html">Mục lục </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="contents.html" accesskey="U">Python 3.5.2 documentation contents</a> &#187;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">24. Chỉnh sửa input, lưu lại history</a><ul>
+<li><a class="reference internal" href="#tu-dong-hoan-thanh-code-va-luu-lai-de-su-dung-cho-lan-sau-ma-khong-phai-code-lai">24.1. Tự động hoàn thành code và lưu lại để sử dụng cho lần sau mà không phải code lại</a></li>
+<li><a class="reference internal" href="#thay-the-trinh-thong-dich-interpreter">24.2. Thay thế trình thông dịch (Interpreter)</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="whatnow.html"
+                        title="previous chapter">23. What Now?</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="floatingpoint.html"
+                        title="next chapter">25. Floating Point Arithmetic:  Issues and Limitations</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/interactive.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="chinh-sua-input-luu-lai-history">
+<span id="tut-interacting"></span><h1>24. Chỉnh sửa input, lưu lại history<a class="headerlink" href="#chinh-sua-input-luu-lai-history" title="Permalink to this headline">¶</a></h1>
+<p>Some versions of the Python interpreter support editing of the current input
+line and history substitution, similar to facilities found in the Korn shell and
+the GNU Bash shell.  This is implemented using the <a class="reference external" href="https://tiswww.case.edu/php/chet/readline/rltop.html">GNU Readline</a> library,
+which supports various styles of editing.  This library has its own
+documentation which we won&#8217;t duplicate here.</p>
+<div class="section" id="tu-dong-hoan-thanh-code-va-luu-lai-de-su-dung-cho-lan-sau-ma-khong-phai-code-lai">
+<span id="tut-keybindings"></span><h2>24.1. Tự động hoàn thành code và lưu lại để sử dụng cho lần sau mà không phải code lại<a class="headerlink" href="#tu-dong-hoan-thanh-code-va-luu-lai-de-su-dung-cho-lan-sau-ma-khong-phai-code-lai" title="Permalink to this headline">¶</a></h2>
+<p>Completion of variable and module names is
+<span class="xref std std-ref">automatically enabled</span> at interpreter startup so
+that the <code class="kbd docutils literal"><span class="pre">Tab</span></code> key invokes the completion function; it looks at
+Python statement names, the current local variables, and the available
+module names.  For dotted expressions such as <code class="docutils literal"><span class="pre">string.a</span></code>, it will evaluate
+the expression up to the final <code class="docutils literal"><span class="pre">'.'</span></code> and then suggest completions from
+the attributes of the resulting object.  Note that this may execute
+application-defined code if an object with a <code class="xref py py-meth docutils literal"><span class="pre">__getattr__()</span></code> method
+is part of the expression.  The default configuration also saves your
+history into a file named <code class="file docutils literal"><span class="pre">.python_history</span></code> in your user directory.
+The history will be available again during the next interactive interpreter
+session.</p>
+</div>
+<div class="section" id="thay-the-trinh-thong-dich-interpreter">
+<span id="tut-commentary"></span><h2>24.2. Thay thế trình thông dịch (Interpreter)<a class="headerlink" href="#thay-the-trinh-thong-dich-interpreter" title="Permalink to this headline">¶</a></h2>
+<p>This facility is an enormous step forward compared to earlier versions of the
+interpreter; however, some wishes are left: It would be nice if the proper
+indentation were suggested on continuation lines (the parser knows if an indent
+token is required next).  The completion mechanism might use the interpreter&#8217;s
+symbol table.  A command to check (or even suggest) matching parentheses,
+quotes, etc., would also be useful.</p>
+<p>One alternative enhanced interactive interpreter that has been around for quite
+some time is <a class="reference external" href="https://ipython.org/">IPython</a>, which features tab completion, object exploration and
+advanced history management.  It can also be thoroughly customized and embedded
+into other applications.  Another similar enhanced interactive environment is
+<a class="reference external" href="http://www.bpython-interpreter.org/">bpython</a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="floatingpoint.html" title="25. Floating Point Arithmetic: Issues and Limitations"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="whatnow.html" title="23. What Now?"
+             >previous</a> |</li>
+		<li><img src="_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: 4px"/></li>
+        <li><a href="index.html">Trang chủ</a>|&nbsp;</li>
+        <li><a href="search.html">Tìm kiếm</a>|&nbsp;</li>
+        <li><a href="contents.html">Mục lục </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="contents.html" >Python 3.5.2 documentation contents</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 12-2016, Trần Viết Sơn.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>

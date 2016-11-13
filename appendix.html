@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>26. Phụ lục &#8212; Dich tieng Viet Python  3.5.2 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '3.5.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Dich tieng Viet Python  3.5.2 documentation" href="index.html" />
+    <link rel="up" title="Python 3.5.2 documentation contents" href="contents.html" />
+    <link rel="prev" title="25. Floating Point Arithmetic: Issues and Limitations" href="floatingpoint.html" /> 
+  </head>
+  <body role="document">
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/logo.png" border="0" alt="Python tiếng Việt"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="floatingpoint.html" title="25. Floating Point Arithmetic: Issues and Limitations"
+             accesskey="P">previous</a> |</li>
+		<li><img src="_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: 4px"/></li>
+        <li><a href="index.html">Trang chủ</a>|&nbsp;</li>
+        <li><a href="search.html">Tìm kiếm</a>|&nbsp;</li>
+        <li><a href="contents.html">Mục lục </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="contents.html" accesskey="U">Python 3.5.2 documentation contents</a> &#187;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">26. Phụ lục</a><ul>
+<li><a class="reference internal" href="#che-do-tuong-tac">26.1. Chế độ tương tác</a><ul>
+<li><a class="reference internal" href="#xu-ly-loi">26.1.1. Xử lý lỗi</a></li>
+<li><a class="reference internal" href="#file-thuc-thi">26.1.2. File thực thi</a></li>
+<li><a class="reference internal" href="#cac-file-start-up">26.1.3. Các file start-up</a></li>
+<li><a class="reference internal" href="#chinh-sua-modules">26.1.4. Chỉnh sửa Modules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="floatingpoint.html"
+                        title="previous chapter">25. Floating Point Arithmetic:  Issues and Limitations</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/appendix.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="phu-luc">
+<span id="tut-appendix"></span><h1>26. Phụ lục<a class="headerlink" href="#phu-luc" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="che-do-tuong-tac">
+<span id="tut-interac"></span><h2>26.1. Chế độ tương tác<a class="headerlink" href="#che-do-tuong-tac" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="xu-ly-loi">
+<span id="tut-error"></span><h3>26.1.1. Xử lý lỗi<a class="headerlink" href="#xu-ly-loi" title="Permalink to this headline">¶</a></h3>
+<p>When an error occurs, the interpreter prints an error message and a stack trace.
+In interactive mode, it then returns to the primary prompt; when input came from
+a file, it exits with a nonzero exit status after printing the stack trace.
+(Exceptions handled by an <code class="xref std std-keyword docutils literal"><span class="pre">except</span></code> clause in a <code class="xref std std-keyword docutils literal"><span class="pre">try</span></code> statement
+are not errors in this context.)  Some errors are unconditionally fatal and
+cause an exit with a nonzero exit; this applies to internal inconsistencies and
+some cases of running out of memory.  All error messages are written to the
+standard error stream; normal output from executed commands is written to
+standard output.</p>
+<p>Typing the interrupt character (usually <code class="kbd docutils literal"><span class="pre">Control-C</span></code> or <code class="kbd docutils literal"><span class="pre">Delete</span></code>) to the primary or
+secondary prompt cancels the input and returns to the primary prompt. <a class="footnote-reference" href="#id2" id="id1">[1]</a>
+Typing an interrupt while a command is executing raises the
+<code class="xref py py-exc docutils literal"><span class="pre">KeyboardInterrupt</span></code> exception, which may be handled by a <code class="xref std std-keyword docutils literal"><span class="pre">try</span></code>
+statement.</p>
+</div>
+<div class="section" id="file-thuc-thi">
+<span id="tut-scripts"></span><h3>26.1.2. File thực thi<a class="headerlink" href="#file-thuc-thi" title="Permalink to this headline">¶</a></h3>
+<p>On BSD&#8217;ish Unix systems, Python scripts can be made directly executable, like
+shell scripts, by putting the line</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3.5</span>
+</pre></div>
+</div>
+<p>(assuming that the interpreter is on the user&#8217;s <span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal"><span class="pre">PATH</span></code>) at the beginning
+of the script and giving the file an executable mode.  The <code class="docutils literal"><span class="pre">#!</span></code> must be the
+first two characters of the file.  On some platforms, this first line must end
+with a Unix-style line ending (<code class="docutils literal"><span class="pre">'\n'</span></code>), not a Windows (<code class="docutils literal"><span class="pre">'\r\n'</span></code>) line
+ending.  Note that the hash, or pound, character, <code class="docutils literal"><span class="pre">'#'</span></code>, is used to start a
+comment in Python.</p>
+<p>The script can be given an executable mode, or permission, using the
+<strong class="program">chmod</strong> command.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ chmod +x myscript.py
+</pre></div>
+</div>
+<p>On Windows systems, there is no notion of an &#8220;executable mode&#8221;.  The Python
+installer automatically associates <code class="docutils literal"><span class="pre">.py</span></code> files with <code class="docutils literal"><span class="pre">python.exe</span></code> so that
+a double-click on a Python file will run it as a script.  The extension can
+also be <code class="docutils literal"><span class="pre">.pyw</span></code>, in that case, the console window that normally appears is
+suppressed.</p>
+</div>
+<div class="section" id="cac-file-start-up">
+<span id="tut-startup"></span><h3>26.1.3. Các file start-up<a class="headerlink" href="#cac-file-start-up" title="Permalink to this headline">¶</a></h3>
+<p>When you use Python interactively, it is frequently handy to have some standard
+commands executed every time the interpreter is started.  You can do this by
+setting an environment variable named <span class="target" id="index-1"></span><code class="xref std std-envvar docutils literal"><span class="pre">PYTHONSTARTUP</span></code> to the name of a
+file containing your start-up commands.  This is similar to the <code class="file docutils literal"><span class="pre">.profile</span></code>
+feature of the Unix shells.</p>
+<p>This file is only read in interactive sessions, not when Python reads commands
+from a script, and not when <code class="file docutils literal"><span class="pre">/dev/tty</span></code> is given as the explicit source of
+commands (which otherwise behaves like an interactive session).  It is executed
+in the same namespace where interactive commands are executed, so that objects
+that it defines or imports can be used without qualification in the interactive
+session. You can also change the prompts <code class="docutils literal"><span class="pre">sys.ps1</span></code> and <code class="docutils literal"><span class="pre">sys.ps2</span></code> in this
+file.</p>
+<p>If you want to read an additional start-up file from the current directory, you
+can program this in the global start-up file using code like <code class="docutils literal"><span class="pre">if</span>
+<span class="pre">os.path.isfile('.pythonrc.py'):</span> <span class="pre">exec(open('.pythonrc.py').read())</span></code>.
+If you want to use the startup file in a script, you must do this explicitly
+in the script:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;PYTHONSTARTUP&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">filename</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">fobj</span><span class="p">:</span>
+        <span class="n">startup_file</span> <span class="o">=</span> <span class="n">fobj</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">exec</span><span class="p">(</span><span class="n">startup_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="chinh-sua-modules">
+<span id="tut-customize"></span><h3>26.1.4. Chỉnh sửa Modules<a class="headerlink" href="#chinh-sua-modules" title="Permalink to this headline">¶</a></h3>
+<p>Python provides two hooks to let you customize it: <code class="xref py py-mod docutils literal"><span class="pre">sitecustomize</span></code> and
+<code class="xref py py-mod docutils literal"><span class="pre">usercustomize</span></code>.  To see how it works, you need first to find the location
+of your user site-packages directory.  Start Python and run this code:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">site</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">site</span><span class="o">.</span><span class="n">getusersitepackages</span><span class="p">()</span>
+<span class="go">&#39;/home/user/.local/lib/python3.5/site-packages&#39;</span>
+</pre></div>
+</div>
+<p>Now you can create a file named <code class="file docutils literal"><span class="pre">usercustomize.py</span></code> in that directory and
+put anything you want in it.  It will affect every invocation of Python, unless
+it is started with the <code class="xref std std-option docutils literal"><span class="pre">-s</span></code> option to disable the automatic import.</p>
+<p><code class="xref py py-mod docutils literal"><span class="pre">sitecustomize</span></code> works in the same way, but is typically created by an
+administrator of the computer in the global site-packages directory, and is
+imported before <code class="xref py py-mod docutils literal"><span class="pre">usercustomize</span></code>.  See the documentation of the <code class="xref py py-mod docutils literal"><span class="pre">site</span></code>
+module for more details.</p>
+<p class="rubric">Footnotes</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>A problem with the GNU Readline package may prevent this.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="floatingpoint.html" title="25. Floating Point Arithmetic: Issues and Limitations"
+             >previous</a> |</li>
+		<li><img src="_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: 4px"/></li>
+        <li><a href="index.html">Trang chủ</a>|&nbsp;</li>
+        <li><a href="search.html">Tìm kiếm</a>|&nbsp;</li>
+        <li><a href="contents.html">Mục lục </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="contents.html" >Python 3.5.2 documentation contents</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 12-2016, Trần Viết Sơn.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>
