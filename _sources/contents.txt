@@ -1,0 +1,31 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ Python Documentation contents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+.. toctree::
+
+   whatsnew/index.txt
+   tutorial/index.txt
+   using/index.txt
+   reference/index.txt
+   library/index.txt
+   extending/index.txt
+   c-api/index.txt
+   distributing/index.txt
+   installing/index.txt
+   howto/index.txt
+   faq/index.txt
+   glossary.txt
+
+   about.txt
+   bugs.txt
+   copyright.txt
+   license.txt
+
+.. to include legacy packaging docs in build
+
+.. toctree::
+   :hidden:
+
+   distutils/index.txt
+   install/index.txt

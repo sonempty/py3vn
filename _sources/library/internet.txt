@@ -1,0 +1,48 @@
+.. _internet:
+
+******************************
+Internet Protocols and Support
+******************************
+
+.. index::
+   single: WWW
+   single: Internet
+   single: World Wide Web
+
+.. index:: module: socket
+
+The modules described in this chapter implement Internet protocols and  support
+for related technology.  They are all implemented in Python. Most of these
+modules require the presence of the system-dependent module :mod:`socket`, which
+is currently supported on most popular platforms.  Here is an overview:
+
+
+.. toctree::
+
+   webbrowser.txt
+   cgi.txt
+   cgitb.txt
+   wsgiref.txt
+   urllib.txt
+   urllib.request.txt
+   urllib.parse.txt
+   urllib.error.txt
+   urllib.robotparser.txt
+   http.txt
+   http.client.txt
+   ftplib.txt
+   poplib.txt
+   imaplib.txt
+   nntplib.txt
+   smtplib.txt
+   smtpd.txt
+   telnetlib.txt
+   uuid.txt
+   socketserver.txt
+   http.server.txt
+   http.cookies.txt
+   http.cookiejar.txt
+   xmlrpc.txt
+   xmlrpc.client.txt
+   xmlrpc.server.txt
+   ipaddress.txt

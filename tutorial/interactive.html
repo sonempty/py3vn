@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>14. Interactive Input Editing and History Substitution &#8212; Dịch tiếng Việt Python 3.5 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="top" title="Dịch tiếng Việt Python 3.5 documentation" href="../index.html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" type="image/png" href="../_static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    
+
+  </head>
+  <body role="document">
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
+        <li><a href="../index.html">Dịch tiếng Việt Python 3.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    
+        <div class="badge">
+            <a href="https://github.com/sonempty/Python-Document-in-Vietnamese">Fork me on GitHub</a>
+            <img src="../_static/right-red@2x.png">
+        </div>
+    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="interactive-input-editing-and-history-substitution">
+<span id="tut-interacting"></span><h1>14. Interactive Input Editing and History Substitution<a class="headerlink" href="#interactive-input-editing-and-history-substitution" title="Permalink to this headline">¶</a></h1>
+<p>Some versions of the Python interpreter support editing of the current input
+line and history substitution, similar to facilities found in the Korn shell and
+the GNU Bash shell.  This is implemented using the <a class="reference external" href="https://tiswww.case.edu/php/chet/readline/rltop.html">GNU Readline</a> library,
+which supports various styles of editing.  This library has its own
+documentation which we won&#8217;t duplicate here.</p>
+<div class="section" id="tab-completion-and-history-editing">
+<span id="tut-keybindings"></span><h2>14.1. Tab Completion and History Editing<a class="headerlink" href="#tab-completion-and-history-editing" title="Permalink to this headline">¶</a></h2>
+<p>Completion of variable and module names is
+<a class="reference internal" href="../library/site.html#rlcompleter-config"><span class="std std-ref">automatically enabled</span></a> at interpreter startup so
+that the <code class="kbd docutils literal"><span class="pre">Tab</span></code> key invokes the completion function; it looks at
+Python statement names, the current local variables, and the available
+module names.  For dotted expressions such as <code class="docutils literal"><span class="pre">string.a</span></code>, it will evaluate
+the expression up to the final <code class="docutils literal"><span class="pre">'.'</span></code> and then suggest completions from
+the attributes of the resulting object.  Note that this may execute
+application-defined code if an object with a <a class="reference internal" href="../reference/datamodel.html#object.__getattr__" title="object.__getattr__"><code class="xref py py-meth docutils literal"><span class="pre">__getattr__()</span></code></a> method
+is part of the expression.  The default configuration also saves your
+history into a file named <code class="file docutils literal"><span class="pre">.python_history</span></code> in your user directory.
+The history will be available again during the next interactive interpreter
+session.</p>
+</div>
+<div class="section" id="alternatives-to-the-interactive-interpreter">
+<span id="tut-commentary"></span><h2>14.2. Alternatives to the Interactive Interpreter<a class="headerlink" href="#alternatives-to-the-interactive-interpreter" title="Permalink to this headline">¶</a></h2>
+<p>This facility is an enormous step forward compared to earlier versions of the
+interpreter; however, some wishes are left: It would be nice if the proper
+indentation were suggested on continuation lines (the parser knows if an indent
+token is required next).  The completion mechanism might use the interpreter&#8217;s
+symbol table.  A command to check (or even suggest) matching parentheses,
+quotes, etc., would also be useful.</p>
+<p>One alternative enhanced interactive interpreter that has been around for quite
+some time is <a class="reference external" href="https://ipython.org/">IPython</a>, which features tab completion, object exploration and
+advanced history management.  It can also be thoroughly customized and embedded
+into other applications.  Another similar enhanced interactive environment is
+<a class="reference external" href="http://www.bpython-interpreter.org/">bpython</a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <a id="sidebar-anchor"></a>
+    
+
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">14. Interactive Input Editing and History Substitution</a><ul>
+<li><a class="reference internal" href="#tab-completion-and-history-editing">14.1. Tab Completion and History Editing</a></li>
+<li><a class="reference internal" href="#alternatives-to-the-interactive-interpreter">14.2. Alternatives to the Interactive Interpreter</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/tutorial/interactive.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; <a href="../copyright.html">Copyright</a> 2016, Trần Viết Sơn.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>

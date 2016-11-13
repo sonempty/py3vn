@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>11. File and Directory Access &#8212; Dịch tiếng Việt Python 3.5 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="top" title="Dịch tiếng Việt Python 3.5 documentation" href="../index.html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" type="image/png" href="../_static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    
+
+  </head>
+  <body role="document">
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
+        <li><a href="../index.html">Dịch tiếng Việt Python 3.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    
+        <div class="badge">
+            <a href="https://github.com/sonempty/Python-Document-in-Vietnamese">Fork me on GitHub</a>
+            <img src="../_static/right-red@2x.png">
+        </div>
+    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="file-and-directory-access">
+<span id="filesys"></span><h1>11. File and Directory Access<a class="headerlink" href="#file-and-directory-access" title="Permalink to this headline">¶</a></h1>
+<p>The modules described in this chapter deal with disk files and directories.  For
+example, there are modules for reading the properties of files, manipulating
+paths in a portable way, and creating temporary files.  The full list of modules
+in this chapter is:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pathlib.html">11.1. <code class="docutils literal"><span class="pre">pathlib</span></code> &#8212; Object-oriented filesystem paths</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pathlib.html#basic-use">11.1.1. Basic use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pathlib.html#pure-paths">11.1.2. Pure paths</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pathlib.html#general-properties">11.1.2.1. General properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pathlib.html#operators">11.1.2.2. Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pathlib.html#accessing-individual-parts">11.1.2.3. Accessing individual parts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pathlib.html#methods-and-properties">11.1.2.4. Methods and properties</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pathlib.html#concrete-paths">11.1.3. Concrete paths</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pathlib.html#methods">11.1.3.1. Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="os.path.html">11.2. <code class="docutils literal"><span class="pre">os.path</span></code> &#8212; Common pathname manipulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fileinput.html">11.3. <code class="docutils literal"><span class="pre">fileinput</span></code> &#8212; Iterate over lines from multiple input streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stat.html">11.4. <code class="docutils literal"><span class="pre">stat</span></code> &#8212; Interpreting <code class="docutils literal"><span class="pre">stat()</span></code> results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filecmp.html">11.5. <code class="docutils literal"><span class="pre">filecmp</span></code> &#8212; File and Directory Comparisons</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="filecmp.html#the-dircmp-class">11.5.1. The <code class="docutils literal"><span class="pre">dircmp</span></code> class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tempfile.html">11.6. <code class="docutils literal"><span class="pre">tempfile</span></code> &#8212; Generate temporary files and directories</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tempfile.html#examples">11.6.1. Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tempfile.html#deprecated-functions-and-variables">11.6.2. Deprecated functions and variables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glob.html">11.7. <code class="docutils literal"><span class="pre">glob</span></code> &#8212; Unix style pathname pattern expansion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fnmatch.html">11.8. <code class="docutils literal"><span class="pre">fnmatch</span></code> &#8212; Unix filename pattern matching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linecache.html">11.9. <code class="docutils literal"><span class="pre">linecache</span></code> &#8212; Random access to text lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shutil.html">11.10. <code class="docutils literal"><span class="pre">shutil</span></code> &#8212; High-level file operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="shutil.html#directory-and-files-operations">11.10.1. Directory and files operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="shutil.html#copytree-example">11.10.1.1. copytree example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shutil.html#rmtree-example">11.10.1.2. rmtree example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="shutil.html#archiving-operations">11.10.2. Archiving operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="shutil.html#archiving-example">11.10.2.1. Archiving example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="shutil.html#querying-the-size-of-the-output-terminal">11.10.3. Querying the size of the output terminal</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="macpath.html">11.11. <code class="docutils literal"><span class="pre">macpath</span></code> &#8212; Mac OS 9 path manipulation functions</a></li>
+</ul>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt>Module <a class="reference internal" href="os.html#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal"><span class="pre">os</span></code></a></dt>
+<dd>Operating system interfaces, including functions to work with files at a
+lower level than Python <a class="reference internal" href="../glossary.html#term-file-object"><span class="xref std std-term">file objects</span></a>.</dd>
+<dt>Module <a class="reference internal" href="io.html#module-io" title="io: Core tools for working with streams."><code class="xref py py-mod docutils literal"><span class="pre">io</span></code></a></dt>
+<dd>Python&#8217;s built-in I/O library, including both abstract classes and
+some concrete classes such as file I/O.</dd>
+<dt>Built-in function <a class="reference internal" href="functions.html#open" title="open"><code class="xref py py-func docutils literal"><span class="pre">open()</span></code></a></dt>
+<dd>The standard way to open files for reading and writing with Python.</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <a id="sidebar-anchor"></a>
+    
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/filesys.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; <a href="../copyright.html">Copyright</a> 2016, Trần Viết Sơn.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>

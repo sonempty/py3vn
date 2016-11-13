@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Stable Application Binary Interface &#8212; Dịch tiếng Việt Python 3.5 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="top" title="Dịch tiếng Việt Python 3.5 documentation" href="../index.html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" type="image/png" href="../_static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    
+
+  </head>
+  <body role="document">
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
+        <li><a href="../index.html">Dịch tiếng Việt Python 3.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    
+        <div class="badge">
+            <a href="https://github.com/sonempty/Python-Document-in-Vietnamese">Fork me on GitHub</a>
+            <img src="../_static/right-red@2x.png">
+        </div>
+    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="stable-application-binary-interface">
+<span id="stable"></span><h1>Stable Application Binary Interface<a class="headerlink" href="#stable-application-binary-interface" title="Permalink to this headline">¶</a></h1>
+<p>Traditionally, the C API of Python will change with every release.  Most changes
+will be source-compatible, typically by only adding API, rather than changing
+existing API or removing API (although some interfaces do get removed after
+being deprecated first).</p>
+<p>Unfortunately, the API compatibility does not extend to binary compatibility
+(the ABI). The reason is primarily the evolution of struct definitions, where
+addition of a new field, or changing the type of a field, might not break the
+API, but can break the ABI.  As a consequence, extension modules need to be
+recompiled for every Python release (although an exception is possible on Unix
+when none of the affected interfaces are used). In addition, on Windows,
+extension modules link with a specific pythonXY.dll and need to be recompiled to
+link with a newer one.</p>
+<p>Since Python 3.2, a subset of the API has been declared to guarantee a stable
+ABI. Extension modules wishing to use this API (called &#8220;limited API&#8221;) need to
+define <code class="docutils literal"><span class="pre">Py_LIMITED_API</span></code>. A number of interpreter details then become hidden
+from the extension module; in return, a module is built that works on any 3.x
+version (x&gt;=2) without recompilation.</p>
+<p>In some cases, the stable ABI needs to be extended with new functions.
+Extension modules wishing to use these new APIs need to set <code class="docutils literal"><span class="pre">Py_LIMITED_API</span></code>
+to the <code class="docutils literal"><span class="pre">PY_VERSION_HEX</span></code> value (see <a class="reference internal" href="apiabiversion.html#apiabiversion"><span class="std std-ref">API and ABI Versioning</span></a>) of the minimum Python
+version they want to support (e.g. <code class="docutils literal"><span class="pre">0x03030000</span></code> for Python 3.3). Such modules
+will work on all subsequent Python releases, but fail to load (because of
+missing symbols) on the older releases.</p>
+<p>As of Python 3.2, the set of functions available to the limited API is
+documented in <span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0384"><strong>PEP 384</strong></a>.  In the C API documentation, API elements that are not
+part of the limited API are marked as &#8220;Not part of the limited API.&#8221;</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <a id="sidebar-anchor"></a>
+    
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/c-api/stable.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; <a href="../copyright.html">Copyright</a> 2016, Trần Viết Sơn.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>

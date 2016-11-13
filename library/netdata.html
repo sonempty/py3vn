@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>19. Internet Data Handling &#8212; Dịch tiếng Việt Python 3.5 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="top" title="Dịch tiếng Việt Python 3.5 documentation" href="../index.html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" type="image/png" href="../_static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    
+
+  </head>
+  <body role="document">
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
+        <li><a href="../index.html">Dịch tiếng Việt Python 3.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    
+        <div class="badge">
+            <a href="https://github.com/sonempty/Python-Document-in-Vietnamese">Fork me on GitHub</a>
+            <img src="../_static/right-red@2x.png">
+        </div>
+    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="internet-data-handling">
+<span id="netdata"></span><h1>19. Internet Data Handling<a class="headerlink" href="#internet-data-handling" title="Permalink to this headline">¶</a></h1>
+<p>This chapter describes modules which support handling data formats commonly used
+on the Internet.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="email.html">19.1. <code class="docutils literal"><span class="pre">email</span></code> &#8212; An email and MIME handling package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="email.message.html">19.1.1. <code class="docutils literal"><span class="pre">email.message</span></code>: Representing an email message</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.parser.html">19.1.2. <code class="docutils literal"><span class="pre">email.parser</span></code>: Parsing email messages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="email.parser.html#feedparser-api">19.1.2.1. FeedParser API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="email.parser.html#parser-class-api">19.1.2.2. Parser class API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="email.parser.html#additional-notes">19.1.2.3. Additional notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="email.generator.html">19.1.3. <code class="docutils literal"><span class="pre">email.generator</span></code>: Generating MIME documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.policy.html">19.1.4. <code class="docutils literal"><span class="pre">email.policy</span></code>: Policy Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.headerregistry.html">19.1.5. <code class="docutils literal"><span class="pre">email.headerregistry</span></code>: Custom Header Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.contentmanager.html">19.1.6. <code class="docutils literal"><span class="pre">email.contentmanager</span></code>: Managing MIME Content</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="email.contentmanager.html#content-manager-instances">19.1.6.1. Content Manager Instances</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="email.mime.html">19.1.7. <code class="docutils literal"><span class="pre">email.mime</span></code>: Creating email and MIME objects from scratch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.header.html">19.1.8. <code class="docutils literal"><span class="pre">email.header</span></code>: Internationalized headers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.charset.html">19.1.9. <code class="docutils literal"><span class="pre">email.charset</span></code>: Representing character sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.encoders.html">19.1.10. <code class="docutils literal"><span class="pre">email.encoders</span></code>: Encoders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.errors.html">19.1.11. <code class="docutils literal"><span class="pre">email.errors</span></code>: Exception and Defect classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.util.html">19.1.12. <code class="docutils literal"><span class="pre">email.utils</span></code>: Miscellaneous utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.iterators.html">19.1.13. <code class="docutils literal"><span class="pre">email.iterators</span></code>: Iterators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email-examples.html">19.1.14. <code class="docutils literal"><span class="pre">email</span></code>: Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="email-examples.html#examples-using-the-provisional-api">19.1.14.1. Examples using the Provisional API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="email.html#package-history">19.1.15. Package History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.html#differences-from-mimelib">19.1.16. Differences from <code class="docutils literal"><span class="pre">mimelib</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="json.html">19.2. <code class="docutils literal"><span class="pre">json</span></code> &#8212; JSON encoder and decoder</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="json.html#basic-usage">19.2.1. Basic Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="json.html#encoders-and-decoders">19.2.2. Encoders and Decoders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="json.html#exceptions">19.2.3. Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="json.html#standard-compliance-and-interoperability">19.2.4. Standard Compliance and Interoperability</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="json.html#character-encodings">19.2.4.1. Character Encodings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="json.html#infinite-and-nan-number-values">19.2.4.2. Infinite and NaN Number Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="json.html#repeated-names-within-an-object">19.2.4.3. Repeated Names Within an Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="json.html#top-level-non-object-non-array-values">19.2.4.4. Top-level Non-Object, Non-Array Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="json.html#implementation-limitations">19.2.4.5. Implementation Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="json.html#module-json.tool">19.2.5. Command Line Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="json.html#command-line-options">19.2.5.1. Command line options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mailcap.html">19.3. <code class="docutils literal"><span class="pre">mailcap</span></code> &#8212; Mailcap file handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mailbox.html">19.4. <code class="docutils literal"><span class="pre">mailbox</span></code> &#8212; Manipulate mailboxes in various formats</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mailbox.html#mailbox-objects">19.4.1. <code class="docutils literal"><span class="pre">Mailbox</span></code> objects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mailbox.html#maildir">19.4.1.1. <code class="docutils literal"><span class="pre">Maildir</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mailbox.html#mbox">19.4.1.2. <code class="docutils literal"><span class="pre">mbox</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mailbox.html#mh">19.4.1.3. <code class="docutils literal"><span class="pre">MH</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mailbox.html#babyl">19.4.1.4. <code class="docutils literal"><span class="pre">Babyl</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mailbox.html#mmdf">19.4.1.5. <code class="docutils literal"><span class="pre">MMDF</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mailbox.html#message-objects">19.4.2. <code class="docutils literal"><span class="pre">Message</span></code> objects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mailbox.html#maildirmessage">19.4.2.1. <code class="docutils literal"><span class="pre">MaildirMessage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mailbox.html#mboxmessage">19.4.2.2. <code class="docutils literal"><span class="pre">mboxMessage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mailbox.html#mhmessage">19.4.2.3. <code class="docutils literal"><span class="pre">MHMessage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mailbox.html#babylmessage">19.4.2.4. <code class="docutils literal"><span class="pre">BabylMessage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mailbox.html#mmdfmessage">19.4.2.5. <code class="docutils literal"><span class="pre">MMDFMessage</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mailbox.html#exceptions">19.4.3. Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailbox.html#examples">19.4.4. Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mimetypes.html">19.5. <code class="docutils literal"><span class="pre">mimetypes</span></code> &#8212; Map filenames to MIME types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mimetypes.html#mimetypes-objects">19.5.1. MimeTypes Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="base64.html">19.6. <code class="docutils literal"><span class="pre">base64</span></code> &#8212; Base16, Base32, Base64, Base85 Data Encodings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="binhex.html">19.7. <code class="docutils literal"><span class="pre">binhex</span></code> &#8212; Encode and decode binhex4 files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="binhex.html#notes">19.7.1. Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="binascii.html">19.8. <code class="docutils literal"><span class="pre">binascii</span></code> &#8212; Convert between binary and ASCII</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quopri.html">19.9. <code class="docutils literal"><span class="pre">quopri</span></code> &#8212; Encode and decode MIME quoted-printable data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="uu.html">19.10. <code class="docutils literal"><span class="pre">uu</span></code> &#8212; Encode and decode uuencode files</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <a id="sidebar-anchor"></a>
+    
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/netdata.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; <a href="../copyright.html">Copyright</a> 2016, Trần Viết Sơn.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>

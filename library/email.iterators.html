@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>19.1.13. email.iterators: Iterators &#8212; Dịch tiếng Việt Python 3.5 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="top" title="Dịch tiếng Việt Python 3.5 documentation" href="../index.html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" type="image/png" href="../_static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    
+
+  </head>
+  <body role="document">
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
+        <li><a href="../index.html">Dịch tiếng Việt Python 3.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    
+        <div class="badge">
+            <a href="https://github.com/sonempty/Python-Document-in-Vietnamese">Fork me on GitHub</a>
+            <img src="../_static/right-red@2x.png">
+        </div>
+    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-email.iterators">
+<span id="email-iterators-iterators"></span><h1>19.1.13. <a class="reference internal" href="#module-email.iterators" title="email.iterators: Iterate over a  message object tree."><code class="xref py py-mod docutils literal"><span class="pre">email.iterators</span></code></a>: Iterators<a class="headerlink" href="#module-email.iterators" title="Permalink to this headline">¶</a></h1>
+<p><strong>Source code:</strong> <a href="#id1"><span class="problematic" id="id2">:source:`Lib/email/iterators.py`</span></a></p>
+<hr class="docutils" />
+<p>Iterating over a message object tree is fairly easy with the
+<a class="reference internal" href="email.message.html#email.message.Message.walk" title="email.message.Message.walk"><code class="xref py py-meth docutils literal"><span class="pre">Message.walk</span></code></a> method.  The
+<a class="reference internal" href="#module-email.iterators" title="email.iterators: Iterate over a  message object tree."><code class="xref py py-mod docutils literal"><span class="pre">email.iterators</span></code></a> module provides some useful higher level iterations over
+message object trees.</p>
+<dl class="function">
+<dt id="email.iterators.body_line_iterator">
+<code class="descclassname">email.iterators.</code><code class="descname">body_line_iterator</code><span class="sig-paren">(</span><em>msg</em>, <em>decode=False</em><span class="sig-paren">)</span><a class="headerlink" href="#email.iterators.body_line_iterator" title="Permalink to this definition">¶</a></dt>
+<dd><p>This iterates over all the payloads in all the subparts of <em>msg</em>, returning the
+string payloads line-by-line.  It skips over all the subpart headers, and it
+skips over any subpart with a payload that isn&#8217;t a Python string.  This is
+somewhat equivalent to reading the flat text representation of the message from
+a file using <a class="reference internal" href="io.html#io.TextIOBase.readline" title="io.TextIOBase.readline"><code class="xref py py-meth docutils literal"><span class="pre">readline()</span></code></a>, skipping over all the
+intervening headers.</p>
+<p>Optional <em>decode</em> is passed through to <a class="reference internal" href="email.message.html#email.message.Message.get_payload" title="email.message.Message.get_payload"><code class="xref py py-meth docutils literal"><span class="pre">Message.get_payload</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="email.iterators.typed_subpart_iterator">
+<code class="descclassname">email.iterators.</code><code class="descname">typed_subpart_iterator</code><span class="sig-paren">(</span><em>msg</em>, <em>maintype='text'</em>, <em>subtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#email.iterators.typed_subpart_iterator" title="Permalink to this definition">¶</a></dt>
+<dd><p>This iterates over all the subparts of <em>msg</em>, returning only those subparts that
+match the MIME type specified by <em>maintype</em> and <em>subtype</em>.</p>
+<p>Note that <em>subtype</em> is optional; if omitted, then subpart MIME type matching is
+done only with the main type.  <em>maintype</em> is optional too; it defaults to
+<em class="mimetype">text</em>.</p>
+<p>Thus, by default <a class="reference internal" href="#email.iterators.typed_subpart_iterator" title="email.iterators.typed_subpart_iterator"><code class="xref py py-func docutils literal"><span class="pre">typed_subpart_iterator()</span></code></a> returns each subpart that has a
+MIME type of <em class="mimetype">text/*</em>.</p>
+</dd></dl>
+
+<p>The following function has been added as a useful debugging tool.  It should
+<em>not</em> be considered part of the supported public interface for the package.</p>
+<dl class="function">
+<dt id="email.iterators._structure">
+<code class="descclassname">email.iterators.</code><code class="descname">_structure</code><span class="sig-paren">(</span><em>msg</em>, <em>fp=None</em>, <em>level=0</em>, <em>include_default=False</em><span class="sig-paren">)</span><a class="headerlink" href="#email.iterators._structure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints an indented representation of the content types of the message object
+structure.  For example:</p>
+<p>Optional <em>fp</em> is a file-like object to print the output to.  It must be
+suitable for Python&#8217;s <a class="reference internal" href="functions.html#print" title="print"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a> function.  <em>level</em> is used internally.
+<em>include_default</em>, if true, prints the default type as well.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <a id="sidebar-anchor"></a>
+    
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/email.iterators.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; <a href="../copyright.html">Copyright</a> 2016, Trần Viết Sơn.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>

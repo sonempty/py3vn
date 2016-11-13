@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>19.1.14. email: Examples &#8212; Dịch tiếng Việt Python 3.5 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="top" title="Dịch tiếng Việt Python 3.5 documentation" href="../index.html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" type="image/png" href="../_static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    
+
+  </head>
+  <body role="document">
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
+        <li><a href="../index.html">Dịch tiếng Việt Python 3.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    
+        <div class="badge">
+            <a href="https://github.com/sonempty/Python-Document-in-Vietnamese">Fork me on GitHub</a>
+            <img src="../_static/right-red@2x.png">
+        </div>
+    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="email-examples">
+<span id="id1"></span><h1>19.1.14. <a class="reference internal" href="email.html#module-email" title="email: Package supporting the parsing, manipulating, and generating email messages, including MIME documents."><code class="xref py py-mod docutils literal"><span class="pre">email</span></code></a>: Examples<a class="headerlink" href="#email-examples" title="Permalink to this headline">¶</a></h1>
+<p>Here are a few examples of how to use the <a class="reference internal" href="email.html#module-email" title="email: Package supporting the parsing, manipulating, and generating email messages, including MIME documents."><code class="xref py py-mod docutils literal"><span class="pre">email</span></code></a> package to read, write,
+and send simple email messages, as well as more complex MIME messages.</p>
+<p>First, let&#8217;s see how to create and send a simple text message:</p>
+<p>And parsing RFC822 headers can easily be done by the parse(filename) or
+parsestr(message_as_string) methods of the Parser() class:</p>
+<p>Here&#8217;s an example of how to send a MIME message containing a bunch of family
+pictures that may be residing in a directory:</p>
+<p>Here&#8217;s an example of how to send the entire contents of a directory as an email
+message: <a class="footnote-reference" href="#id4" id="id2">[1]</a></p>
+<p>Here&#8217;s an example of how to unpack a MIME message like the one
+above, into a directory of files:</p>
+<p>Here&#8217;s an example of how to create an HTML message with an alternative plain
+text version: <a class="footnote-reference" href="#id5" id="id3">[2]</a></p>
+<div class="section" id="examples-using-the-provisional-api">
+<span id="email-contentmanager-api-examples"></span><h2>19.1.14.1. Examples using the Provisional API<a class="headerlink" href="#examples-using-the-provisional-api" title="Permalink to this headline">¶</a></h2>
+<p>Here is a reworking of the last example using the provisional API.  To make
+things a bit more interesting, we include a related image in the html part, and
+we save a copy of what we are going to send to disk, as well as sending it.</p>
+<p>This example also shows how easy it is to include non-ASCII, and simplifies the
+sending of the message using the <a class="reference internal" href="smtplib.html#smtplib.SMTP.send_message" title="smtplib.SMTP.send_message"><code class="xref py py-meth docutils literal"><span class="pre">send_message()</span></code></a> method of the
+<a class="reference internal" href="smtplib.html#module-smtplib" title="smtplib: SMTP protocol client (requires sockets)."><code class="xref py py-mod docutils literal"><span class="pre">smtplib</span></code></a> module.</p>
+<p>If we were instead sent the message from the last example, here is one
+way we could process it:</p>
+<p>Up to the prompt, the output from the above is:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>To: Penelope Pussycat &lt;penelope@example.com&gt;, Fabrette Pussycat &lt;fabrette@example.com&gt;
+From: Pepé Le Pew &lt;pepe@example.com&gt;
+Subject: Ayons asperges pour le déjeuner
+
+Salut!
+
+Cela ressemble à un excellent recipie[1] déjeuner.
+</pre></div>
+</div>
+<p class="rubric">Footnotes</p>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td>Thanks to Matthew Dixon Cowles for the original inspiration and examples.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td>Contributed by Martin Matejek.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <a id="sidebar-anchor"></a>
+    
+
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">19.1.14. <code class="docutils literal"><span class="pre">email</span></code>: Examples</a><ul>
+<li><a class="reference internal" href="#examples-using-the-provisional-api">19.1.14.1. Examples using the Provisional API</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/email-examples.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; <a href="../copyright.html">Copyright</a> 2016, Trần Viết Sơn.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>

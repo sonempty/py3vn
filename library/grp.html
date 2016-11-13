@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>35.4. grp — The group database &#8212; Dịch tiếng Việt Python 3.5 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="top" title="Dịch tiếng Việt Python 3.5 documentation" href="../index.html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" type="image/png" href="../_static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    
+
+  </head>
+  <body role="document">
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
+        <li><a href="../index.html">Dịch tiếng Việt Python 3.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    
+        <div class="badge">
+            <a href="https://github.com/sonempty/Python-Document-in-Vietnamese">Fork me on GitHub</a>
+            <img src="../_static/right-red@2x.png">
+        </div>
+    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-grp">
+<span id="grp-the-group-database"></span><h1>35.4. <a class="reference internal" href="#module-grp" title="grp: The group database (getgrnam() and friends). (Unix)"><code class="xref py py-mod docutils literal"><span class="pre">grp</span></code></a> &#8212; The group database<a class="headerlink" href="#module-grp" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p>This module provides access to the Unix group database. It is available on all
+Unix versions.</p>
+<p>Group database entries are reported as a tuple-like object, whose attributes
+correspond to the members of the <code class="docutils literal"><span class="pre">group</span></code> structure (Attribute field below, see
+<code class="docutils literal"><span class="pre">&lt;pwd.h&gt;</span></code>):</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="22%" />
+<col width="65%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Index</th>
+<th class="head">Attribute</th>
+<th class="head">Meaning</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>gr_name</td>
+<td>the name of the group</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>gr_passwd</td>
+<td>the (encrypted) group password;
+often empty</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>gr_gid</td>
+<td>the numerical group ID</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>gr_mem</td>
+<td>all the group member&#8217;s  user
+names</td>
+</tr>
+</tbody>
+</table>
+<p>The gid is an integer, name and password are strings, and the member list is a
+list of strings. (Note that most users are not explicitly listed as members of
+the group they are in according to the password database.  Check both databases
+to get complete membership information.  Also note that a <code class="docutils literal"><span class="pre">gr_name</span></code> that
+starts with a <code class="docutils literal"><span class="pre">+</span></code> or <code class="docutils literal"><span class="pre">-</span></code> is likely to be a YP/NIS reference and may not be
+accessible via <a class="reference internal" href="#grp.getgrnam" title="grp.getgrnam"><code class="xref py py-func docutils literal"><span class="pre">getgrnam()</span></code></a> or <a class="reference internal" href="#grp.getgrgid" title="grp.getgrgid"><code class="xref py py-func docutils literal"><span class="pre">getgrgid()</span></code></a>.)</p>
+<p>It defines the following items:</p>
+<dl class="function">
+<dt id="grp.getgrgid">
+<code class="descclassname">grp.</code><code class="descname">getgrgid</code><span class="sig-paren">(</span><em>gid</em><span class="sig-paren">)</span><a class="headerlink" href="#grp.getgrgid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the group database entry for the given numeric group ID. <a class="reference internal" href="exceptions.html#KeyError" title="KeyError"><code class="xref py py-exc docutils literal"><span class="pre">KeyError</span></code></a>
+is raised if the entry asked for cannot be found.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="grp.getgrnam">
+<code class="descclassname">grp.</code><code class="descname">getgrnam</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#grp.getgrnam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the group database entry for the given group name. <a class="reference internal" href="exceptions.html#KeyError" title="KeyError"><code class="xref py py-exc docutils literal"><span class="pre">KeyError</span></code></a> is
+raised if the entry asked for cannot be found.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="grp.getgrall">
+<code class="descclassname">grp.</code><code class="descname">getgrall</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#grp.getgrall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of all available group entries, in arbitrary order.</p>
+</dd></dl>
+
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt>Module <a class="reference internal" href="pwd.html#module-pwd" title="pwd: The password database (getpwnam() and friends). (Unix)"><code class="xref py py-mod docutils literal"><span class="pre">pwd</span></code></a></dt>
+<dd>An interface to the user database, similar to this.</dd>
+<dt>Module <a class="reference internal" href="spwd.html#module-spwd" title="spwd: The shadow password database (getspnam() and friends). (Unix)"><code class="xref py py-mod docutils literal"><span class="pre">spwd</span></code></a></dt>
+<dd>An interface to the shadow password database, similar to this.</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <a id="sidebar-anchor"></a>
+    
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/grp.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; <a href="../copyright.html">Copyright</a> 2016, Trần Viết Sơn.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>

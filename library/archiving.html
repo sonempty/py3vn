@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>13. Data Compression and Archiving &#8212; Dịch tiếng Việt Python 3.5 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="top" title="Dịch tiếng Việt Python 3.5 documentation" href="../index.html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" type="image/png" href="../_static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    
+
+  </head>
+  <body role="document">
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
+        <li><a href="../index.html">Dịch tiếng Việt Python 3.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    
+        <div class="badge">
+            <a href="https://github.com/sonempty/Python-Document-in-Vietnamese">Fork me on GitHub</a>
+            <img src="../_static/right-red@2x.png">
+        </div>
+    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="data-compression-and-archiving">
+<span id="archiving"></span><h1>13. Data Compression and Archiving<a class="headerlink" href="#data-compression-and-archiving" title="Permalink to this headline">¶</a></h1>
+<p>The modules described in this chapter support data compression with the zlib,
+gzip, bzip2 and lzma algorithms, and the creation of ZIP- and tar-format
+archives.  See also <a class="reference internal" href="shutil.html#archiving-operations"><span class="std std-ref">Archiving operations</span></a> provided by the <a class="reference internal" href="shutil.html#module-shutil" title="shutil: High-level file operations, including copying."><code class="xref py py-mod docutils literal"><span class="pre">shutil</span></code></a>
+module.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zlib.html">13.1. <code class="docutils literal"><span class="pre">zlib</span></code> &#8212; Compression compatible with <strong class="program">gzip</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="gzip.html">13.2. <code class="docutils literal"><span class="pre">gzip</span></code> &#8212; Support for <strong class="program">gzip</strong> files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gzip.html#examples-of-usage">13.2.1. Examples of usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bz2.html">13.3. <code class="docutils literal"><span class="pre">bz2</span></code> &#8212; Support for <strong class="program">bzip2</strong> compression</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bz2.html#de-compression-of-files">13.3.1. (De)compression of files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bz2.html#incremental-de-compression">13.3.2. Incremental (de)compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bz2.html#one-shot-de-compression">13.3.3. One-shot (de)compression</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lzma.html">13.4. <code class="docutils literal"><span class="pre">lzma</span></code> &#8212; Compression using the LZMA algorithm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lzma.html#reading-and-writing-compressed-files">13.4.1. Reading and writing compressed files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lzma.html#compressing-and-decompressing-data-in-memory">13.4.2. Compressing and decompressing data in memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lzma.html#miscellaneous">13.4.3. Miscellaneous</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lzma.html#specifying-custom-filter-chains">13.4.4. Specifying custom filter chains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lzma.html#examples">13.4.5. Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="zipfile.html">13.5. <code class="docutils literal"><span class="pre">zipfile</span></code> &#8212; Work with ZIP archives</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="zipfile.html#zipfile-objects">13.5.1. ZipFile Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zipfile.html#pyzipfile-objects">13.5.2. PyZipFile Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zipfile.html#zipinfo-objects">13.5.3. ZipInfo Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zipfile.html#command-line-interface">13.5.4. Command-Line Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="zipfile.html#command-line-options">13.5.4.1. Command-line options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tarfile.html">13.6. <code class="docutils literal"><span class="pre">tarfile</span></code> &#8212; Read and write tar archive files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tarfile.html#tarfile-objects">13.6.1. TarFile Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tarfile.html#tarinfo-objects">13.6.2. TarInfo Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tarfile.html#command-line-interface">13.6.3. Command-Line Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tarfile.html#command-line-options">13.6.3.1. Command-line options</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tarfile.html#examples">13.6.4. Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tarfile.html#supported-tar-formats">13.6.5. Supported tar formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tarfile.html#unicode-issues">13.6.6. Unicode issues</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <a id="sidebar-anchor"></a>
+    
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/archiving.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; <a href="../copyright.html">Copyright</a> 2016, Trần Viết Sơn.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>

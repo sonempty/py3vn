@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>35.3. spwd — The shadow password database &#8212; Dịch tiếng Việt Python 3.5 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="top" title="Dịch tiếng Việt Python 3.5 documentation" href="../index.html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" type="image/png" href="../_static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    
+
+  </head>
+  <body role="document">
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
+        <li><a href="../index.html">Dịch tiếng Việt Python 3.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    
+        <div class="badge">
+            <a href="https://github.com/sonempty/Python-Document-in-Vietnamese">Fork me on GitHub</a>
+            <img src="../_static/right-red@2x.png">
+        </div>
+    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-spwd">
+<span id="spwd-the-shadow-password-database"></span><h1>35.3. <a class="reference internal" href="#module-spwd" title="spwd: The shadow password database (getspnam() and friends). (Unix)"><code class="xref py py-mod docutils literal"><span class="pre">spwd</span></code></a> &#8212; The shadow password database<a class="headerlink" href="#module-spwd" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p>This module provides access to the Unix shadow password database. It is
+available on various Unix versions.</p>
+<p>You must have enough privileges to access the shadow password database (this
+usually means you have to be root).</p>
+<p>Shadow password database entries are reported as a tuple-like object, whose
+attributes correspond to the members of the <code class="docutils literal"><span class="pre">spwd</span></code> structure (Attribute field
+below, see <code class="docutils literal"><span class="pre">&lt;shadow.h&gt;</span></code>):</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="27%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Index</th>
+<th class="head">Attribute</th>
+<th class="head">Meaning</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td><code class="docutils literal"><span class="pre">sp_namp</span></code></td>
+<td>Login name</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td><code class="docutils literal"><span class="pre">sp_pwdp</span></code></td>
+<td>Encrypted password</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td><code class="docutils literal"><span class="pre">sp_lstchg</span></code></td>
+<td>Date of last change</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td><code class="docutils literal"><span class="pre">sp_min</span></code></td>
+<td>Minimal number of days between
+changes</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td><code class="docutils literal"><span class="pre">sp_max</span></code></td>
+<td>Maximum number of days between
+changes</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td><code class="docutils literal"><span class="pre">sp_warn</span></code></td>
+<td>Number of days before password
+expires to warn user about it</td>
+</tr>
+<tr class="row-even"><td>6</td>
+<td><code class="docutils literal"><span class="pre">sp_inact</span></code></td>
+<td>Number of days after password
+expires until account is
+disabled</td>
+</tr>
+<tr class="row-odd"><td>7</td>
+<td><code class="docutils literal"><span class="pre">sp_expire</span></code></td>
+<td>Number of days since 1970-01-01
+when account expires</td>
+</tr>
+<tr class="row-even"><td>8</td>
+<td><code class="docutils literal"><span class="pre">sp_flag</span></code></td>
+<td>Reserved</td>
+</tr>
+</tbody>
+</table>
+<p>The sp_namp and sp_pwdp items are strings, all others are integers.
+<a class="reference internal" href="exceptions.html#KeyError" title="KeyError"><code class="xref py py-exc docutils literal"><span class="pre">KeyError</span></code></a> is raised if the entry asked for cannot be found.</p>
+<p>The following functions are defined:</p>
+<dl class="function">
+<dt id="spwd.getspnam">
+<code class="descclassname">spwd.</code><code class="descname">getspnam</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#spwd.getspnam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the shadow password database entry for the given user name.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="spwd.getspall">
+<code class="descclassname">spwd.</code><code class="descname">getspall</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#spwd.getspall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of all available shadow password database entries, in arbitrary
+order.</p>
+</dd></dl>
+
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt>Module <a class="reference internal" href="grp.html#module-grp" title="grp: The group database (getgrnam() and friends). (Unix)"><code class="xref py py-mod docutils literal"><span class="pre">grp</span></code></a></dt>
+<dd>An interface to the group database, similar to this.</dd>
+<dt>Module <a class="reference internal" href="pwd.html#module-pwd" title="pwd: The password database (getpwnam() and friends). (Unix)"><code class="xref py py-mod docutils literal"><span class="pre">pwd</span></code></a></dt>
+<dd>An interface to the normal password database, similar to this.</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <a id="sidebar-anchor"></a>
+    
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/spwd.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; <a href="../copyright.html">Copyright</a> 2016, Trần Viết Sơn.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>
