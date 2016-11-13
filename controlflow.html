@@ -1,0 +1,851 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>More Control Flow Tools &#8212; Dich tieng Viet Python  3.5.2 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '3.5.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Dich tieng Viet Python  3.5.2 documentation" href="index.html" />
+    <link rel="up" title="Python 3.5.2 documentation contents" href="contents.html" />
+    <link rel="next" title="Data Structures" href="datastructures.html" />
+    <link rel="prev" title="An Informal Introduction to Python" href="introduction.html" /> 
+  </head>
+  <body role="document">
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/logo.png" border="0" alt="Python tiếng Việt"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="datastructures.html" title="Data Structures"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="introduction.html" title="An Informal Introduction to Python"
+             accesskey="P">previous</a> |</li>
+		<li><img src="_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: 4px"/></li>
+        <li><a href="index.html">Trang chủ</a>|&nbsp;</li>
+        <li><a href="search.html">Tìm kiếm</a>|&nbsp;</li>
+        <li><a href="contents.html">Mục lục </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="contents.html" accesskey="U">Python 3.5.2 documentation contents</a> &#187;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">More Control Flow Tools</a><ul>
+<li><a class="reference internal" href="#if-statements">&#8220;if&#8221; Statements</a></li>
+<li><a class="reference internal" href="#for-statements">&#8220;for&#8221; Statements</a></li>
+<li><a class="reference internal" href="#the-range-function">The &#8220;range()&#8221; Function</a></li>
+<li><a class="reference internal" href="#break-and-continue-statements-and-else-clauses-on-loops">&#8220;break&#8221; and &#8220;continue&#8221; Statements, and &#8220;else&#8221; Clauses on Loops</a></li>
+<li><a class="reference internal" href="#pass-statements">&#8220;pass&#8221; Statements</a></li>
+<li><a class="reference internal" href="#defining-functions">Defining Functions</a></li>
+<li><a class="reference internal" href="#more-on-defining-functions">More on Defining Functions</a><ul>
+<li><a class="reference internal" href="#default-argument-values">Default Argument Values</a></li>
+<li><a class="reference internal" href="#keyword-arguments">Keyword Arguments</a></li>
+<li><a class="reference internal" href="#arbitrary-argument-lists">Arbitrary Argument Lists</a></li>
+<li><a class="reference internal" href="#unpacking-argument-lists">Unpacking Argument Lists</a></li>
+<li><a class="reference internal" href="#lambda-expressions">Lambda Expressions</a></li>
+<li><a class="reference internal" href="#documentation-strings">Documentation Strings</a></li>
+<li><a class="reference internal" href="#function-annotations">Function Annotations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#intermezzo-coding-style">Intermezzo: Coding Style</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="introduction.html"
+                        title="previous chapter">An Informal Introduction to Python</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="datastructures.html"
+                        title="next chapter">Data Structures</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/controlflow.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="more-control-flow-tools">
+<h1>More Control Flow Tools<a class="headerlink" href="#more-control-flow-tools" title="Permalink to this headline">¶</a></h1>
+<p>Besides the &#8220;while&#8221; statement just introduced, Python knows the usual
+control flow statements known from other languages, with some twists.</p>
+<div class="section" id="if-statements">
+<h2>&#8220;if&#8221; Statements<a class="headerlink" href="#if-statements" title="Permalink to this headline">¶</a></h2>
+<p>Perhaps the most well-known statement type is the &#8220;if&#8221; statement.  For
+example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter an integer: &quot;</span><span class="p">))</span>
+<span class="go">Please enter an integer: 42</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Negative changed to zero&#39;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Zero&#39;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Single&#39;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;More&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">More</span>
+</pre></div>
+</div>
+<p>There can be zero or more &#8220;elif&#8221; parts, and the &#8220;else&#8221; part is
+optional.  The keyword &#8216;&#8220;elif&#8221;&#8217; is short for &#8216;else if&#8217;, and is useful
+to avoid excessive indentation.  An  &#8220;if&#8221; ... &#8220;elif&#8221; ... &#8220;elif&#8221; ...
+sequence is a substitute for the &#8220;switch&#8221; or &#8220;case&#8221; statements found
+in other languages.</p>
+</div>
+<div class="section" id="for-statements">
+<h2>&#8220;for&#8221; Statements<a class="headerlink" href="#for-statements" title="Permalink to this headline">¶</a></h2>
+<p>The &#8220;for&#8221; statement in Python differs a bit from what you may be used
+to in C or Pascal.  Rather than always iterating over an arithmetic
+progression of numbers (like in Pascal), or giving the user the
+ability to define both the iteration step and halting condition (as
+C), Python&#8217;s &#8220;for&#8221; statement iterates over the items of any sequence
+(a list or a string), in the order that they appear in the sequence.
+For example (no pun intended):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Measure some strings:</span>
+<span class="gp">... </span><span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;window&#39;</span><span class="p">,</span> <span class="s1">&#39;defenestrate&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">))</span>
+<span class="gp">...</span>
+<span class="go">cat 3</span>
+<span class="go">window 6</span>
+<span class="go">defenestrate 12</span>
+</pre></div>
+</div>
+<p>If you need to modify the sequence you are iterating over while inside
+the loop (for example to duplicate selected items), it is recommended
+that you first make a copy.  Iterating over a sequence does not
+implicitly make a copy.  The slice notation makes this especially
+convenient:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">[:]:</span>  <span class="c1"># Loop over a slice copy of the entire list.</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">words</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">words</span>
+<span class="go">[&#39;defenestrate&#39;, &#39;cat&#39;, &#39;window&#39;, &#39;defenestrate&#39;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-range-function">
+<h2>The &#8220;range()&#8221; Function<a class="headerlink" href="#the-range-function" title="Permalink to this headline">¶</a></h2>
+<p>If you do need to iterate over a sequence of numbers, the built-in
+function &#8220;range()&#8221; comes in handy.  It generates arithmetic
+progressions:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">0</span>
+<span class="go">1</span>
+<span class="go">2</span>
+<span class="go">3</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>The given end point is never part of the generated sequence;
+&#8220;range(10)&#8221; generates 10 values, the legal indices for items of a
+sequence of length 10.  It is possible to let the range start at
+another number, or to specify a different increment (even negative;
+sometimes this is called the &#8216;step&#8217;):</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>range(5, 10)</dt>
+<dd>5 through 9</dd>
+<dt>range(0, 10, 3)</dt>
+<dd>0, 3, 6, 9</dd>
+<dt>range(-10, -100, -30)</dt>
+<dd>-10, -40, -70</dd>
+</dl>
+</div></blockquote>
+<p>To iterate over the indices of a sequence, you can combine &#8220;range()&#8221;
+and &#8220;len()&#8221; as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Mary&#39;</span><span class="p">,</span> <span class="s1">&#39;had&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;little&#39;</span><span class="p">,</span> <span class="s1">&#39;lamb&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="gp">...</span>
+<span class="go">0 Mary</span>
+<span class="go">1 had</span>
+<span class="go">2 a</span>
+<span class="go">3 little</span>
+<span class="go">4 lamb</span>
+</pre></div>
+</div>
+<p>In most such cases, however, it is convenient to use the &#8220;enumerate()&#8221;
+function, see Looping Techniques.</p>
+<p>A strange thing happens if you just print a range:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="go">range(0, 10)</span>
+</pre></div>
+</div>
+<p>In many ways the object returned by &#8220;range()&#8221; behaves as if it is a
+list, but in fact it isn&#8217;t. It is an object which returns the
+successive items of the desired sequence when you iterate over it, but
+it doesn&#8217;t really make the list, thus saving space.</p>
+<p>We say such an object is <em>iterable</em>, that is, suitable as a target for
+functions and constructs that expect something from which they can
+obtain successive items until the supply is exhausted. We have seen
+that the &#8220;for&#8221; statement is such an <em>iterator</em>. The function &#8220;list()&#8221;
+is another; it creates lists from iterables:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="go">[0, 1, 2, 3, 4]</span>
+</pre></div>
+</div>
+<p>Later we will see more functions that return iterables and take
+iterables as argument.</p>
+</div>
+<div class="section" id="break-and-continue-statements-and-else-clauses-on-loops">
+<h2>&#8220;break&#8221; and &#8220;continue&#8221; Statements, and &#8220;else&#8221; Clauses on Loops<a class="headerlink" href="#break-and-continue-statements-and-else-clauses-on-loops" title="Permalink to this headline">¶</a></h2>
+<p>The &#8220;break&#8221; statement, like in C, breaks out of the smallest enclosing
+&#8220;for&#8221; or &#8220;while&#8221; loop.</p>
+<p>Loop statements may have an &#8220;else&#8221; clause; it is executed when the
+loop terminates through exhaustion of the list (with &#8220;for&#8221;) or when
+the condition becomes false (with &#8220;while&#8221;), but not when the loop is
+terminated by a &#8220;break&#8221; statement.  This is exemplified by the
+following loop, which searches for prime numbers:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s1">&#39;equals&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">//</span><span class="n">x</span><span class="p">)</span>
+<span class="gp">... </span>            <span class="k">break</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="c1"># loop fell through without finding a factor</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s1">&#39;is a prime number&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">2 is a prime number</span>
+<span class="go">3 is a prime number</span>
+<span class="go">4 equals 2 * 2</span>
+<span class="go">5 is a prime number</span>
+<span class="go">6 equals 2 * 3</span>
+<span class="go">7 is a prime number</span>
+<span class="go">8 equals 2 * 4</span>
+<span class="go">9 equals 3 * 3</span>
+</pre></div>
+</div>
+<p>(Yes, this is the correct code.  Look closely: the &#8220;else&#8221; clause
+belongs to the &#8220;for&#8221; loop, <strong>not</strong> the &#8220;if&#8221; statement.)</p>
+<p>When used with a loop, the &#8220;else&#8221; clause has more in common with the
+&#8220;else&#8221; clause of a &#8220;try&#8221; statement than it does that of &#8220;if&#8221;
+statements: a &#8220;try&#8221; statement&#8217;s &#8220;else&#8221; clause runs when no exception
+occurs, and a loop&#8217;s &#8220;else&#8221; clause runs when no &#8220;break&#8221; occurs. For
+more on the &#8220;try&#8221; statement and exceptions, see Handling Exceptions.</p>
+<p>The &#8220;continue&#8221; statement, also borrowed from C, continues with the
+next iteration of the loop:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Found an even number&quot;</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">continue</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Found a number&quot;</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
+<span class="go">Found an even number 2</span>
+<span class="go">Found a number 3</span>
+<span class="go">Found an even number 4</span>
+<span class="go">Found a number 5</span>
+<span class="go">Found an even number 6</span>
+<span class="go">Found a number 7</span>
+<span class="go">Found an even number 8</span>
+<span class="go">Found a number 9</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pass-statements">
+<h2>&#8220;pass&#8221; Statements<a class="headerlink" href="#pass-statements" title="Permalink to this headline">¶</a></h2>
+<p>The &#8220;pass&#8221; statement does nothing. It can be used when a statement is
+required syntactically but the program requires no action. For
+example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">pass</span>  <span class="c1"># Busy-wait for keyboard interrupt (Ctrl+C)</span>
+<span class="gp">...</span>
+</pre></div>
+</div>
+<p>This is commonly used for creating minimal classes:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">MyEmptyClass</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">pass</span>
+<span class="gp">...</span>
+</pre></div>
+</div>
+<p>Another place &#8220;pass&#8221; can be used is as a place-holder for a function
+or conditional body when you are working on new code, allowing you to
+keep thinking at a more abstract level.  The &#8220;pass&#8221; is silently
+ignored:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">initlog</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">pass</span>   <span class="c1"># Remember to implement this!</span>
+<span class="gp">...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="defining-functions">
+<h2>Defining Functions<a class="headerlink" href="#defining-functions" title="Permalink to this headline">¶</a></h2>
+<p>We can create a function that writes the Fibonacci series to an
+arbitrary boundary:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>    <span class="c1"># write Fibonacci series up to n</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Print a Fibonacci series up to n.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">()</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Now call the function we just defined:</span>
+<span class="gp">... </span><span class="n">fib</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="go">0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597</span>
+</pre></div>
+</div>
+<p>The keyword &#8220;def&#8221; introduces a function <em>definition</em>.  It must be
+followed by the function name and the parenthesized list of formal
+parameters. The statements that form the body of the function start at
+the next line, and must be indented.</p>
+<p>The first statement of the function body can optionally be a string
+literal; this string literal is the function&#8217;s documentation string,
+or <em>docstring</em>. (More about docstrings can be found in the section
+Documentation Strings.) There are tools which use docstrings to
+automatically produce online or printed documentation, or to let the
+user interactively browse through code; it&#8217;s good practice to include
+docstrings in code that you write, so make a habit of it.</p>
+<p>The <em>execution</em> of a function introduces a new symbol table used for
+the local variables of the function.  More precisely, all variable
+assignments in a function store the value in the local symbol table;
+whereas variable references first look in the local symbol table, then
+in the local symbol tables of enclosing functions, then in the global
+symbol table, and finally in the table of built-in names. Thus, global
+variables cannot be directly assigned a value within a function
+(unless named in a &#8220;global&#8221; statement), although they may be
+referenced.</p>
+<p>The actual parameters (arguments) to a function call are introduced in
+the local symbol table of the called function when it is called; thus,
+arguments are passed using <em>call by value</em> (where the <em>value</em> is
+always an object <em>reference</em>, not the value of the object). [1] When a
+function calls another function, a new local symbol table is created
+for that call.</p>
+<p>A function definition introduces the function name in the current
+symbol table. The value of the function name has a type that is
+recognized by the interpreter as a user-defined function.  This value
+can be assigned to another name which can then also be used as a
+function.  This serves as a general renaming mechanism:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fib</span>
+<span class="go">&lt;function fib at 10042ed0&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">fib</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="go">0 1 1 2 3 5 8 13 21 34 55 89</span>
+</pre></div>
+</div>
+<p>Coming from other languages, you might object that &#8220;fib&#8221; is not a
+function but a procedure since it doesn&#8217;t return a value.  In fact,
+even functions without a &#8220;return&#8221; statement do return a value, albeit
+a rather boring one.  This value is called &#8220;None&#8221; (it&#8217;s a built-in
+name).  Writing the value &#8220;None&#8221; is normally suppressed by the
+interpreter if it would be the only value written. You can see it if
+you really want to using &#8220;print()&#8221;:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fib</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">fib</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="go">None</span>
+</pre></div>
+</div>
+<p>It is simple to write a function that returns a list of the numbers of
+the Fibonacci series, instead of printing it:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">fib2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>  <span class="c1"># return Fibonacci series up to n</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Return a list containing the Fibonacci series up to n.&quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>    <span class="c1"># see below</span>
+<span class="gp">... </span>        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">result</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f100</span> <span class="o">=</span> <span class="n">fib2</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>    <span class="c1"># call it</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f100</span>                <span class="c1"># write the result</span>
+<span class="go">[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]</span>
+</pre></div>
+</div>
+<p>This example, as usual, demonstrates some new Python features:</p>
+<ul class="simple">
+<li>The &#8220;return&#8221; statement returns with a value from a function.
+&#8220;return&#8221; without an expression argument returns &#8220;None&#8221;. Falling off
+the end of a function also returns &#8220;None&#8221;.</li>
+<li>The statement &#8220;result.append(a)&#8221; calls a <em>method</em> of the list
+object &#8220;result&#8221;.  A method is a function that &#8216;belongs&#8217; to an object
+and is named &#8220;obj.methodname&#8221;, where &#8220;obj&#8221; is some object (this may
+be an expression), and &#8220;methodname&#8221; is the name of a method that is
+defined by the object&#8217;s type. Different types define different
+methods.  Methods of different types may have the same name without
+causing ambiguity.  (It is possible to define your own object types
+and methods, using <em>classes</em>, see Classes) The method &#8220;append()&#8221;
+shown in the example is defined for list objects; it adds a new
+element at the end of the list.  In this example it is equivalent to
+&#8220;result = result + [a]&#8221;, but more efficient.</li>
+</ul>
+</div>
+<div class="section" id="more-on-defining-functions">
+<h2>More on Defining Functions<a class="headerlink" href="#more-on-defining-functions" title="Permalink to this headline">¶</a></h2>
+<p>It is also possible to define functions with a variable number of
+arguments. There are three forms, which can be combined.</p>
+<div class="section" id="default-argument-values">
+<h3>Default Argument Values<a class="headerlink" href="#default-argument-values" title="Permalink to this headline">¶</a></h3>
+<p>The most useful form is to specify a default value for one or more
+arguments. This creates a function that can be called with fewer
+arguments than it is defined to allow.  For example:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>def ask_ok(prompt, retries=4, reminder=&#8217;Please try again!&#8217;):</dt>
+<dd><dl class="first last docutils">
+<dt>while True:</dt>
+<dd><p class="first">ok = input(prompt)
+if ok in (&#8216;y&#8217;, &#8216;ye&#8217;, &#8216;yes&#8217;):</p>
+<blockquote>
+<div>return True</div></blockquote>
+<dl class="docutils">
+<dt>if ok in (&#8216;n&#8217;, &#8216;no&#8217;, &#8216;nop&#8217;, &#8216;nope&#8217;):</dt>
+<dd>return False</dd>
+</dl>
+<p>retries = retries - 1
+if retries &lt; 0:</p>
+<blockquote>
+<div>raise ValueError(&#8216;invalid user response&#8217;)</div></blockquote>
+<p class="last">print(reminder)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<p>This function can be called in several ways:</p>
+<ul class="simple">
+<li>giving only the mandatory argument: &#8220;ask_ok(&#8216;Do you really want to
+quit?&#8217;)&#8221;</li>
+<li>giving one of the optional arguments: &#8220;ask_ok(&#8216;OK to overwrite the
+file?&#8217;, 2)&#8221;</li>
+<li>or even giving all arguments: &#8220;ask_ok(&#8216;OK to overwrite the file?&#8217;,
+2, &#8216;Come on, only yes or no!&#8217;)&#8221;</li>
+</ul>
+<p>This example also introduces the &#8220;in&#8221; keyword. This tests whether or
+not a sequence contains a certain value.</p>
+<p>The default values are evaluated at the point of function definition
+in the <em>defining</em> scope, so that</p>
+<blockquote>
+<div><p>i = 5</p>
+<dl class="docutils">
+<dt>def f(arg=i):</dt>
+<dd>print(arg)</dd>
+</dl>
+<p>i = 6
+f()</p>
+</div></blockquote>
+<p>will print &#8220;5&#8221;.</p>
+<p><strong>Important warning:</strong>  The default value is evaluated only once. This
+makes a difference when the default is a mutable object such as a
+list, dictionary, or instances of most classes.  For example, the
+following function accumulates the arguments passed to it on
+subsequent calls:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>def f(a, L=[]):</dt>
+<dd>L.append(a)
+return L</dd>
+</dl>
+<p>print(f(1))
+print(f(2))
+print(f(3))</p>
+</div></blockquote>
+<p>This will print</p>
+<blockquote>
+<div>[1]
+[1, 2]
+[1, 2, 3]</div></blockquote>
+<p>If you don&#8217;t want the default to be shared between subsequent calls,
+you can write the function like this instead:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>def f(a, L=None):</dt>
+<dd><dl class="first docutils">
+<dt>if L is None:</dt>
+<dd>L = []</dd>
+</dl>
+<p class="last">L.append(a)
+return L</p>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="keyword-arguments">
+<h3>Keyword Arguments<a class="headerlink" href="#keyword-arguments" title="Permalink to this headline">¶</a></h3>
+<p>Functions can also be called using <em>keyword arguments</em> of the form
+&#8220;kwarg=value&#8221;.  For instance, the following function:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>def parrot(voltage, state=&#8217;a stiff&#8217;, action=&#8217;voom&#8217;, type=&#8217;Norwegian Blue&#8217;):</dt>
+<dd>print(&#8220;&#8211; This parrot wouldn&#8217;t&#8221;, action, end=&#8217; &#8216;)
+print(&#8220;if you put&#8221;, voltage, &#8220;volts through it.&#8221;)
+print(&#8220;&#8211; Lovely plumage, the&#8221;, type)
+print(&#8220;&#8211; It&#8217;s&#8221;, state, &#8221;!&#8221;)</dd>
+</dl>
+</div></blockquote>
+<p>accepts one required argument (&#8220;voltage&#8221;) and three optional arguments
+(&#8220;state&#8221;, &#8220;action&#8221;, and &#8220;type&#8221;).  This function can be called in any
+of the following ways:</p>
+<blockquote>
+<div>parrot(1000)                                          # 1 positional argument
+parrot(voltage=1000)                                  # 1 keyword argument
+parrot(voltage=1000000, action=&#8217;VOOOOOM&#8217;)             # 2 keyword arguments
+parrot(action=&#8217;VOOOOOM&#8217;, voltage=1000000)             # 2 keyword arguments
+parrot(&#8216;a million&#8217;, &#8216;bereft of life&#8217;, &#8216;jump&#8217;)         # 3 positional arguments
+parrot(&#8216;a thousand&#8217;, state=&#8217;pushing up the daisies&#8217;)  # 1 positional, 1 keyword</div></blockquote>
+<p>but all the following calls would be invalid:</p>
+<blockquote>
+<div>parrot()                     # required argument missing
+parrot(voltage=5.0, &#8216;dead&#8217;)  # non-keyword argument after a keyword argument
+parrot(110, voltage=220)     # duplicate value for the same argument
+parrot(actor=&#8217;John Cleese&#8217;)  # unknown keyword argument</div></blockquote>
+<p>In a function call, keyword arguments must follow positional
+arguments. All the keyword arguments passed must match one of the
+arguments accepted by the function (e.g. &#8220;actor&#8221; is not a valid
+argument for the &#8220;parrot&#8221; function), and their order is not important.
+This also includes non-optional arguments (e.g. &#8220;parrot(voltage=1000)&#8221;
+is valid too). No argument may receive a value more than once. Here&#8217;s
+an example that fails due to this restriction:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">pass</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">function</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">?</span>
+<span class="gr">TypeError</span>: <span class="n">function() got multiple values for keyword argument &#39;a&#39;</span>
+</pre></div>
+</div>
+<p>When a final formal parameter of the form &#8220;<a href="#id1"><span class="problematic" id="id2">**</span></a>name&#8221; is present, it
+receives a dictionary (see Mapping Types &#8212; dict) containing all
+keyword arguments except for those corresponding to a formal
+parameter.  This may be combined with a formal parameter of the form
+&#8220;<a href="#id3"><span class="problematic" id="id4">*</span></a>name&#8221; (described in the next subsection) which receives a tuple
+containing the positional arguments beyond the formal parameter list.
+(&#8220;<a href="#id5"><span class="problematic" id="id6">*</span></a>name&#8221; must occur before &#8220;<a href="#id7"><span class="problematic" id="id8">**</span></a>name&#8221;.) For example, if we define a
+function like this:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>def cheeseshop(kind, <a href="#id9"><span class="problematic" id="id10">*</span></a>arguments, <a href="#id11"><span class="problematic" id="id12">**</span></a>keywords):</dt>
+<dd><p class="first">print(&#8220;&#8211; Do you have any&#8221;, kind, &#8221;?&#8221;)
+print(&#8220;&#8211; I&#8217;m sorry, we&#8217;re all out of&#8221;, kind)
+for arg in arguments:</p>
+<blockquote>
+<div>print(arg)</div></blockquote>
+<p>print(&#8220;-&#8221; * 40)
+keys = sorted(keywords.keys())
+for kw in keys:</p>
+<blockquote class="last">
+<div>print(kw, &#8221;:&#8221;, keywords[kw])</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+<p>It could be called like this:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>cheeseshop(&#8220;Limburger&#8221;, &#8220;It&#8217;s very runny, sir.&#8221;,</dt>
+<dd>&#8220;It&#8217;s really very, VERY runny, sir.&#8221;,
+shopkeeper=&#8221;Michael Palin&#8221;,
+client=&#8221;John Cleese&#8221;,
+sketch=&#8221;Cheese Shop Sketch&#8221;)</dd>
+</dl>
+</div></blockquote>
+<p>and of course it would print:</p>
+<blockquote>
+<div>&#8211; Do you have any Limburger ?
+&#8211; I&#8217;m sorry, we&#8217;re all out of Limburger
+It&#8217;s very runny, sir.
+It&#8217;s really very, VERY runny, sir.
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
+client : John Cleese
+shopkeeper : Michael Palin
+sketch : Cheese Shop Sketch</div></blockquote>
+<p>Note that the list of keyword argument names is created by sorting the
+result of the keywords dictionary&#8217;s &#8220;keys()&#8221; method before printing
+its contents; if this is not done, the order in which the arguments
+are printed is undefined.</p>
+</div>
+<div class="section" id="arbitrary-argument-lists">
+<h3>Arbitrary Argument Lists<a class="headerlink" href="#arbitrary-argument-lists" title="Permalink to this headline">¶</a></h3>
+<p>Finally, the least frequently used option is to specify that a
+function can be called with an arbitrary number of arguments.  These
+arguments will be wrapped up in a tuple (see Tuples and Sequences).
+Before the variable number of arguments, zero or more normal arguments
+may occur.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>def write_multiple_items(file, separator, <a href="#id13"><span class="problematic" id="id14">*</span></a>args):</dt>
+<dd>file.write(separator.join(args))</dd>
+</dl>
+</div></blockquote>
+<p>Normally, these &#8220;variadic&#8221; arguments will be last in the list of
+formal parameters, because they scoop up all remaining input arguments
+that are passed to the function. Any formal parameters which occur
+after the &#8220;<a href="#id15"><span class="problematic" id="id16">*</span></a>args&#8221; parameter are &#8216;keyword-only&#8217; arguments, meaning that
+they can only be used as keywords rather than positional arguments.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">concat</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">concat</span><span class="p">(</span><span class="s2">&quot;earth&quot;</span><span class="p">,</span> <span class="s2">&quot;mars&quot;</span><span class="p">,</span> <span class="s2">&quot;venus&quot;</span><span class="p">)</span>
+<span class="go">&#39;earth/mars/venus&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">concat</span><span class="p">(</span><span class="s2">&quot;earth&quot;</span><span class="p">,</span> <span class="s2">&quot;mars&quot;</span><span class="p">,</span> <span class="s2">&quot;venus&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+<span class="go">&#39;earth.mars.venus&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="unpacking-argument-lists">
+<h3>Unpacking Argument Lists<a class="headerlink" href="#unpacking-argument-lists" title="Permalink to this headline">¶</a></h3>
+<p>The reverse situation occurs when the arguments are already in a list
+or tuple but need to be unpacked for a function call requiring
+separate positional arguments.  For instance, the built-in &#8220;range()&#8221;
+function expects separate <em>start</em> and <em>stop</em> arguments.  If they are
+not available separately, write the function call with the
+&#8220;*&#8221;-operator to unpack the arguments out of a list or tuple:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>            <span class="c1"># normal call with separate arguments</span>
+<span class="go">[3, 4, 5]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">))</span>            <span class="c1"># call with arguments unpacked from a list</span>
+<span class="go">[3, 4, 5]</span>
+</pre></div>
+</div>
+<p>In the same fashion, dictionaries can deliver keyword arguments with
+the &#8220;**&#8221;-operator:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">parrot</span><span class="p">(</span><span class="n">voltage</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="s1">&#39;a stiff&#39;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;voom&#39;</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- This parrot wouldn&#39;t&quot;</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;if you put&quot;</span><span class="p">,</span> <span class="n">voltage</span><span class="p">,</span> <span class="s2">&quot;volts through it.&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;E&#39;s&quot;</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;voltage&quot;</span><span class="p">:</span> <span class="s2">&quot;four million&quot;</span><span class="p">,</span> <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;bleedin&#39; demised&quot;</span><span class="p">,</span> <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;VOOM&quot;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parrot</span><span class="p">(</span><span class="o">**</span><span class="n">d</span><span class="p">)</span>
+<span class="go">-- This parrot wouldn&#39;t VOOM if you put four million volts through it. E&#39;s bleedin&#39; demised !</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lambda-expressions">
+<h3>Lambda Expressions<a class="headerlink" href="#lambda-expressions" title="Permalink to this headline">¶</a></h3>
+<p>Small anonymous functions can be created with the &#8220;lambda&#8221; keyword.
+This function returns the sum of its two arguments: &#8220;lambda a, b:
+a+b&#8221;. Lambda functions can be used wherever function objects are
+required.  They are syntactically restricted to a single expression.
+Semantically, they are just syntactic sugar for a normal function
+definition.  Like nested function definitions, lambda functions can
+reference variables from the containing scope:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">make_incrementor</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">n</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">make_incrementor</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="go">42</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">43</span>
+</pre></div>
+</div>
+<p>The above example uses a lambda expression to return a function.
+Another use is to pass a small function as an argument:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">pair</span><span class="p">:</span> <span class="n">pair</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span>
+<span class="go">[(4, &#39;four&#39;), (1, &#39;one&#39;), (3, &#39;three&#39;), (2, &#39;two&#39;)]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="documentation-strings">
+<h3>Documentation Strings<a class="headerlink" href="#documentation-strings" title="Permalink to this headline">¶</a></h3>
+<p>Here are some conventions about the content and formatting of
+documentation strings.</p>
+<p>The first line should always be a short, concise summary of the
+object&#8217;s purpose.  For brevity, it should not explicitly state the
+object&#8217;s name or type, since these are available by other means
+(except if the name happens to be a verb describing a function&#8217;s
+operation).  This line should begin with a capital letter and end with
+a period.</p>
+<p>If there are more lines in the documentation string, the second line
+should be blank, visually separating the summary from the rest of the
+description.  The following lines should be one or more paragraphs
+describing the object&#8217;s calling conventions, its side effects, etc.</p>
+<p>The Python parser does not strip indentation from multi-line string
+literals in Python, so tools that process documentation have to strip
+indentation if desired.  This is done using the following convention.
+The first non-blank line <em>after</em> the first line of the string
+determines the amount of indentation for the entire documentation
+string.  (We can&#8217;t use the first line since it is generally adjacent
+to the string&#8217;s opening quotes so its indentation is not apparent in
+the string literal.)  Whitespace &#8220;equivalent&#8221; to this indentation is
+then stripped from the start of all lines of the string.  Lines that
+are indented less should not occur, but if they occur all their
+leading whitespace should be stripped.  Equivalence of whitespace
+should be tested after expansion of tabs (to 8 spaces, normally).</p>
+<p>Here is an example of a multi-line docstring:</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Do nothing, but document it.</span>
+<span class="gp">...</span><span class="sd"></span>
+<span class="gp">... </span><span class="sd">    No, really, it doesn&#39;t do anything.</span>
+<span class="gp">... </span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="gp">... </span>    <span class="k">pass</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">my_function</span><span class="o">.</span><span class="n">__doc__</span><span class="p">)</span>
+<span class="go">Do nothing, but document it.</span>
+</pre></div>
+</div>
+<blockquote>
+<div>No, really, it doesn&#8217;t do anything.</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="function-annotations">
+<h3>Function Annotations<a class="headerlink" href="#function-annotations" title="Permalink to this headline">¶</a></h3>
+<p>Function annotations are completely optional metadata information
+about the types used by user-defined functions (see <strong>PEP 484</strong> for
+more information).</p>
+<p>Annotations are stored in the &#8220;__annotations__&#8221; attribute of the
+function as a dictionary and have no effect on any other part of the
+function.  Parameter annotations are defined by a colon after the
+parameter name, followed by an expression evaluating to the value of
+the annotation.  Return annotations are defined by a literal &#8220;-&gt;&#8221;,
+followed by an expression, between the parameter list and the colon
+denoting the end of the &#8220;def&#8221; statement.  The following example has a
+positional argument, a keyword argument, and the return value
+annotated:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">ham</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">eggs</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;eggs&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Annotations:&quot;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">__annotations__</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Arguments:&quot;</span><span class="p">,</span> <span class="n">ham</span><span class="p">,</span> <span class="n">eggs</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">ham</span> <span class="o">+</span> <span class="s1">&#39; and &#39;</span> <span class="o">+</span> <span class="n">eggs</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">)</span>
+<span class="go">Annotations: {&#39;ham&#39;: &lt;class &#39;str&#39;&gt;, &#39;return&#39;: &lt;class &#39;str&#39;&gt;, &#39;eggs&#39;: &lt;class &#39;str&#39;&gt;}</span>
+<span class="go">Arguments: spam eggs</span>
+<span class="go">&#39;spam and eggs&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="intermezzo-coding-style">
+<h2>Intermezzo: Coding Style<a class="headerlink" href="#intermezzo-coding-style" title="Permalink to this headline">¶</a></h2>
+<p>Now that you are about to write longer, more complex pieces of Python,
+it is a good time to talk about <em>coding style</em>.  Most languages can be
+written (or more concise, <em>formatted</em>) in different styles; some are
+more readable than others. Making it easy for others to read your code
+is always a good idea, and adopting a nice coding style helps
+tremendously for that.</p>
+<p>For Python, <strong>PEP 8</strong> has emerged as the style guide that most
+projects adhere to; it promotes a very readable and eye-pleasing
+coding style.  Every Python developer should read it at some point;
+here are the most important points extracted for you:</p>
+<ul>
+<li><p class="first">Use 4-space indentation, and no tabs.</p>
+<p>4 spaces are a good compromise between small indentation (allows
+greater nesting depth) and large indentation (easier to read).  Tabs
+introduce confusion, and are best left out.</p>
+</li>
+<li><p class="first">Wrap lines so that they don&#8217;t exceed 79 characters.</p>
+<p>This helps users with small displays and makes it possible to have
+several code files side-by-side on larger displays.</p>
+</li>
+<li><p class="first">Use blank lines to separate functions and classes, and larger
+blocks of code inside functions.</p>
+</li>
+<li><p class="first">When possible, put comments on a line of their own.</p>
+</li>
+<li><p class="first">Use docstrings.</p>
+</li>
+<li><p class="first">Use spaces around operators and after commas, but not directly
+inside bracketing constructs: &#8220;a = f(1, 2) + g(3, 4)&#8221;.</p>
+</li>
+<li><p class="first">Name your classes and functions consistently; the convention is to
+use &#8220;CamelCase&#8221; for classes and &#8220;lower_case_with_underscores&#8221; for
+functions and methods.  Always use &#8220;self&#8221; as the name for the first
+method argument (see A First Look at Classes for more on classes and
+methods).</p>
+</li>
+<li><p class="first">Don&#8217;t use fancy encodings if your code is meant to be used in
+international environments.  Python&#8217;s default, UTF-8, or even plain
+ASCII work best in any case.</p>
+</li>
+<li><p class="first">Likewise, don&#8217;t use non-ASCII characters in identifiers if there
+is only the slightest chance people speaking a different language
+will read or maintain the code.</p>
+</li>
+</ul>
+<p>-[ Footnotes ]-</p>
+<dl class="docutils">
+<dt>[1] Actually, <em>call by object reference</em> would be a better</dt>
+<dd>description, since if a mutable object is passed, the caller will
+see any changes the callee makes to it (items inserted into a
+list).</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="datastructures.html" title="Data Structures"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="introduction.html" title="An Informal Introduction to Python"
+             >previous</a> |</li>
+		<li><img src="_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: 4px"/></li>
+        <li><a href="index.html">Trang chủ</a>|&nbsp;</li>
+        <li><a href="search.html">Tìm kiếm</a>|&nbsp;</li>
+        <li><a href="contents.html">Mục lục </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="contents.html" >Python 3.5.2 documentation contents</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 12-2016, Trần Viết Sơn.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Errors and Exceptions &#8212; Dich tieng Viet Python  3.5.2 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '3.5.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Dich tieng Viet Python  3.5.2 documentation" href="index.html" />
+    <link rel="up" title="Python 3.5.2 documentation contents" href="contents.html" />
+    <link rel="next" title="Classes" href="classes.html" />
+    <link rel="prev" title="Input and Output" href="inputoutput.html" /> 
+  </head>
+  <body role="document">
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/logo.png" border="0" alt="Python tiếng Việt"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="classes.html" title="Classes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="inputoutput.html" title="Input and Output"
+             accesskey="P">previous</a> |</li>
+		<li><img src="_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: 4px"/></li>
+        <li><a href="index.html">Trang chủ</a>|&nbsp;</li>
+        <li><a href="search.html">Tìm kiếm</a>|&nbsp;</li>
+        <li><a href="contents.html">Mục lục </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="contents.html" accesskey="U">Python 3.5.2 documentation contents</a> &#187;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Errors and Exceptions</a><ul>
+<li><a class="reference internal" href="#syntax-errors">Syntax Errors</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
+<li><a class="reference internal" href="#handling-exceptions">Handling Exceptions</a></li>
+<li><a class="reference internal" href="#raising-exceptions">Raising Exceptions</a></li>
+<li><a class="reference internal" href="#user-defined-exceptions">User-defined Exceptions</a></li>
+<li><a class="reference internal" href="#defining-clean-up-actions">Defining Clean-up Actions</a></li>
+<li><a class="reference internal" href="#predefined-clean-up-actions">Predefined Clean-up Actions</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="inputoutput.html"
+                        title="previous chapter">Input and Output</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="classes.html"
+                        title="next chapter">Classes</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/errors.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="errors-and-exceptions">
+<h1>Errors and Exceptions<a class="headerlink" href="#errors-and-exceptions" title="Permalink to this headline">¶</a></h1>
+<p>Until now error messages haven&#8217;t been more than mentioned, but if you
+have tried out the examples you have probably seen some.  There are
+(at least) two distinguishable kinds of errors: <em>syntax errors</em> and
+<em>exceptions</em>.</p>
+<div class="section" id="syntax-errors">
+<h2>Syntax Errors<a class="headerlink" href="#syntax-errors" title="Permalink to this headline">¶</a></h2>
+<p>Syntax errors, also known as parsing errors, are perhaps the most
+common kind of complaint you get while you are still learning Python:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="kc">True</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello world&#39;</span><span class="p">)</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>
+    <span class="k">while</span> <span class="kc">True</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello world&#39;</span><span class="p">)</span>
+                   <span class="o">^</span>
+<span class="gr">SyntaxError</span>: <span class="n">invalid syntax</span>
+</pre></div>
+</div>
+<p>The parser repeats the offending line and displays a little &#8216;arrow&#8217;
+pointing at the earliest point in the line where the error was
+detected.  The error is caused by (or at least detected at) the token
+<em>preceding</em> the arrow: in the example, the error is detected at the
+function &#8220;print()&#8221;, since a colon (&#8220;&#8217;:&#8217;&#8221;) is missing before it.  File
+name and line number are printed so you know where to look in case the
+input came from a script.</p>
+</div>
+<div class="section" id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<p>Even if a statement or expression is syntactically correct, it may
+cause an error when an attempt is made to execute it. Errors detected
+during execution are called <em>exceptions</em> and are not unconditionally
+fatal: you will soon learn how to handle them in Python programs.
+Most exceptions are not handled by programs, however, and result in
+error messages as shown here:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">ZeroDivisionError</span>: <span class="n">division by zero</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="o">+</span> <span class="n">spam</span><span class="o">*</span><span class="mi">3</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">NameError</span>: <span class="n">name &#39;spam&#39; is not defined</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;2&#39;</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">TypeError</span>: <span class="n">Can&#39;t convert &#39;int&#39; object to str implicitly</span>
+</pre></div>
+</div>
+<p>The last line of the error message indicates what happened. Exceptions
+come in different types, and the type is printed as part of the
+message: the types in the example are &#8220;ZeroDivisionError&#8221;, &#8220;NameError&#8221;
+and &#8220;TypeError&#8221;. The string printed as the exception type is the name
+of the built-in exception that occurred.  This is true for all built-
+in exceptions, but need not be true for user-defined exceptions
+(although it is a useful convention). Standard exception names are
+built-in identifiers (not reserved keywords).</p>
+<p>The rest of the line provides detail based on the type of exception
+and what caused it.</p>
+<p>The preceding part of the error message shows the context where the
+exception happened, in the form of a stack traceback. In general it
+contains a stack traceback listing source lines; however, it will not
+display lines read from standard input.</p>
+<p>Built-in Exceptions lists the built-in exceptions and their meanings.</p>
+</div>
+<div class="section" id="handling-exceptions">
+<h2>Handling Exceptions<a class="headerlink" href="#handling-exceptions" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to write programs that handle selected exceptions. Look
+at the following example, which asks the user for input until a valid
+integer has been entered, but allows the user to interrupt the program
+(using &#8220;Control-C&#8221; or whatever the operating system supports); note
+that a user-generated interruption is signalled by raising the
+&#8220;KeyboardInterrupt&#8221; exception.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter a number: &quot;</span><span class="p">))</span>
+<span class="gp">... </span>        <span class="k">break</span>
+<span class="gp">... </span>    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Oops!  That was no valid number.  Try again...&quot;</span><span class="p">)</span>
+<span class="gp">...</span>
+</pre></div>
+</div>
+<p>The &#8220;try&#8221; statement works as follows.</p>
+<ul class="simple">
+<li>First, the <em>try clause</em> (the statement(s) between the &#8220;try&#8221; and
+&#8220;except&#8221; keywords) is executed.</li>
+<li>If no exception occurs, the <em>except clause</em> is skipped and
+execution of the &#8220;try&#8221; statement is finished.</li>
+<li>If an exception occurs during execution of the try clause, the
+rest of the clause is skipped.  Then if its type matches the
+exception named after the &#8220;except&#8221; keyword, the except clause is
+executed, and then execution continues after the &#8220;try&#8221; statement.</li>
+<li>If an exception occurs which does not match the exception named in
+the except clause, it is passed on to outer &#8220;try&#8221; statements; if no
+handler is found, it is an <em>unhandled exception</em> and execution stops
+with a message as shown above.</li>
+</ul>
+<p>A &#8220;try&#8221; statement may have more than one except clause, to specify
+handlers for different exceptions.  At most one handler will be
+executed. Handlers only handle exceptions that occur in the
+corresponding try clause, not in other handlers of the same &#8220;try&#8221;
+statement.  An except clause may name multiple exceptions as a
+parenthesized tuple, for example:</p>
+<blockquote>
+<div>... except (RuntimeError, TypeError, NameError):
+...     pass</div></blockquote>
+<p>A class in an &#8220;except&#8221; clause is compatible with an exception if it is
+the same class or a base class thereof (but not the other way around
+&#8212; an except clause listing a derived class is not compatible with a
+base class).  For example, the following code will print B, C, D in
+that order:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>class B(Exception):</dt>
+<dd>pass</dd>
+<dt>class C(B):</dt>
+<dd>pass</dd>
+<dt>class D(C):</dt>
+<dd>pass</dd>
+<dt>for cls in [B, C, D]:</dt>
+<dd><dl class="first last docutils">
+<dt>try:</dt>
+<dd>raise cls()</dd>
+<dt>except D:</dt>
+<dd>print(&#8220;D&#8221;)</dd>
+<dt>except C:</dt>
+<dd>print(&#8220;C&#8221;)</dd>
+<dt>except B:</dt>
+<dd>print(&#8220;B&#8221;)</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<p>Note that if the except clauses were reversed (with &#8220;except B&#8221; first),
+it would have printed B, B, B &#8212; the first matching except clause is
+triggered.</p>
+<p>The last except clause may omit the exception name(s), to serve as a
+wildcard. Use this with extreme caution, since it is easy to mask a
+real programming error in this way!  It can also be used to print an
+error message and then re-raise the exception (allowing a caller to
+handle the exception as well):</p>
+<blockquote>
+<div><p>import sys</p>
+<dl class="docutils">
+<dt>try:</dt>
+<dd>f = open(&#8216;myfile.txt&#8217;)
+s = f.readline()
+i = int(s.strip())</dd>
+<dt>except OSError as err:</dt>
+<dd>print(&#8220;OS error: {0}&#8221;.format(err))</dd>
+<dt>except ValueError:</dt>
+<dd>print(&#8220;Could not convert data to an integer.&#8221;)</dd>
+<dt>except:</dt>
+<dd>print(&#8220;Unexpected error:&#8221;, sys.exc_info()[0])
+raise</dd>
+</dl>
+</div></blockquote>
+<p>The &#8220;try&#8221; ... &#8220;except&#8221; statement has an optional <em>else clause</em>, which,
+when present, must follow all except clauses.  It is useful for code
+that must be executed if the try clause does not raise an exception.
+For example:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>for arg in sys.argv[1:]:</dt>
+<dd><dl class="first last docutils">
+<dt>try:</dt>
+<dd>f = open(arg, &#8216;r&#8217;)</dd>
+<dt>except IOError:</dt>
+<dd>print(&#8216;cannot open&#8217;, arg)</dd>
+<dt>else:</dt>
+<dd>print(arg, &#8216;has&#8217;, len(f.readlines()), &#8216;lines&#8217;)
+f.close()</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<p>The use of the &#8220;else&#8221; clause is better than adding additional code to
+the &#8220;try&#8221; clause because it avoids accidentally catching an exception
+that wasn&#8217;t raised by the code being protected by the &#8220;try&#8221; ...
+&#8220;except&#8221; statement.</p>
+<p>When an exception occurs, it may have an associated value, also known
+as the exception&#8217;s <em>argument</em>. The presence and type of the argument
+depend on the exception type.</p>
+<p>The except clause may specify a variable after the exception name.
+The variable is bound to an exception instance with the arguments
+stored in &#8220;instance.args&#8221;.  For convenience, the exception instance
+defines &#8220;__str__()&#8221; so the arguments can be printed directly without
+having to reference &#8221;.args&#8221;.  One may also instantiate an exception
+first before raising it and add any attributes to it as desired.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="s1">&#39;eggs&#39;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">inst</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">inst</span><span class="p">))</span>    <span class="c1"># the exception instance</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">inst</span><span class="o">.</span><span class="n">args</span><span class="p">)</span>     <span class="c1"># arguments stored in .args</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">inst</span><span class="p">)</span>          <span class="c1"># __str__ allows args to be printed directly,</span>
+<span class="gp">... </span>                         <span class="c1"># but may be overridden in exception subclasses</span>
+<span class="gp">... </span>    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">inst</span><span class="o">.</span><span class="n">args</span>     <span class="c1"># unpack args</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x =&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;y =&#39;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">&lt;class &#39;Exception&#39;&gt;</span>
+<span class="go">(&#39;spam&#39;, &#39;eggs&#39;)</span>
+<span class="go">(&#39;spam&#39;, &#39;eggs&#39;)</span>
+<span class="go">x = spam</span>
+<span class="go">y = eggs</span>
+</pre></div>
+</div>
+<p>If an exception has arguments, they are printed as the last part
+(&#8216;detail&#8217;) of the message for unhandled exceptions.</p>
+<p>Exception handlers don&#8217;t just handle exceptions if they occur
+immediately in the try clause, but also if they occur inside functions
+that are called (even indirectly) in the try clause. For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">this_fails</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">0</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">this_fails</span><span class="p">()</span>
+<span class="gp">... </span><span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Handling run-time error:&#39;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">Handling run-time error: division by zero</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="raising-exceptions">
+<h2>Raising Exceptions<a class="headerlink" href="#raising-exceptions" title="Permalink to this headline">¶</a></h2>
+<p>The &#8220;raise&#8221; statement allows the programmer to force a specified
+exception to occur. For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span><span class="s1">&#39;HiThere&#39;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">NameError</span>: <span class="n">HiThere</span>
+</pre></div>
+</div>
+<p>The sole argument to &#8220;raise&#8221; indicates the exception to be raised.
+This must be either an exception instance or an exception class (a
+class that derives from &#8220;Exception&#8221;).  If an exception class is
+passed, it will be implicitly instantiated by calling its constructor
+with no arguments:</p>
+<blockquote>
+<div>raise ValueError  # shorthand for &#8216;raise ValueError()&#8217;</div></blockquote>
+<p>If you need to determine whether an exception was raised but don&#8217;t
+intend to handle it, a simpler form of the &#8220;raise&#8221; statement allows
+you to re-raise the exception:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span><span class="s1">&#39;HiThere&#39;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;An exception flew by!&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">raise</span>
+<span class="gp">...</span>
+<span class="go">An exception flew by!</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">2</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">NameError</span>: <span class="n">HiThere</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="user-defined-exceptions">
+<h2>User-defined Exceptions<a class="headerlink" href="#user-defined-exceptions" title="Permalink to this headline">¶</a></h2>
+<p>Programs may name their own exceptions by creating a new exception
+class (see Classes for more about Python classes).  Exceptions should
+typically be derived from the &#8220;Exception&#8221; class, either directly or
+indirectly.</p>
+<p>Exception classes can be defined which do anything any other class can
+do, but are usually kept simple, often only offering a number of
+attributes that allow information about the error to be extracted by
+handlers for the exception.  When creating a module that can raise
+several distinct errors, a common practice is to create a base class
+for exceptions defined by that module, and subclass that to create
+specific exception classes for different error conditions:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>class Error(Exception):</dt>
+<dd>&#8220;&#8221;&#8220;Base class for exceptions in this module.&#8221;&#8220;&#8221;
+pass</dd>
+<dt>class InputError(Error):</dt>
+<dd><p class="first">&#8220;&#8221;&#8220;Exception raised for errors in the input.</p>
+<dl class="docutils">
+<dt>Attributes:</dt>
+<dd>expression &#8211; input expression in which the error occurred
+message &#8211; explanation of the error</dd>
+</dl>
+<p>&#8220;&#8221;&#8220;</p>
+<dl class="last docutils">
+<dt>def __init__(self, expression, message):</dt>
+<dd>self.expression = expression
+self.message = message</dd>
+</dl>
+</dd>
+<dt>class TransitionError(Error):</dt>
+<dd><p class="first">&#8220;&#8221;&#8220;Raised when an operation attempts a state transition that&#8217;s not
+allowed.</p>
+<dl class="docutils">
+<dt>Attributes:</dt>
+<dd>previous &#8211; state at beginning of transition
+next &#8211; attempted new state
+message &#8211; explanation of why the specific transition is not allowed</dd>
+</dl>
+<p>&#8220;&#8221;&#8220;</p>
+<dl class="last docutils">
+<dt>def __init__(self, previous, next, message):</dt>
+<dd>self.previous = previous
+self.next = next
+self.message = message</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<p>Most exceptions are defined with names that end in &#8220;Error,&#8221; similar to
+the naming of the standard exceptions.</p>
+<p>Many standard modules define their own exceptions to report errors
+that may occur in functions they define.  More information on classes
+is presented in chapter Classes.</p>
+</div>
+<div class="section" id="defining-clean-up-actions">
+<h2>Defining Clean-up Actions<a class="headerlink" href="#defining-clean-up-actions" title="Permalink to this headline">¶</a></h2>
+<p>The &#8220;try&#8221; statement has another optional clause which is intended to
+define clean-up actions that must be executed under all circumstances.
+For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">raise</span> <span class="ne">KeyboardInterrupt</span>
+<span class="gp">... </span><span class="k">finally</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Goodbye, world!&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">Goodbye, world!</span>
+<span class="nc">KeyboardInterrupt</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">2</span>, in <span class="n">&lt;module&gt;</span>
+</pre></div>
+</div>
+<p>A <em>finally clause</em> is always executed before leaving the &#8220;try&#8221;
+statement, whether an exception has occurred or not. When an exception
+has occurred in the &#8220;try&#8221; clause and has not been handled by an
+&#8220;except&#8221; clause (or it has occurred in an &#8220;except&#8221; or &#8220;else&#8221; clause),
+it is re-raised after the &#8220;finally&#8221; clause has been executed.  The
+&#8220;finally&#8221; clause is also executed &#8220;on the way out&#8221; when any other
+clause of the &#8220;try&#8221; statement is left via a &#8220;break&#8221;, &#8220;continue&#8221; or
+&#8220;return&#8221; statement.  A more complicated example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">result</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+<span class="gp">... </span>    <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;division by zero!&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;result is&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">finally</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;executing finally clause&quot;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">divide</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">result is 2.0</span>
+<span class="go">executing finally clause</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">divide</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="go">division by zero!</span>
+<span class="go">executing finally clause</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">divide</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">)</span>
+<span class="go">executing finally clause</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">3</span>, in <span class="n">divide</span>
+<span class="gr">TypeError</span>: <span class="n">unsupported operand type(s) for /: &#39;str&#39; and &#39;str&#39;</span>
+</pre></div>
+</div>
+<p>As you can see, the &#8220;finally&#8221; clause is executed in any event.  The
+&#8220;TypeError&#8221; raised by dividing two strings is not handled by the
+&#8220;except&#8221; clause and therefore re-raised after the &#8220;finally&#8221; clause has
+been executed.</p>
+<p>In real world applications, the &#8220;finally&#8221; clause is useful for
+releasing external resources (such as files or network connections),
+regardless of whether the use of the resource was successful.</p>
+</div>
+<div class="section" id="predefined-clean-up-actions">
+<h2>Predefined Clean-up Actions<a class="headerlink" href="#predefined-clean-up-actions" title="Permalink to this headline">¶</a></h2>
+<p>Some objects define standard clean-up actions to be undertaken when
+the object is no longer needed, regardless of whether or not the
+operation using the object succeeded or failed. Look at the following
+example, which tries to open a file and print its contents to the
+screen.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>for line in open(&#8220;myfile.txt&#8221;):</dt>
+<dd>print(line, end=&#8221;&#8221;)</dd>
+</dl>
+</div></blockquote>
+<p>The problem with this code is that it leaves the file open for an
+indeterminate amount of time after this part of the code has finished
+executing. This is not an issue in simple scripts, but can be a
+problem for larger applications. The &#8220;with&#8221; statement allows objects
+like files to be used in a way that ensures they are always cleaned up
+promptly and correctly.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>with open(&#8220;myfile.txt&#8221;) as f:</dt>
+<dd><dl class="first last docutils">
+<dt>for line in f:</dt>
+<dd>print(line, end=&#8221;&#8221;)</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<p>After the statement is executed, the file <em>f</em> is always closed, even
+if a problem was encountered while processing the lines. Objects
+which, like files, provide predefined clean-up actions will indicate
+this in their documentation.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="classes.html" title="Classes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="inputoutput.html" title="Input and Output"
+             >previous</a> |</li>
+		<li><img src="_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: 4px"/></li>
+        <li><a href="index.html">Trang chủ</a>|&nbsp;</li>
+        <li><a href="search.html">Tìm kiếm</a>|&nbsp;</li>
+        <li><a href="contents.html">Mục lục </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="contents.html" >Python 3.5.2 documentation contents</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 12-2016, Trần Viết Sơn.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>

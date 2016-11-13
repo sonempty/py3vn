@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Virtual Environments and Packages &#8212; Dich tieng Viet Python  3.5.2 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '3.5.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Dich tieng Viet Python  3.5.2 documentation" href="index.html" />
+    <link rel="up" title="Python 3.5.2 documentation contents" href="contents.html" />
+    <link rel="next" title="What Now?" href="whatnow.html" />
+    <link rel="prev" title="Brief Tour of the Standard Library – Part II" href="stdlib2.html" /> 
+  </head>
+  <body role="document">
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/logo.png" border="0" alt="Python tiếng Việt"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="whatnow.html" title="What Now?"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="stdlib2.html" title="Brief Tour of the Standard Library – Part II"
+             accesskey="P">previous</a> |</li>
+		<li><img src="_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: 4px"/></li>
+        <li><a href="index.html">Trang chủ</a>|&nbsp;</li>
+        <li><a href="search.html">Tìm kiếm</a>|&nbsp;</li>
+        <li><a href="contents.html">Mục lục </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="contents.html" accesskey="U">Python 3.5.2 documentation contents</a> &#187;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Virtual Environments and Packages</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#creating-virtual-environments">Creating Virtual Environments</a></li>
+<li><a class="reference internal" href="#managing-packages-with-pip">Managing Packages with pip</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="stdlib2.html"
+                        title="previous chapter">Brief Tour of the Standard Library &#8211; Part II</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="whatnow.html"
+                        title="next chapter">What Now?</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/venv.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="virtual-environments-and-packages">
+<h1>Virtual Environments and Packages<a class="headerlink" href="#virtual-environments-and-packages" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Python applications will often use packages and modules that don&#8217;t
+come as part of the standard library.  Applications will sometimes
+need a specific version of a library, because the application may
+require that a particular bug has been fixed or the application may be
+written using an obsolete version of the library&#8217;s interface.</p>
+<p>This means it may not be possible for one Python installation to meet
+the requirements of every application.  If application A needs version
+1.0 of a particular module but application B needs version 2.0, then
+the requirements are in conflict and installing either version 1.0 or
+2.0 will leave one application unable to run.</p>
+<p>The solution for this problem is to create a <em>virtual environment</em>
+(often shortened to &#8220;virtualenv&#8221;), a self-contained directory tree
+that contains a Python installation for a particular version of
+Python, plus a number of additional packages.</p>
+<p>Different applications can then use different virtual environments. To
+resolve the earlier example of conflicting requirements, application A
+can have its own virtual environment with version 1.0 installed while
+application B has another virtualenv with version 2.0. If application
+B requires a library be upgraded to version 3.0, this will not affect
+application A&#8217;s environment.</p>
+</div>
+<div class="section" id="creating-virtual-environments">
+<h2>Creating Virtual Environments<a class="headerlink" href="#creating-virtual-environments" title="Permalink to this headline">¶</a></h2>
+<p>The script used to create and manage virtual environments is called
+<strong>pyvenv</strong>.  <strong>pyvenv</strong> will usually install the most recent version
+of Python that you have available; the script is also installed with a
+version number, so if you have multiple versions of Python on your
+system you can select a specific Python version by running
+&#8220;pyvenv-3.4&#8221; or whichever version you want.</p>
+<p>To create a virtualenv, decide upon a directory where you want to
+place it and run <strong>pyvenv</strong> with the directory path:</p>
+<blockquote>
+<div>pyvenv tutorial-env</div></blockquote>
+<p>This will create the &#8220;tutorial-env&#8221; directory if it doesn&#8217;t exist, and
+also create directories inside it containing a copy of the Python
+interpreter, the standard library, and various supporting files.</p>
+<p>Once you&#8217;ve created a virtual environment, you need to activate it.</p>
+<p>On Windows, run:</p>
+<blockquote>
+<div>tutorial-env/Scripts/activate</div></blockquote>
+<p>On Unix or MacOS, run:</p>
+<blockquote>
+<div>source tutorial-env/bin/activate</div></blockquote>
+<p>(This script is written for the bash shell.  If you use the <strong>csh</strong> or
+<strong>fish</strong> shells, there are alternate &#8220;activate.csh&#8221; and
+&#8220;activate.fish&#8221; scripts you should use instead.)</p>
+<p>Activating the virtualenv will change your shell&#8217;s prompt to show what
+virtualenv you&#8217;re using, and modify the environment so that running
+&#8220;python&#8221; will get you that particular version and installation of
+Python.  For example:</p>
+<blockquote>
+<div><p>-&gt; source ~/envs/tutorial-env/bin/activate
+(tutorial-env) -&gt; python
+Python 3.4.3+ (3.4:c7b9645a6f35+, May 22 2015, 09:31:25)</p>
+<blockquote>
+<div>...</div></blockquote>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sys</span><span class="o">.</span><span class="n">path</span>
+<span class="go">[&#39;&#39;, &#39;/usr/local/lib/python34.zip&#39;, ...,</span>
+<span class="go">&#39;~/envs/tutorial-env/lib/python3.4/site-packages&#39;]</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="managing-packages-with-pip">
+<h2>Managing Packages with pip<a class="headerlink" href="#managing-packages-with-pip" title="Permalink to this headline">¶</a></h2>
+<p>Once you&#8217;ve activated a virtual environment, you can install, upgrade,
+and remove packages using a program called <strong>pip</strong>.  By default &#8220;pip&#8221;
+will install packages from the Python Package Index,
+&lt;<a class="reference external" href="https://pypi.python.org/pypi">https://pypi.python.org/pypi</a>&gt;.  You can browse the Python Package
+Index by going to it in your web browser, or you can use &#8220;pip&#8220;&#8216;s
+limited search feature:</p>
+<blockquote>
+<div>(tutorial-env) -&gt; pip search astronomy
+skyfield               - Elegant astronomy for Python
+gary                   - Galactic astronomy and gravitational dynamics.
+novas                  - The United States Naval Observatory NOVAS astronomy library
+astroobs               - Provides astronomy ephemeris to plan telescope observations
+PyAstronomy            - A collection of astronomy related tools for Python.
+...</div></blockquote>
+<p>&#8220;pip&#8221; has a number of subcommands: &#8220;search&#8221;, &#8220;install&#8221;, &#8220;uninstall&#8221;,
+&#8220;freeze&#8221;, etc.  (Consult the <em>Installing Python Modules</em> guide for
+complete documentation for &#8220;pip&#8221;.)</p>
+<p>You can install the latest version of a package by specifying a
+package&#8217;s name:</p>
+<blockquote>
+<div><p>-&gt; pip install novas
+Collecting novas</p>
+<blockquote>
+<div>Downloading novas-3.1.1.3.tar.gz (136kB)</div></blockquote>
+<dl class="docutils">
+<dt>Installing collected packages: novas</dt>
+<dd>Running setup.py install for novas</dd>
+</dl>
+<p>Successfully installed novas-3.1.1.3</p>
+</div></blockquote>
+<p>You can also install a specific version of a package by giving the
+package name  followed by &#8220;==&#8221; and the version number:</p>
+<blockquote>
+<div><p>-&gt; pip install requests==2.6.0
+Collecting requests==2.6.0</p>
+<blockquote>
+<div>Using cached requests-2.6.0-py2.py3-none-any.whl</div></blockquote>
+<p>Installing collected packages: requests
+Successfully installed requests-2.6.0</p>
+</div></blockquote>
+<p>If you re-run this command, &#8220;pip&#8221; will notice that the requested
+version is already installed and do nothing.  You can supply a
+different version number to get that version, or you can run &#8220;pip
+install &#8211;upgrade&#8221; to upgrade the package to the latest version:</p>
+<blockquote>
+<div><p>-&gt; pip install &#8211;upgrade requests
+Collecting requests
+Installing collected packages: requests</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>Found existing installation: requests 2.6.0</dt>
+<dd><dl class="first last docutils">
+<dt>Uninstalling requests-2.6.0:</dt>
+<dd>Successfully uninstalled requests-2.6.0</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<p>Successfully installed requests-2.7.0</p>
+</div></blockquote>
+<p>&#8220;pip uninstall&#8221; followed by one or more package names will remove the
+packages from the virtual environment.</p>
+<p>&#8220;pip show&#8221; will display information about a particular package:</p>
+<blockquote>
+<div>(tutorial-env) -&gt; pip show requests
+&#8212;
+Metadata-Version: 2.0
+Name: requests
+Version: 2.7.0
+Summary: Python HTTP for Humans.
+Home-page: <a class="reference external" href="http://python-requests.org">http://python-requests.org</a>
+Author: Kenneth Reitz
+Author-email: <a class="reference external" href="mailto:me&#37;&#52;&#48;kennethreitz&#46;com">me<span>&#64;</span>kennethreitz<span>&#46;</span>com</a>
+License: Apache 2.0
+Location: /Users/akuchling/envs/tutorial-env/lib/python3.4/site-packages
+Requires:</div></blockquote>
+<p>&#8220;pip list&#8221; will display all of the packages installed in the virtual
+environment:</p>
+<blockquote>
+<div>(tutorial-env) -&gt; pip list
+novas (3.1.1.3)
+numpy (1.9.2)
+pip (7.0.3)
+requests (2.7.0)
+setuptools (16.0)</div></blockquote>
+<p>&#8220;pip freeze&#8221; will produce a similar list of the installed packages,
+but the output uses the format that &#8220;pip install&#8221; expects. A common
+convention is to put this list in a &#8220;requirements.txt&#8221; file:</p>
+<blockquote>
+<div>(tutorial-env) -&gt; pip freeze &gt; requirements.txt
+(tutorial-env) -&gt; cat requirements.txt
+novas==3.1.1.3
+numpy==1.9.2
+requests==2.7.0</div></blockquote>
+<p>The &#8220;requirements.txt&#8221; can then be committed to version control and
+shipped as part of an application.  Users can then install all the
+necessary packages with &#8220;install -r&#8221;:</p>
+<blockquote>
+<div><p>-&gt; pip install -r requirements.txt
+Collecting novas==3.1.1.3 (from -r requirements.txt (line 1))</p>
+<blockquote>
+<div>...</div></blockquote>
+<dl class="docutils">
+<dt>Collecting numpy==1.9.2 (from -r requirements.txt (line 2))</dt>
+<dd>...</dd>
+<dt>Collecting requests==2.7.0 (from -r requirements.txt (line 3))</dt>
+<dd>...</dd>
+<dt>Installing collected packages: novas, numpy, requests</dt>
+<dd>Running setup.py install for novas</dd>
+</dl>
+<p>Successfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0</p>
+</div></blockquote>
+<p>&#8220;pip&#8221; has many more options.  Consult the <em>Installing Python Modules</em>
+guide for complete documentation for &#8220;pip&#8221;.  When you&#8217;ve written a
+package and want to make it available on the Python Package Index,
+consult the <em>Distributing Python Modules</em> guide.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="whatnow.html" title="What Now?"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="stdlib2.html" title="Brief Tour of the Standard Library – Part II"
+             >previous</a> |</li>
+		<li><img src="_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: 4px"/></li>
+        <li><a href="index.html">Trang chủ</a>|&nbsp;</li>
+        <li><a href="search.html">Tìm kiếm</a>|&nbsp;</li>
+        <li><a href="contents.html">Mục lục </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="contents.html" >Python 3.5.2 documentation contents</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 12-2016, Trần Viết Sơn.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>

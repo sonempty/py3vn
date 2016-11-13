@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Appendix &#8212; Dich tieng Viet Python  3.5.2 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '3.5.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Dich tieng Viet Python  3.5.2 documentation" href="index.html" />
+    <link rel="up" title="Python 3.5.2 documentation contents" href="contents.html" />
+    <link rel="prev" title="Floating Point Arithmetic: Issues and Limitations" href="floatingpoint.html" /> 
+  </head>
+  <body role="document">
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/logo.png" border="0" alt="Python tiếng Việt"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="floatingpoint.html" title="Floating Point Arithmetic: Issues and Limitations"
+             accesskey="P">previous</a> |</li>
+		<li><img src="_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: 4px"/></li>
+        <li><a href="index.html">Trang chủ</a>|&nbsp;</li>
+        <li><a href="search.html">Tìm kiếm</a>|&nbsp;</li>
+        <li><a href="contents.html">Mục lục </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="contents.html" accesskey="U">Python 3.5.2 documentation contents</a> &#187;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Appendix</a><ul>
+<li><a class="reference internal" href="#interactive-mode">Interactive Mode</a><ul>
+<li><a class="reference internal" href="#error-handling">Error Handling</a></li>
+<li><a class="reference internal" href="#executable-python-scripts">Executable Python Scripts</a></li>
+<li><a class="reference internal" href="#the-interactive-startup-file">The Interactive Startup File</a></li>
+<li><a class="reference internal" href="#the-customization-modules">The Customization Modules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="floatingpoint.html"
+                        title="previous chapter">Floating Point Arithmetic:  Issues and Limitations</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/appendix.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="appendix">
+<h1>Appendix<a class="headerlink" href="#appendix" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="interactive-mode">
+<h2>Interactive Mode<a class="headerlink" href="#interactive-mode" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="error-handling">
+<h3>Error Handling<a class="headerlink" href="#error-handling" title="Permalink to this headline">¶</a></h3>
+<p>When an error occurs, the interpreter prints an error message and a
+stack trace. In interactive mode, it then returns to the primary
+prompt; when input came from a file, it exits with a nonzero exit
+status after printing the stack trace. (Exceptions handled by an
+&#8220;except&#8221; clause in a &#8220;try&#8221; statement are not errors in this context.)
+Some errors are unconditionally fatal and cause an exit with a nonzero
+exit; this applies to internal inconsistencies and some cases of
+running out of memory.  All error messages are written to the standard
+error stream; normal output from executed commands is written to
+standard output.</p>
+<p>Typing the interrupt character (usually &#8220;Control-C&#8221; or &#8220;Delete&#8221;) to
+the primary or secondary prompt cancels the input and returns to the
+primary prompt. [1] Typing an interrupt while a command is executing
+raises the &#8220;KeyboardInterrupt&#8221; exception, which may be handled by a
+&#8220;try&#8221; statement.</p>
+</div>
+<div class="section" id="executable-python-scripts">
+<h3>Executable Python Scripts<a class="headerlink" href="#executable-python-scripts" title="Permalink to this headline">¶</a></h3>
+<p>On BSD&#8217;ish Unix systems, Python scripts can be made directly
+executable, like shell scripts, by putting the line</p>
+<blockquote>
+<div>#!/usr/bin/env python3.5</div></blockquote>
+<p>(assuming that the interpreter is on the user&#8217;s &#8220;PATH&#8221;) at the
+beginning of the script and giving the file an executable mode.  The
+&#8220;#!&#8221; must be the first two characters of the file.  On some platforms,
+this first line must end with a Unix-style line ending (&#8220;&#8216;n&#8217;&#8221;), not a
+Windows (&#8220;&#8216;rn&#8217;&#8221;) line ending.  Note that the hash, or pound,
+character, &#8220;&#8217;#&#8217;&#8221;, is used to start a comment in Python.</p>
+<p>The script can be given an executable mode, or permission, using the
+<strong>chmod</strong> command.</p>
+<blockquote>
+<div>$ chmod +x myscript.py</div></blockquote>
+<p>On Windows systems, there is no notion of an &#8220;executable mode&#8221;.  The
+Python installer automatically associates &#8221;.py&#8221; files with
+&#8220;python.exe&#8221; so that a double-click on a Python file will run it as a
+script.  The extension can also be &#8221;.pyw&#8221;, in that case, the console
+window that normally appears is suppressed.</p>
+</div>
+<div class="section" id="the-interactive-startup-file">
+<h3>The Interactive Startup File<a class="headerlink" href="#the-interactive-startup-file" title="Permalink to this headline">¶</a></h3>
+<p>When you use Python interactively, it is frequently handy to have some
+standard commands executed every time the interpreter is started.  You
+can do this by setting an environment variable named &#8220;PYTHONSTARTUP&#8221;
+to the name of a file containing your start-up commands.  This is
+similar to the &#8221;.profile&#8221; feature of the Unix shells.</p>
+<p>This file is only read in interactive sessions, not when Python reads
+commands from a script, and not when &#8220;/dev/tty&#8221; is given as the
+explicit source of commands (which otherwise behaves like an
+interactive session).  It is executed in the same namespace where
+interactive commands are executed, so that objects that it defines or
+imports can be used without qualification in the interactive session.
+You can also change the prompts &#8220;sys.ps1&#8221; and &#8220;sys.ps2&#8221; in this file.</p>
+<p>If you want to read an additional start-up file from the current
+directory, you can program this in the global start-up file using code
+like &#8220;if os.path.isfile(&#8216;.pythonrc.py&#8217;):
+exec(open(&#8216;.pythonrc.py&#8217;).read())&#8221;. If you want to use the startup
+file in a script, you must do this explicitly in the script:</p>
+<blockquote>
+<div><p>import os
+filename = os.environ.get(&#8216;PYTHONSTARTUP&#8217;)
+if filename and os.path.isfile(filename):</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>with open(filename) as fobj:</dt>
+<dd>startup_file = fobj.read()</dd>
+</dl>
+<p>exec(startup_file)</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="the-customization-modules">
+<h3>The Customization Modules<a class="headerlink" href="#the-customization-modules" title="Permalink to this headline">¶</a></h3>
+<p>Python provides two hooks to let you customize it: &#8220;sitecustomize&#8221; and
+&#8220;usercustomize&#8221;.  To see how it works, you need first to find the
+location of your user site-packages directory.  Start Python and run
+this code:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">site</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">site</span><span class="o">.</span><span class="n">getusersitepackages</span><span class="p">()</span>
+<span class="go">&#39;/home/user/.local/lib/python3.5/site-packages&#39;</span>
+</pre></div>
+</div>
+<p>Now you can create a file named &#8220;usercustomize.py&#8221; in that directory
+and put anything you want in it.  It will affect every invocation of
+Python, unless it is started with the &#8220;-s&#8221; option to disable the
+automatic import.</p>
+<p>&#8220;sitecustomize&#8221; works in the same way, but is typically created by an
+administrator of the computer in the global site-packages directory,
+and is imported before &#8220;usercustomize&#8221;.  See the documentation of the
+&#8220;site&#8221; module for more details.</p>
+<p>-[ Footnotes ]-</p>
+<p>[1] A problem with the GNU Readline package may prevent this.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="floatingpoint.html" title="Floating Point Arithmetic: Issues and Limitations"
+             >previous</a> |</li>
+		<li><img src="_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: 4px"/></li>
+        <li><a href="index.html">Trang chủ</a>|&nbsp;</li>
+        <li><a href="search.html">Tìm kiếm</a>|&nbsp;</li>
+        <li><a href="contents.html">Mục lục </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="contents.html" >Python 3.5.2 documentation contents</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 12-2016, Trần Viết Sơn.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>
