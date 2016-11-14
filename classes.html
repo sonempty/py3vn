@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>9. Classes &#8212; Tài liệu Python tiếng Việt   V3.5 documentation</title>
+    <title>9. Lớp (Classes) &#8212; Tài liệu Python tiếng Việt   V3.5 documentation</title>
     
     <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -26,7 +26,7 @@
     <link rel="copyright" title="Copyright" href="copyright.html" />
     <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="index.html" />
     <link rel="next" title="10. Brief Tour of the Standard Library" href="stdlib.html" />
-    <link rel="prev" title="8. Errors and Exceptions" href="errors.html" />
+    <link rel="prev" title="8. Lỗi và ngoại lệ" href="errors.html" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <link rel="shortcut icon" type="image/png" href="_static/favicon.png" />
     <meta name="viewport" content="width=device-width,initial-scale=0.8">
@@ -54,8 +54,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="classes">
-<span id="tut-classes"></span><h1>9. Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="lop-classes">
+<span id="tut-classes"></span><h1>9. Lớp (Classes)<a class="headerlink" href="#lop-classes" title="Permalink to this headline">¶</a></h1>
 <p>Compared with other programming languages, Python&#8217;s class mechanism adds classes
 with a minimum of new syntax and semantics.  It is a mixture of the class
 mechanisms found in C++ and Modula-3.  Python classes provide all the standard
@@ -66,7 +66,7 @@ name.  Objects can contain arbitrary amounts and kinds of data.  As is true for
 modules, classes partake of the dynamic nature of Python: they are created at
 runtime, and can be modified further after creation.</p>
 <p>In C++ terminology, normally class members (including the data members) are
-<em>public</em> (except see below <a class="reference internal" href="#tut-private"><span class="std std-ref">Private Variables</span></a>), and all member functions are
+<em>public</em> (except see below <a class="reference internal" href="#tut-private"><span class="std std-ref">Biến nội bộ (Private values)</span></a>), and all member functions are
 <em>virtual</em>.  As in Modula-3, there are no shorthands for referencing the object&#8217;s
 members from its methods: the method function is declared with an explicit first
 argument representing the object, which is provided implicitly by the call.  As
@@ -79,8 +79,8 @@ redefined for class instances.</p>
 occasional use of Smalltalk and C++ terms.  I would use Modula-3 terms, since
 its object-oriented semantics are closer to those of Python than C++, but I
 expect that few readers have heard of it.)</p>
-<div class="section" id="a-word-about-names-and-objects">
-<span id="tut-object"></span><h2>9.1. A Word About Names and Objects<a class="headerlink" href="#a-word-about-names-and-objects" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ten-cua-objects">
+<span id="tut-object"></span><h2>9.1. Tên của Objects<a class="headerlink" href="#ten-cua-objects" title="Permalink to this headline">¶</a></h2>
 <p>Objects have individuality, and multiple names (in multiple scopes) can be bound
 to the same object.  This is known as aliasing in other languages.  This is
 usually not appreciated on a first glance at Python, and can be safely ignored
@@ -93,8 +93,8 @@ pointer is passed by the implementation; and if a function modifies an object
 passed as an argument, the caller will see the change &#8212; this eliminates the
 need for two different argument passing mechanisms as in Pascal.</p>
 </div>
-<div class="section" id="python-scopes-and-namespaces">
-<span id="tut-scopes"></span><h2>9.2. Python Scopes and Namespaces<a class="headerlink" href="#python-scopes-and-namespaces" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pham-vi-scopes-va-khong-gian-ten-namespaces">
+<span id="tut-scopes"></span><h2>9.2. Phạm vi (Scopes) và Không gian tên (Namespaces)<a class="headerlink" href="#pham-vi-scopes-va-khong-gian-ten-namespaces" title="Permalink to this headline">¶</a></h2>
 <p>Before introducing classes, I first have to tell you something about Python&#8217;s
 scope rules.  Class definitions play some neat tricks with namespaces, and you
 need to know how scopes and namespaces work to fully understand what&#8217;s going on.
@@ -178,8 +178,8 @@ function definitions bind the module or function name in the local scope.</p>
 variables live in the global scope and should be rebound there; the
 <a class="reference internal" href="reference/simple_stmts.html#nonlocal"><code class="xref std std-keyword docutils literal"><span class="pre">nonlocal</span></code></a> statement indicates that particular variables live in
 an enclosing scope and should be rebound there.</p>
-<div class="section" id="scopes-and-namespaces-example">
-<span id="tut-scopeexample"></span><h3>9.2.1. Scopes and Namespaces Example<a class="headerlink" href="#scopes-and-namespaces-example" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="vi-du-ve-pham-vi-va-khong-gian-ten">
+<span id="tut-scopeexample"></span><h3>9.2.1. Ví dụ về phạm vi và không gian tên<a class="headerlink" href="#vi-du-ve-pham-vi-va-khong-gian-ten" title="Permalink to this headline">¶</a></h3>
 <p>This is an example demonstrating how to reference the different scopes and
 namespaces, and how <a class="reference internal" href="reference/simple_stmts.html#global"><code class="xref std std-keyword docutils literal"><span class="pre">global</span></code></a> and <a class="reference internal" href="reference/simple_stmts.html#nonlocal"><code class="xref std std-keyword docutils literal"><span class="pre">nonlocal</span></code></a> affect variable
 binding:</p>
@@ -222,12 +222,12 @@ binding.</p>
 <a class="reference internal" href="reference/simple_stmts.html#global"><code class="xref std std-keyword docutils literal"><span class="pre">global</span></code></a> assignment.</p>
 </div>
 </div>
-<div class="section" id="a-first-look-at-classes">
-<span id="tut-firstclasses"></span><h2>9.3. A First Look at Classes<a class="headerlink" href="#a-first-look-at-classes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cai-nhin-dau-tien-ve-lop">
+<span id="tut-firstclasses"></span><h2>9.3. Cái nhìn đầu tiên về Lớp<a class="headerlink" href="#cai-nhin-dau-tien-ve-lop" title="Permalink to this headline">¶</a></h2>
 <p>Classes introduce a little bit of new syntax, three new object types, and some
 new semantics.</p>
-<div class="section" id="class-definition-syntax">
-<span id="tut-classdefinition"></span><h3>9.3.1. Class Definition Syntax<a class="headerlink" href="#class-definition-syntax" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="cu-phap-dinh-nghia-lop">
+<span id="tut-classdefinition"></span><h3>9.3.1. Cú pháp định nghĩa lớp<a class="headerlink" href="#cu-phap-dinh-nghia-lop" title="Permalink to this headline">¶</a></h3>
 <p>The simplest form of class definition looks like this:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ClassName</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="n">statement</span><span class="o">-</span><span class="mi">1</span><span class="o">&gt;</span>
@@ -257,8 +257,8 @@ definition was entered) is reinstated, and the class object is bound here to the
 class name given in the class definition header (<code class="xref py py-class docutils literal"><span class="pre">ClassName</span></code> in the
 example).</p>
 </div>
-<div class="section" id="class-objects">
-<span id="tut-classobjects"></span><h3>9.3.2. Class Objects<a class="headerlink" href="#class-objects" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="doi-tuong-lop">
+<span id="tut-classobjects"></span><h3>9.3.2. Đối tượng lớp<a class="headerlink" href="#doi-tuong-lop" title="Permalink to this headline">¶</a></h3>
 <p>Class objects support two kinds of operations: attribute references and
 instantiation.</p>
 <p><em>Attribute references</em> use the standard syntax used for all attribute references
@@ -314,8 +314,8 @@ are passed on to <a class="reference internal" href="reference/datamodel.html#ob
 </pre></div>
 </div>
 </div>
-<div class="section" id="instance-objects">
-<span id="tut-instanceobjects"></span><h3>9.3.3. Instance Objects<a class="headerlink" href="#instance-objects" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="thuc-the-instance-cua-lop">
+<span id="tut-instanceobjects"></span><h3>9.3.3. Thực thể (instance) của lớp<a class="headerlink" href="#thuc-the-instance-cua-lop" title="Permalink to this headline">¶</a></h3>
 <p>Now what can we do with instance objects?  The only operations understood by
 instance objects are attribute references.  There are two kinds of valid
 attribute names, data attributes and methods.</p>
@@ -344,8 +344,8 @@ reference, since <code class="docutils literal"><span class="pre">MyClass.f</spa
 <code class="docutils literal"><span class="pre">MyClass.i</span></code> is not.  But <code class="docutils literal"><span class="pre">x.f</span></code> is not the same thing as <code class="docutils literal"><span class="pre">MyClass.f</span></code> &#8212; it
 is a <em>method object</em>, not a function object.</p>
 </div>
-<div class="section" id="method-objects">
-<span id="tut-methodobjects"></span><h3>9.3.4. Method Objects<a class="headerlink" href="#method-objects" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="doi-tuong-la-cac-phuong-thuc-method">
+<span id="tut-methodobjects"></span><h3>9.3.4. Đối tượng là các phương thức (Method)<a class="headerlink" href="#doi-tuong-la-cac-phuong-thuc-method" title="Permalink to this headline">¶</a></h3>
 <p>Usually, a method is called right after it is bound:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">f</span><span class="p">()</span>
 </pre></div>
@@ -380,8 +380,8 @@ with an argument list, a new argument list is constructed from the instance
 object and the argument list, and the function object is called with this new
 argument list.</p>
 </div>
-<div class="section" id="class-and-instance-variables">
-<span id="tut-class-and-instance-variables"></span><h3>9.3.5. Class and Instance Variables<a class="headerlink" href="#class-and-instance-variables" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="lop-va-bien-thuc-the">
+<span id="tut-class-and-instance-variables"></span><h3>9.3.5. Lớp và biến thực thể<a class="headerlink" href="#lop-va-bien-thuc-the" title="Permalink to this headline">¶</a></h3>
 <p>Generally speaking, instance variables are for data unique to each instance
 and class variables are for attributes and methods shared by all instances
 of the class:</p>
@@ -404,7 +404,7 @@ of the class:</p>
 <span class="s1">&#39;Buddy&#39;</span>
 </pre></div>
 </div>
-<p>As discussed in <a class="reference internal" href="#tut-object"><span class="std std-ref">A Word About Names and Objects</span></a>, shared data can have possibly surprising
+<p>As discussed in <a class="reference internal" href="#tut-object"><span class="std std-ref">Tên của Objects</span></a>, shared data can have possibly surprising
 effects with involving <a class="reference internal" href="glossary.html#term-mutable"><span class="xref std std-term">mutable</span></a> objects such as lists and dictionaries.
 For example, the <em>tricks</em> list in the following code should not be used as a
 class variable because just a single list would be shared by all <em>Dog</em>
@@ -449,8 +449,8 @@ instances:</p>
 </div>
 </div>
 </div>
-<div class="section" id="random-remarks">
-<span id="tut-remarks"></span><h2>9.4. Random Remarks<a class="headerlink" href="#random-remarks" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="chu-thich-ngau-nhien">
+<span id="tut-remarks"></span><h2>9.4. Chú thích ngẫu nhiên<a class="headerlink" href="#chu-thich-ngau-nhien" title="Permalink to this headline">¶</a></h2>
 <p>Data attributes override method attributes with the same name; to avoid
 accidental name conflicts, which may cause hard-to-find bugs in large programs,
 it is wise to use some kind of convention that minimizes the chance of
@@ -525,8 +525,8 @@ reasons why a method would want to reference its own class.</p>
 <p>Each value is an object, and therefore has a <em>class</em> (also called its <em>type</em>).
 It is stored as <code class="docutils literal"><span class="pre">object.__class__</span></code>.</p>
 </div>
-<div class="section" id="inheritance">
-<span id="tut-inheritance"></span><h2>9.5. Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ke-thua-inheritance">
+<span id="tut-inheritance"></span><h2>9.5. Kế thừa (Inheritance)<a class="headerlink" href="#ke-thua-inheritance" title="Permalink to this headline">¶</a></h2>
 <p>Of course, a language feature would not be worthy of the name &#8220;class&#8221; without
 supporting inheritance.  The syntax for a derived class definition looks like
 this:</p>
@@ -576,8 +576,8 @@ is <code class="docutils literal"><span class="pre">True</span></code> since <co
 <code class="docutils literal"><span class="pre">issubclass(float,</span> <span class="pre">int)</span></code> is <code class="docutils literal"><span class="pre">False</span></code> since <code class="xref py py-class docutils literal"><span class="pre">float</span></code> is not a
 subclass of <code class="xref py py-class docutils literal"><span class="pre">int</span></code>.</li>
 </ul>
-<div class="section" id="multiple-inheritance">
-<span id="tut-multiple"></span><h3>9.5.1. Multiple Inheritance<a class="headerlink" href="#multiple-inheritance" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="da-ke-thua">
+<span id="tut-multiple"></span><h3>9.5.1. Đa kế thừa<a class="headerlink" href="#da-ke-thua" title="Permalink to this headline">¶</a></h3>
 <p>Python supports a form of multiple inheritance as well.  A class definition with
 multiple base classes looks like this:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">DerivedClassName</span><span class="p">(</span><span class="n">Base1</span><span class="p">,</span> <span class="n">Base2</span><span class="p">,</span> <span class="n">Base3</span><span class="p">):</span>
@@ -613,8 +613,8 @@ extensible classes with multiple inheritance.  For more detail, see
 <a class="reference external" href="https://www.python.org/download/releases/2.3/mro/">https://www.python.org/download/releases/2.3/mro/</a>.</p>
 </div>
 </div>
-<div class="section" id="private-variables">
-<span id="tut-private"></span><h2>9.6. Private Variables<a class="headerlink" href="#private-variables" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bien-noi-bo-private-values">
+<span id="tut-private"></span><h2>9.6. Biến nội bộ (Private values)<a class="headerlink" href="#bien-noi-bo-private-values" title="Permalink to this headline">¶</a></h2>
 <p>&#8220;Private&#8221; instance variables that cannot be accessed except from inside an
 object don&#8217;t exist in Python.  However, there is a convention that is followed
 by most Python code: a name prefixed with an underscore (e.g. <code class="docutils literal"><span class="pre">_spam</span></code>) should
@@ -661,8 +661,8 @@ to code that is byte-compiled together.  The same restriction applies to
 <code class="docutils literal"><span class="pre">getattr()</span></code>, <code class="docutils literal"><span class="pre">setattr()</span></code> and <code class="docutils literal"><span class="pre">delattr()</span></code>, as well as when referencing
 <code class="docutils literal"><span class="pre">__dict__</span></code> directly.</p>
 </div>
-<div class="section" id="odds-and-ends">
-<span id="tut-odds"></span><h2>9.7. Odds and Ends<a class="headerlink" href="#odds-and-ends" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="noi-them-mot-chut-ve-lop">
+<span id="tut-odds"></span><h2>9.7. Nói thêm một chút về Lớp<a class="headerlink" href="#noi-them-mot-chut-ve-lop" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes it is useful to have a data type similar to the Pascal &#8220;record&#8221; or C
 &#8220;struct&#8221;, bundling together a few named data items.  An empty class definition
 will do nicely:</p>
@@ -686,8 +686,8 @@ data from a string buffer instead, and pass it as an argument.</p>
 object with the method <code class="xref py py-meth docutils literal"><span class="pre">m()</span></code>, and <code class="docutils literal"><span class="pre">m.__func__</span></code> is the function object
 corresponding to the method.</p>
 </div>
-<div class="section" id="iterators">
-<span id="tut-iterators"></span><h2>9.8. Iterators<a class="headerlink" href="#iterators" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vong-lap">
+<span id="tut-iterators"></span><h2>9.8. Vòng lặp<a class="headerlink" href="#vong-lap" title="Permalink to this headline">¶</a></h2>
 <p>By now you have probably noticed that most container objects can be looped over
 using a <a class="reference internal" href="reference/compound_stmts.html#for"><code class="xref std std-keyword docutils literal"><span class="pre">for</span></code></a> statement:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]:</span>
@@ -760,8 +760,8 @@ defines <code class="xref py py-meth docutils literal"><span class="pre">__next_
 </pre></div>
 </div>
 </div>
-<div class="section" id="generators">
-<span id="tut-generators"></span><h2>9.9. Generators<a class="headerlink" href="#generators" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bo-sinh-generators">
+<span id="tut-generators"></span><h2>9.9. Bộ sinh (Generators)<a class="headerlink" href="#bo-sinh-generators" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference internal" href="glossary.html#term-generator"><span class="xref std std-term">Generator</span></a>s are a simple and powerful tool for creating iterators.  They
 are written like regular functions but use the <a class="reference internal" href="reference/simple_stmts.html#yield"><code class="xref std std-keyword docutils literal"><span class="pre">yield</span></code></a> statement
 whenever they want to return data.  Each time <code class="xref py py-func docutils literal"><span class="pre">next()</span></code> is called on it, the
@@ -795,8 +795,8 @@ generators terminate, they automatically raise <code class="xref py py-exc docut
 combination, these features make it easy to create iterators with no more effort
 than writing a regular function.</p>
 </div>
-<div class="section" id="generator-expressions">
-<span id="tut-genexps"></span><h2>9.10. Generator Expressions<a class="headerlink" href="#generator-expressions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bieu-thuc-sinh">
+<span id="tut-genexps"></span><h2>9.10. Biểu thức sinh<a class="headerlink" href="#bieu-thuc-sinh" title="Permalink to this headline">¶</a></h2>
 <p>Some simple generators can be coded succinctly as expressions using a syntax
 similar to list comprehensions but with parentheses instead of brackets.  These
 expressions are designed for situations where the generator is used right away
@@ -858,25 +858,25 @@ should be restricted to things like post-mortem debuggers.</td></tr>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="index.html">Nội dung bài học</a></h3>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="appetite.html">1. Whetting Your Appetite</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interpreter.html">2. Using the Python Interpreter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">3. An Informal Introduction to Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="controlflow.html">4. More Control Flow Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="datastructures.html">5. Data Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">6. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appetite.html">1. Lời tựa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interpreter.html">2. Sử dụng trình thông dịch Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">3. Gới thiệu ngôn ngữ lập trình Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controlflow.html">4. Điều khiển luồng</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datastructures.html">5. Cấu trúc dữ liệu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">6. Mô-đun</a></li>
 <li class="toctree-l1"><a class="reference internal" href="inputoutput.html">7. Input and Output</a></li>
-<li class="toctree-l1"><a class="reference internal" href="errors.html">8. Errors and Exceptions</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Classes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#a-word-about-names-and-objects">9.1. A Word About Names and Objects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#python-scopes-and-namespaces">9.2. Python Scopes and Namespaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#a-first-look-at-classes">9.3. A First Look at Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#random-remarks">9.4. Random Remarks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#inheritance">9.5. Inheritance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#private-variables">9.6. Private Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#odds-and-ends">9.7. Odds and Ends</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#iterators">9.8. Iterators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#generators">9.9. Generators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#generator-expressions">9.10. Generator Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="errors.html">8. Lỗi và ngoại lệ</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Lớp (Classes)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ten-cua-objects">9.1. Tên của Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pham-vi-scopes-va-khong-gian-ten-namespaces">9.2. Phạm vi (Scopes) và Không gian tên (Namespaces)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cai-nhin-dau-tien-ve-lop">9.3. Cái nhìn đầu tiên về Lớp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#chu-thich-ngau-nhien">9.4. Chú thích ngẫu nhiên</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ke-thua-inheritance">9.5. Kế thừa (Inheritance)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bien-noi-bo-private-values">9.6. Biến nội bộ (Private values)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#noi-them-mot-chut-ve-lop">9.7. Nói thêm một chút về Lớp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vong-lap">9.8. Vòng lặp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bo-sinh-generators">9.9. Bộ sinh (Generators)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bieu-thuc-sinh">9.10. Biểu thức sinh</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="stdlib.html">10. Brief Tour of the Standard Library</a></li>
@@ -889,10 +889,10 @@ should be restricted to things like post-mortem debuggers.</td></tr>
 </ul>
 
   <div role="note" aria-label="source link">
-    <h3>Trang Web </h3>
+    <h3>Thực hành </h3>
     <ul class="this-page-menu">
       <li><a href="_sources/classes.txt"
-            rel="nofollow">Xem mã nguồn</a></li>
+            rel="nofollow">Bài tập chương này</a></li>
     </ul>
    </div>
         </div>
@@ -909,14 +909,14 @@ should be restricted to things like post-mortem debuggers.</td></tr>
           <a href="stdlib.html" title="10. Brief Tour of the Standard Library"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="errors.html" title="8. Errors and Exceptions"
+          <a href="errors.html" title="8. Lỗi và ngoại lệ"
              accesskey="P">previous</a> |</li>
       </ul>
     </div>
 
     <div class="footer" role="contentinfo">
         &#169; <a href="copyright.html">Copyright</a> 2016, Trần Viết Sơn.
-      Update lần cuối vào Nov 14, 2016.
+      Update lần cuối vào Nov 15, 2016.
       Webste được xây dựng bằng <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
     </div>
   </body>

@@ -1,7 +1,7 @@
 .. _tut-modules:
 
 *******
-Modules
+Mô-đun
 *******
 
 If you quit from the Python interpreter and enter it again, the definitions you
@@ -67,8 +67,8 @@ If you intend to use a function often you can assign it to a local name::
 
 .. _tut-moremodules:
 
-More on Modules
-===============
+Tìm hiểu thêm về Modules
+=========================
 
 A module can contain executable statements as well as function definitions.
 These statements are intended to initialize the module. They are executed only
@@ -123,8 +123,8 @@ use it to save typing in interactive sessions.
 
 .. _tut-modulesasscripts:
 
-Executing modules as scripts
-----------------------------
+Thực thi modules theo kịch bản
+------------------------------
 
 When you run a Python module with ::
 
@@ -158,8 +158,8 @@ for testing purposes (running the module as a script executes a test suite).
 
 .. _tut-searchpath:
 
-The Module Search Path
-----------------------
+Module tìm đường dẫn
+--------------------
 
 .. index:: triple: module; search; path
 
@@ -189,8 +189,8 @@ directory. This is an error unless the replacement is intended.  See section
 .. %
     Do we need stuff on zip files etc. ? DUBOIS
 
-"Compiled" Python files
------------------------
+Đóng gói các file Python
+-------------------------
 
 To speed up loading modules, Python caches the compiled version of each module
 in the ``__pycache__`` directory under the name :file:`module.{version}.pyc`,
@@ -235,8 +235,8 @@ Some tips for experts:
 
 .. _tut-standardmodules:
 
-Standard Modules
-================
+Các Modules chuẩn
+==================
 
 .. index:: module: sys
 
@@ -277,8 +277,8 @@ operations::
 
 .. _tut-dir:
 
-The :func:`dir` Function
-========================
+Hàm :func:`dir`
+===============
 
 The built-in function :func:`dir` is used to find out which names a module
 defines.  It returns a sorted list of strings::
@@ -355,8 +355,8 @@ want a list of those, they are defined in the standard module
 
 .. _tut-packages:
 
-Packages
-========
+Các gói - Packages
+==================
 
 Packages are a way of structuring Python's module namespace by using "dotted
 module names".  For example, the module name :mod:`A.B` designates a submodule
@@ -456,8 +456,8 @@ item.
 
 .. _tut-pkg-import-star:
 
-Importing \* From a Package
----------------------------
+Importing \* từ một Package
+----------------------------
 
 .. index:: single: __all__
 
@@ -510,8 +510,8 @@ importing module needs to use submodules with the same name from different
 packages.
 
 
-Intra-package References
-------------------------
+Tham chiếu Package con
+----------------------
 
 When packages are structured into subpackages (as with the :mod:`sound` package
 in the example), you can use absolute imports to refer to submodules of siblings
@@ -533,8 +533,8 @@ the name of the main module is always ``"__main__"``, modules intended for use
 as the main module of a Python application must always use absolute imports.
 
 
-Packages in Multiple Directories
---------------------------------
+Packages trong nhiều đường dẫn
+------------------------------
 
 Packages support one more special attribute, :attr:`__path__`.  This is
 initialized to be a list containing the name of the directory holding the

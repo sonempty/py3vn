@@ -11,7 +11,7 @@ discuss some of the possibilities.
 
 .. _tut-formatting:
 
-Fancier Output Formatting
+Định dạng Output rõ ràng
 =========================
 
 So far we've encountered two ways of writing values: *expression statements* and
@@ -201,8 +201,8 @@ For a complete overview of string formatting with :meth:`str.format`, see
 :ref:`formatstrings`.
 
 
-Old string formatting
----------------------
+Kiểu định dạng chuỗi hay dùng
+-----------------------------
 
 The ``%`` operator can also be used for string formatting. It interprets the
 left argument much like a :c:func:`sprintf`\ -style format string to be applied
@@ -218,8 +218,8 @@ More information can be found in the :ref:`old-string-formatting` section.
 
 .. _tut-files:
 
-Reading and Writing Files
-=========================
+Đọc và ghi Files
+================
 
 .. index::
    builtin: open
@@ -264,8 +264,8 @@ reading and writing such files.
 
 .. _tut-filemethods:
 
-Methods of File Objects
------------------------
+Các phương thức tương tác với đối tượng File
+---------------------------------------------
 
 The rest of the examples in this section will assume that a file object called
 ``f`` has already been created.
@@ -381,8 +381,8 @@ Reference for a complete guide to file objects.
 
 .. _tut-json:
 
-Saving structured data with :mod:`json`
----------------------------------------
+Lưu dữ liệu có cấu trúc với with :mod:`json`
+--------------------------------------------
 
 .. index:: module: json
 

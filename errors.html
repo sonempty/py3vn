@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>8. Errors and Exceptions &#8212; Tài liệu Python tiếng Việt   V3.5 documentation</title>
+    <title>8. Lỗi và ngoại lệ &#8212; Tài liệu Python tiếng Việt   V3.5 documentation</title>
     
     <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/sidebar.js"></script>
     <link rel="copyright" title="Copyright" href="copyright.html" />
     <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="index.html" />
-    <link rel="next" title="9. Classes" href="classes.html" />
+    <link rel="next" title="9. Lớp (Classes)" href="classes.html" />
     <link rel="prev" title="7. Input and Output" href="inputoutput.html" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <link rel="shortcut icon" type="image/png" href="_static/favicon.png" />
@@ -54,13 +54,13 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="errors-and-exceptions">
-<span id="tut-errors"></span><h1>8. Errors and Exceptions<a class="headerlink" href="#errors-and-exceptions" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="loi-va-ngoai-le">
+<span id="tut-errors"></span><h1>8. Lỗi và ngoại lệ<a class="headerlink" href="#loi-va-ngoai-le" title="Permalink to this headline">¶</a></h1>
 <p>Until now error messages haven&#8217;t been more than mentioned, but if you have tried
 out the examples you have probably seen some.  There are (at least) two
 distinguishable kinds of errors: <em>syntax errors</em> and <em>exceptions</em>.</p>
-<div class="section" id="syntax-errors">
-<span id="tut-syntaxerrors"></span><h2>8.1. Syntax Errors<a class="headerlink" href="#syntax-errors" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="loi-cu-phap">
+<span id="tut-syntaxerrors"></span><h2>8.1. Lỗi cú pháp<a class="headerlink" href="#loi-cu-phap" title="Permalink to this headline">¶</a></h2>
 <p>Syntax errors, also known as parsing errors, are perhaps the most common kind of
 complaint you get while you are still learning Python:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="kc">True</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello world&#39;</span><span class="p">)</span>
@@ -77,8 +77,8 @@ example, the error is detected at the function <code class="xref py py-func docu
 (<code class="docutils literal"><span class="pre">':'</span></code>) is missing before it.  File name and line number are printed so you
 know where to look in case the input came from a script.</p>
 </div>
-<div class="section" id="exceptions">
-<span id="tut-exceptions"></span><h2>8.2. Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ngoai-le">
+<span id="tut-exceptions"></span><h2>8.2. Ngoại lệ<a class="headerlink" href="#ngoai-le" title="Permalink to this headline">¶</a></h2>
 <p>Even if a statement or expression is syntactically correct, it may cause an
 error when an attempt is made to execute it. Errors detected during execution
 are called <em>exceptions</em> and are not unconditionally fatal: you will soon learn
@@ -113,8 +113,8 @@ traceback listing source lines; however, it will not display lines read from
 standard input.</p>
 <p><span class="xref std std-ref">bltin-exceptions</span> lists the built-in exceptions and their meanings.</p>
 </div>
-<div class="section" id="handling-exceptions">
-<span id="tut-handling"></span><h2>8.3. Handling Exceptions<a class="headerlink" href="#handling-exceptions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="xu-ly-ngoai-le">
+<span id="tut-handling"></span><h2>8.3. Xử lý ngoại lệ<a class="headerlink" href="#xu-ly-ngoai-le" title="Permalink to this headline">¶</a></h2>
 <p>It is possible to write programs that handle selected exceptions. Look at the
 following example, which asks the user for input until a valid integer has been
 entered, but allows the user to interrupt the program (using <code class="kbd docutils literal"><span class="pre">Control-C</span></code> or
@@ -260,8 +260,8 @@ indirectly) in the try clause. For example:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="raising-exceptions">
-<span id="tut-raising"></span><h2>8.4. Raising Exceptions<a class="headerlink" href="#raising-exceptions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="goi-ngoai-le">
+<span id="tut-raising"></span><h2>8.4. Gọi ngoại lệ<a class="headerlink" href="#goi-ngoai-le" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference internal" href="reference/simple_stmts.html#raise"><code class="xref std std-keyword docutils literal"><span class="pre">raise</span></code></a> statement allows the programmer to force a specified
 exception to occur. For example:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span><span class="s1">&#39;HiThere&#39;</span><span class="p">)</span>
@@ -293,10 +293,10 @@ re-raise the exception:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="user-defined-exceptions">
-<span id="tut-userexceptions"></span><h2>8.5. User-defined Exceptions<a class="headerlink" href="#user-defined-exceptions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ngoai-le-do-ban-dinh-nghia">
+<span id="tut-userexceptions"></span><h2>8.5. Ngoại lệ do bạn định nghĩa<a class="headerlink" href="#ngoai-le-do-ban-dinh-nghia" title="Permalink to this headline">¶</a></h2>
 <p>Programs may name their own exceptions by creating a new exception class (see
-<a class="reference internal" href="classes.html#tut-classes"><span class="std std-ref">Classes</span></a> for more about Python classes).  Exceptions should typically
+<a class="reference internal" href="classes.html#tut-classes"><span class="std std-ref">Lớp (Classes)</span></a> for more about Python classes).  Exceptions should typically
 be derived from the <code class="xref py py-exc docutils literal"><span class="pre">Exception</span></code> class, either directly or indirectly.</p>
 <p>Exception classes can be defined which do anything any other class can do, but
 are usually kept simple, often only offering a number of attributes that allow
@@ -340,10 +340,10 @@ to create specific exception classes for different error conditions:</p>
 naming of the standard exceptions.</p>
 <p>Many standard modules define their own exceptions to report errors that may
 occur in functions they define.  More information on classes is presented in
-chapter <a class="reference internal" href="classes.html#tut-classes"><span class="std std-ref">Classes</span></a>.</p>
+chapter <a class="reference internal" href="classes.html#tut-classes"><span class="std std-ref">Lớp (Classes)</span></a>.</p>
 </div>
-<div class="section" id="defining-clean-up-actions">
-<span id="tut-cleanup"></span><h2>8.6. Defining Clean-up Actions<a class="headerlink" href="#defining-clean-up-actions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dinh-nghia-cach-xu-ly">
+<span id="tut-cleanup"></span><h2>8.6. Định nghĩa cách xử lý<a class="headerlink" href="#dinh-nghia-cach-xu-ly" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference internal" href="reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal"><span class="pre">try</span></code></a> statement has another optional clause which is intended to
 define clean-up actions that must be executed under all circumstances.  For
 example:</p>
@@ -399,8 +399,8 @@ clause has been executed.</p>
 releasing external resources (such as files or network connections), regardless
 of whether the use of the resource was successful.</p>
 </div>
-<div class="section" id="predefined-clean-up-actions">
-<span id="tut-cleanup-with"></span><h2>8.7. Predefined Clean-up Actions<a class="headerlink" href="#predefined-clean-up-actions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cac-cach-xu-ly-da-co-san">
+<span id="tut-cleanup-with"></span><h2>8.7. Các cách xử lý đã có sẵn<a class="headerlink" href="#cac-cach-xu-ly-da-co-san" title="Permalink to this headline">¶</a></h2>
 <p>Some objects define standard clean-up actions to be undertaken when the object
 is no longer needed, regardless of whether or not the operation using the object
 succeeded or failed. Look at the following example, which tries to open a file
@@ -445,24 +445,24 @@ provide predefined clean-up actions will indicate this in their documentation.</
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="index.html">Nội dung bài học</a></h3>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="appetite.html">1. Whetting Your Appetite</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interpreter.html">2. Using the Python Interpreter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">3. An Informal Introduction to Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="controlflow.html">4. More Control Flow Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="datastructures.html">5. Data Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">6. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appetite.html">1. Lời tựa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interpreter.html">2. Sử dụng trình thông dịch Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">3. Gới thiệu ngôn ngữ lập trình Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controlflow.html">4. Điều khiển luồng</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datastructures.html">5. Cấu trúc dữ liệu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">6. Mô-đun</a></li>
 <li class="toctree-l1"><a class="reference internal" href="inputoutput.html">7. Input and Output</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Errors and Exceptions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#syntax-errors">8.1. Syntax Errors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#exceptions">8.2. Exceptions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#handling-exceptions">8.3. Handling Exceptions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#raising-exceptions">8.4. Raising Exceptions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#user-defined-exceptions">8.5. User-defined Exceptions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#defining-clean-up-actions">8.6. Defining Clean-up Actions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#predefined-clean-up-actions">8.7. Predefined Clean-up Actions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Lỗi và ngoại lệ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#loi-cu-phap">8.1. Lỗi cú pháp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ngoai-le">8.2. Ngoại lệ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#xu-ly-ngoai-le">8.3. Xử lý ngoại lệ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#goi-ngoai-le">8.4. Gọi ngoại lệ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ngoai-le-do-ban-dinh-nghia">8.5. Ngoại lệ do bạn định nghĩa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dinh-nghia-cach-xu-ly">8.6. Định nghĩa cách xử lý</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cac-cach-xu-ly-da-co-san">8.7. Các cách xử lý đã có sẵn</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="classes.html">9. Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">9. Lớp (Classes)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stdlib.html">10. Brief Tour of the Standard Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stdlib2.html">11. Brief Tour of the Standard Library &#8211; Part II</a></li>
 <li class="toctree-l1"><a class="reference internal" href="venv.html">12. Virtual Environments and Packages</a></li>
@@ -473,10 +473,10 @@ provide predefined clean-up actions will indicate this in their documentation.</
 </ul>
 
   <div role="note" aria-label="source link">
-    <h3>Trang Web </h3>
+    <h3>Thực hành </h3>
     <ul class="this-page-menu">
       <li><a href="_sources/errors.txt"
-            rel="nofollow">Xem mã nguồn</a></li>
+            rel="nofollow">Bài tập chương này</a></li>
     </ul>
    </div>
         </div>
@@ -490,7 +490,7 @@ provide predefined clean-up actions will indicate this in their documentation.</
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="classes.html" title="9. Classes"
+          <a href="classes.html" title="9. Lớp (Classes)"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="inputoutput.html" title="7. Input and Output"
@@ -500,7 +500,7 @@ provide predefined clean-up actions will indicate this in their documentation.</
 
     <div class="footer" role="contentinfo">
         &#169; <a href="copyright.html">Copyright</a> 2016, Trần Viết Sơn.
-      Update lần cuối vào Nov 14, 2016.
+      Update lần cuối vào Nov 15, 2016.
       Webste được xây dựng bằng <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
     </div>
   </body>

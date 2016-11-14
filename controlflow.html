@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>4. More Control Flow Tools &#8212; Tài liệu Python tiếng Việt   V3.5 documentation</title>
+    <title>4. Điều khiển luồng &#8212; Tài liệu Python tiếng Việt   V3.5 documentation</title>
     
     <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,8 +25,8 @@
     <script type="text/javascript" src="_static/sidebar.js"></script>
     <link rel="copyright" title="Copyright" href="copyright.html" />
     <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="index.html" />
-    <link rel="next" title="5. Data Structures" href="datastructures.html" />
-    <link rel="prev" title="3. An Informal Introduction to Python" href="introduction.html" />
+    <link rel="next" title="5. Cấu trúc dữ liệu" href="datastructures.html" />
+    <link rel="prev" title="3. Gới thiệu ngôn ngữ lập trình Python" href="introduction.html" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <link rel="shortcut icon" type="image/png" href="_static/favicon.png" />
     <meta name="viewport" content="width=device-width,initial-scale=0.8">
@@ -54,12 +54,12 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="more-control-flow-tools">
-<span id="tut-morecontrol"></span><h1>4. More Control Flow Tools<a class="headerlink" href="#more-control-flow-tools" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="dieu-khien-luong">
+<span id="tut-morecontrol"></span><h1>4. Điều khiển luồng<a class="headerlink" href="#dieu-khien-luong" title="Permalink to this headline">¶</a></h1>
 <p>Besides the <a class="reference internal" href="reference/compound_stmts.html#while"><code class="xref std std-keyword docutils literal"><span class="pre">while</span></code></a> statement just introduced, Python knows the usual
 control flow statements known from other languages, with some twists.</p>
-<div class="section" id="if-statements">
-<span id="tut-if"></span><h2>4.1. <a class="reference internal" href="reference/compound_stmts.html#if"><code class="xref std std-keyword docutils literal"><span class="pre">if</span></code></a> Statements<a class="headerlink" href="#if-statements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cau-lenh-dieu-kien-if">
+<span id="tut-if"></span><h2>4.1. Câu lệnh điều kiện <a class="reference internal" href="reference/compound_stmts.html#if"><code class="xref std std-keyword docutils literal"><span class="pre">if</span></code></a><a class="headerlink" href="#cau-lenh-dieu-kien-if" title="Permalink to this headline">¶</a></h2>
 <p>Perhaps the most well-known statement type is the <a class="reference internal" href="reference/compound_stmts.html#if"><code class="xref std std-keyword docutils literal"><span class="pre">if</span></code></a> statement.  For
 example:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter an integer: &quot;</span><span class="p">))</span>
@@ -83,8 +83,8 @@ to avoid excessive indentation.  An  <a class="reference internal" href="referen
 <a class="reference internal" href="reference/compound_stmts.html#elif"><code class="xref std std-keyword docutils literal"><span class="pre">elif</span></code></a> ... sequence is a substitute for the <code class="docutils literal"><span class="pre">switch</span></code> or
 <code class="docutils literal"><span class="pre">case</span></code> statements found in other languages.</p>
 </div>
-<div class="section" id="for-statements">
-<span id="tut-for"></span><h2>4.2. <a class="reference internal" href="reference/compound_stmts.html#for"><code class="xref std std-keyword docutils literal"><span class="pre">for</span></code></a> Statements<a class="headerlink" href="#for-statements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vong-lap-for">
+<span id="tut-for"></span><h2>4.2. Vòng lặp <a class="reference internal" href="reference/compound_stmts.html#for"><code class="xref std std-keyword docutils literal"><span class="pre">for</span></code></a><a class="headerlink" href="#vong-lap-for" title="Permalink to this headline">¶</a></h2>
 <p id="index-0">The <a class="reference internal" href="reference/compound_stmts.html#for"><code class="xref std std-keyword docutils literal"><span class="pre">for</span></code></a> statement in Python differs a bit from what you may be used
 to in C or Pascal.  Rather than always iterating over an arithmetic progression
 of numbers (like in Pascal), or giving the user the ability to define both the
@@ -114,8 +114,8 @@ slice notation makes this especially convenient:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="the-range-function">
-<span id="tut-range"></span><h2>4.3. The <code class="xref py py-func docutils literal"><span class="pre">range()</span></code> Function<a class="headerlink" href="#the-range-function" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ham-range">
+<span id="tut-range"></span><h2>4.3. Hàm <code class="xref py py-func docutils literal"><span class="pre">range()</span></code><a class="headerlink" href="#ham-range" title="Permalink to this headline">¶</a></h2>
 <p>If you do need to iterate over a sequence of numbers, the built-in function
 <code class="xref py py-func docutils literal"><span class="pre">range()</span></code> comes in handy.  It generates arithmetic progressions:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
@@ -156,7 +156,7 @@ increment (even negative; sometimes this is called the &#8216;step&#8217;):</p>
 </pre></div>
 </div>
 <p>In most such cases, however, it is convenient to use the <code class="xref py py-func docutils literal"><span class="pre">enumerate()</span></code>
-function, see <a class="reference internal" href="datastructures.html#tut-loopidioms"><span class="std std-ref">Looping Techniques</span></a>.</p>
+function, see <a class="reference internal" href="datastructures.html#tut-loopidioms"><span class="std std-ref">Các kỹ thuật lặp</span></a>.</p>
 <p>A strange thing happens if you just print a range:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 <span class="go">range(0, 10)</span>
@@ -177,8 +177,8 @@ is another; it creates lists from iterables:</p>
 </div>
 <p>Later we will see more functions that return iterables and take iterables as argument.</p>
 </div>
-<div class="section" id="break-and-continue-statements-and-else-clauses-on-loops">
-<span id="tut-break"></span><h2>4.4. <a class="reference internal" href="reference/simple_stmts.html#break"><code class="xref std std-keyword docutils literal"><span class="pre">break</span></code></a> and <a class="reference internal" href="reference/simple_stmts.html#continue"><code class="xref std std-keyword docutils literal"><span class="pre">continue</span></code></a> Statements, and <a class="reference internal" href="reference/compound_stmts.html#else"><code class="xref std std-keyword docutils literal"><span class="pre">else</span></code></a> Clauses on Loops<a class="headerlink" href="#break-and-continue-statements-and-else-clauses-on-loops" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cau-lenh-break-continue-va-menh-de-else">
+<span id="tut-break"></span><h2>4.4. Câu lệnh <a class="reference internal" href="reference/simple_stmts.html#break"><code class="xref std std-keyword docutils literal"><span class="pre">break</span></code></a> , <a class="reference internal" href="reference/simple_stmts.html#continue"><code class="xref std std-keyword docutils literal"><span class="pre">continue</span></code></a> và mệnh đề <a class="reference internal" href="reference/compound_stmts.html#else"><code class="xref std std-keyword docutils literal"><span class="pre">else</span></code></a><a class="headerlink" href="#cau-lenh-break-continue-va-menh-de-else" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference internal" href="reference/simple_stmts.html#break"><code class="xref std std-keyword docutils literal"><span class="pre">break</span></code></a> statement, like in C, breaks out of the smallest enclosing
 <a class="reference internal" href="reference/compound_stmts.html#for"><code class="xref std std-keyword docutils literal"><span class="pre">for</span></code></a> or <a class="reference internal" href="reference/compound_stmts.html#while"><code class="xref std std-keyword docutils literal"><span class="pre">while</span></code></a> loop.</p>
 <p>Loop statements may have an <code class="docutils literal"><span class="pre">else</span></code> clause; it is executed when the loop
@@ -212,7 +212,7 @@ the <a class="reference internal" href="reference/compound_stmts.html#for"><code
 <a class="reference internal" href="reference/compound_stmts.html#if"><code class="xref std std-keyword docutils literal"><span class="pre">if</span></code></a> statements: a <a class="reference internal" href="reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal"><span class="pre">try</span></code></a> statement&#8217;s <code class="docutils literal"><span class="pre">else</span></code> clause runs
 when no exception occurs, and a loop&#8217;s <code class="docutils literal"><span class="pre">else</span></code> clause runs when no <code class="docutils literal"><span class="pre">break</span></code>
 occurs. For more on the <a class="reference internal" href="reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal"><span class="pre">try</span></code></a> statement and exceptions, see
-<a class="reference internal" href="errors.html#tut-handling"><span class="std std-ref">Handling Exceptions</span></a>.</p>
+<a class="reference internal" href="errors.html#tut-handling"><span class="std std-ref">Xử lý ngoại lệ</span></a>.</p>
 <p>The <a class="reference internal" href="reference/simple_stmts.html#continue"><code class="xref std std-keyword docutils literal"><span class="pre">continue</span></code></a> statement, also borrowed from C, continues with the next
 iteration of the loop:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
@@ -231,8 +231,8 @@ iteration of the loop:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="pass-statements">
-<span id="tut-pass"></span><h2>4.5. <a class="reference internal" href="reference/simple_stmts.html#pass"><code class="xref std std-keyword docutils literal"><span class="pre">pass</span></code></a> Statements<a class="headerlink" href="#pass-statements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cau-lenh-pass">
+<span id="tut-pass"></span><h2>4.5. Câu lệnh  <a class="reference internal" href="reference/simple_stmts.html#pass"><code class="xref std std-keyword docutils literal"><span class="pre">pass</span></code></a><a class="headerlink" href="#cau-lenh-pass" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference internal" href="reference/simple_stmts.html#pass"><code class="xref std std-keyword docutils literal"><span class="pre">pass</span></code></a> statement does nothing. It can be used when a statement is
 required syntactically but the program requires no action. For example:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -255,8 +255,8 @@ at a more abstract level.  The <a class="reference internal" href="reference/sim
 </pre></div>
 </div>
 </div>
-<div class="section" id="defining-functions">
-<span id="tut-functions"></span><h2>4.6. Defining Functions<a class="headerlink" href="#defining-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dinh-nghia-ham">
+<span id="tut-functions"></span><h2>4.6. Định nghĩa hàm<a class="headerlink" href="#dinh-nghia-ham" title="Permalink to this headline">¶</a></h2>
 <p>We can create a function that writes the Fibonacci series to an arbitrary
 boundary:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>    <span class="c1"># write Fibonacci series up to n</span>
@@ -278,7 +278,7 @@ The statements that form the body of the function start at the next line, and
 must be indented.</p>
 <p>The first statement of the function body can optionally be a string literal;
 this string literal is the function&#8217;s documentation string, or <em class="dfn">docstring</em>.
-(More about docstrings can be found in the section <a class="reference internal" href="#tut-docstrings"><span class="std std-ref">Documentation Strings</span></a>.)
+(More about docstrings can be found in the section <a class="reference internal" href="#tut-docstrings"><span class="std std-ref">Phần chú thích (Doc String)</span></a>.)
 There are tools which use docstrings to automatically produce online or printed
 documentation, or to let the user interactively browse through code; it&#8217;s good
 practice to include docstrings in code that you write, so make a habit of it.</p>
@@ -345,18 +345,18 @@ the end of a function also returns <code class="docutils literal"><span class="p
 and <code class="docutils literal"><span class="pre">methodname</span></code> is the name of a method that is defined by the object&#8217;s type.
 Different types define different methods.  Methods of different types may have
 the same name without causing ambiguity.  (It is possible to define your own
-object types and methods, using <em>classes</em>, see <a class="reference internal" href="classes.html#tut-classes"><span class="std std-ref">Classes</span></a>)
+object types and methods, using <em>classes</em>, see <a class="reference internal" href="classes.html#tut-classes"><span class="std std-ref">Lớp (Classes)</span></a>)
 The method <code class="xref py py-meth docutils literal"><span class="pre">append()</span></code> shown in the example is defined for list objects; it
 adds a new element at the end of the list.  In this example it is equivalent to
 <code class="docutils literal"><span class="pre">result</span> <span class="pre">=</span> <span class="pre">result</span> <span class="pre">+</span> <span class="pre">[a]</span></code>, but more efficient.</li>
 </ul>
 </div>
-<div class="section" id="more-on-defining-functions">
-<span id="tut-defining"></span><h2>4.7. More on Defining Functions<a class="headerlink" href="#more-on-defining-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tim-hieu-them-ve-cach-dinh-nghia-ham">
+<span id="tut-defining"></span><h2>4.7. Tìm hiểu thêm về cách định nghĩa hàm<a class="headerlink" href="#tim-hieu-them-ve-cach-dinh-nghia-ham" title="Permalink to this headline">¶</a></h2>
 <p>It is also possible to define functions with a variable number of arguments.
 There are three forms, which can be combined.</p>
-<div class="section" id="default-argument-values">
-<span id="tut-defaultargs"></span><h3>4.7.1. Default Argument Values<a class="headerlink" href="#default-argument-values" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="doi-so-mac-dinh">
+<span id="tut-defaultargs"></span><h3>4.7.1. Đối số mặc định<a class="headerlink" href="#doi-so-mac-dinh" title="Permalink to this headline">¶</a></h3>
 <p>The most useful form is to specify a default value for one or more arguments.
 This creates a function that can be called with fewer arguments than it is
 defined to allow.  For example:</p>
@@ -425,8 +425,8 @@ write the function like this instead:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="keyword-arguments">
-<span id="tut-keywordargs"></span><h3>4.7.2. Keyword Arguments<a class="headerlink" href="#keyword-arguments" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="doi-so-voi-tu-khoa">
+<span id="tut-keywordargs"></span><h3>4.7.2. Đối số với từ khóa<a class="headerlink" href="#doi-so-voi-tu-khoa" title="Permalink to this headline">¶</a></h3>
 <p>Functions can also be called using <a class="reference internal" href="glossary.html#term-keyword-argument"><span class="xref std std-term">keyword arguments</span></a>
 of the form <code class="docutils literal"><span class="pre">kwarg=value</span></code>.  For instance, the following function:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">parrot</span><span class="p">(</span><span class="n">voltage</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="s1">&#39;a stiff&#39;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;voom&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;Norwegian Blue&#39;</span><span class="p">):</span>
@@ -511,11 +511,11 @@ sketch : Cheese Shop Sketch
 of the keywords dictionary&#8217;s <code class="docutils literal"><span class="pre">keys()</span></code> method before printing its contents;
 if this is not done, the order in which the arguments are printed is undefined.</p>
 </div>
-<div class="section" id="arbitrary-argument-lists">
-<span id="tut-arbitraryargs"></span><h3>4.7.3. Arbitrary Argument Lists<a class="headerlink" href="#arbitrary-argument-lists" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="cac-doi-so-tuy-y">
+<span id="tut-arbitraryargs"></span><h3>4.7.3. Các đối số tùy ý<a class="headerlink" href="#cac-doi-so-tuy-y" title="Permalink to this headline">¶</a></h3>
 <p id="index-2">Finally, the least frequently used option is to specify that a function can be
 called with an arbitrary number of arguments.  These arguments will be wrapped
-up in a tuple (see <a class="reference internal" href="datastructures.html#tut-tuples"><span class="std std-ref">Tuples and Sequences</span></a>).  Before the variable number of arguments,
+up in a tuple (see <a class="reference internal" href="datastructures.html#tut-tuples"><span class="std std-ref">Tuples - kiểu dữ liệu có trình tự (Sequences)</span></a>).  Before the variable number of arguments,
 zero or more normal arguments may occur.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">write_multiple_items</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">separator</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
     <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">separator</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">args</span><span class="p">))</span>
@@ -536,8 +536,8 @@ keywords rather than positional arguments.</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="unpacking-argument-lists">
-<span id="tut-unpacking-arguments"></span><h3>4.7.4. Unpacking Argument Lists<a class="headerlink" href="#unpacking-argument-lists" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="goi-doi-so-tu-trong-lists">
+<span id="tut-unpacking-arguments"></span><h3>4.7.4. Gọi đối số từ trong Lists<a class="headerlink" href="#goi-doi-so-tu-trong-lists" title="Permalink to this headline">¶</a></h3>
 <p>The reverse situation occurs when the arguments are already in a list or tuple
 but need to be unpacked for a function call requiring separate positional
 arguments.  For instance, the built-in <code class="xref py py-func docutils literal"><span class="pre">range()</span></code> function expects separate
@@ -563,8 +563,8 @@ or tuple:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="lambda-expressions">
-<span id="tut-lambda"></span><h3>4.7.5. Lambda Expressions<a class="headerlink" href="#lambda-expressions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="bieu-thuc-lambda">
+<span id="tut-lambda"></span><h3>4.7.5. Biểu thức Lambda<a class="headerlink" href="#bieu-thuc-lambda" title="Permalink to this headline">¶</a></h3>
 <p>Small anonymous functions can be created with the <a class="reference internal" href="reference/expressions.html#lambda"><code class="xref std std-keyword docutils literal"><span class="pre">lambda</span></code></a> keyword.
 This function returns the sum of its two arguments: <code class="docutils literal"><span class="pre">lambda</span> <span class="pre">a,</span> <span class="pre">b:</span> <span class="pre">a+b</span></code>.
 Lambda functions can be used wherever function objects are required.  They are
@@ -591,8 +591,8 @@ is to pass a small function as an argument:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="documentation-strings">
-<span id="tut-docstrings"></span><h3>4.7.6. Documentation Strings<a class="headerlink" href="#documentation-strings" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="phan-chu-thich-doc-string">
+<span id="tut-docstrings"></span><h3>4.7.6. Phần chú thích (Doc String)<a class="headerlink" href="#phan-chu-thich-doc-string" title="Permalink to this headline">¶</a></h3>
 <p id="index-4">Here are some conventions about the content and formatting of documentation
 strings.</p>
 <p>The first line should always be a short, concise summary of the object&#8217;s
@@ -630,8 +630,8 @@ of tabs (to 8 spaces, normally).</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="function-annotations">
-<span id="tut-annotations"></span><h3>4.7.7. Function Annotations<a class="headerlink" href="#function-annotations" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="cac-ham-chu-thich">
+<span id="tut-annotations"></span><h3>4.7.7. Các hàm chú thích<a class="headerlink" href="#cac-ham-chu-thich" title="Permalink to this headline">¶</a></h3>
 <p id="index-5"><a class="reference internal" href="reference/compound_stmts.html#function"><span class="std std-ref">Function annotations</span></a> are completely optional metadata
 information about the types used by user-defined functions (see <span class="target" id="index-6"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0484"><strong>PEP 484</strong></a>
 for more information).</p>
@@ -656,14 +656,14 @@ value annotated:</p>
 </div>
 </div>
 </div>
-<div class="section" id="intermezzo-coding-style">
-<span id="tut-codingstyle"></span><h2>4.8. Intermezzo: Coding Style<a class="headerlink" href="#intermezzo-coding-style" title="Permalink to this headline">¶</a></h2>
-<p id="index-7">Now that you are about to write longer, more complex pieces of Python, it is a
+<div class="section" id="coding-style-theo-chuan-pep-8">
+<span id="tut-codingstyle"></span><h2>4.8. Coding Style theo chuẩn <span class="target" id="index-7"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0008"><strong>PEP 8</strong></a><a class="headerlink" href="#coding-style-theo-chuan-pep-8" title="Permalink to this headline">¶</a></h2>
+<p id="index-8">Now that you are about to write longer, more complex pieces of Python, it is a
 good time to talk about <em>coding style</em>.  Most languages can be written (or more
 concise, <em>formatted</em>) in different styles; some are more readable than others.
 Making it easy for others to read your code is always a good idea, and adopting
 a nice coding style helps tremendously for that.</p>
-<p>For Python, <span class="target" id="index-8"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0008"><strong>PEP 8</strong></a> has emerged as the style guide that most projects adhere to;
+<p>For Python, <span class="target" id="index-9"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0008"><strong>PEP 8</strong></a> has emerged as the style guide that most projects adhere to;
 it promotes a very readable and eye-pleasing coding style.  Every Python
 developer should read it at some point; here are the most important points
 extracted for you:</p>
@@ -690,7 +690,7 @@ bracketing constructs: <code class="docutils literal"><span class="pre">a</span>
 <li><p class="first">Name your classes and functions consistently; the convention is to use
 <code class="docutils literal"><span class="pre">CamelCase</span></code> for classes and <code class="docutils literal"><span class="pre">lower_case_with_underscores</span></code> for functions
 and methods.  Always use <code class="docutils literal"><span class="pre">self</span></code> as the name for the first method argument
-(see <a class="reference internal" href="classes.html#tut-firstclasses"><span class="std std-ref">A First Look at Classes</span></a> for more on classes and methods).</p>
+(see <a class="reference internal" href="classes.html#tut-firstclasses"><span class="std std-ref">Cái nhìn đầu tiên về Lớp</span></a> for more on classes and methods).</p>
 </li>
 <li><p class="first">Don&#8217;t use fancy encodings if your code is meant to be used in international
 environments.  Python&#8217;s default, UTF-8, or even plain ASCII work best in any
@@ -733,25 +733,25 @@ callee makes to it (items inserted into a list).</td></tr>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="index.html">Nội dung bài học</a></h3>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="appetite.html">1. Whetting Your Appetite</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interpreter.html">2. Using the Python Interpreter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">3. An Informal Introduction to Python</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. More Control Flow Tools</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#if-statements">4.1. <code class="docutils literal"><span class="pre">if</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#for-statements">4.2. <code class="docutils literal"><span class="pre">for</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#the-range-function">4.3. The <code class="docutils literal"><span class="pre">range()</span></code> Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#break-and-continue-statements-and-else-clauses-on-loops">4.4. <code class="docutils literal"><span class="pre">break</span></code> and <code class="docutils literal"><span class="pre">continue</span></code> Statements, and <code class="docutils literal"><span class="pre">else</span></code> Clauses on Loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pass-statements">4.5. <code class="docutils literal"><span class="pre">pass</span></code> Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#defining-functions">4.6. Defining Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#more-on-defining-functions">4.7. More on Defining Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#intermezzo-coding-style">4.8. Intermezzo: Coding Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appetite.html">1. Lời tựa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interpreter.html">2. Sử dụng trình thông dịch Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">3. Gới thiệu ngôn ngữ lập trình Python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Điều khiển luồng</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cau-lenh-dieu-kien-if">4.1. Câu lệnh điều kiện <code class="docutils literal"><span class="pre">if</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vong-lap-for">4.2. Vòng lặp <code class="docutils literal"><span class="pre">for</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ham-range">4.3. Hàm <code class="docutils literal"><span class="pre">range()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cau-lenh-break-continue-va-menh-de-else">4.4. Câu lệnh <code class="docutils literal"><span class="pre">break</span></code> , <code class="docutils literal"><span class="pre">continue</span></code> và mệnh đề <code class="docutils literal"><span class="pre">else</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cau-lenh-pass">4.5. Câu lệnh  <code class="docutils literal"><span class="pre">pass</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dinh-nghia-ham">4.6. Định nghĩa hàm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tim-hieu-them-ve-cach-dinh-nghia-ham">4.7. Tìm hiểu thêm về cách định nghĩa hàm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coding-style-theo-chuan-pep-8">4.8. Coding Style theo chuẩn <strong>PEP 8</strong></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="datastructures.html">5. Data Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">6. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datastructures.html">5. Cấu trúc dữ liệu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">6. Mô-đun</a></li>
 <li class="toctree-l1"><a class="reference internal" href="inputoutput.html">7. Input and Output</a></li>
-<li class="toctree-l1"><a class="reference internal" href="errors.html">8. Errors and Exceptions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="classes.html">9. Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="errors.html">8. Lỗi và ngoại lệ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">9. Lớp (Classes)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stdlib.html">10. Brief Tour of the Standard Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stdlib2.html">11. Brief Tour of the Standard Library &#8211; Part II</a></li>
 <li class="toctree-l1"><a class="reference internal" href="venv.html">12. Virtual Environments and Packages</a></li>
@@ -762,10 +762,10 @@ callee makes to it (items inserted into a list).</td></tr>
 </ul>
 
   <div role="note" aria-label="source link">
-    <h3>Trang Web </h3>
+    <h3>Thực hành </h3>
     <ul class="this-page-menu">
       <li><a href="_sources/controlflow.txt"
-            rel="nofollow">Xem mã nguồn</a></li>
+            rel="nofollow">Bài tập chương này</a></li>
     </ul>
    </div>
         </div>
@@ -779,17 +779,17 @@ callee makes to it (items inserted into a list).</td></tr>
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="datastructures.html" title="5. Data Structures"
+          <a href="datastructures.html" title="5. Cấu trúc dữ liệu"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="introduction.html" title="3. An Informal Introduction to Python"
+          <a href="introduction.html" title="3. Gới thiệu ngôn ngữ lập trình Python"
              accesskey="P">previous</a> |</li>
       </ul>
     </div>
 
     <div class="footer" role="contentinfo">
         &#169; <a href="copyright.html">Copyright</a> 2016, Trần Viết Sơn.
-      Update lần cuối vào Nov 14, 2016.
+      Update lần cuối vào Nov 15, 2016.
       Webste được xây dựng bằng <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
     </div>
   </body>

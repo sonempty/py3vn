@@ -1,8 +1,8 @@
 .. _tut-informal:
 
-**********************************
-An Informal Introduction to Python
-**********************************
+************************************
+Gới thiệu ngôn ngữ lập trình Python
+************************************
 
 In the following examples, input and output are distinguished by the presence or
 absence of prompts (:term:`>>>` and :term:`...`): to repeat the example, you must type
@@ -29,8 +29,8 @@ Some examples::
 
 .. _tut-calculator:
 
-Using Python as a Calculator
-============================
+Sử dụng Python như là máy tính
+==============================
 
 Let's try some simple Python commands.  Start the interpreter and wait for the
 primary prompt, ``>>>``.  (It shouldn't take long.)
@@ -38,8 +38,8 @@ primary prompt, ``>>>``.  (It shouldn't take long.)
 
 .. _tut-numbers:
 
-Numbers
--------
+Số
+--
 
 The interpreter acts as a simple calculator: you can type an expression at it
 and it will write the value.  Expression syntax is straightforward: the
@@ -131,8 +131,8 @@ and uses the ``j`` or ``J`` suffix to indicate the imaginary part
 
 .. _tut-strings:
 
-Strings
--------
+Chuỗi
+-----
 
 Besides numbers, Python can also manipulate strings, which can be expressed
 in several ways.  They can be enclosed in single quotes (``'...'``) or
@@ -362,8 +362,8 @@ The built-in function :func:`len` returns the length of a string::
 
 .. _tut-lists:
 
-Lists
------
+Danh sách (Lists)
+-----------------
 
 Python knows a number of *compound* data types, used to group together other
 values.  The most versatile is the *list*, which can be written as a list of
@@ -453,8 +453,8 @@ example::
 
 .. _tut-firststeps:
 
-First Steps Towards Programming
-===============================
+Những bước lập trình đầu tiên
+=============================
 
 Of course, we can use Python for more complicated tasks than adding two and two
 together.  For instance, we can write an initial sub-sequence of the *Fibonacci*

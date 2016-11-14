@@ -1,8 +1,8 @@
 .. _tut-morecontrol:
 
-***********************
-More Control Flow Tools
-***********************
+*******************
+Điều khiển luồng
+*******************
 
 Besides the :keyword:`while` statement just introduced, Python knows the usual
 control flow statements known from other languages, with some twists.
@@ -10,8 +10,8 @@ control flow statements known from other languages, with some twists.
 
 .. _tut-if:
 
-:keyword:`if` Statements
-========================
+Câu lệnh điều kiện :keyword:`if` 
+================================
 
 Perhaps the most well-known statement type is the :keyword:`if` statement.  For
 example::
@@ -39,8 +39,8 @@ to avoid excessive indentation.  An  :keyword:`if` ... :keyword:`elif` ...
 
 .. _tut-for:
 
-:keyword:`for` Statements
-=========================
+Vòng lặp :keyword:`for`
+=======================
 
 .. index::
    statement: for
@@ -81,8 +81,8 @@ slice notation makes this especially convenient::
 
 .. _tut-range:
 
-The :func:`range` Function
-==========================
+Hàm :func:`range`
+=================
 
 If you do need to iterate over a sequence of numbers, the built-in function
 :func:`range` comes in handy.  It generates arithmetic progressions::
@@ -151,8 +151,8 @@ Later we will see more functions that return iterables and take iterables as arg
 
 .. _tut-break:
 
-:keyword:`break` and :keyword:`continue` Statements, and :keyword:`else` Clauses on Loops
-=========================================================================================
+Câu lệnh :keyword:`break` , :keyword:`continue` và mệnh đề :keyword:`else`
+==========================================================================
 
 The :keyword:`break` statement, like in C, breaks out of the smallest enclosing
 :keyword:`for` or :keyword:`while` loop.
@@ -210,8 +210,8 @@ iteration of the loop::
 
 .. _tut-pass:
 
-:keyword:`pass` Statements
-==========================
+Câu lệnh  :keyword:`pass` 
+=========================
 
 The :keyword:`pass` statement does nothing. It can be used when a statement is
 required syntactically but the program requires no action. For example::
@@ -236,8 +236,8 @@ at a more abstract level.  The :keyword:`pass` is silently ignored::
 
 .. _tut-functions:
 
-Defining Functions
-==================
+Định nghĩa hàm
+==============
 
 We can create a function that writes the Fibonacci series to an arbitrary
 boundary::
@@ -345,8 +345,8 @@ This example, as usual, demonstrates some new Python features:
 
 .. _tut-defining:
 
-More on Defining Functions
-==========================
+Tìm hiểu thêm về cách định nghĩa hàm
+====================================
 
 It is also possible to define functions with a variable number of arguments.
 There are three forms, which can be combined.
@@ -354,8 +354,8 @@ There are three forms, which can be combined.
 
 .. _tut-defaultargs:
 
-Default Argument Values
------------------------
+Đối số mặc định
+---------------
 
 The most useful form is to specify a default value for one or more arguments.
 This creates a function that can be called with fewer arguments than it is
@@ -429,8 +429,8 @@ write the function like this instead::
 
 .. _tut-keywordargs:
 
-Keyword Arguments
------------------
+Đối số với từ khóa
+-------------------
 
 Functions can also be called using :term:`keyword arguments <keyword argument>`
 of the form ``kwarg=value``.  For instance, the following function::
@@ -520,8 +520,8 @@ if this is not done, the order in which the arguments are printed is undefined.
 
 .. _tut-arbitraryargs:
 
-Arbitrary Argument Lists
-------------------------
+Các đối số tùy ý
+-----------------
 
 .. index::
   statement: *
@@ -551,8 +551,8 @@ keywords rather than positional arguments. ::
 
 .. _tut-unpacking-arguments:
 
-Unpacking Argument Lists
-------------------------
+Gọi đối số từ trong Lists
+-------------------------
 
 The reverse situation occurs when the arguments are already in a list or tuple
 but need to be unpacked for a function call requiring separate positional
@@ -585,8 +585,8 @@ In the same fashion, dictionaries can deliver keyword arguments with the ``**``\
 
 .. _tut-lambda:
 
-Lambda Expressions
-------------------
+Biểu thức Lambda
+----------------
 
 Small anonymous functions can be created with the :keyword:`lambda` keyword.
 This function returns the sum of its two arguments: ``lambda a, b: a+b``.
@@ -616,8 +616,8 @@ is to pass a small function as an argument::
 
 .. _tut-docstrings:
 
-Documentation Strings
----------------------
+Phần chú thích (Doc String)
+---------------------------
 
 .. index::
    single: docstrings
@@ -667,8 +667,8 @@ Here is an example of a multi-line docstring::
 
 .. _tut-annotations:
 
-Function Annotations
---------------------
+Các hàm chú thích
+-----------------
 
 .. sectionauthor:: Zachary Ware <zachary.ware@gmail.com>
 .. index::
@@ -700,8 +700,8 @@ value annotated::
 
 .. _tut-codingstyle:
 
-Intermezzo: Coding Style
-========================
+Coding Style theo chuẩn :pep:`8`
+================================
 
 .. sectionauthor:: Georg Brandl <georg@python.org>
 .. index:: pair: coding; style

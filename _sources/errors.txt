@@ -1,7 +1,7 @@
 .. _tut-errors:
 
 *********************
-Errors and Exceptions
+Lỗi và ngoại lệ
 *********************
 
 Until now error messages haven't been more than mentioned, but if you have tried
@@ -11,7 +11,7 @@ distinguishable kinds of errors: *syntax errors* and *exceptions*.
 
 .. _tut-syntaxerrors:
 
-Syntax Errors
+Lỗi cú pháp
 =============
 
 Syntax errors, also known as parsing errors, are perhaps the most common kind of
@@ -33,7 +33,7 @@ know where to look in case the input came from a script.
 
 .. _tut-exceptions:
 
-Exceptions
+Ngoại lệ
 ==========
 
 Even if a statement or expression is syntactically correct, it may cause an
@@ -76,7 +76,7 @@ standard input.
 
 .. _tut-handling:
 
-Handling Exceptions
+Xử lý ngoại lệ
 ===================
 
 It is possible to write programs that handle selected exceptions. Look at the
@@ -233,8 +233,8 @@ indirectly) in the try clause. For example::
 
 .. _tut-raising:
 
-Raising Exceptions
-==================
+Gọi ngoại lệ
+============
 
 The :keyword:`raise` statement allows the programmer to force a specified
 exception to occur. For example::
@@ -269,8 +269,8 @@ re-raise the exception::
 
 .. _tut-userexceptions:
 
-User-defined Exceptions
-=======================
+Ngoại lệ do bạn định nghĩa
+==========================
 
 Programs may name their own exceptions by creating a new exception class (see
 :ref:`tut-classes` for more about Python classes).  Exceptions should typically
@@ -324,8 +324,8 @@ chapter :ref:`tut-classes`.
 
 .. _tut-cleanup:
 
-Defining Clean-up Actions
-=========================
+Định nghĩa cách xử lý
+======================
 
 The :keyword:`try` statement has another optional clause which is intended to
 define clean-up actions that must be executed under all circumstances.  For
@@ -386,8 +386,8 @@ of whether the use of the resource was successful.
 
 .. _tut-cleanup-with:
 
-Predefined Clean-up Actions
-===========================
+Các cách xử lý đã có sẵn
+========================
 
 Some objects define standard clean-up actions to be undertaken when the object
 is no longer needed, regardless of whether or not the operation using the object

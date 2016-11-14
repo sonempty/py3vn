@@ -1,14 +1,14 @@
 .. _tut-using:
 
-****************************
-Using the Python Interpreter
-****************************
+*******************************
+Sử dụng trình thông dịch Python
+*******************************
 
 
 .. _tut-invoking:
 
-Invoking the Interpreter
-========================
+Chạy trình thông dịch
+======================
 
 The Python interpreter is usually installed as :file:`/usr/local/bin/python3.5`
 on those machines where it is available; putting :file:`/usr/local/bin` in your
@@ -68,8 +68,8 @@ All command line options are described in **Command line and environment**.
 
 .. _tut-argpassing:
 
-Argument Passing
-----------------
+Truyền tham số
+--------------
 
 When known to the interpreter, the script name and additional arguments
 thereafter are turned into a list of strings and assigned to the ``argv``
@@ -86,7 +86,7 @@ left in ``sys.argv`` for  the command or module to handle.
 
 .. _tut-interactive:
 
-Interactive Mode
+Chế độ tương tác
 ----------------
 
 When commands are read from a tty, the interpreter is said to be in *interactive
@@ -121,14 +121,14 @@ For more on interactive mode, see :ref:`tut-interac`.
 
 .. _tut-interp:
 
-The Interpreter and Its Environment
-===================================
+Trình thông dịch và môi trường
+==============================
 
 
 .. _tut-source-encoding:
 
-Source Code Encoding
---------------------
+Mã hóa mã nguồn
+---------------
 
 By default, Python source files are treated as encoded in UTF-8.  In that
 encoding, characters of most languages in the world can be used simultaneously

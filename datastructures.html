@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>5. Data Structures &#8212; Tài liệu Python tiếng Việt   V3.5 documentation</title>
+    <title>5. Cấu trúc dữ liệu &#8212; Tài liệu Python tiếng Việt   V3.5 documentation</title>
     
     <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,8 +25,8 @@
     <script type="text/javascript" src="_static/sidebar.js"></script>
     <link rel="copyright" title="Copyright" href="copyright.html" />
     <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="index.html" />
-    <link rel="next" title="6. Modules" href="modules.html" />
-    <link rel="prev" title="4. More Control Flow Tools" href="controlflow.html" />
+    <link rel="next" title="6. Mô-đun" href="modules.html" />
+    <link rel="prev" title="4. Điều khiển luồng" href="controlflow.html" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <link rel="shortcut icon" type="image/png" href="_static/favicon.png" />
     <meta name="viewport" content="width=device-width,initial-scale=0.8">
@@ -54,12 +54,12 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="data-structures">
-<span id="tut-structures"></span><h1>5. Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="cau-truc-du-lieu">
+<span id="tut-structures"></span><h1>5. Cấu trúc dữ liệu<a class="headerlink" href="#cau-truc-du-lieu" title="Permalink to this headline">¶</a></h1>
 <p>This chapter describes some things you&#8217;ve learned about already in more detail,
 and adds some new things as well.</p>
-<div class="section" id="more-on-lists">
-<span id="tut-morelists"></span><h2>5.1. More on Lists<a class="headerlink" href="#more-on-lists" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tim-hieu-them-ve-lists">
+<span id="tut-morelists"></span><h2>5.1. Tìm hiểu thêm về Lists<a class="headerlink" href="#tim-hieu-them-ve-lists" title="Permalink to this headline">¶</a></h2>
 <p>The list data type has some more methods.  Here are all of the methods of list
 objects:</p>
 <dl class="method">
@@ -167,8 +167,8 @@ customization, see <code class="xref py py-func docutils literal"><span class="p
 only modify the list have no return value printed &#8211; they return the default
 <code class="docutils literal"><span class="pre">None</span></code>. <a class="footnote-reference" href="#id3" id="id1">[1]</a>  This is a design principle for all mutable data structures in
 Python.</p>
-<div class="section" id="using-lists-as-stacks">
-<span id="tut-lists-as-stacks"></span><h3>5.1.1. Using Lists as Stacks<a class="headerlink" href="#using-lists-as-stacks" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="su-dung-lists-nhu-ngan-xep">
+<span id="tut-lists-as-stacks"></span><h3>5.1.1. Sử dụng Lists như ngăn xếp<a class="headerlink" href="#su-dung-lists-nhu-ngan-xep" title="Permalink to this headline">¶</a></h3>
 <p>The list methods make it very easy to use a list as a stack, where the last
 element added is the first element retrieved (&#8220;last-in, first-out&#8221;).  To add an
 item to the top of the stack, use <code class="xref py py-meth docutils literal"><span class="pre">append()</span></code>.  To retrieve an item from the
@@ -191,8 +191,8 @@ top of the stack, use <code class="xref py py-meth docutils literal"><span class
 </pre></div>
 </div>
 </div>
-<div class="section" id="using-lists-as-queues">
-<span id="tut-lists-as-queues"></span><h3>5.1.2. Using Lists as Queues<a class="headerlink" href="#using-lists-as-queues" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="su-dung-list-nhu-hang-doi">
+<span id="tut-lists-as-queues"></span><h3>5.1.2. Sử dụng List như hàng đợi<a class="headerlink" href="#su-dung-list-nhu-hang-doi" title="Permalink to this headline">¶</a></h3>
 <p>It is also possible to use a list as a queue, where the first element added is
 the first element retrieved (&#8220;first-in, first-out&#8221;); however, lists are not
 efficient for this purpose.  While appends and pops from the end of list are
@@ -213,8 +213,8 @@ have fast appends and pops from both ends.  For example:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="list-comprehensions">
-<span id="tut-listcomps"></span><h3>5.1.3. List Comprehensions<a class="headerlink" href="#list-comprehensions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="cac-cach-tao-list-nhanh-chong">
+<span id="tut-listcomps"></span><h3>5.1.3. Các cách tạo List nhanh chóng<a class="headerlink" href="#cac-cach-tao-list-nhanh-chong" title="Permalink to this headline">¶</a></h3>
 <p>List comprehensions provide a concise way to create lists.
 Common applications are to make new lists where each element is the result of
 some operations applied to each member of another sequence or iterable, or to
@@ -300,8 +300,8 @@ it must be parenthesized.</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="nested-list-comprehensions">
-<h3>5.1.4. Nested List Comprehensions<a class="headerlink" href="#nested-list-comprehensions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="lists-trong-lists">
+<h3>5.1.4. Lists trong Lists<a class="headerlink" href="#lists-trong-lists" title="Permalink to this headline">¶</a></h3>
 <p>The initial expression in a list comprehension can be any arbitrary expression,
 including another list comprehension.</p>
 <p>Consider the following example of a 3x4 matrix implemented as a list of
@@ -348,11 +348,11 @@ The <code class="xref py py-func docutils literal"><span class="pre">zip()</span
 <span class="go">[(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]</span>
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="controlflow.html#tut-unpacking-arguments"><span class="std std-ref">Unpacking Argument Lists</span></a> for details on the asterisk in this line.</p>
+<p>See <a class="reference internal" href="controlflow.html#tut-unpacking-arguments"><span class="std std-ref">Gọi đối số từ trong Lists</span></a> for details on the asterisk in this line.</p>
 </div>
 </div>
-<div class="section" id="the-del-statement">
-<span id="tut-del"></span><h2>5.2. The <a class="reference internal" href="reference/simple_stmts.html#del"><code class="xref std std-keyword docutils literal"><span class="pre">del</span></code></a> statement<a class="headerlink" href="#the-del-statement" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cau-lenh-del">
+<span id="tut-del"></span><h2>5.2. Câu lệnh <a class="reference internal" href="reference/simple_stmts.html#del"><code class="xref std std-keyword docutils literal"><span class="pre">del</span></code></a><a class="headerlink" href="#cau-lenh-del" title="Permalink to this headline">¶</a></h2>
 <p>There is a way to remove an item from a list given its index instead of its
 value: the <a class="reference internal" href="reference/simple_stmts.html#del"><code class="xref std std-keyword docutils literal"><span class="pre">del</span></code></a> statement.  This differs from the <code class="xref py py-meth docutils literal"><span class="pre">pop()</span></code> method
 which returns a value.  The <a class="reference internal" href="reference/simple_stmts.html#del"><code class="xref std std-keyword docutils literal"><span class="pre">del</span></code></a> statement can also be used to remove
@@ -377,8 +377,8 @@ of an empty list to the slice).  For example:</p>
 <p>Referencing the name <code class="docutils literal"><span class="pre">a</span></code> hereafter is an error (at least until another value
 is assigned to it).  We&#8217;ll find other uses for <a class="reference internal" href="reference/simple_stmts.html#del"><code class="xref std std-keyword docutils literal"><span class="pre">del</span></code></a> later.</p>
 </div>
-<div class="section" id="tuples-and-sequences">
-<span id="tut-tuples"></span><h2>5.3. Tuples and Sequences<a class="headerlink" href="#tuples-and-sequences" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tuples-kieu-du-lieu-co-trinh-tu-sequences">
+<span id="tut-tuples"></span><h2>5.3. Tuples - kiểu dữ liệu có trình tự (Sequences)<a class="headerlink" href="#tuples-kieu-du-lieu-co-trinh-tu-sequences" title="Permalink to this headline">¶</a></h2>
 <p>We saw that lists and strings have many common properties, such as indexing and
 slicing operations.  They are two examples of <em>sequence</em> data types (see
 <span class="xref std std-ref">typesseq</span>).  Since Python is an evolving language, other sequence data
@@ -445,8 +445,9 @@ many variables on the left side of the equals sign as there are elements in the
 sequence.  Note that multiple assignment is really just a combination of tuple
 packing and sequence unpacking.</p>
 </div>
-<div class="section" id="sets">
-<span id="tut-sets"></span><h2>5.4. Sets<a class="headerlink" href="#sets" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bo">
+<span id="tut-sets"></span><h2>5.4. Bộ<a class="headerlink" href="#bo" title="Permalink to this headline">¶</a></h2>
+<p>Tác giả: Chú ý phân biệt Bộ (Sets) và Dãy (Sequences)</p>
 <p>Python also includes a data type for <em>sets</em>.  A set is an unordered collection
 with no duplicate elements.  Basic uses include membership testing and
 eliminating duplicate entries.  Set objects also support mathematical operations
@@ -487,8 +488,8 @@ are also supported:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="dictionaries">
-<span id="tut-dictionaries"></span><h2>5.5. Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="kieu-tu-dien">
+<span id="tut-dictionaries"></span><h2>5.5. Kiểu từ điển<a class="headerlink" href="#kieu-tu-dien" title="Permalink to this headline">¶</a></h2>
 <p>Another useful data type built into Python is the <em>dictionary</em> (see
 <span class="xref std std-ref">typesmapping</span>). Dictionaries are sometimes found in other languages as
 &#8220;associative memories&#8221; or &#8220;associative arrays&#8221;.  Unlike sequences, which are
@@ -553,8 +554,8 @@ keyword arguments:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="looping-techniques">
-<span id="tut-loopidioms"></span><h2>5.6. Looping Techniques<a class="headerlink" href="#looping-techniques" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cac-ky-thuat-lap">
+<span id="tut-loopidioms"></span><h2>5.6. Các kỹ thuật lặp<a class="headerlink" href="#cac-ky-thuat-lap" title="Permalink to this headline">¶</a></h2>
 <p>When looping through dictionaries, the key and corresponding value can be
 retrieved at the same time using the <code class="xref py py-meth docutils literal"><span class="pre">items()</span></code> method.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">knights</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;gallahad&#39;</span><span class="p">:</span> <span class="s1">&#39;the pure&#39;</span><span class="p">,</span> <span class="s1">&#39;robin&#39;</span><span class="p">:</span> <span class="s1">&#39;the brave&#39;</span><span class="p">}</span>
@@ -625,8 +626,8 @@ however, it is often simpler and safer to create a new list instead.</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="more-on-conditions">
-<span id="tut-conditions"></span><h2>5.7. More on Conditions<a class="headerlink" href="#more-on-conditions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cac-cau-lenh-dieu-kien">
+<span id="tut-conditions"></span><h2>5.7. Các câu lệnh điều kiện<a class="headerlink" href="#cac-cau-lenh-dieu-kien" title="Permalink to this headline">¶</a></h2>
 <p>The conditions used in <code class="docutils literal"><span class="pre">while</span></code> and <code class="docutils literal"><span class="pre">if</span></code> statements can contain any
 operators, not just comparisons.</p>
 <p>The comparison operators <code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> check whether a value occurs
@@ -661,8 +662,8 @@ programmers may grumble about this, but it avoids a common class of problems
 encountered in C programs: typing <code class="docutils literal"><span class="pre">=</span></code> in an expression when <code class="docutils literal"><span class="pre">==</span></code> was
 intended.</p>
 </div>
-<div class="section" id="comparing-sequences-and-other-types">
-<span id="tut-comparing"></span><h2>5.8. Comparing Sequences and Other Types<a class="headerlink" href="#comparing-sequences-and-other-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="so-sanh-day-va-kieu-du-lieu-khac">
+<span id="tut-comparing"></span><h2>5.8. So sánh dãy và kiểu dữ liệu khác<a class="headerlink" href="#so-sanh-day-va-kieu-du-lieu-khac" title="Permalink to this headline">¶</a></h2>
 <p>Sequence objects may be compared to other objects with the same sequence type.
 The comparison uses <em>lexicographical</em> ordering: first the first two items are
 compared, and if they differ this determines the outcome of the comparison; if
@@ -727,25 +728,25 @@ are not independent of the original dictionary &#8211; it is only a <em>view</em
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="index.html">Nội dung bài học</a></h3>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="appetite.html">1. Whetting Your Appetite</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interpreter.html">2. Using the Python Interpreter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">3. An Informal Introduction to Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="controlflow.html">4. More Control Flow Tools</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Data Structures</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#more-on-lists">5.1. More on Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#the-del-statement">5.2. The <code class="docutils literal"><span class="pre">del</span></code> statement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tuples-and-sequences">5.3. Tuples and Sequences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sets">5.4. Sets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#dictionaries">5.5. Dictionaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#looping-techniques">5.6. Looping Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#more-on-conditions">5.7. More on Conditions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#comparing-sequences-and-other-types">5.8. Comparing Sequences and Other Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appetite.html">1. Lời tựa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interpreter.html">2. Sử dụng trình thông dịch Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">3. Gới thiệu ngôn ngữ lập trình Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controlflow.html">4. Điều khiển luồng</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Cấu trúc dữ liệu</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tim-hieu-them-ve-lists">5.1. Tìm hiểu thêm về Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cau-lenh-del">5.2. Câu lệnh <code class="docutils literal"><span class="pre">del</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tuples-kieu-du-lieu-co-trinh-tu-sequences">5.3. Tuples - kiểu dữ liệu có trình tự (Sequences)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bo">5.4. Bộ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kieu-tu-dien">5.5. Kiểu từ điển</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cac-ky-thuat-lap">5.6. Các kỹ thuật lặp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cac-cau-lenh-dieu-kien">5.7. Các câu lệnh điều kiện</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#so-sanh-day-va-kieu-du-lieu-khac">5.8. So sánh dãy và kiểu dữ liệu khác</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">6. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">6. Mô-đun</a></li>
 <li class="toctree-l1"><a class="reference internal" href="inputoutput.html">7. Input and Output</a></li>
-<li class="toctree-l1"><a class="reference internal" href="errors.html">8. Errors and Exceptions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="classes.html">9. Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="errors.html">8. Lỗi và ngoại lệ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">9. Lớp (Classes)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stdlib.html">10. Brief Tour of the Standard Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stdlib2.html">11. Brief Tour of the Standard Library &#8211; Part II</a></li>
 <li class="toctree-l1"><a class="reference internal" href="venv.html">12. Virtual Environments and Packages</a></li>
@@ -756,10 +757,10 @@ are not independent of the original dictionary &#8211; it is only a <em>view</em
 </ul>
 
   <div role="note" aria-label="source link">
-    <h3>Trang Web </h3>
+    <h3>Thực hành </h3>
     <ul class="this-page-menu">
       <li><a href="_sources/datastructures.txt"
-            rel="nofollow">Xem mã nguồn</a></li>
+            rel="nofollow">Bài tập chương này</a></li>
     </ul>
    </div>
         </div>
@@ -773,17 +774,17 @@ are not independent of the original dictionary &#8211; it is only a <em>view</em
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="modules.html" title="6. Modules"
+          <a href="modules.html" title="6. Mô-đun"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="controlflow.html" title="4. More Control Flow Tools"
+          <a href="controlflow.html" title="4. Điều khiển luồng"
              accesskey="P">previous</a> |</li>
       </ul>
     </div>
 
     <div class="footer" role="contentinfo">
         &#169; <a href="copyright.html">Copyright</a> 2016, Trần Viết Sơn.
-      Update lần cuối vào Nov 14, 2016.
+      Update lần cuối vào Nov 15, 2016.
       Webste được xây dựng bằng <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
     </div>
   </body>
