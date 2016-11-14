@@ -1,0 +1,38 @@
+.. _tutorial-index:
+
+######################
+  The Python Tutorial
+######################
+
+Python là một NNLT mạnh mẽ và dễ học . Python có một cấu trúc dữ liệu cao cấp, đơn giản nhưng hiệu quả trong việc tiếp cận lập trình hướng đối tượng (OPP). Cú pháp của nó khá thanh lịch, rõ ràng và ngắn gọn làm cho nó trở thành một ngôn ngữ lý tưởng lập trình hướng kịch bản và phát triển ứng dụng nhanh chóng trong nhiều lĩnh vực trên hầu hết các nền tảng.
+
+https://www.python.org/ là trang chủ của Python, chứa bản cài đặt Python, các thư viện chuẩn, các Packages mở rộng của các lập trình viên và chứa cả các hướng dẫn. Nói chung là bạn nên tìm hiểu về trang web này.
+
+Trình thông dịch Python có thể mở rộng thêm dữ liệu và các thư viện một cách dễ dàng. Ví dụ như có các bản CPython, Ipython...Python cũng là một NNLT mở rộng cho việc tùy chỉnh các ứng dụng khác.
+
+Tài liệu này hướng dẫn cho người đọc các khái niệm cơ bản, làm bài tập các phần để nắm vững kiến thức.
+
+Hướng dẫn về các đối tượng (Objects) và Modules chỉ ở mức cơ bản, Xem phần **library-index** và **reference-index** để nắm rõ hơn nhé. Để viết các phần mở rộng cho **C** hoặc **C++**, đọc phần **extending-index** và **c-api-index**. Bạn cũng nên đọc thêm vài cuốn sách về Python để hoàn thiện kỹ năng của mình.
+
+Tài liệu này chỉ hướng dẫn một số tính năng nổi bật của Python, còn rất nhiều thư viện khác chờ các bạn khám phá. Cố lên nhé các chế.
+
+.. toctree::
+   :numbered:
+
+   appetite.txt
+   interpreter.txt
+   introduction.txt
+   controlflow.txt
+   datastructures.txt
+   modules.txt
+   inputoutput.txt
+   errors.txt
+   classes.txt
+   stdlib.txt
+   stdlib2.txt
+   venv.txt
+   whatnow.txt
+   interactive.txt
+   floatingpoint.txt
+   appendix.txt
+

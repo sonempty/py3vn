@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>9. Top-level components &#8212; Tài liệu Python tiếng Việt   V3.5 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     ' V3.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="../index.html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" type="image/png" href="../_static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    
+
+  </head>
+  <body role="document">
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
+        <li><a href="../index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
+      </ul>
+    </div>
+    
+        <div class="badge">
+            <a href="https://github.com/sonempty/py3vn">Fork me on Github</a>
+            <img src="../_static/right-red@2x.png">
+        </div>
+    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="top-level-components">
+<span id="top-level"></span><h1>9. Top-level components<a class="headerlink" href="#top-level-components" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">The Python interpreter can get its input from a number of sources: from a script
+passed to it as standard input or as program argument, typed in interactively,
+from a module source file, etc.  This chapter gives the syntax used in these
+cases.</p>
+<div class="section" id="complete-python-programs">
+<span id="programs"></span><h2>9.1. Complete Python programs<a class="headerlink" href="#complete-python-programs" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="index-1"></span><p id="index-2">While a language specification need not prescribe how the language interpreter
+is invoked, it is useful to have a notion of a complete Python program.  A
+complete Python program is executed in a minimally initialized environment: all
+built-in and standard modules are available, but none have been initialized,
+except for <code class="xref py py-mod docutils literal"><span class="pre">sys</span></code> (various system services), <code class="xref py py-mod docutils literal"><span class="pre">builtins</span></code> (built-in
+functions, exceptions and <code class="docutils literal"><span class="pre">None</span></code>) and <code class="xref py py-mod docutils literal"><span class="pre">__main__</span></code>.  The latter is used to
+provide the local and global namespace for execution of the complete program.</p>
+<p>The syntax for a complete Python program is that for file input, described in
+the next section.</p>
+<p id="index-3">The interpreter may also be invoked in interactive mode; in this case, it does
+not read and execute a complete program but reads and executes one statement
+(possibly compound) at a time.  The initial environment is identical to that of
+a complete program; each statement is executed in the namespace of
+<code class="xref py py-mod docutils literal"><span class="pre">__main__</span></code>.</p>
+<p id="index-4">Under Unix, a complete program can be passed to the interpreter in three forms:
+with the <code class="xref std std-option docutils literal"><span class="pre">-c</span></code> <em>string</em> command line option, as a file passed as the
+first command line argument, or as standard input.  If the file or standard
+input is a tty device, the interpreter enters interactive mode; otherwise, it
+executes the file as a complete program.</p>
+</div>
+<div class="section" id="file-input">
+<span id="id1"></span><h2>9.2. File input<a class="headerlink" href="#file-input" title="Permalink to this headline">¶</a></h2>
+<p>All input read from non-interactive files has the same form:</p>
+<pre>
+<strong id="grammar-token-file_input">file_input</strong> ::=  (NEWLINE | <a class="reference internal" href="compound_stmts.html#grammar-token-statement"><code class="xref docutils literal"><span class="pre">statement</span></code></a>)*
+</pre>
+<p>This syntax is used in the following situations:</p>
+<ul class="simple">
+<li>when parsing a complete Python program (from a file or from a string);</li>
+<li>when parsing a module;</li>
+<li>when parsing a string passed to the <code class="xref py py-func docutils literal"><span class="pre">exec()</span></code> function;</li>
+</ul>
+</div>
+<div class="section" id="interactive-input">
+<span id="interactive"></span><h2>9.3. Interactive input<a class="headerlink" href="#interactive-input" title="Permalink to this headline">¶</a></h2>
+<p>Input in interactive mode is parsed using the following grammar:</p>
+<pre>
+<strong id="grammar-token-interactive_input">interactive_input</strong> ::=  [<a class="reference internal" href="compound_stmts.html#grammar-token-stmt_list"><code class="xref docutils literal"><span class="pre">stmt_list</span></code></a>] NEWLINE | <a class="reference internal" href="compound_stmts.html#grammar-token-compound_stmt"><code class="xref docutils literal"><span class="pre">compound_stmt</span></code></a> NEWLINE
+</pre>
+<p>Note that a (top-level) compound statement must be followed by a blank line in
+interactive mode; this is needed to help the parser detect the end of the input.</p>
+</div>
+<div class="section" id="expression-input">
+<span id="id2"></span><h2>9.4. Expression input<a class="headerlink" href="#expression-input" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="index-5"></span><p id="index-6"><code class="xref py py-func docutils literal"><span class="pre">eval()</span></code> is used for expression input.  It ignores leading whitespace. The
+string argument to <code class="xref py py-func docutils literal"><span class="pre">eval()</span></code> must have the following form:</p>
+<pre>
+<strong id="grammar-token-eval_input">eval_input</strong> ::=  <a class="reference internal" href="expressions.html#grammar-token-expression_list"><code class="xref docutils literal"><span class="pre">expression_list</span></code></a> NEWLINE*
+</pre>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <a id="sidebar-anchor"></a>
+    
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Tìm kiếm</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../index.html">Nội dung bài học</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../appetite.html">1. Whetting Your Appetite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interpreter.html">2. Using the Python Interpreter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">3. An Informal Introduction to Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../controlflow.html">4. More Control Flow Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datastructures.html">5. Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">6. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inputoutput.html">7. Input and Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../errors.html">8. Errors and Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../classes.html">9. Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdlib.html">10. Brief Tour of the Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stdlib2.html">11. Brief Tour of the Standard Library &#8211; Part II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../venv.html">12. Virtual Environments and Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whatnow.html">13. What Now?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interactive.html">14. Interactive Input Editing and History Substitution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../floatingpoint.html">15. Floating Point Arithmetic:  Issues and Limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix.html">16. Appendix</a></li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>Trang Web </h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/reference/toplevel_components.txt"
+            rel="nofollow">Xem mã nguồn</a></li>
+    </ul>
+   </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; <a href="../copyright.html">Copyright</a> 2016, Trần Viết Sơn.
+      Update lần cuối vào Nov 14, 2016.
+      Webste được xây dựng bằng <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>
