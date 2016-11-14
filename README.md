@@ -1,8 +1,10 @@
-# [![N|Solid](https://sonempty.github.io/py3vn/_static/py.png)](https://sonempty.github.io/py3vn)T�i li?u Python 3.5 ti?ng Vi?t
+# Tài liệu Python 3.5 tiếng Việt
 ---
 
-N?i dung T�i Li?u:
+Nội dung Tài Liệu này:
 
-  - Ph?n hu?ng d?n (D?ch t? tutorial c?a Python Docs)
-  - Ph?n b�i t?p v� d�p �n
+  - Hướng dẫn (Dịch theo Python Docs)
+  - Bài tập và đáp án
+  
+Cần người tham gia dịch cùng, bạn nào hứng thú thì tham gia nhé.
 
