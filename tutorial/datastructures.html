@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>5. Data Structures &#8212; Dịch tiếng Việt Python 3.5 documentation</title>
+    <title>5. Data Structures &#8212; Tài liệu Python tiếng Việt   V3.5 documentation</title>
     
     <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -13,7 +13,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '3.5',
+        VERSION:     ' V3.5',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,9 +23,10 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/sidebar.js"></script>
-    <link rel="author" title="About these documents" href="../about.html" />
-    <link rel="copyright" title="Copyright" href="../copyright.html" />
-    <link rel="top" title="Dịch tiếng Việt Python 3.5 documentation" href="../index.html" />
+    <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="../index.html" />
+    <link rel="up" title="The Python Tutorial" href="index.html" />
+    <link rel="next" title="6. Modules" href="modules.html" />
+    <link rel="prev" title="4. More Control Flow Tools" href="controlflow.html" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <link rel="shortcut icon" type="image/png" href="../_static/favicon.png" />
     <meta name="viewport" content="width=device-width,initial-scale=0.8">
@@ -37,12 +38,13 @@
       <h3>Navigation</h3>
       <ul>
         <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
-        <li><a href="../index.html">Dịch tiếng Việt Python 3.5 documentation</a> &#187;</li> 
+        <li><a href="../index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li>
+          <li><a href="index.html" accesskey="U">The Python Tutorial</a> &#187;</li> 
       </ul>
     </div>
     
         <div class="badge">
-            <a href="https://github.com/sonempty/Python-Document-in-Vietnamese">Fork me on GitHub</a>
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
             <img src="../_static/right-red@2x.png">
         </div>
     
@@ -54,89 +56,59 @@
           <div class="body" role="main">
             
   <div class="section" id="data-structures">
-<span id="tut-structures"></span><h1>5. Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this headline">¶</a></h1>
-<p>This chapter describes some things you&#8217;ve learned about already in more detail,
-and adds some new things as well.</p>
+<h1>5. Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this headline">¶</a></h1>
+<p>This chapter describes some things you&#8217;ve learned about already in
+more detail, and adds some new things as well.</p>
 <div class="section" id="more-on-lists">
-<span id="tut-morelists"></span><h2>5.1. More on Lists<a class="headerlink" href="#more-on-lists" title="Permalink to this headline">¶</a></h2>
-<p>The list data type has some more methods.  Here are all of the methods of list
-objects:</p>
-<dl class="method">
-<dt>
-<code class="descclassname">list.</code><code class="descname">append</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span></dt>
-<dd><p>Add an item to the end of the list.  Equivalent to <code class="docutils literal"><span class="pre">a[len(a):]</span> <span class="pre">=</span> <span class="pre">[x]</span></code>.</p>
-</dd></dl>
-
-<dl class="method">
-<dt>
-<code class="descclassname">list.</code><code class="descname">extend</code><span class="sig-paren">(</span><em>L</em><span class="sig-paren">)</span></dt>
-<dd><p>Extend the list by appending all the items in the given list.  Equivalent to
-<code class="docutils literal"><span class="pre">a[len(a):]</span> <span class="pre">=</span> <span class="pre">L</span></code>.</p>
-</dd></dl>
-
-<dl class="method">
-<dt>
-<code class="descclassname">list.</code><code class="descname">insert</code><span class="sig-paren">(</span><em>i</em>, <em>x</em><span class="sig-paren">)</span></dt>
-<dd><p>Insert an item at a given position.  The first argument is the index of the
-element before which to insert, so <code class="docutils literal"><span class="pre">a.insert(0,</span> <span class="pre">x)</span></code> inserts at the front of
-the list, and <code class="docutils literal"><span class="pre">a.insert(len(a),</span> <span class="pre">x)</span></code> is equivalent to <code class="docutils literal"><span class="pre">a.append(x)</span></code>.</p>
-</dd></dl>
-
-<dl class="method">
-<dt>
-<code class="descclassname">list.</code><code class="descname">remove</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span></dt>
-<dd><p>Remove the first item from the list whose value is <em>x</em>.  It is an error if
-there is no such item.</p>
-</dd></dl>
-
-<dl class="method">
-<dt>
-<code class="descclassname">list.</code><code class="descname">pop</code><span class="sig-paren">(</span><span class="optional">[</span><em>i</em><span class="optional">]</span><span class="sig-paren">)</span></dt>
-<dd><p>Remove the item at the given position in the list, and return it.  If no index
-is specified, <code class="docutils literal"><span class="pre">a.pop()</span></code> removes and returns the last item in the list.  (The
-square brackets around the <em>i</em> in the method signature denote that the parameter
-is optional, not that you should type square brackets at that position.  You
-will see this notation frequently in the Python Library Reference.)</p>
-</dd></dl>
-
-<dl class="method">
-<dt>
-<code class="descclassname">list.</code><code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
-<dd><p>Remove all items from the list.  Equivalent to <code class="docutils literal"><span class="pre">del</span> <span class="pre">a[:]</span></code>.</p>
-</dd></dl>
-
-<dl class="method">
-<dt>
-<code class="descclassname">list.</code><code class="descname">index</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span></dt>
-<dd><p>Return the index in the list of the first item whose value is <em>x</em>. It is an
-error if there is no such item.</p>
-</dd></dl>
-
-<dl class="method">
-<dt>
-<code class="descclassname">list.</code><code class="descname">count</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span></dt>
-<dd><p>Return the number of times <em>x</em> appears in the list.</p>
-</dd></dl>
-
-<dl class="method">
-<dt>
-<code class="descclassname">list.</code><code class="descname">sort</code><span class="sig-paren">(</span><em>key=None</em>, <em>reverse=False</em><span class="sig-paren">)</span></dt>
-<dd><p>Sort the items of the list in place (the arguments can be used for sort
-customization, see <a class="reference internal" href="../library/functions.html#sorted" title="sorted"><code class="xref py py-func docutils literal"><span class="pre">sorted()</span></code></a> for their explanation).</p>
-</dd></dl>
-
-<dl class="method">
-<dt>
-<code class="descclassname">list.</code><code class="descname">reverse</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
-<dd><p>Reverse the elements of the list in place.</p>
-</dd></dl>
-
-<dl class="method">
-<dt>
-<code class="descclassname">list.</code><code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
-<dd><p>Return a shallow copy of the list.  Equivalent to <code class="docutils literal"><span class="pre">a[:]</span></code>.</p>
-</dd></dl>
-
+<h2>5.1. More on Lists<a class="headerlink" href="#more-on-lists" title="Permalink to this headline">¶</a></h2>
+<p>The list data type has some more methods.  Here are all of the methods
+of list objects:</p>
+<p>list.append(x)</p>
+<blockquote>
+<div>Add an item to the end of the list.  Equivalent to &#8220;a[len(a):] =
+[x]&#8221;.</div></blockquote>
+<p>list.extend(L)</p>
+<blockquote>
+<div>Extend the list by appending all the items in the given list.
+Equivalent to &#8220;a[len(a):] = L&#8221;.</div></blockquote>
+<p>list.insert(i, x)</p>
+<blockquote>
+<div>Insert an item at a given position.  The first argument is the
+index of the element before which to insert, so &#8220;a.insert(0, x)&#8221;
+inserts at the front of the list, and &#8220;a.insert(len(a), x)&#8221; is
+equivalent to &#8220;a.append(x)&#8221;.</div></blockquote>
+<p>list.remove(x)</p>
+<blockquote>
+<div>Remove the first item from the list whose value is <em>x</em>.  It is an
+error if there is no such item.</div></blockquote>
+<p>list.pop([i])</p>
+<blockquote>
+<div>Remove the item at the given position in the list, and return it.
+If no index is specified, &#8220;a.pop()&#8221; removes and returns the last
+item in the list.  (The square brackets around the <em>i</em> in the
+method signature denote that the parameter is optional, not that
+you should type square brackets at that position.  You will see
+this notation frequently in the Python Library Reference.)</div></blockquote>
+<p>list.clear()</p>
+<blockquote>
+<div>Remove all items from the list.  Equivalent to &#8220;del a[:]&#8221;.</div></blockquote>
+<p>list.index(x)</p>
+<blockquote>
+<div>Return the index in the list of the first item whose value is <em>x</em>.
+It is an error if there is no such item.</div></blockquote>
+<p>list.count(x)</p>
+<blockquote>
+<div>Return the number of times <em>x</em> appears in the list.</div></blockquote>
+<p>list.sort(key=None, reverse=False)</p>
+<blockquote>
+<div>Sort the items of the list in place (the arguments can be used for
+sort customization, see &#8220;sorted()&#8221; for their explanation).</div></blockquote>
+<p>list.reverse()</p>
+<blockquote>
+<div>Reverse the elements of the list in place.</div></blockquote>
+<p>list.copy()</p>
+<blockquote>
+<div>Return a shallow copy of the list.  Equivalent to &#8220;a[:]&#8221;.</div></blockquote>
 <p>An example that uses most of the list methods:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mf">66.25</span><span class="p">,</span> <span class="mi">333</span><span class="p">,</span> <span class="mi">333</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1234.5</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">333</span><span class="p">),</span> <span class="n">a</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mf">66.25</span><span class="p">),</span> <span class="n">a</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">))</span>
@@ -162,16 +134,17 @@ customization, see <a class="reference internal" href="../library/functions.html
 <span class="go">[-1, 1, 66.25, 333, 333]</span>
 </pre></div>
 </div>
-<p>You might have noticed that methods like <code class="docutils literal"><span class="pre">insert</span></code>, <code class="docutils literal"><span class="pre">remove</span></code> or <code class="docutils literal"><span class="pre">sort</span></code> that
-only modify the list have no return value printed &#8211; they return the default
-<code class="docutils literal"><span class="pre">None</span></code>. <a class="footnote-reference" href="#id3" id="id1">[1]</a>  This is a design principle for all mutable data structures in
-Python.</p>
+<p>You might have noticed that methods like &#8220;insert&#8221;, &#8220;remove&#8221; or &#8220;sort&#8221;
+that only modify the list have no return value printed &#8211; they return
+the default &#8220;None&#8221;. [1]  This is a design principle for all mutable
+data structures in Python.</p>
 <div class="section" id="using-lists-as-stacks">
-<span id="tut-lists-as-stacks"></span><h3>5.1.1. Using Lists as Stacks<a class="headerlink" href="#using-lists-as-stacks" title="Permalink to this headline">¶</a></h3>
-<p>The list methods make it very easy to use a list as a stack, where the last
-element added is the first element retrieved (&#8220;last-in, first-out&#8221;).  To add an
-item to the top of the stack, use <code class="xref py py-meth docutils literal"><span class="pre">append()</span></code>.  To retrieve an item from the
-top of the stack, use <code class="xref py py-meth docutils literal"><span class="pre">pop()</span></code> without an explicit index.  For example:</p>
+<h3>5.1.1. Using Lists as Stacks<a class="headerlink" href="#using-lists-as-stacks" title="Permalink to this headline">¶</a></h3>
+<p>The list methods make it very easy to use a list as a stack, where the
+last element added is the first element retrieved (&#8220;last-in, first-
+out&#8221;).  To add an item to the top of the stack, use &#8220;append()&#8221;.  To
+retrieve an item from the top of the stack, use &#8220;pop()&#8221; without an
+explicit index.  For example:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stack</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
@@ -191,13 +164,14 @@ top of the stack, use <code class="xref py py-meth docutils literal"><span class
 </div>
 </div>
 <div class="section" id="using-lists-as-queues">
-<span id="tut-lists-as-queues"></span><h3>5.1.2. Using Lists as Queues<a class="headerlink" href="#using-lists-as-queues" title="Permalink to this headline">¶</a></h3>
-<p>It is also possible to use a list as a queue, where the first element added is
-the first element retrieved (&#8220;first-in, first-out&#8221;); however, lists are not
-efficient for this purpose.  While appends and pops from the end of list are
-fast, doing inserts or pops from the beginning of a list is slow (because all
-of the other elements have to be shifted by one).</p>
-<p>To implement a queue, use <a class="reference internal" href="../library/collections.html#collections.deque" title="collections.deque"><code class="xref py py-class docutils literal"><span class="pre">collections.deque</span></code></a> which was designed to
+<h3>5.1.2. Using Lists as Queues<a class="headerlink" href="#using-lists-as-queues" title="Permalink to this headline">¶</a></h3>
+<p>It is also possible to use a list as a queue, where the first element
+added is the first element retrieved (&#8220;first-in, first-out&#8221;); however,
+lists are not efficient for this purpose.  While appends and pops from
+the end of list are fast, doing inserts or pops from the beginning of
+a list is slow (because all of the other elements have to be shifted
+by one).</p>
+<p>To implement a queue, use &#8220;collections.deque&#8221; which was designed to
 have fast appends and pops from both ends.  For example:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">deque</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">queue</span> <span class="o">=</span> <span class="n">deque</span><span class="p">([</span><span class="s2">&quot;Eric&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Michael&quot;</span><span class="p">])</span>
@@ -213,11 +187,12 @@ have fast appends and pops from both ends.  For example:</p>
 </div>
 </div>
 <div class="section" id="list-comprehensions">
-<span id="tut-listcomps"></span><h3>5.1.3. List Comprehensions<a class="headerlink" href="#list-comprehensions" title="Permalink to this headline">¶</a></h3>
-<p>List comprehensions provide a concise way to create lists.
-Common applications are to make new lists where each element is the result of
-some operations applied to each member of another sequence or iterable, or to
-create a subsequence of those elements that satisfy a certain condition.</p>
+<h3>5.1.3. List Comprehensions<a class="headerlink" href="#list-comprehensions" title="Permalink to this headline">¶</a></h3>
+<p>List comprehensions provide a concise way to create lists. Common
+applications are to make new lists where each element is the result of
+some operations applied to each member of another sequence or
+iterable, or to create a subsequence of those elements that satisfy a
+certain condition.</p>
 <p>For example, assume we want to create a list of squares, like:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
@@ -227,23 +202,21 @@ create a subsequence of those elements that satisfy a certain condition.</p>
 <span class="go">[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</span>
 </pre></div>
 </div>
-<p>Note that this creates (or overwrites) a variable named <code class="docutils literal"><span class="pre">x</span></code> that still exists
-after the loop completes.  We can calculate the list of squares without any
-side effects using:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">squares</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)))</span>
-</pre></div>
-</div>
+<p>Note that this creates (or overwrites) a variable named &#8220;x&#8221; that still
+exists after the loop completes.  We can calculate the list of squares
+without any side effects using:</p>
+<blockquote>
+<div>squares = list(map(lambda x: x**2, range(10)))</div></blockquote>
 <p>or, equivalently:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
-</pre></div>
-</div>
+<blockquote>
+<div>squares = [x**2 for x in range(10)]</div></blockquote>
 <p>which is more concise and readable.</p>
-<p>A list comprehension consists of brackets containing an expression followed
-by a <a class="reference internal" href="../reference/compound_stmts.html#for"><code class="xref std std-keyword docutils literal"><span class="pre">for</span></code></a> clause, then zero or more <a class="reference internal" href="../reference/compound_stmts.html#for"><code class="xref std std-keyword docutils literal"><span class="pre">for</span></code></a> or <a class="reference internal" href="../reference/compound_stmts.html#if"><code class="xref std std-keyword docutils literal"><span class="pre">if</span></code></a>
-clauses.  The result will be a new list resulting from evaluating the expression
-in the context of the <a class="reference internal" href="../reference/compound_stmts.html#for"><code class="xref std std-keyword docutils literal"><span class="pre">for</span></code></a> and <a class="reference internal" href="../reference/compound_stmts.html#if"><code class="xref std std-keyword docutils literal"><span class="pre">if</span></code></a> clauses which follow it.
-For example, this listcomp combines the elements of two lists if they are not
-equal:</p>
+<p>A list comprehension consists of brackets containing an expression
+followed by a &#8220;for&#8221; clause, then zero or more &#8220;for&#8221; or &#8220;if&#8221; clauses.
+The result will be a new list resulting from evaluating the expression
+in the context of the &#8220;for&#8221; and &#8220;if&#8221; clauses which follow it. For
+example, this listcomp combines the elements of two lists if they are
+not equal:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">y</span><span class="p">]</span>
 <span class="go">[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]</span>
 </pre></div>
@@ -259,10 +232,10 @@ equal:</p>
 <span class="go">[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]</span>
 </pre></div>
 </div>
-<p>Note how the order of the <a class="reference internal" href="../reference/compound_stmts.html#for"><code class="xref std std-keyword docutils literal"><span class="pre">for</span></code></a> and <a class="reference internal" href="../reference/compound_stmts.html#if"><code class="xref std std-keyword docutils literal"><span class="pre">if</span></code></a> statements is the
-same in both these snippets.</p>
-<p>If the expression is a tuple (e.g. the <code class="docutils literal"><span class="pre">(x,</span> <span class="pre">y)</span></code> in the previous example),
-it must be parenthesized.</p>
+<p>Note how the order of the &#8220;for&#8221; and &#8220;if&#8221; statements is the same in
+both these snippets.</p>
+<p>If the expression is a tuple (e.g. the &#8220;(x, y)&#8221; in the previous
+example), it must be parenthesized.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">vec</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># create a new list with the values doubled</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">x</span><span class="o">*</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">vec</span><span class="p">]</span>
@@ -292,7 +265,8 @@ it must be parenthesized.</p>
 <span class="go">[1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
 </pre></div>
 </div>
-<p>List comprehensions can contain complex expressions and nested functions:</p>
+<p>List comprehensions can contain complex expressions and nested
+functions:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">pi</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">pi</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]</span>
 <span class="go">[&#39;3.1&#39;, &#39;3.14&#39;, &#39;3.142&#39;, &#39;3.1416&#39;, &#39;3.14159&#39;]</span>
@@ -301,10 +275,10 @@ it must be parenthesized.</p>
 </div>
 <div class="section" id="nested-list-comprehensions">
 <h3>5.1.4. Nested List Comprehensions<a class="headerlink" href="#nested-list-comprehensions" title="Permalink to this headline">¶</a></h3>
-<p>The initial expression in a list comprehension can be any arbitrary expression,
-including another list comprehension.</p>
-<p>Consider the following example of a 3x4 matrix implemented as a list of
-3 lists of length 4:</p>
+<p>The initial expression in a list comprehension can be any arbitrary
+expression, including another list comprehension.</p>
+<p>Consider the following example of a 3x4 matrix implemented as a list
+of 3 lists of length 4:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="p">[</span>
 <span class="gp">... </span>    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
 <span class="gp">... </span>    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
@@ -318,7 +292,7 @@ including another list comprehension.</p>
 </pre></div>
 </div>
 <p>As we saw in the previous section, the nested listcomp is evaluated in
-the context of the <a class="reference internal" href="../reference/compound_stmts.html#for"><code class="xref std std-keyword docutils literal"><span class="pre">for</span></code></a> that follows it, so this example is
+the context of the &#8220;for&#8221; that follows it, so this example is
 equivalent to:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">transposed</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
@@ -341,22 +315,23 @@ equivalent to:</p>
 <span class="go">[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]</span>
 </pre></div>
 </div>
-<p>In the real world, you should prefer built-in functions to complex flow statements.
-The <a class="reference internal" href="../library/functions.html#zip" title="zip"><code class="xref py py-func docutils literal"><span class="pre">zip()</span></code></a> function would do a great job for this use case:</p>
+<p>In the real world, you should prefer built-in functions to complex
+flow statements. The &#8220;zip()&#8221; function would do a great job for this
+use case:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">matrix</span><span class="p">))</span>
 <span class="go">[(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]</span>
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="controlflow.html#tut-unpacking-arguments"><span class="std std-ref">Unpacking Argument Lists</span></a> for details on the asterisk in this line.</p>
+<p>See Unpacking Argument Lists for details on the asterisk in this line.</p>
 </div>
 </div>
 <div class="section" id="the-del-statement">
-<span id="tut-del"></span><h2>5.2. The <a class="reference internal" href="../reference/simple_stmts.html#del"><code class="xref std std-keyword docutils literal"><span class="pre">del</span></code></a> statement<a class="headerlink" href="#the-del-statement" title="Permalink to this headline">¶</a></h2>
-<p>There is a way to remove an item from a list given its index instead of its
-value: the <a class="reference internal" href="../reference/simple_stmts.html#del"><code class="xref std std-keyword docutils literal"><span class="pre">del</span></code></a> statement.  This differs from the <code class="xref py py-meth docutils literal"><span class="pre">pop()</span></code> method
-which returns a value.  The <a class="reference internal" href="../reference/simple_stmts.html#del"><code class="xref std std-keyword docutils literal"><span class="pre">del</span></code></a> statement can also be used to remove
-slices from a list or clear the entire list (which we did earlier by assignment
-of an empty list to the slice).  For example:</p>
+<h2>5.2. The &#8220;del&#8221; statement<a class="headerlink" href="#the-del-statement" title="Permalink to this headline">¶</a></h2>
+<p>There is a way to remove an item from a list given its index instead
+of its value: the &#8220;del&#8221; statement.  This differs from the &#8220;pop()&#8221;
+method which returns a value.  The &#8220;del&#8221; statement can also be used to
+remove slices from a list or clear the entire list (which we did
+earlier by assignment of an empty list to the slice).  For example:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">66.25</span><span class="p">,</span> <span class="mi">333</span><span class="p">,</span> <span class="mi">333</span><span class="p">,</span> <span class="mf">1234.5</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
@@ -369,21 +344,22 @@ of an empty list to the slice).  For example:</p>
 <span class="go">[]</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../reference/simple_stmts.html#del"><code class="xref std std-keyword docutils literal"><span class="pre">del</span></code></a> can also be used to delete entire variables:</p>
+<p>&#8220;del&#8221; can also be used to delete entire variables:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">a</span>
 </pre></div>
 </div>
-<p>Referencing the name <code class="docutils literal"><span class="pre">a</span></code> hereafter is an error (at least until another value
-is assigned to it).  We&#8217;ll find other uses for <a class="reference internal" href="../reference/simple_stmts.html#del"><code class="xref std std-keyword docutils literal"><span class="pre">del</span></code></a> later.</p>
+<p>Referencing the name &#8220;a&#8221; hereafter is an error (at least until another
+value is assigned to it).  We&#8217;ll find other uses for &#8220;del&#8221; later.</p>
 </div>
 <div class="section" id="tuples-and-sequences">
-<span id="tut-tuples"></span><h2>5.3. Tuples and Sequences<a class="headerlink" href="#tuples-and-sequences" title="Permalink to this headline">¶</a></h2>
-<p>We saw that lists and strings have many common properties, such as indexing and
-slicing operations.  They are two examples of <em>sequence</em> data types (see
-<a class="reference internal" href="../library/stdtypes.html#typesseq"><span class="std std-ref">Sequence Types &#8212; list, tuple, range</span></a>).  Since Python is an evolving language, other sequence data
-types may be added.  There is also another standard sequence data type: the
-<em>tuple</em>.</p>
-<p>A tuple consists of a number of values separated by commas, for instance:</p>
+<h2>5.3. Tuples and Sequences<a class="headerlink" href="#tuples-and-sequences" title="Permalink to this headline">¶</a></h2>
+<p>We saw that lists and strings have many common properties, such as
+indexing and slicing operations.  They are two examples of <em>sequence</em>
+data types (see Sequence Types &#8212; list, tuple, range).  Since Python
+is an evolving language, other sequence data types may be added.
+There is also another standard sequence data type: the <em>tuple</em>.</p>
+<p>A tuple consists of a number of values separated by commas, for
+instance:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="mi">12345</span><span class="p">,</span> <span class="mi">54321</span><span class="p">,</span> <span class="s1">&#39;hello!&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="go">12345</span>
@@ -404,24 +380,26 @@ types may be added.  There is also another standard sequence data type: the
 <span class="go">([1, 2, 3], [3, 2, 1])</span>
 </pre></div>
 </div>
-<p>As you see, on output tuples are always enclosed in parentheses, so that nested
-tuples are interpreted correctly; they may be input with or without surrounding
-parentheses, although often parentheses are necessary anyway (if the tuple is
-part of a larger expression).  It is not possible to assign to the individual
-items of a tuple, however it is possible to create tuples which contain mutable
-objects, such as lists.</p>
-<p>Though tuples may seem similar to lists, they are often used in different
-situations and for different purposes.
-Tuples are <a class="reference internal" href="../glossary.html#term-immutable"><span class="xref std std-term">immutable</span></a>, and usually contain a heterogeneous sequence of
-elements that are accessed via unpacking (see later in this section) or indexing
-(or even by attribute in the case of <a class="reference internal" href="../library/collections.html#collections.namedtuple" title="collections.namedtuple"><code class="xref py py-func docutils literal"><span class="pre">namedtuples</span></code></a>).
-Lists are <a class="reference internal" href="../glossary.html#term-mutable"><span class="xref std std-term">mutable</span></a>, and their elements are usually homogeneous and are
+<p>As you see, on output tuples are always enclosed in parentheses, so
+that nested tuples are interpreted correctly; they may be input with
+or without surrounding parentheses, although often parentheses are
+necessary anyway (if the tuple is part of a larger expression).  It is
+not possible to assign to the individual items of a tuple, however it
+is possible to create tuples which contain mutable objects, such as
+lists.</p>
+<p>Though tuples may seem similar to lists, they are often used in
+different situations and for different purposes. Tuples are
+<em>immutable</em>, and usually contain a heterogeneous sequence of elements
+that are accessed via unpacking (see later in this section) or
+indexing (or even by attribute in the case of &#8220;namedtuples&#8221;). Lists
+are <em>mutable</em>, and their elements are usually homogeneous and are
 accessed by iterating over the list.</p>
-<p>A special problem is the construction of tuples containing 0 or 1 items: the
-syntax has some extra quirks to accommodate these.  Empty tuples are constructed
-by an empty pair of parentheses; a tuple with one item is constructed by
-following a value with a comma (it is not sufficient to enclose a single value
-in parentheses). Ugly, but effective.  For example:</p>
+<p>A special problem is the construction of tuples containing 0 or 1
+items: the syntax has some extra quirks to accommodate these.  Empty
+tuples are constructed by an empty pair of parentheses; a tuple with
+one item is constructed by following a value with a comma (it is not
+sufficient to enclose a single value in parentheses). Ugly, but
+effective.  For example:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">empty</span> <span class="o">=</span> <span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">singleton</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span>    <span class="c1"># &lt;-- note trailing comma</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">empty</span><span class="p">)</span>
@@ -432,27 +410,29 @@ in parentheses). Ugly, but effective.  For example:</p>
 <span class="go">(&#39;hello&#39;,)</span>
 </pre></div>
 </div>
-<p>The statement <code class="docutils literal"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">12345,</span> <span class="pre">54321,</span> <span class="pre">'hello!'</span></code> is an example of <em>tuple packing</em>:
-the values <code class="docutils literal"><span class="pre">12345</span></code>, <code class="docutils literal"><span class="pre">54321</span></code> and <code class="docutils literal"><span class="pre">'hello!'</span></code> are packed together in a tuple.
-The reverse operation is also possible:</p>
+<p>The statement &#8220;t = 12345, 54321, &#8216;hello!&#8217;&#8221; is an example of <em>tuple
+packing</em>: the values &#8220;12345&#8221;, &#8220;54321&#8221; and &#8220;&#8216;hello!&#8217;&#8221; are packed
+together in a tuple. The reverse operation is also possible:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">t</span>
 </pre></div>
 </div>
-<p>This is called, appropriately enough, <em>sequence unpacking</em> and works for any
-sequence on the right-hand side.  Sequence unpacking requires that there are as
-many variables on the left side of the equals sign as there are elements in the
-sequence.  Note that multiple assignment is really just a combination of tuple
-packing and sequence unpacking.</p>
+<p>This is called, appropriately enough, <em>sequence unpacking</em> and works
+for any sequence on the right-hand side.  Sequence unpacking requires
+that there are as many variables on the left side of the equals sign
+as there are elements in the sequence.  Note that multiple assignment
+is really just a combination of tuple packing and sequence unpacking.</p>
 </div>
 <div class="section" id="sets">
-<span id="tut-sets"></span><h2>5.4. Sets<a class="headerlink" href="#sets" title="Permalink to this headline">¶</a></h2>
-<p>Python also includes a data type for <em>sets</em>.  A set is an unordered collection
-with no duplicate elements.  Basic uses include membership testing and
-eliminating duplicate entries.  Set objects also support mathematical operations
-like union, intersection, difference, and symmetric difference.</p>
-<p>Curly braces or the <a class="reference internal" href="../library/stdtypes.html#set" title="set"><code class="xref py py-func docutils literal"><span class="pre">set()</span></code></a> function can be used to create sets.  Note: to
-create an empty set you have to use <code class="docutils literal"><span class="pre">set()</span></code>, not <code class="docutils literal"><span class="pre">{}</span></code>; the latter creates an
-empty dictionary, a data structure that we discuss in the next section.</p>
+<h2>5.4. Sets<a class="headerlink" href="#sets" title="Permalink to this headline">¶</a></h2>
+<p>Python also includes a data type for <em>sets</em>.  A set is an unordered
+collection with no duplicate elements.  Basic uses include membership
+testing and eliminating duplicate entries.  Set objects also support
+mathematical operations like union, intersection, difference, and
+symmetric difference.</p>
+<p>Curly braces or the &#8220;set()&#8221; function can be used to create sets.
+Note: to create an empty set you have to use &#8220;set()&#8221;, not &#8220;{}&#8221;; the
+latter creates an empty dictionary, a data structure that we discuss
+in the next section.</p>
 <p>Here is a brief demonstration:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">basket</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;pear&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">basket</span><span class="p">)</span>                      <span class="c1"># show that duplicates have been removed</span>
@@ -461,8 +441,9 @@ empty dictionary, a data structure that we discuss in the next section.</p>
 <span class="go">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;crabgrass&#39;</span> <span class="ow">in</span> <span class="n">basket</span>
 <span class="go">False</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Demonstrate set operations on unique letters from two words</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Demonstrate set operations on unique letters from two words</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;abracadabra&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;alacazam&#39;</span><span class="p">)</span>
@@ -478,8 +459,8 @@ empty dictionary, a data structure that we discuss in the next section.</p>
 <span class="go">{&#39;r&#39;, &#39;d&#39;, &#39;b&#39;, &#39;m&#39;, &#39;z&#39;, &#39;l&#39;}</span>
 </pre></div>
 </div>
-<p>Similarly to <a class="reference internal" href="#tut-listcomps"><span class="std std-ref">list comprehensions</span></a>, set comprehensions
-are also supported:</p>
+<p>Similarly to list comprehensions, set comprehensions are also
+supported:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="s1">&#39;abracadabra&#39;</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">&#39;abc&#39;</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
 <span class="go">{&#39;r&#39;, &#39;d&#39;}</span>
@@ -487,31 +468,33 @@ are also supported:</p>
 </div>
 </div>
 <div class="section" id="dictionaries">
-<span id="tut-dictionaries"></span><h2>5.5. Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h2>
+<h2>5.5. Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h2>
 <p>Another useful data type built into Python is the <em>dictionary</em> (see
-<a class="reference internal" href="../library/stdtypes.html#typesmapping"><span class="std std-ref">Mapping Types &#8212; dict</span></a>). Dictionaries are sometimes found in other languages as
-&#8220;associative memories&#8221; or &#8220;associative arrays&#8221;.  Unlike sequences, which are
-indexed by a range of numbers, dictionaries are indexed by <em>keys</em>, which can be
-any immutable type; strings and numbers can always be keys.  Tuples can be used
-as keys if they contain only strings, numbers, or tuples; if a tuple contains
-any mutable object either directly or indirectly, it cannot be used as a key.
-You can&#8217;t use lists as keys, since lists can be modified in place using index
-assignments, slice assignments, or methods like <code class="xref py py-meth docutils literal"><span class="pre">append()</span></code> and
-<code class="xref py py-meth docutils literal"><span class="pre">extend()</span></code>.</p>
-<p>It is best to think of a dictionary as an unordered set of <em>key: value</em> pairs,
-with the requirement that the keys are unique (within one dictionary). A pair of
-braces creates an empty dictionary: <code class="docutils literal"><span class="pre">{}</span></code>. Placing a comma-separated list of
-key:value pairs within the braces adds initial key:value pairs to the
-dictionary; this is also the way dictionaries are written on output.</p>
-<p>The main operations on a dictionary are storing a value with some key and
-extracting the value given the key.  It is also possible to delete a key:value
-pair with <code class="docutils literal"><span class="pre">del</span></code>. If you store using a key that is already in use, the old
-value associated with that key is forgotten.  It is an error to extract a value
-using a non-existent key.</p>
-<p>Performing <code class="docutils literal"><span class="pre">list(d.keys())</span></code> on a dictionary returns a list of all the keys
-used in the dictionary, in arbitrary order (if you want it sorted, just use
-<code class="docutils literal"><span class="pre">sorted(d.keys())</span></code> instead). <a class="footnote-reference" href="#id4" id="id2">[2]</a>  To check whether a single key is in the
-dictionary, use the <a class="reference internal" href="../reference/expressions.html#in"><code class="xref std std-keyword docutils literal"><span class="pre">in</span></code></a> keyword.</p>
+Mapping Types &#8212; dict). Dictionaries are sometimes found in other
+languages as &#8220;associative memories&#8221; or &#8220;associative arrays&#8221;.  Unlike
+sequences, which are indexed by a range of numbers, dictionaries are
+indexed by <em>keys</em>, which can be any immutable type; strings and
+numbers can always be keys.  Tuples can be used as keys if they
+contain only strings, numbers, or tuples; if a tuple contains any
+mutable object either directly or indirectly, it cannot be used as a
+key. You can&#8217;t use lists as keys, since lists can be modified in place
+using index assignments, slice assignments, or methods like &#8220;append()&#8221;
+and &#8220;extend()&#8221;.</p>
+<p>It is best to think of a dictionary as an unordered set of <em>key:
+value</em> pairs, with the requirement that the keys are unique (within
+one dictionary). A pair of braces creates an empty dictionary: &#8220;{}&#8221;.
+Placing a comma-separated list of key:value pairs within the braces
+adds initial key:value pairs to the dictionary; this is also the way
+dictionaries are written on output.</p>
+<p>The main operations on a dictionary are storing a value with some key
+and extracting the value given the key.  It is also possible to delete
+a key:value pair with &#8220;del&#8221;. If you store using a key that is already
+in use, the old value associated with that key is forgotten.  It is an
+error to extract a value using a non-existent key.</p>
+<p>Performing &#8220;list(d.keys())&#8221; on a dictionary returns a list of all the
+keys used in the dictionary, in arbitrary order (if you want it
+sorted, just use &#8220;sorted(d.keys())&#8221; instead). [2]  To check whether a
+single key is in the dictionary, use the &#8220;in&#8221; keyword.</p>
 <p>Here is a small example using a dictionary:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tel</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;jack&#39;</span><span class="p">:</span> <span class="mi">4098</span><span class="p">,</span> <span class="s1">&#39;sape&#39;</span><span class="p">:</span> <span class="mi">4139</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">tel</span><span class="p">[</span><span class="s1">&#39;guido&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4127</span>
@@ -533,29 +516,29 @@ dictionary, use the <a class="reference internal" href="../reference/expressions
 <span class="go">False</span>
 </pre></div>
 </div>
-<p>The <a class="reference internal" href="../library/stdtypes.html#dict" title="dict"><code class="xref py py-func docutils literal"><span class="pre">dict()</span></code></a> constructor builds dictionaries directly from sequences of
-key-value pairs:</p>
+<p>The &#8220;dict()&#8221; constructor builds dictionaries directly from sequences
+of key-value pairs:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">dict</span><span class="p">([(</span><span class="s1">&#39;sape&#39;</span><span class="p">,</span> <span class="mi">4139</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;guido&#39;</span><span class="p">,</span> <span class="mi">4127</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;jack&#39;</span><span class="p">,</span> <span class="mi">4098</span><span class="p">)])</span>
 <span class="go">{&#39;sape&#39;: 4139, &#39;jack&#39;: 4098, &#39;guido&#39;: 4127}</span>
 </pre></div>
 </div>
-<p>In addition, dict comprehensions can be used to create dictionaries from
-arbitrary key and value expressions:</p>
+<p>In addition, dict comprehensions can be used to create dictionaries
+from arbitrary key and value expressions:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)}</span>
 <span class="go">{2: 4, 4: 16, 6: 36}</span>
 </pre></div>
 </div>
-<p>When the keys are simple strings, it is sometimes easier to specify pairs using
-keyword arguments:</p>
+<p>When the keys are simple strings, it is sometimes easier to specify
+pairs using keyword arguments:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">dict</span><span class="p">(</span><span class="n">sape</span><span class="o">=</span><span class="mi">4139</span><span class="p">,</span> <span class="n">guido</span><span class="o">=</span><span class="mi">4127</span><span class="p">,</span> <span class="n">jack</span><span class="o">=</span><span class="mi">4098</span><span class="p">)</span>
 <span class="go">{&#39;sape&#39;: 4139, &#39;jack&#39;: 4098, &#39;guido&#39;: 4127}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="looping-techniques">
-<span id="tut-loopidioms"></span><h2>5.6. Looping Techniques<a class="headerlink" href="#looping-techniques" title="Permalink to this headline">¶</a></h2>
-<p>When looping through dictionaries, the key and corresponding value can be
-retrieved at the same time using the <code class="xref py py-meth docutils literal"><span class="pre">items()</span></code> method.</p>
+<h2>5.6. Looping Techniques<a class="headerlink" href="#looping-techniques" title="Permalink to this headline">¶</a></h2>
+<p>When looping through dictionaries, the key and corresponding value can
+be retrieved at the same time using the &#8220;items()&#8221; method.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">knights</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;gallahad&#39;</span><span class="p">:</span> <span class="s1">&#39;the pure&#39;</span><span class="p">,</span> <span class="s1">&#39;robin&#39;</span><span class="p">:</span> <span class="s1">&#39;the brave&#39;</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">knights</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
@@ -564,8 +547,9 @@ retrieved at the same time using the <code class="xref py py-meth docutils liter
 <span class="go">robin the brave</span>
 </pre></div>
 </div>
-<p>When looping through a sequence, the position index and corresponding value can
-be retrieved at the same time using the <a class="reference internal" href="../library/functions.html#enumerate" title="enumerate"><code class="xref py py-func docutils literal"><span class="pre">enumerate()</span></code></a> function.</p>
+<p>When looping through a sequence, the position index and corresponding
+value can be retrieved at the same time using the &#8220;enumerate()&#8221;
+function.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="s1">&#39;tic&#39;</span><span class="p">,</span> <span class="s1">&#39;tac&#39;</span><span class="p">,</span> <span class="s1">&#39;toe&#39;</span><span class="p">]):</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
 <span class="gp">...</span>
@@ -574,8 +558,8 @@ be retrieved at the same time using the <a class="reference internal" href="../l
 <span class="go">2 toe</span>
 </pre></div>
 </div>
-<p>To loop over two or more sequences at the same time, the entries can be paired
-with the <a class="reference internal" href="../library/functions.html#zip" title="zip"><code class="xref py py-func docutils literal"><span class="pre">zip()</span></code></a> function.</p>
+<p>To loop over two or more sequences at the same time, the entries can
+be paired with the &#8220;zip()&#8221; function.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">questions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;quest&#39;</span><span class="p">,</span> <span class="s1">&#39;favorite color&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">answers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;lancelot&#39;</span><span class="p">,</span> <span class="s1">&#39;the holy grail&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">q</span><span class="p">,</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">questions</span><span class="p">,</span> <span class="n">answers</span><span class="p">):</span>
@@ -586,8 +570,8 @@ with the <a class="reference internal" href="../library/functions.html#zip" titl
 <span class="go">What is your favorite color?  It is blue.</span>
 </pre></div>
 </div>
-<p>To loop over a sequence in reverse, first specify the sequence in a forward
-direction and then call the <a class="reference internal" href="../library/functions.html#reversed" title="reversed"><code class="xref py py-func docutils literal"><span class="pre">reversed()</span></code></a> function.</p>
+<p>To loop over a sequence in reverse, first specify the sequence in a
+forward direction and then call the &#8220;reversed()&#8221; function.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)):</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 <span class="gp">...</span>
@@ -598,8 +582,8 @@ direction and then call the <a class="reference internal" href="../library/funct
 <span class="go">1</span>
 </pre></div>
 </div>
-<p>To loop over a sequence in sorted order, use the <a class="reference internal" href="../library/functions.html#sorted" title="sorted"><code class="xref py py-func docutils literal"><span class="pre">sorted()</span></code></a> function which
-returns a new sorted list while leaving the source unaltered.</p>
+<p>To loop over a sequence in sorted order, use the &#8220;sorted()&#8221; function
+which returns a new sorted list while leaving the source unaltered.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">basket</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;pear&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">basket</span><span class="p">)):</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
@@ -610,8 +594,9 @@ returns a new sorted list while leaving the source unaltered.</p>
 <span class="go">pear</span>
 </pre></div>
 </div>
-<p>It is sometimes tempting to change a list while you are looping over it;
-however, it is often simpler and safer to create a new list instead.</p>
+<p>It is sometimes tempting to change a list while you are looping over
+it; however, it is often simpler and safer to create a new list
+instead.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">math</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">raw_data</span> <span class="o">=</span> <span class="p">[</span><span class="mf">56.2</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;NaN&#39;</span><span class="p">),</span> <span class="mf">51.7</span><span class="p">,</span> <span class="mf">55.3</span><span class="p">,</span> <span class="mf">52.5</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;NaN&#39;</span><span class="p">),</span> <span class="mf">47.8</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">filtered_data</span> <span class="o">=</span> <span class="p">[]</span>
@@ -625,84 +610,82 @@ however, it is often simpler and safer to create a new list instead.</p>
 </div>
 </div>
 <div class="section" id="more-on-conditions">
-<span id="tut-conditions"></span><h2>5.7. More on Conditions<a class="headerlink" href="#more-on-conditions" title="Permalink to this headline">¶</a></h2>
-<p>The conditions used in <code class="docutils literal"><span class="pre">while</span></code> and <code class="docutils literal"><span class="pre">if</span></code> statements can contain any
+<h2>5.7. More on Conditions<a class="headerlink" href="#more-on-conditions" title="Permalink to this headline">¶</a></h2>
+<p>The conditions used in &#8220;while&#8221; and &#8220;if&#8221; statements can contain any
 operators, not just comparisons.</p>
-<p>The comparison operators <code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> check whether a value occurs
-(does not occur) in a sequence.  The operators <code class="docutils literal"><span class="pre">is</span></code> and <code class="docutils literal"><span class="pre">is</span> <span class="pre">not</span></code> compare
-whether two objects are really the same object; this only matters for mutable
-objects like lists.  All comparison operators have the same priority, which is
-lower than that of all numerical operators.</p>
-<p>Comparisons can be chained.  For example, <code class="docutils literal"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span> <span class="pre">==</span> <span class="pre">c</span></code> tests whether <code class="docutils literal"><span class="pre">a</span></code> is
-less than <code class="docutils literal"><span class="pre">b</span></code> and moreover <code class="docutils literal"><span class="pre">b</span></code> equals <code class="docutils literal"><span class="pre">c</span></code>.</p>
-<p>Comparisons may be combined using the Boolean operators <code class="docutils literal"><span class="pre">and</span></code> and <code class="docutils literal"><span class="pre">or</span></code>, and
-the outcome of a comparison (or of any other Boolean expression) may be negated
-with <code class="docutils literal"><span class="pre">not</span></code>.  These have lower priorities than comparison operators; between
-them, <code class="docutils literal"><span class="pre">not</span></code> has the highest priority and <code class="docutils literal"><span class="pre">or</span></code> the lowest, so that <code class="docutils literal"><span class="pre">A</span> <span class="pre">and</span>
-<span class="pre">not</span> <span class="pre">B</span> <span class="pre">or</span> <span class="pre">C</span></code> is equivalent to <code class="docutils literal"><span class="pre">(A</span> <span class="pre">and</span> <span class="pre">(not</span> <span class="pre">B))</span> <span class="pre">or</span> <span class="pre">C</span></code>. As always, parentheses
-can be used to express the desired composition.</p>
-<p>The Boolean operators <code class="docutils literal"><span class="pre">and</span></code> and <code class="docutils literal"><span class="pre">or</span></code> are so-called <em>short-circuit</em>
-operators: their arguments are evaluated from left to right, and evaluation
-stops as soon as the outcome is determined.  For example, if <code class="docutils literal"><span class="pre">A</span></code> and <code class="docutils literal"><span class="pre">C</span></code> are
-true but <code class="docutils literal"><span class="pre">B</span></code> is false, <code class="docutils literal"><span class="pre">A</span> <span class="pre">and</span> <span class="pre">B</span> <span class="pre">and</span> <span class="pre">C</span></code> does not evaluate the expression
-<code class="docutils literal"><span class="pre">C</span></code>.  When used as a general value and not as a Boolean, the return value of a
-short-circuit operator is the last evaluated argument.</p>
-<p>It is possible to assign the result of a comparison or other Boolean expression
-to a variable.  For example,</p>
+<p>The comparison operators &#8220;in&#8221; and &#8220;not in&#8221; check whether a value
+occurs (does not occur) in a sequence.  The operators &#8220;is&#8221; and &#8220;is
+not&#8221; compare whether two objects are really the same object; this only
+matters for mutable objects like lists.  All comparison operators have
+the same priority, which is lower than that of all numerical
+operators.</p>
+<p>Comparisons can be chained.  For example, &#8220;a &lt; b == c&#8221; tests whether
+&#8220;a&#8221; is less than &#8220;b&#8221; and moreover &#8220;b&#8221; equals &#8220;c&#8221;.</p>
+<p>Comparisons may be combined using the Boolean operators &#8220;and&#8221; and
+&#8220;or&#8221;, and the outcome of a comparison (or of any other Boolean
+expression) may be negated with &#8220;not&#8221;.  These have lower priorities
+than comparison operators; between them, &#8220;not&#8221; has the highest
+priority and &#8220;or&#8221; the lowest, so that &#8220;A and not B or C&#8221; is equivalent
+to &#8220;(A and (not B)) or C&#8221;. As always, parentheses can be used to
+express the desired composition.</p>
+<p>The Boolean operators &#8220;and&#8221; and &#8220;or&#8221; are so-called <em>short-circuit</em>
+operators: their arguments are evaluated from left to right, and
+evaluation stops as soon as the outcome is determined.  For example,
+if &#8220;A&#8221; and &#8220;C&#8221; are true but &#8220;B&#8221; is false, &#8220;A and B and C&#8221; does not
+evaluate the expression &#8220;C&#8221;.  When used as a general value and not as
+a Boolean, the return value of a short-circuit operator is the last
+evaluated argument.</p>
+<p>It is possible to assign the result of a comparison or other Boolean
+expression to a variable.  For example,</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">string1</span><span class="p">,</span> <span class="n">string2</span><span class="p">,</span> <span class="n">string3</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Trondheim&#39;</span><span class="p">,</span> <span class="s1">&#39;Hammer Dance&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">non_null</span> <span class="o">=</span> <span class="n">string1</span> <span class="ow">or</span> <span class="n">string2</span> <span class="ow">or</span> <span class="n">string3</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">non_null</span>
 <span class="go">&#39;Trondheim&#39;</span>
 </pre></div>
 </div>
-<p>Note that in Python, unlike C, assignment cannot occur inside expressions. C
-programmers may grumble about this, but it avoids a common class of problems
-encountered in C programs: typing <code class="docutils literal"><span class="pre">=</span></code> in an expression when <code class="docutils literal"><span class="pre">==</span></code> was
-intended.</p>
+<p>Note that in Python, unlike C, assignment cannot occur inside
+expressions. C programmers may grumble about this, but it avoids a
+common class of problems encountered in C programs: typing &#8220;=&#8221; in an
+expression when &#8220;==&#8221; was intended.</p>
 </div>
 <div class="section" id="comparing-sequences-and-other-types">
-<span id="tut-comparing"></span><h2>5.8. Comparing Sequences and Other Types<a class="headerlink" href="#comparing-sequences-and-other-types" title="Permalink to this headline">¶</a></h2>
-<p>Sequence objects may be compared to other objects with the same sequence type.
-The comparison uses <em>lexicographical</em> ordering: first the first two items are
-compared, and if they differ this determines the outcome of the comparison; if
-they are equal, the next two items are compared, and so on, until either
-sequence is exhausted. If two items to be compared are themselves sequences of
-the same type, the lexicographical comparison is carried out recursively.  If
-all items of two sequences compare equal, the sequences are considered equal.
-If one sequence is an initial sub-sequence of the other, the shorter sequence is
-the smaller (lesser) one.  Lexicographical ordering for strings uses the Unicode
-code point number to order individual characters.  Some examples of comparisons
-between sequences of the same type:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>              <span class="o">&lt;</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>              <span class="o">&lt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="s1">&#39;ABC&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;C&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;Pascal&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;Python&#39;</span>
-<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>           <span class="o">&lt;</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>                 <span class="o">&lt;</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>             <span class="o">==</span> <span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">)</span>
-<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;aa&#39;</span><span class="p">,</span> <span class="s1">&#39;ab&#39;</span><span class="p">))</span>   <span class="o">&lt;</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Note that comparing objects of different types with <code class="docutils literal"><span class="pre">&lt;</span></code> or <code class="docutils literal"><span class="pre">&gt;</span></code> is legal
-provided that the objects have appropriate comparison methods.  For example,
-mixed numeric types are compared according to their numeric value, so 0 equals
-0.0, etc.  Otherwise, rather than providing an arbitrary ordering, the
-interpreter will raise a <a class="reference internal" href="../library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal"><span class="pre">TypeError</span></code></a> exception.</p>
-<p class="rubric">Footnotes</p>
-<table class="docutils footnote" frame="void" id="id3" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Other languages may return the mutated object, which allows method
-chaining, such as <code class="docutils literal"><span class="pre">d-&gt;insert(&quot;a&quot;)-&gt;remove(&quot;b&quot;)-&gt;sort();</span></code>.</td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id4" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Calling <code class="docutils literal"><span class="pre">d.keys()</span></code> will return a <em class="dfn">dictionary view</em> object.  It
-supports operations like membership test and iteration, but its contents
-are not independent of the original dictionary &#8211; it is only a <em>view</em>.</td></tr>
-</tbody>
-</table>
+<h2>5.8. Comparing Sequences and Other Types<a class="headerlink" href="#comparing-sequences-and-other-types" title="Permalink to this headline">¶</a></h2>
+<p>Sequence objects may be compared to other objects with the same
+sequence type. The comparison uses <em>lexicographical</em> ordering: first
+the first two items are compared, and if they differ this determines
+the outcome of the comparison; if they are equal, the next two items
+are compared, and so on, until either sequence is exhausted. If two
+items to be compared are themselves sequences of the same type, the
+lexicographical comparison is carried out recursively.  If all items
+of two sequences compare equal, the sequences are considered equal. If
+one sequence is an initial sub-sequence of the other, the shorter
+sequence is the smaller (lesser) one.  Lexicographical ordering for
+strings uses the Unicode code point number to order individual
+characters.  Some examples of comparisons between sequences of the
+same type:</p>
+<blockquote>
+<div>(1, 2, 3)              &lt; (1, 2, 4)
+[1, 2, 3]              &lt; [1, 2, 4]
+&#8216;ABC&#8217; &lt; &#8216;C&#8217; &lt; &#8216;Pascal&#8217; &lt; &#8216;Python&#8217;
+(1, 2, 3, 4)           &lt; (1, 2, 4)
+(1, 2)                 &lt; (1, 2, -1)
+(1, 2, 3)             == (1.0, 2.0, 3.0)
+(1, 2, (&#8216;aa&#8217;, &#8216;ab&#8217;))   &lt; (1, 2, (&#8216;abc&#8217;, &#8216;a&#8217;), 4)</div></blockquote>
+<p>Note that comparing objects of different types with &#8220;&lt;&#8221; or &#8220;&gt;&#8221; is
+legal provided that the objects have appropriate comparison methods.
+For example, mixed numeric types are compared according to their
+numeric value, so 0 equals 0.0, etc.  Otherwise, rather than providing
+an arbitrary ordering, the interpreter will raise a &#8220;TypeError&#8221;
+exception.</p>
+<p>-[ Footnotes ]-</p>
+<dl class="docutils">
+<dt>[1] Other languages may return the mutated object, which allows</dt>
+<dd>method chaining, such as &#8220;d-&gt;insert(&#8220;a&#8221;)-&gt;remove(&#8220;b&#8221;)-&gt;sort();&#8221;.</dd>
+<dt>[2] Calling &#8220;d.keys()&#8221; will return a <em>dictionary view</em> object.  It</dt>
+<dd>supports operations like membership test and iteration, but its
+contents are not independent of the original dictionary &#8211; it is
+only a <em>view</em>.</dd>
+</dl>
 </div>
 </div>
 
@@ -715,23 +698,35 @@ are not independent of the original dictionary &#8211; it is only a <em>view</em
     <a id="sidebar-anchor"></a>
     
 
-  <h3><a href="../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">5. Data Structures</a><ul>
-<li><a class="reference internal" href="#more-on-lists">5.1. More on Lists</a><ul>
-<li><a class="reference internal" href="#using-lists-as-stacks">5.1.1. Using Lists as Stacks</a></li>
-<li><a class="reference internal" href="#using-lists-as-queues">5.1.2. Using Lists as Queues</a></li>
-<li><a class="reference internal" href="#list-comprehensions">5.1.3. List Comprehensions</a></li>
-<li><a class="reference internal" href="#nested-list-comprehensions">5.1.4. Nested List Comprehensions</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#the-del-statement">5.2. The <code class="docutils literal"><span class="pre">del</span></code> statement</a></li>
-<li><a class="reference internal" href="#tuples-and-sequences">5.3. Tuples and Sequences</a></li>
-<li><a class="reference internal" href="#sets">5.4. Sets</a></li>
-<li><a class="reference internal" href="#dictionaries">5.5. Dictionaries</a></li>
-<li><a class="reference internal" href="#looping-techniques">5.6. Looping Techniques</a></li>
-<li><a class="reference internal" href="#more-on-conditions">5.7. More on Conditions</a></li>
-<li><a class="reference internal" href="#comparing-sequences-and-other-types">5.8. Comparing Sequences and Other Types</a></li>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Python Tutorial</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="appetite.html">1. Whetting Your Appetite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interpreter.html">2. Using the Python Interpreter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">3. An Informal Introduction to Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controlflow.html">4. More Control Flow Tools</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5. Data Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html">6. Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inputoutput.html">7. Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="errors.html">8. Errors and Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes.html">9. Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stdlib.html">10. Brief Tour of the Standard Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stdlib2.html">11. Brief Tour of the Standard Library &#8211; Part II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="venv.html">12. Virtual Environments and Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whatnow.html">13. What Now?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactive.html">14. Interactive Input Editing and History Substitution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="floatingpoint.html">15. Floating Point Arithmetic:  Issues and Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html">16. Appendix</a></li>
 </ul>
 </li>
 </ul>
@@ -743,16 +738,6 @@ are not independent of the original dictionary &#8211; it is only a <em>view</em
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -764,13 +749,17 @@ are not independent of the original dictionary &#8211; it is only a <em>view</em
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
+          <a href="modules.html" title="6. Modules"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="controlflow.html" title="4. More Control Flow Tools"
+             accesskey="P">previous</a> |</li>
       </ul>
     </div>
 
     <div class="footer" role="contentinfo">
-        &#169; <a href="../copyright.html">Copyright</a> 2016, Trần Viết Sơn.
+        &#169; Copyright 2016, Trần Viết Sơn.
+      Last updated on Nov 14, 2016.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
     </div>
   </body>
