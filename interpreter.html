@@ -58,73 +58,74 @@
 <span id="tut-using"></span><h1>2. Sử dụng trình thông dịch Python<a class="headerlink" href="#su-dung-trinh-thong-dich-python" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="chay-trinh-thong-dich">
 <span id="tut-invoking"></span><h2>2.1. Chạy trình thông dịch<a class="headerlink" href="#chay-trinh-thong-dich" title="Permalink to this headline">¶</a></h2>
-<p>The Python interpreter is usually installed as <code class="file docutils literal"><span class="pre">/usr/local/bin/python3.5</span></code>
-on those machines where it is available; putting <code class="file docutils literal"><span class="pre">/usr/local/bin</span></code> in your
-Unix shell&#8217;s search path makes it possible to start it by typing the command:</p>
+<p>Trình thông dịch Python thường được cài đặt tại <code class="file docutils literal"><span class="pre">/usr/local/bin/python3.5</span></code>;
+Bổ sung đường dẫn <code class="file docutils literal"><span class="pre">/usr/local/bin</span></code> vào Unix shell&#8217;s
+(Command line của các HĐH Unix)
+để chạy trình thông dịch từ mọi đường dẫn bằng câu lệnh:</p>
 <div class="highlight-text"><div class="highlight"><pre><span></span>python3.5
 </pre></div>
 </div>
-<p>to the shell. <a class="footnote-reference" href="#id2" id="id1">[1]</a> Since the choice of the directory where the interpreter lives
-is an installation option, other places are possible; check with your local
-Python guru or system administrator.  (E.g., <code class="file docutils literal"><span class="pre">/usr/local/python</span></code> is a
-popular alternative location.)</p>
-<p>On Windows machines, the Python installation is usually placed in
-<code class="file docutils literal"><span class="pre">C:\Python35</span></code>, though you can change this when you&#8217;re running the
-installer.  To add this directory to your path,  you can type the following
-command into the command prompt in a DOS box:</p>
+<p>Đối với shell. <a class="footnote-reference" href="#id2" id="id1">[1]</a> Khi cài đăth Trình thông dịch Python có thể chọn cài ở một
+đường dẫn khác (VD <code class="file docutils literal"><span class="pre">/usr/local/python</span></code> cũng là một đường dẫn hay được
+chọn.)</p>
+<p>Trên Windowns, Python thường được cài đặt mặc định tại <code class="file docutils literal"><span class="pre">C:\Python35</span></code>,
+Bạn có thể thay đổi đường dẫn này khi cài đặt khi chạy bộ cài.  Dể add đường
+dẫn cho Windown dùng câu lệnh</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">path</span><span class="o">=%</span><span class="n">path</span><span class="o">%</span><span class="p">;</span><span class="n">C</span><span class="p">:</span>\<span class="n">python35</span>
 </pre></div>
 </div>
-<p>Typing an end-of-file character (<code class="kbd docutils literal"><span class="pre">Control-D</span></code> on Unix, <code class="kbd docutils literal"><span class="pre">Control-Z</span></code> on
-Windows) at the primary prompt causes the interpreter to exit with a zero exit
-status.  If that doesn&#8217;t work, you can exit the interpreter by typing the
-following command: <code class="docutils literal"><span class="pre">quit()</span></code>.</p>
-<p>The interpreter&#8217;s line-editing features include interactive editing, history
-substitution and code completion on systems that support readline.  Perhaps the
-quickest check to see whether command line editing is supported is typing
-<code class="kbd docutils literal"><span class="pre">Control-P</span></code> to the first Python prompt you get.  If it beeps, you have command
-line editing; see Appendix <a class="reference internal" href="interactive.html#tut-interacting"><span class="std std-ref">Interactive Input Editing and History Substitution</span></a> for an introduction to the
-keys.  If nothing appears to happen, or if <code class="docutils literal"><span class="pre">^P</span></code> is echoed, command line
-editing isn&#8217;t available; you&#8217;ll only be able to use backspace to remove
-characters from the current line.</p>
-<p>The interpreter operates somewhat like the Unix shell: when called with standard
-input connected to a tty device, it reads and executes commands interactively;
-when called with a file name argument or with a file as standard input, it reads
-and executes a <em>script</em> from that file.</p>
-<p>A second way of starting the interpreter is <code class="docutils literal"><span class="pre">python</span> <span class="pre">-c</span> <span class="pre">command</span> <span class="pre">[arg]</span> <span class="pre">...</span></code>,
-which executes the statement(s) in <em>command</em>, analogous to the shell&#8217;s
-<code class="xref std std-option docutils literal"><span class="pre">-c</span></code> option.  Since Python statements often contain spaces or other
-characters that are special to the shell, it is usually advised to quote
-<em>command</em> in its entirety with single quotes.</p>
-<p>Some Python modules are also useful as scripts.  These can be invoked using
-<code class="docutils literal"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">module</span> <span class="pre">[arg]</span> <span class="pre">...</span></code>, which executes the source file for <em>module</em> as
-if you had spelled out its full name on the command line.</p>
-<p>When a script file is used, it is sometimes useful to be able to run the script
-and enter interactive mode afterwards.  This can be done by passing <code class="xref std std-option docutils literal"><span class="pre">-i</span></code>
-before the script.</p>
-<p>All command line options are described in <strong>Command line and environment</strong>.</p>
+<p>Hoặc dễ hơn thì nhớ tick vào ô <strong>add-path</strong> khi chạy bộ cài đặt nhé.</p>
+<p>Để thoát khỏi trình thông dịch khi đang ở trên Command-line nhấn <code class="kbd docutils literal"><span class="pre">Control-D</span></code>
+trên Unix ; <code class="kbd docutils literal"><span class="pre">Control-Z</span></code> hoặc <code class="kbd docutils literal"><span class="pre">Control-C</span></code> trên Windows. Cũng có thể dùng
+lệnh : <code class="docutils literal"><span class="pre">quit()</span></code> để thoát.</p>
+<p>Tính năng soạn thảo nhiều dòng trên trình thông dịch cũng dễ, nhấn <code class="kbd docutils literal"><span class="pre">Shift-Enter</span></code>
+để xuống hàng, Nhấn <code class="kbd docutils literal"><span class="pre">Control-P</span></code> để in ra toàn bộ những gì đã command nhé ;
+Xem phần  <a class="reference internal" href="interactive.html#tut-interacting"><span class="std std-ref">Interactive Input Editing and History Substitution</span></a> để hiểu rõ hơn.</p>
+<p>Trình thông dịch Python hoạt động tương tự như  Unix shell: khi được gọi với
+một đầu nhập chuẩn đã kết nối với một thiết bị đầu cuối (tty device), nó đọc
+và thực hiện các lệnh một cách tương tác; khi được gọi với tham số là một tên
+tập tin hoặc với đầu vào chuẩn là một tập tin, nó đọc và thực hiện <em>Kịch bản</em>
+chứa trong tập tin đó.</p>
+<p>Một cách nữa để chạy trình thông dịch từ CMD là dùng lệnh
+<code class="docutils literal"><span class="pre">python</span> <span class="pre">-c</span> <span class="pre">command</span> <span class="pre">[arg]</span> <span class="pre">...</span></code>, Trong đó:</p>
+<ul class="simple">
+<li><code class="xref std std-option docutils literal"><span class="pre">-c</span></code> là một option để thông báo cho Shell là chạy câu lệnh.</li>
+<li><strong>command</strong> là câu lệnh của bạn, câu lệnh phải nằm trong hai dấu <cite>&#8220;</cite>  nhé.</li>
+</ul>
+<p>VD <code class="docutils literal"><span class="pre">python</span> <span class="pre">-c</span> <span class="pre">&quot;print('Chao</span> <span class="pre">ban')&quot;</span></code></p>
+<ul class="simple">
+<li><strong>arg</strong> là biến mà bạn truyền vào. Phần này bạn nào mới bắt đầu thì thấy khó</li>
+</ul>
+<p>hiểu, sau này chạy vài chương trình rồi bạn sẽ hiểu rõ.</p>
+<p>Tương tự như thực thi file, thực thi module từ CMD bằng lệnh :
+<code class="docutils literal"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">module</span> <span class="pre">[arg]</span> <span class="pre">...</span></code> .</p>
+<p>Khi tập tin kịch bản (script file) được sử dụng, Sẽ rất hữu dụng nếu có thể
+chạy chương trình và chuyển sang chế độ tương tác ngay sau đó. Điều này thực
+hiện được bằng cách dùng  Option <code class="xref std std-option docutils literal"><span class="pre">-i</span></code></p>
+<p>Xem tất cả các Options tại mục <strong>Command line and environment</strong>.</p>
 <div class="section" id="truyen-tham-so">
 <span id="tut-argpassing"></span><h3>2.1.1. Truyền tham số<a class="headerlink" href="#truyen-tham-so" title="Permalink to this headline">¶</a></h3>
-<p>When known to the interpreter, the script name and additional arguments
-thereafter are turned into a list of strings and assigned to the <code class="docutils literal"><span class="pre">argv</span></code>
-variable in the <code class="docutils literal"><span class="pre">sys</span></code> module.  You can access this list by executing <code class="docutils literal"><span class="pre">import</span>
-<span class="pre">sys</span></code>.  The length of the list is at least one; when no script and no arguments
-are given, <code class="docutils literal"><span class="pre">sys.argv[0]</span></code> is an empty string.  When the script name is given as
-<code class="docutils literal"><span class="pre">'-'</span></code> (meaning  standard input), <code class="docutils literal"><span class="pre">sys.argv[0]</span></code> is set to <code class="docutils literal"><span class="pre">'-'</span></code>.  When
-<code class="xref std std-option docutils literal"><span class="pre">-c</span></code> <em>command</em> is used, <code class="docutils literal"><span class="pre">sys.argv[0]</span></code> is set to <code class="docutils literal"><span class="pre">'-c'</span></code>.  When
-<code class="xref std std-option docutils literal"><span class="pre">-m</span></code> <em>module</em> is used, <code class="docutils literal"><span class="pre">sys.argv[0]</span></code>  is set to the full name of the
-located module.  Options found after  <code class="xref std std-option docutils literal"><span class="pre">-c</span></code> <em>command</em> or <code class="xref std std-option docutils literal"><span class="pre">-m</span></code>
-<em>module</em> are not consumed  by the Python interpreter&#8217;s option processing but
-left in <code class="docutils literal"><span class="pre">sys.argv</span></code> for  the command or module to handle.</p>
+<dl class="docutils">
+<dt>Bộ thông dịch nhận biết tên chương trình và các tham số khác được truyền vào</dt>
+<dd>chương trình trong biến  <code class="docutils literal"><span class="pre">sys.arvg</span></code> dưới dạng một danh sách các chuỗi.</dd>
+</dl>
+<p>Độ dài tối thiểu là một; khi không có kịch bản hoặc thông số truyền vào,
+<code class="docutils literal"><span class="pre">sys.argv[0]</span></code> là một chuỗi rỗng. Khi tên kịch bản được truyền vào là <code class="docutils literal"><span class="pre">'-'</span></code>
+(có nghĩa là đầu vào chuẩn),  <code class="docutils literal"><span class="pre">sys.argv[0]</span></code> được gán thành <code class="docutils literal"><span class="pre">'-'</span></code>. Khi
+<code class="docutils literal"><span class="pre">-c</span></code> command được sử dụng, <code class="docutils literal"><span class="pre">sys.argv[0]</span></code> được gán thành &#8216;-c&#8217;. Khi <code class="docutils literal"><span class="pre">-m</span></code>
+module được sử dụng, <code class="docutils literal"><span class="pre">sys.argv[0]</span></code> được gán là tên đầy đủ của mô-đun đã nạp.
+Các tùy chọn sau <code class="docutils literal"><span class="pre">-c</span></code> command hoặc <code class="docutils literal"><span class="pre">-m</span></code> <em>module</em> không được sử dụng bởi
+trình thông dịch Python mà truyền vào <code class="docutils literal"><span class="pre">sys.arvg</span></code> để cho command hay module
+xử lý.</p>
 </div>
 <div class="section" id="che-do-tuong-tac">
-<span id="tut-interactive"></span><h3>2.1.2. Chế độ tương tác<a class="headerlink" href="#che-do-tuong-tac" title="Permalink to this headline">¶</a></h3>
-<p>When commands are read from a tty, the interpreter is said to be in <em>interactive
-mode</em>.  In this mode it prompts for the next command with the <em>primary prompt</em>,
-usually three greater-than signs (<code class="docutils literal"><span class="pre">&gt;&gt;&gt;</span></code>); for continuation lines it prompts
-with the <em>secondary prompt</em>, by default three dots (<code class="docutils literal"><span class="pre">...</span></code>). The interpreter
-prints a welcome message stating its version number and a copyright notice
-before printing the first prompt:</p>
+<h3>2.1.2. Chế độ tương tác<a class="headerlink" href="#che-do-tuong-tac" title="Permalink to this headline">¶</a></h3>
+<p>Khi các lệnh được đọc từ một tty, trình thông dịch được xem là đang trong
+<code class="docutils literal"><span class="pre">chế</span> <span class="pre">độ</span> <span class="pre">tương</span> <span class="pre">tác</span></code>. Trong chế độ này nó nhắc lệnh tiếp theo với dấu nhắc
+chính (primary prompt), thường là ba dấu lớn hơn (<code class="docutils literal"><span class="pre">&gt;&gt;&gt;</span></code>); với các dòng
+tiếp nối (continuation line), nó sẽ nhắc với dấu nhắc thứ (secondary prompt),
+mặc định là ba dấu chấm (<code class="docutils literal"><span class="pre">...</span></code>). Trìn thông dịch sẽ in một thông báo chào
+mừng, số hiệu phiên bản và thông báo bản quyền trước khi hiện dấu nhắc:</p>
 <div class="highlight-shell-session"><div class="highlight"><pre><span></span><span class="gp">$</span> python3.5
 <span class="go">Python 3.5 (default, Sep 16 2015, 09:25:04)</span>
 <span class="go">[GCC 4.8.2] on linux</span>
@@ -132,8 +133,8 @@ before printing the first prompt:</p>
 <span class="gp">&gt;</span>&gt;&gt;
 </pre></div>
 </div>
-<p>Continuation lines are needed when entering a multi-line construct. As an
-example, take a look at this <a class="reference internal" href="reference/compound_stmts.html#if"><code class="xref std std-keyword docutils literal"><span class="pre">if</span></code></a> statement:</p>
+<p>Các dòng nối tiếp được dùng khi nhập vào các cấu trúc nhiều dòng. Hãy xem ví
+dụ dưới, chú ý câu lệnh <a class="reference internal" href="reference/compound_stmts.html#if"><code class="xref std std-keyword docutils literal"><span class="pre">if</span></code></a> statement:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">the_world_is_flat</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">the_world_is_flat</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Be careful not to fall off!&quot;</span><span class="p">)</span>
@@ -141,46 +142,41 @@ example, take a look at this <a class="reference internal" href="reference/compo
 <span class="go">Be careful not to fall off!</span>
 </pre></div>
 </div>
-<p>For more on interactive mode, see <a class="reference internal" href="appendix.html#tut-interac"><span class="std std-ref">Interactive Mode</span></a>.</p>
+<p>Xem thêm về  <a class="reference internal" href="appendix.html#tut-interac"><span class="std std-ref">Interactive Mode</span></a>.</p>
 </div>
 </div>
 <div class="section" id="trinh-thong-dich-va-moi-truong">
 <span id="tut-interp"></span><h2>2.2. Trình thông dịch và môi trường<a class="headerlink" href="#trinh-thong-dich-va-moi-truong" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="ma-hoa-ma-nguon">
 <span id="tut-source-encoding"></span><h3>2.2.1. Mã hóa mã nguồn<a class="headerlink" href="#ma-hoa-ma-nguon" title="Permalink to this headline">¶</a></h3>
-<p>By default, Python source files are treated as encoded in UTF-8.  In that
-encoding, characters of most languages in the world can be used simultaneously
-in string literals, identifiers and comments &#8212; although the standard library
-only uses ASCII characters for identifiers, a convention that any portable code
-should follow.  To display all these characters properly, your editor must
-recognize that the file is UTF-8, and it must use a font that supports all the
-characters in the file.</p>
-<p>It is also possible to specify a different encoding for source files.  In order
-to do this, put one more special comment line right after the <code class="docutils literal"><span class="pre">#!</span></code> line to
-define the source file encoding:</p>
+<p>Mặc định, Python sử dụng bãng mã UTF-8 , do đó bao gồm cả những ký tự đặc biệt,
+và hầu hết các ký tự như chữ Ả Rập, China. Riêng việc định danh thì các thư
+viện chuẩn thì chỉ sử dụng bảng mã ASCII nhé. Để Editor mà bạn dùng hiển thị
+đúng tất cả các ký tự UTF-8, nó cần (Thường thì có hết rồi) có font thích hợp..</p>
+<p>Có thể sử dụng các bảng mã khác trong các tập tin nguồn Python. Cách tốt nhất
+là thêm dòng chú thích đặc biệt sau <code class="docutils literal"><span class="pre">#!</span></code>  để định nghĩa bảng mã trong tập tin:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: encoding -*-</span>
 </pre></div>
 </div>
-<p>With that declaration, everything in the source file will be treated as having
-the encoding <em>encoding</em> instead of UTF-8.  The list of possible encodings can be
-found in the Python Library Reference, in the section on <code class="xref py py-mod docutils literal"><span class="pre">codecs</span></code>.</p>
-<p>For example, if your editor of choice does not support UTF-8 encoded files and
-insists on using some other encoding, say Windows-1252, you can write:</p>
+<p>Với khai báo này, mọi ký tự trong tập tin nguồn sẽ được xem như từ bảng mã
+encoding, và vì vậy ta có thể viết các chuỗi Unicode trực tiếp trong bảng mã đó.</p>
+<p>VD sử dụng bãng mã Windows-1252, Thêm chú thích sau vào đầu file chương trình:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: cp-1252 -*-</span>
 </pre></div>
 </div>
 <p>and still use all characters in the Windows-1252 character set in the source
 files.  The special encoding comment must be in the <em>first or second</em> line
 within the file.</p>
-<p class="rubric">Footnotes</p>
+<p class="rubric">Chú thích:</p>
 <table class="docutils footnote" frame="void" id="id2" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>On Unix, the Python 3.x interpreter is by default not installed with the
-executable named <code class="docutils literal"><span class="pre">python</span></code>, so that it does not conflict with a
-simultaneously installed Python 2.x executable.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Trên các HĐH Unix, Thường thì trình thông dịch Python 3.x thường không</td></tr>
 </tbody>
 </table>
+<p>được cài sẵn, mà thay vào đó là cài sẵn python 2.x . Do đó khi gõ <code class="docutils literal"><span class="pre">python</span></code>
+từ cmd thì sẽ gọi trình thông dịch python 2.x chứ không phải là 3.x. Cẩn thận
+nhầm nhé.</p>
 </div>
 </div>
 </div>

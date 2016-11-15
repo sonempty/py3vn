@@ -10,60 +10,62 @@ Sử dụng trình thông dịch Python
 Chạy trình thông dịch
 ======================
 
-The Python interpreter is usually installed as :file:`/usr/local/bin/python3.5`
-on those machines where it is available; putting :file:`/usr/local/bin` in your
-Unix shell's search path makes it possible to start it by typing the command:
+Trình thông dịch Python thường được cài đặt tại :file:`/usr/local/bin/python3.5`;
+Bổ sung đường dẫn :file:`/usr/local/bin` vào Unix shell's
+(Command line của các HĐH Unix)
+để chạy trình thông dịch từ mọi đường dẫn bằng câu lệnh:
 
 .. code-block:: text
 
    python3.5
 
-to the shell. [#]_ Since the choice of the directory where the interpreter lives
-is an installation option, other places are possible; check with your local
-Python guru or system administrator.  (E.g., :file:`/usr/local/python` is a
-popular alternative location.)
+Đối với shell. [#]_ Khi cài đăth Trình thông dịch Python có thể chọn cài ở một
+đường dẫn khác (VD :file:`/usr/local/python` cũng là một đường dẫn hay được
+chọn.)
 
-On Windows machines, the Python installation is usually placed in
-:file:`C:\\Python35`, though you can change this when you're running the
-installer.  To add this directory to your path,  you can type the following
-command into the command prompt in a DOS box::
+Trên Windowns, Python thường được cài đặt mặc định tại :file:`C:\\Python35`,
+Bạn có thể thay đổi đường dẫn này khi cài đặt khi chạy bộ cài.  Dể add đường
+dẫn cho Windown dùng câu lệnh ::
 
    set path=%path%;C:\python35
 
-Typing an end-of-file character (:kbd:`Control-D` on Unix, :kbd:`Control-Z` on
-Windows) at the primary prompt causes the interpreter to exit with a zero exit
-status.  If that doesn't work, you can exit the interpreter by typing the
-following command: ``quit()``.
+Hoặc dễ hơn thì nhớ tick vào ô **add-path** khi chạy bộ cài đặt nhé.
 
-The interpreter's line-editing features include interactive editing, history
-substitution and code completion on systems that support readline.  Perhaps the
-quickest check to see whether command line editing is supported is typing
-:kbd:`Control-P` to the first Python prompt you get.  If it beeps, you have command
-line editing; see Appendix :ref:`tut-interacting` for an introduction to the
-keys.  If nothing appears to happen, or if ``^P`` is echoed, command line
-editing isn't available; you'll only be able to use backspace to remove
-characters from the current line.
+Để thoát khỏi trình thông dịch khi đang ở trên Command-line nhấn :kbd:`Control-D`
+trên Unix ; :kbd:`Control-Z` hoặc :kbd:`Control-C` trên Windows. Cũng có thể dùng
+lệnh : ``quit()`` để thoát.
 
-The interpreter operates somewhat like the Unix shell: when called with standard
-input connected to a tty device, it reads and executes commands interactively;
-when called with a file name argument or with a file as standard input, it reads
-and executes a *script* from that file.
+Tính năng soạn thảo nhiều dòng trên trình thông dịch cũng dễ, nhấn :kbd:`Shift-Enter`
+để xuống hàng, Nhấn :kbd:`Control-P` để in ra toàn bộ những gì đã command nhé ;
+Xem phần  :ref:`tut-interacting` để hiểu rõ hơn.
 
-A second way of starting the interpreter is ``python -c command [arg] ...``,
-which executes the statement(s) in *command*, analogous to the shell's
-:option:`-c` option.  Since Python statements often contain spaces or other
-characters that are special to the shell, it is usually advised to quote
-*command* in its entirety with single quotes.
+Trình thông dịch Python hoạt động tương tự như  Unix shell: khi được gọi với
+một đầu nhập chuẩn đã kết nối với một thiết bị đầu cuối (tty device), nó đọc
+và thực hiện các lệnh một cách tương tác; khi được gọi với tham số là một tên
+tập tin hoặc với đầu vào chuẩn là một tập tin, nó đọc và thực hiện *Kịch bản*
+chứa trong tập tin đó.
 
-Some Python modules are also useful as scripts.  These can be invoked using
-``python -m module [arg] ...``, which executes the source file for *module* as
-if you had spelled out its full name on the command line.
+Một cách nữa để chạy trình thông dịch từ CMD là dùng lệnh
+``python -c command [arg] ...``, Trong đó:
 
-When a script file is used, it is sometimes useful to be able to run the script
-and enter interactive mode afterwards.  This can be done by passing :option:`-i`
-before the script.
+* :option:`-c` là một option để thông báo cho Shell là chạy câu lệnh.
 
-All command line options are described in **Command line and environment**.
+* **command** là câu lệnh của bạn, câu lệnh phải nằm trong hai dấu `"`  nhé.
+
+VD ``python -c "print('Chao ban')"``
+
+* **arg** là biến mà bạn truyền vào. Phần này bạn nào mới bắt đầu thì thấy khó
+
+hiểu, sau này chạy vài chương trình rồi bạn sẽ hiểu rõ.
+
+Tương tự như thực thi file, thực thi module từ CMD bằng lệnh :
+``python -m module [arg] ...`` .
+
+Khi tập tin kịch bản (script file) được sử dụng, Sẽ rất hữu dụng nếu có thể
+chạy chương trình và chuyển sang chế độ tương tác ngay sau đó. Điều này thực
+hiện được bằng cách dùng  Option :option:`-i`
+
+Xem tất cả các Options tại mục **Command line and environment**.
 
 
 .. _tut-argpassing:
@@ -71,30 +73,27 @@ All command line options are described in **Command line and environment**.
 Truyền tham số
 --------------
 
-When known to the interpreter, the script name and additional arguments
-thereafter are turned into a list of strings and assigned to the ``argv``
-variable in the ``sys`` module.  You can access this list by executing ``import
-sys``.  The length of the list is at least one; when no script and no arguments
-are given, ``sys.argv[0]`` is an empty string.  When the script name is given as
-``'-'`` (meaning  standard input), ``sys.argv[0]`` is set to ``'-'``.  When
-:option:`-c` *command* is used, ``sys.argv[0]`` is set to ``'-c'``.  When
-:option:`-m` *module* is used, ``sys.argv[0]``  is set to the full name of the
-located module.  Options found after  :option:`-c` *command* or :option:`-m`
-*module* are not consumed  by the Python interpreter's option processing but
-left in ``sys.argv`` for  the command or module to handle.
+Bộ thông dịch nhận biết tên chương trình và các tham số khác được truyền vào
+ chương trình trong biến  ``sys.arvg`` dưới dạng một danh sách các chuỗi.
+Độ dài tối thiểu là một; khi không có kịch bản hoặc thông số truyền vào, 
+``sys.argv[0]`` là một chuỗi rỗng. Khi tên kịch bản được truyền vào là ``'-'``
+(có nghĩa là đầu vào chuẩn),  ``sys.argv[0]`` được gán thành ``'-'``. Khi
+``-c`` command được sử dụng, ``sys.argv[0]`` được gán thành '-c'. Khi ``-m``
+module được sử dụng, ``sys.argv[0]`` được gán là tên đầy đủ của mô-đun đã nạp.
+Các tùy chọn sau ``-c`` command hoặc ``-m`` *module* không được sử dụng bởi
+trình thông dịch Python mà truyền vào ``sys.arvg`` để cho command hay module
+xử lý.
 
-
-.. _tut-interactive:
 
 Chế độ tương tác
 ----------------
 
-When commands are read from a tty, the interpreter is said to be in *interactive
-mode*.  In this mode it prompts for the next command with the *primary prompt*,
-usually three greater-than signs (``>>>``); for continuation lines it prompts
-with the *secondary prompt*, by default three dots (``...``). The interpreter
-prints a welcome message stating its version number and a copyright notice
-before printing the first prompt:
+Khi các lệnh được đọc từ một tty, trình thông dịch được xem là đang trong
+``chế độ tương tác``. Trong chế độ này nó nhắc lệnh tiếp theo với dấu nhắc
+chính (primary prompt), thường là ba dấu lớn hơn (``>>>``); với các dòng
+tiếp nối (continuation line), nó sẽ nhắc với dấu nhắc thứ (secondary prompt),
+mặc định là ba dấu chấm (``...``). Trìn thông dịch sẽ in một thông báo chào
+mừng, số hiệu phiên bản và thông báo bản quyền trước khi hiện dấu nhắc:
 
 .. code-block:: shell-session
 
@@ -106,8 +105,8 @@ before printing the first prompt:
 
 .. XXX update for new releases
 
-Continuation lines are needed when entering a multi-line construct. As an
-example, take a look at this :keyword:`if` statement::
+Các dòng nối tiếp được dùng khi nhập vào các cấu trúc nhiều dòng. Hãy xem ví
+dụ dưới, chú ý câu lệnh :keyword:`if` statement::
 
    >>> the_world_is_flat = True
    >>> if the_world_is_flat:
@@ -116,7 +115,7 @@ example, take a look at this :keyword:`if` statement::
    Be careful not to fall off!
 
 
-For more on interactive mode, see :ref:`tut-interac`.
+Xem thêm về  :ref:`tut-interac`.
 
 
 .. _tut-interp:
@@ -130,26 +129,20 @@ Trình thông dịch và môi trường
 Mã hóa mã nguồn
 ---------------
 
-By default, Python source files are treated as encoded in UTF-8.  In that
-encoding, characters of most languages in the world can be used simultaneously
-in string literals, identifiers and comments --- although the standard library
-only uses ASCII characters for identifiers, a convention that any portable code
-should follow.  To display all these characters properly, your editor must
-recognize that the file is UTF-8, and it must use a font that supports all the
-characters in the file.
+Mặc định, Python sử dụng bãng mã UTF-8 , do đó bao gồm cả những ký tự đặc biệt,
+và hầu hết các ký tự như chữ Ả Rập, China. Riêng việc định danh thì các thư
+viện chuẩn thì chỉ sử dụng bảng mã ASCII nhé. Để Editor mà bạn dùng hiển thị
+đúng tất cả các ký tự UTF-8, nó cần (Thường thì có hết rồi) có font thích hợp..
 
-It is also possible to specify a different encoding for source files.  In order
-to do this, put one more special comment line right after the ``#!`` line to
-define the source file encoding::
+Có thể sử dụng các bảng mã khác trong các tập tin nguồn Python. Cách tốt nhất
+là thêm dòng chú thích đặc biệt sau ``#!``  để định nghĩa bảng mã trong tập tin::
 
    # -*- coding: encoding -*-
 
-With that declaration, everything in the source file will be treated as having
-the encoding *encoding* instead of UTF-8.  The list of possible encodings can be
-found in the Python Library Reference, in the section on :mod:`codecs`.
+Với khai báo này, mọi ký tự trong tập tin nguồn sẽ được xem như từ bảng mã
+encoding, và vì vậy ta có thể viết các chuỗi Unicode trực tiếp trong bảng mã đó.
 
-For example, if your editor of choice does not support UTF-8 encoded files and
-insists on using some other encoding, say Windows-1252, you can write::
+VD sử dụng bãng mã Windows-1252, Thêm chú thích sau vào đầu file chương trình::
 
    # -*- coding: cp-1252 -*-
 
@@ -158,8 +151,9 @@ files.  The special encoding comment must be in the *first or second* line
 within the file.
 
 
-.. rubric:: Footnotes
+.. rubric:: Chú thích:
 
-.. [#] On Unix, the Python 3.x interpreter is by default not installed with the
-   executable named ``python``, so that it does not conflict with a
-   simultaneously installed Python 2.x executable.
+.. [#] Trên các HĐH Unix, Thường thì trình thông dịch Python 3.x thường không
+được cài sẵn, mà thay vào đó là cài sẵn python 2.x . Do đó khi gõ ``python``
+từ cmd thì sẽ gọi trình thông dịch python 2.x chứ không phải là 3.x. Cẩn thận
+nhầm nhé.

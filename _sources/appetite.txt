@@ -4,36 +4,89 @@
 Lời tựa
 *******
 
-Nếu bạn làm việc nhiều với máy vi tính, một lúc nào đó bạn sẽ nhận thấy bạn muốn tự động hóa một số việc. Ví dụ: thực hiện một phép tìm kiếm và thay thế với nhiều tập tin văn bản, hoặc đổi tên và sắp xếp một loạt các tập tin ảnh theo một cách phức tạp. Có thể bạn muốn viết cơ sở dữ liệu tùy biến nho nhỏ, hoặc một ứng dụng với giao diện đồ họa đặc biệt, hay một trò chơi đơn giản.
+Nếu bạn làm việc nhiều với máy vi tính, một lúc nào đó bạn sẽ nhận thấy bạn
+muốn tự động hóa một số việc. Ví dụ: thực hiện một phép tìm kiếm và thay thế
+với nhiều tập tin văn bản, hoặc đổi tên và sắp xếp một loạt các tập tin ảnh
+theo một cách phức tạp. Có thể bạn muốn viết cơ sở dữ liệu tùy biến nho nhỏ,
+hoặc một ứng dụng với giao diện đồ họa đặc biệt, hay một trò chơi đơn giản.
 
-Nếu bạn là một người chuyên viết phần mềm, bạn có thể làm việc với nhiều thư viện C/C++/Java nhưng bạn nhận thấy thường lặp đi lặp lại việc viết/biên dịch/thử/biên dịch là quá tốn thời gian. Có thể bạn viết một bộ các thử nghiệm cho các thư viện ấy và nhận ra rằng viết mã lệnh để thử nghiệm là một việc chán ngấy. Hoặc có thể bạn viết một chương trình cần sử dụng một ngôn ngữ mở rộng, và bạn không muốn thiết kế, xây dựng cả một ngôn ngữ mới cho ứng dụng của mình.
+Nếu bạn là một người chuyên viết phần mềm, bạn có thể làm việc với nhiều thư
+viện C/C++/Java nhưng bạn nhận thấy thường lặp đi lặp lại việc viết / biên dịch
+/ thử / biên dịch là quá tốn thời gian. Có thể bạn viết một bộ các thử nghiệm
+cho các thư viện ấy và nhận ra rằng viết mã lệnh để thử nghiệm là một việc
+chán ngấy. Hoặc có thể bạn viết một chương trình cần sử dụng một ngôn ngữ mở
+rộng, và bạn không muốn thiết kế, xây dựng cả một ngôn ngữ mới cho ứng dụng
+của mình.
 
 Python chính là ngôn ngữ lập trình bạn cần.
 
-Bạn có thể viết một kịch bản Unix hoặc viết file .BAT, Excel trong Windows cho công việc kiểu này thế nhưng, ngôn ngữ kịch bản chỉ tốt cho việc chuyển các tập tin lòng vòng và sửa đổi các dữ liệu văn bản, nó không thích hợp cho một ứng dụng với giao diện đồ họa hoặc một trò chơi. Bạn cần viết một chương trình bằng C/C++/Java, nhưng nó có thể tiêu tốn nhiều thời gian cho việc phát triển thậm chí từ bản nháp đầu tiên của chương trình. Sử dụng Python đơn giản hơn, chạy được cả trên Windows, MacOS X, và các hệ điều hành Unix , và nó cũng giúp bạnh hoàn thành công việc nhanh hơn.
+Bạn có thể viết một kịch bản Unix hoặc viết file .BAT, Excel trong Windows cho
+công việc kiểu này thế nhưng, ngôn ngữ kịch bản chỉ tốt cho việc chuyển các
+tập tin lòng vòng và sửa đổi các dữ liệu văn bản, nó không thích hợp cho một
+ứng dụng với giao diện đồ họa hoặc một trò chơi. Bạn cần viết một chương trình
+bằng C/C++/Java, nhưng nó có thể tiêu tốn nhiều thời gian cho việc phát triển
+thậm chí từ bản nháp đầu tiên của chương trình. Sử dụng Python đơn giản hơn,
+chạy được cả trên Windows, MacOS X, và các hệ điều hành Unix , và nó cũng giúp
+bạnh hoàn thành công việc nhanh hơn.
 
-Sử dụng Python thì đơn giản, nhưng nó là một ngôn ngữ lập trình thực thụ, cung cấp nhiều cấu trúc hơn và hỗ trợ các chương trình lớn hơn so với các ngôn ngữ kịch bản. Mặt khác, Python cũng hỗ trợ nhiều phép kiểm tra lỗi hơn C, và, là một ngôn ngữ bậc-rất-cao, nó có sẵn các kiểu dữ liệu cấp cao, như mảng và từ điển. Chính vì nhiều kiểu dữ liệu tổng quát của nó Python được ứng dụng rộng rãi hơn Awk hoặc thậm chí là Perl trong nhiều loại công việc khác nhau, do đó có nhiều việc làm bằng Python cũng dễ dàng như làm bằng các ngôn ngữ khác.
+Sử dụng Python thì đơn giản, nhưng nó là một ngôn ngữ lập trình thực thụ, cung
+cấp nhiều cấu trúc hơn và hỗ trợ các chương trình lớn hơn so với các ngôn ngữ
+kịch bản. Mặt khác, Python cũng hỗ trợ nhiều phép kiểm tra lỗi hơn C, và, là
+một ngôn ngữ bậc-rất-cao, nó có sẵn các kiểu dữ liệu cấp cao, như mảng và từ
+điển. Chính vì nhiều kiểu dữ liệu tổng quát của nó Python được ứng dụng rộng
+rãi hơn Awk hoặc thậm chí là Perl trong nhiều loại công việc khác nhau, do đó
+có nhiều việc làm bằng Python cũng dễ dàng như làm bằng các ngôn ngữ khác.
 
-Python cho phép bạn chia nhỏ chương trình của mình ra thành các mô-đun để có thể sử dụng lại trong các chương trình Python khác. Nó có sẵn rất nhiều các mô-đun chuẩn để bạn có thể sử dụng làm cơ sở cho chương trình của mình -- hoặc như các ví dụ để bắt đầu học lập trình bằng Python. Một vài mô-đun trong số chúng cung cấp các chức năng như tập tin I/O (vào/ra), các lệnh gọi hàm hệ thống, các socket, và thậm chí các giao tiếp với các công cụ giao diện đồ họa như Tk.
+Python cho phép bạn chia nhỏ chương trình của mình ra thành các mô-đun để có
+thể sử dụng lại trong các chương trình Python khác. Nó có sẵn rất nhiều các
+mô-đun chuẩn để bạn có thể sử dụng làm cơ sở cho chương trình của mình -- hoặc
+như các ví dụ để bắt đầu học lập trình bằng Python. Một vài mô-đun trong số
+chúng cung cấp các chức năng như tập tin I/O (vào/ra), các lệnh gọi hàm hệ
+thống, các socket, và thậm chí các giao tiếp với các công cụ giao diện đồ họa
+như Tkinter.
 
-Python là một ngôn ngữ thông dịch, điều đó giúp bạn tiết kiệm thời gian trong quá trình phát triển chương trình vì việc biên dịch hay liên kết là không cần thiết. Bộ thông dịch có thể được dùng ở chế độ tương tác, làm cho việc thử nghiệm các tính năng của ngôn ngữ trở nên dễ dàng. Nó cũng là một máy tính cầm tay tiện lợi.
+Python là một ngôn ngữ thông dịch, điều đó giúp bạn tiết kiệm thời gian trong
+quá trình phát triển chương trình vì việc biên dịch hay liên kết là không cần
+thiết. Bộ thông dịch có thể được dùng ở chế độ tương tác, làm cho việc thử
+nghiệm các tính năng của ngôn ngữ trở nên dễ dàng. Nó cũng là một máy tính
+cầm tay tiện lợi.
 
-Python cho phép viết các chương trình nhỏ gọn và dễ hiểu. Các chương trình viết bằng Python thường ngắn hơn so với các chương trình viết bằng C, C++ hoặc Java, vì nhiều lý do:
+Python cho phép viết các chương trình nhỏ gọn và dễ hiểu. Các chương trình
+viết bằng Python thường ngắn hơn so với các chương trình viết bằng C, C++ hoặc
+Java, vì nhiều lý do:
 
 
-* các kiểu dữ liệu cao cấp cho phép bạn thực hiện nhanh các thao tác phức tạp chỉ với một lệnh đơn giản;
+* các kiểu dữ liệu cao cấp cho phép bạn thực hiện nhanh các thao tác phức tạp
+  chỉ với một lệnh đơn giản;
 
-* phát biểu lệnh được nhóm lại bằng khoảng cách thụt đầu dòng thay vì đóng mở với các dấu ngoặc;
+* phát biểu lệnh được nhóm lại bằng khoảng cách thụt đầu dòng thay vì đóng mở
+  với các dấu ngoặc;
 
 * không cần khai báo biến hoặc tham số trước khi sử dụng.
 
 
-Python có tính mở rộng: nếu bạn biết lập trình C thì rất dễ để bổ sung các hàm có sẵn hoặc mô-đun vào bộ thông dịch, cũng như việc thực hiện các thao tác quan trọng ở tốc độ tối đa, hoặc liên kết các chương trình Python với các thư viện chỉ được cung cấp dưới dạng nhị phân (ví dụ như các thư viện đồ họa của một vài nhà sản xuất). Một khi bạn đã thực sự móc nối, bạn có thể liên kết bộ thông dịch Python vào trong các ứng dụng viết bằng C và sử dụng nó như một tính năng mở rộng hoặc một ngôn ngữ lệnh cho ứng dụng đó.
+Python có tính mở rộng: nếu bạn biết lập trình C thì rất dễ để bổ sung các hàm
+có sẵn hoặc mô-đun vào bộ thông dịch, cũng như việc thực hiện các thao tác quan
+trọng ở tốc độ tối đa, hoặc liên kết các chương trình Python với các thư viện
+chỉ được cung cấp dưới dạng nhị phân (ví dụ như các thư viện đồ họa của một vài
+nhà sản xuất). Một khi bạn đã thực sự móc nối, bạn có thể liên kết bộ thông
+dịch Python vào trong các ứng dụng viết bằng C và sử dụng nó như một tính năng
+mở rộng hoặc một ngôn ngữ lệnh cho ứng dụng đó.
 
-Cũng xin nói luôn, tên của ngôn ngữ này được đặt sau khi BBC phát chương trình ``Monty Python's Flying Circus'' và nó không có liên quan gì với những loài bò sát bẩn thỉu. Những tham khảo mang tính trào phùng tới Monty Python trong tài liệu không chỉ được cho phép, mà còn được cổ vũ.
+Cũng xin nói luôn, tên của ngôn ngữ này được đặt sau khi BBC phát chương trình
+"Monty Python's Flying Circus" và nó không có liên quan gì với những loài bò
+sát bẩn thỉu (Python - nghĩa là con trăn). Những tham khảo mang tính trào phùng
+tới Monty Python trong tài liệu không chỉ được cho phép, mà còn được cổ vũ.
 
-Bây giờ khi tất cả các bạn đã bị kích thích về Python, bạn sẽ muốn khám phá nó kỹ hơn. Cách học một ngôn ngữ tốt nhất là hãy sử dụng nó, bài chỉ dẫn này mời gọi bạn hãy vừa thử trình thông dịch Python khi bạn vừa đọc.
+Bây giờ khi tất cả các bạn đã bị kích thích về Python, bạn sẽ muốn khám phá nó
+kỹ hơn. Cách học một ngôn ngữ tốt nhất là hãy sử dụng nó, bài chỉ dẫn này mời
+gọi bạn hãy vừa thử trình thông dịch Python khi bạn vừa đọc.
 
-Trong chương tiếp theo, các phương thức sử dụng bộ thông dịch sẽ được giải thích. Điều này không đơn thuần là thông tin, nhưng còn là cơ bản cho việc thử các ví dụ được trình bày về sau.
+Trong chương tiếp, các phương thức sử dụng bộ thông dịch sẽ được giải thích.
+Điều này không đơn thuần là thông tin, nhưng còn là cơ bản cho việc thử các ví
+dụ được trình bày về sau.
 
-Phần học còn lại sẽ giới thiệu các tính năng khác nhau của ngôn ngữ Python và hệ thống thông qua các ví dụ, bắt đầu với các biểu thức đơn giản, các câu lệnh và các kiểu dữ liệu, đi qua các hàm và các mô-đun, và kết thúc là tiếp cận với các khái niệm cao cấp như biệt lệ và các lớp do người dùng tự định nghĩa.
+Phần học còn lại sẽ giới thiệu các tính năng khác nhau của ngôn ngữ Python và
+hệ thống thông qua các ví dụ, bắt đầu với các biểu thức đơn giản, các câu lệnh
+và các kiểu dữ liệu, đi qua các hàm và các mô-đun, và kết thúc là tiếp cận với
+các khái niệm cao cấp như biệt lệ và các lớp do người dùng tự định nghĩa.

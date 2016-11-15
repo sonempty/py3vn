@@ -5,11 +5,15 @@
 ###################################
 
 
-Được sử dụng trong rất nhiều lĩnh vực như : Phân tích dữ liệu, lập trình ứng dụng, phát triển Web, trí tuệ nhân tạo...Ngày nay Python phát triển cực mạnh với một cộng đồng và các thư viện rộng lớn.
+Được sử dụng trong rất nhiều lĩnh vực như : Phân tích dữ liệu, lập trình ứng
+dụng, phát triển Web, trí tuệ nhân tạo...Ngày nay Python phát triển cực mạnh
+với một cộng đồng và các thư viện rộng lớn.
 
-Python là ngôn ngữ có hình thức khá đơn giản và rõ ràng, do đó dễ dàng tiếp cận cho những lập trình viên mới bắt đầu. 
+Python là ngôn ngữ có hình thức khá đơn giản và rõ ràng, do đó dễ dàng tiếp
+cận cho những lập trình viên mới bắt đầu.
 
-Tài liệu này hướng dẫn cho người đọc các khái niệm cơ bản, có thêm phần bài tập cho mỗi chương để người đọc thực hành.
+Tài liệu này hướng dẫn cho người đọc các khái niệm cơ bản, có thêm phần bài
+tập cho mỗi chương để người đọc thực hành.
 
 **Tài liệu được cập nhật liên tục** . Update lần cuối vào Nov 2016
 
