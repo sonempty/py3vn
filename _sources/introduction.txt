@@ -4,22 +4,20 @@
 Gới thiệu ngôn ngữ lập trình Python
 ************************************
 
-In the following examples, input and output are distinguished by the presence or
-absence of prompts (:term:`>>>` and :term:`...`): to repeat the example, you must type
-everything after the prompt, when the prompt appears; lines that do not begin
-with a prompt are output from the interpreter. Note that a secondary prompt on a
-line by itself in an example means you must type a blank line; this is used to
-end a multi-line command.
+Trong các ví dụ bên dưới, input và output được phân biệt bởi sự hiện diện của
+dấu nhắc  (:term:`>>>` và :term:`...`): để lặp lại ví tụ, bạn cần nhập vào mọi
+thứ sau dấu nhắc, khi dấu nhắc xuất hiện; các dòng không bắt đầu bằng một dấu
+nhắc là kết quả xuất từ trình thông dịch. Lưu ý rằng dấu nhắc thứ (*secondary prompt*)
+trên một dòng riêng nó có nghĩa là bạn phải nhận một dòng trống; dòng này dùng
+để kết thúc một lệnh nhiều dòng
 
-Many of the examples in this manual, even those entered at the interactive
-prompt, include comments.  Comments in Python start with the hash character,
-``#``, and extend to the end of the physical line.  A comment may appear at the
-start of a line or following whitespace or code, but not within a string
-literal.  A hash character within a string literal is just a hash character.
-Since comments are to clarify code and are not interpreted by Python, they may
-be omitted when typing in examples.
+Nhiều ví dụ trong tài liệu này, ngay cả những ví dụ nhập từ dòng lệnh tương tác,
+có cả chú thích. Các chú thích trong Python bắt đầu bằng một dấu thăng, ``#``,
+và kéo dài tới hết dòng. Một chú thích có thể xuất hiện ở đầu dòng, hoặc theo
+sau khoảng trắng hoặc mã, nhưng không phải trong một chuỗi. Một dấu thăng trong
+một chuỗi chỉ là một dấu thăng.
 
-Some examples::
+Một vài ví dụ::
 
    # this is the first comment
    spam = 1  # and this is the second comment
@@ -32,8 +30,8 @@ Some examples::
 Sử dụng Python như là máy tính
 ==============================
 
-Let's try some simple Python commands.  Start the interpreter and wait for the
-primary prompt, ``>>>``.  (It shouldn't take long.)
+Hãy thử một vài lệnh Python đơn giản. Khởi động trình thông dịch và chờ dấu nhắc
+chính, ``>>>``.
 
 
 .. _tut-numbers:
@@ -41,11 +39,12 @@ primary prompt, ``>>>``.  (It shouldn't take long.)
 Số
 --
 
-The interpreter acts as a simple calculator: you can type an expression at it
-and it will write the value.  Expression syntax is straightforward: the
-operators ``+``, ``-``, ``*`` and ``/`` work just like in most other languages
-(for example, Pascal or C); parentheses (``()``) can be used for grouping.
-For example::
+Trình thông dịch đóng vài trò là một máy tính đơn giản: bạn nhập một biểu thức
+và nó sẽ trả về giá trị. Cú pháp biểu thức rất dễ hiểu:
+các toán tử  ``+``, ``-``, ``*`` and ``/`` hoạt động như trong hầu hết các ngôn
+ngữ khác (ví dụ Pascal hay C); dấu ngoặc tròn (``()``) dùng để gộp nhóm.
+
+Ví dụ::
 
    >>> 2 + 2
    4
@@ -53,61 +52,56 @@ For example::
    20
    >>> (50 - 5*6) / 4
    5.0
-   >>> 8 / 5  # division always returns a floating point number
+   >>> 8 / 5  # Phép chia luôn trả về số thực
    1.6
 
-The integer numbers (e.g. ``2``, ``4``, ``20``) have type :class:`int`,
-the ones with a fractional part (e.g. ``5.0``, ``1.6``) have type
-:class:`float`.  We will see more about numeric types later in the tutorial.
+Số nguyên (VD. ``2``, ``4``, ``20``) là kiểu :class:`int`, các số thập phân
+(như ``5.0``, ``1.6``) là kiểu :class:`float`.
 
-Division (``/``) always returns a float.  To do :term:`floor division` and
-get an integer result (discarding any fractional result) you can use the ``//``
-operator; to calculate the remainder you can use ``%``::
+Phép chia (``/``) luôn trả về số thực.  Để :term:`Chia lấy phần nguyên`
+sử dụng ``//`` ; Để lấy phần dư dùng ``%``::
 
-   >>> 17 / 3  # classic division returns a float
+   >>> 17 / 3  # Phép / trả về số thực
    5.666666666666667
    >>>
-   >>> 17 // 3  # floor division discards the fractional part
+   >>> 17 // 3  # Phép // trả về phần nguyên
    5
-   >>> 17 % 3  # the % operator returns the remainder of the division
+   >>> 17 % 3  # Phép % trả về số dư
    2
-   >>> 5 * 3 + 2  # result * divisor + remainder
+   >>> 5 * 3 + 2  # Phần nguyên * số bị chia + phần dư
    17
 
-With Python, it is possible to use the ``**`` operator to calculate powers [#]_::
+Phép lũy thừa dùng dấu ``**``  [#]_::
 
-   >>> 5 ** 2  # 5 squared
+   >>> 5 ** 2  # 5 bình phương
    25
-   >>> 2 ** 7  # 2 to the power of 7
+   >>> 2 ** 7  # 2 mũ 7
    128
 
-The equal sign (``=``) is used to assign a value to a variable. Afterwards, no
-result is displayed before the next interactive prompt::
+Dấu (``=``) dùng để gán giá trị cho biến, không có output ra màn hình nhé::
 
    >>> width = 20
    >>> height = 5 * 9
    >>> width * height
    900
 
-If a variable is not "defined" (assigned a value), trying to use it will
-give you an error::
+Nếu biến chưa được "định nghĩa" (Chưa gán giá trị nào) mà bạn đem ra dùng thì
+sẽ báo lỗi::
 
    >>> n  # try to access an undefined variable
    Traceback (most recent call last):
      File "<stdin>", line 1, in <module>
    NameError: name 'n' is not defined
 
-There is full support for floating point; operators with mixed type operands
-convert the integer operand to floating point::
+Nếu trong biểu thức có số thực sẽ trả về số thực::
 
    >>> 3 * 3.75 / 1.5
    7.5
    >>> 7.0 / 2
    3.5
 
-In interactive mode, the last printed expression is assigned to the variable
-``_``.  This means that when you are using Python as a desk calculator, it is
-somewhat easier to continue calculations, for example::
+Trong chế độ tương tác, giá trị cuối cùng được in ra sẽ được gán cho biến ``_``.
+Ví dụ::
 
    >>> tax = 12.5 / 100
    >>> price = 100.50
@@ -118,15 +112,13 @@ somewhat easier to continue calculations, for example::
    >>> round(_, 2)
    113.06
 
-This variable should be treated as read-only by the user.  Don't explicitly
-assign a value to it --- you would create an independent local variable with the
-same name masking the built-in variable with its magic behavior.
+Việc dùng biến ``_`` dễ gây nhầm lẫn --- Tốt nhất đừng sử dụng.
 
-In addition to :class:`int` and :class:`float`, Python supports other types of
-numbers, such as :class:`~decimal.Decimal` and :class:`~fractions.Fraction`.
-Python also has built-in support for :ref:`complex numbers <typesnumeric>`,
-and uses the ``j`` or ``J`` suffix to indicate the imaginary part
-(e.g. ``3+5j``).
+Lớp :class:`int` và :class:`float` cũng hỗ trợ các kiểu số khác như :class:`~decimal.Decimal`
+và :class:`~fractions.Fraction`.
+Python cũng hỗ trợ số phức :ref:`complex numbers <typesnumeric>`,
+và sử dụng chữ ``j`` hoặc ``J`` để biểu diễn phần ảo.
+(VD ``3+5j``).
 
 
 .. _tut-strings:
@@ -134,10 +126,9 @@ and uses the ``j`` or ``J`` suffix to indicate the imaginary part
 Chuỗi
 -----
 
-Besides numbers, Python can also manipulate strings, which can be expressed
-in several ways.  They can be enclosed in single quotes (``'...'``) or
-double quotes (``"..."``) with the same result [#]_.  ``\`` can be used
-to escape quotes::
+Ngoài số, Python còn làm việc được với chuỗi, có thể được biểu hiện theo nhiều cách.
+Chúng có thể được kẹp trong dấu nháy đơn (``'...'``) hoặc nháy kép (``"..."``)
+với kết quả như nhau [#]_. Dấu ``\`` là một dấu escape, xem ví dụ::
 
    >>> 'spam eggs'  # single quotes
    'spam eggs'

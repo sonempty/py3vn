@@ -407,3 +407,6 @@ div.badge img {
     height: 149px;
 }
 
+
+/* appendcss: */
+div.body code.descclassname { display: none }

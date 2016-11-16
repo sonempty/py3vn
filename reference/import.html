@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,30 +23,28 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/sidebar.js"></script>
     <link rel="copyright" title="Copyright" href="../copyright.html" />
-    <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="../index.html" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <link rel="shortcut icon" type="image/png" href="../_static/favicon.png" />
-    <meta name="viewport" content="width=device-width,initial-scale=0.8">
-    
-
+    <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="../index.html" /> 
   </head>
   <body role="document">
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
-        <li><a href="../index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-    
+	    
         <div class="badge">
-            <a href="https://github.com/sonempty/py3vn">Fork me on Github</a>
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
             <img src="../_static/right-red@2x.png">
         </div>
-    
-  
+      
 
     <div class="document">
       <div class="documentwrapper">
@@ -58,24 +57,24 @@
 by the process of <a class="reference internal" href="../glossary.html#term-importing"><span class="xref std std-term">importing</span></a> it.  The <a class="reference internal" href="simple_stmts.html#import"><code class="xref std std-keyword docutils literal"><span class="pre">import</span></code></a> statement is
 the most common way of invoking the import machinery, but it is not the only
 way.  Functions such as <code class="xref py py-func docutils literal"><span class="pre">importlib.import_module()</span></code> and built-in
-<code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code> can also be used to invoke the import machinery.</p>
+<a class="reference internal" href="../library/functions.html#__import__" title="__import__"><code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code></a> can also be used to invoke the import machinery.</p>
 <p>The <a class="reference internal" href="simple_stmts.html#import"><code class="xref std std-keyword docutils literal"><span class="pre">import</span></code></a> statement combines two operations; it searches for the
 named module, then it binds the results of that search to a name in the local
 scope.  The search operation of the <a class="reference internal" href="simple_stmts.html#import"><code class="xref std std-keyword docutils literal"><span class="pre">import</span></code></a> statement is defined as
-a call to the <code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code> function, with the appropriate arguments.
-The return value of <code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code> is used to perform the name
+a call to the <a class="reference internal" href="../library/functions.html#__import__" title="__import__"><code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code></a> function, with the appropriate arguments.
+The return value of <a class="reference internal" href="../library/functions.html#__import__" title="__import__"><code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code></a> is used to perform the name
 binding operation of the <a class="reference internal" href="simple_stmts.html#import"><code class="xref std std-keyword docutils literal"><span class="pre">import</span></code></a> statement.  See the
 <a class="reference internal" href="simple_stmts.html#import"><code class="xref std std-keyword docutils literal"><span class="pre">import</span></code></a> statement for the exact details of that name binding
 operation.</p>
-<p>A direct call to <code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code> performs only the module search and, if
+<p>A direct call to <a class="reference internal" href="../library/functions.html#__import__" title="__import__"><code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code></a> performs only the module search and, if
 found, the module creation operation.  While certain side-effects may occur,
 such as the importing of parent packages, and the updating of various caches
 (including <code class="xref py py-data docutils literal"><span class="pre">sys.modules</span></code>), only the <a class="reference internal" href="simple_stmts.html#import"><code class="xref std std-keyword docutils literal"><span class="pre">import</span></code></a> statement performs
 a name binding operation.</p>
-<p>When calling <code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code> as part of an import statement, the
-standard builtin <code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code> is called. Other mechanisms for
+<p>When calling <a class="reference internal" href="../library/functions.html#__import__" title="__import__"><code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code></a> as part of an import statement, the
+standard builtin <a class="reference internal" href="../library/functions.html#__import__" title="__import__"><code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code></a> is called. Other mechanisms for
 invoking the import system (such as <code class="xref py py-func docutils literal"><span class="pre">importlib.import_module()</span></code>) may
-choose to subvert <code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code> and use its own solution to
+choose to subvert <a class="reference internal" href="../library/functions.html#__import__" title="__import__"><code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code></a> and use its own solution to
 implement import semantics.</p>
 <p>When a module is first imported, Python searches for the module and if found,
 it creates a module object <a class="footnote-reference" href="#fnmo" id="id1">[1]</a>, initializing it.  If the named module
@@ -93,7 +92,7 @@ native namespace package support has been implemented (see <span class="target" 
 <h2>5.1. <code class="xref py py-mod docutils literal"><span class="pre">importlib</span></code><a class="headerlink" href="#importlib" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="xref py py-mod docutils literal"><span class="pre">importlib</span></code> module provides a rich API for interacting with the
 import system.  For example <code class="xref py py-func docutils literal"><span class="pre">importlib.import_module()</span></code> provides a
-recommended, simpler API than built-in <code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code> for invoking the
+recommended, simpler API than built-in <a class="reference internal" href="../library/functions.html#__import__" title="__import__"><code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code></a> for invoking the
 import machinery.  Refer to the <code class="xref py py-mod docutils literal"><span class="pre">importlib</span></code> library documentation for
 additional detail.</p>
 </div>
@@ -175,7 +174,7 @@ its subpackages is imported.</p>
 name of the module (or package, but for the purposes of this discussion, the
 difference is immaterial) being imported.  This name may come from various
 arguments to the <a class="reference internal" href="simple_stmts.html#import"><code class="xref std std-keyword docutils literal"><span class="pre">import</span></code></a> statement, or from the parameters to the
-<code class="xref py py-func docutils literal"><span class="pre">importlib.import_module()</span></code> or <code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code> functions.</p>
+<code class="xref py py-func docutils literal"><span class="pre">importlib.import_module()</span></code> or <a class="reference internal" href="../library/functions.html#__import__" title="__import__"><code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code></a> functions.</p>
 <p>This name will be used in various phases of the import search, and it may be
 the dotted path to a submodule, e.g. <code class="docutils literal"><span class="pre">foo.bar.baz</span></code>.  In this case, Python
 first tries to import <code class="docutils literal"><span class="pre">foo</span></code>, then <code class="docutils literal"><span class="pre">foo.bar</span></code>, and finally <code class="docutils literal"><span class="pre">foo.bar.baz</span></code>.
@@ -791,7 +790,7 @@ delete the default contents of <code class="xref py py-data docutils literal"><s
 entirely with a custom meta path hook.</p>
 <p>If it is acceptable to only alter the behaviour of import statements
 without affecting other APIs that access the import system, then replacing
-the builtin <code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code> function may be sufficient. This technique
+the builtin <a class="reference internal" href="../library/functions.html#__import__" title="__import__"><code class="xref py py-func docutils literal"><span class="pre">__import__()</span></code></a> function may be sufficient. This technique
 may also be employed at the module level to only alter the behaviour of
 import statements within that module.</p>
 <p>To selectively prevent import of some modules from a hook early on the
@@ -806,7 +805,7 @@ while raising an exception terminates it immediately.</p>
 <p>The <code class="xref py py-mod docutils literal"><span class="pre">__main__</span></code> module is a special case relative to Python&#8217;s import
 system.  As noted <a class="reference internal" href="toplevel_components.html#programs"><span class="std std-ref">elsewhere</span></a>, the <code class="docutils literal"><span class="pre">__main__</span></code> module
 is directly initialized at interpreter startup, much like <code class="xref py py-mod docutils literal"><span class="pre">sys</span></code> and
-<code class="xref py py-mod docutils literal"><span class="pre">builtins</span></code>.  However, unlike those two, it doesn&#8217;t strictly
+<a class="reference internal" href="../library/builtins.html#module-builtins" title="builtins: The module that provides the built-in namespace."><code class="xref py py-mod docutils literal"><span class="pre">builtins</span></code></a>.  However, unlike those two, it doesn&#8217;t strictly
 qualify as a built-in module.  This is because the manner in which
 <code class="docutils literal"><span class="pre">__main__</span></code> is initialized depends on the flags and other options with
 which the interpreter is invoked.</p>
@@ -908,8 +907,46 @@ is recommended that code be changed to use <code class="docutils literal"><span 
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-    <a id="sidebar-anchor"></a>
-    
+  <h3><a href="../index.html">Nội dung bài học</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">5. The import system</a><ul>
+<li><a class="reference internal" href="#importlib">5.1. <code class="docutils literal"><span class="pre">importlib</span></code></a></li>
+<li><a class="reference internal" href="#packages">5.2. Packages</a><ul>
+<li><a class="reference internal" href="#regular-packages">5.2.1. Regular packages</a></li>
+<li><a class="reference internal" href="#namespace-packages">5.2.2. Namespace packages</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#searching">5.3. Searching</a><ul>
+<li><a class="reference internal" href="#the-module-cache">5.3.1. The module cache</a></li>
+<li><a class="reference internal" href="#finders-and-loaders">5.3.2. Finders and loaders</a></li>
+<li><a class="reference internal" href="#import-hooks">5.3.3. Import hooks</a></li>
+<li><a class="reference internal" href="#the-meta-path">5.3.4. The meta path</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#loading">5.4. Loading</a><ul>
+<li><a class="reference internal" href="#loaders">5.4.1. Loaders</a></li>
+<li><a class="reference internal" href="#submodules">5.4.2. Submodules</a></li>
+<li><a class="reference internal" href="#module-spec">5.4.3. Module spec</a></li>
+<li><a class="reference internal" href="#import-related-module-attributes">5.4.4. Import-related module attributes</a></li>
+<li><a class="reference internal" href="#module-path">5.4.5. module.__path__</a></li>
+<li><a class="reference internal" href="#module-reprs">5.4.6. Module reprs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-path-based-finder">5.5. The Path Based Finder</a><ul>
+<li><a class="reference internal" href="#path-entry-finders">5.5.1. Path entry finders</a></li>
+<li><a class="reference internal" href="#path-entry-finder-protocol">5.5.2. Path entry finder protocol</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#replacing-the-standard-import-system">5.6. Replacing the standard import system</a></li>
+<li><a class="reference internal" href="#special-considerations-for-main">5.7. Special considerations for __main__</a><ul>
+<li><a class="reference internal" href="#main-spec">5.7.1. __main__.__spec__</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#open-issues">5.8. Open issues</a></li>
+<li><a class="reference internal" href="#references">5.9. References</a></li>
+</ul>
+</li>
+</ul>
 
 <div id="searchbox" style="display: none" role="search">
   <h3>Tìm kiếm</h3>
@@ -920,49 +957,32 @@ is recommended that code be changed to use <code class="docutils literal"><span 
       <input type="hidden" name="area" value="default" />
     </form>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../index.html">Nội dung bài học</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../appetite.html">1. Lời tựa</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../interpreter.html">2. Sử dụng trình thông dịch Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction.html">3. Gới thiệu ngôn ngữ lập trình Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../controlflow.html">4. Điều khiển luồng</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datastructures.html">5. Cấu trúc dữ liệu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modules.html">6. Mô-đun</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../inputoutput.html">7. Input and Output</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../errors.html">8. Lỗi và ngoại lệ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../classes.html">9. Lớp (Classes)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../stdlib.html">10. Brief Tour of the Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../stdlib2.html">11. Brief Tour of the Standard Library &#8211; Part II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../venv.html">12. Virtual Environments and Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../whatnow.html">13. What Now?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../interactive.html">14. Interactive Input Editing and History Substitution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../floatingpoint.html">15. Floating Point Arithmetic:  Issues and Limitations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix.html">16. Appendix</a></li>
-</ul>
-
-  <div role="note" aria-label="source link">
-    <h3>Thực hành </h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/reference/import.txt"
-            rel="nofollow">Bài tập chương này</a></li>
-    </ul>
-   </div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-
+	    
+        <div class="badge">
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
+            <img src="../_static/right-red@2x.png">
+        </div>
+    
     <div class="footer" role="contentinfo">
         &#169; <a href="../copyright.html">Copyright</a> 2016, Trần Viết Sơn.
-      Update lần cuối vào Nov 15, 2016.
+      Update lần cuối vào Nov 16, 2016.
       Webste được xây dựng bằng <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
     </div>
   </body>

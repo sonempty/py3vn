@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,32 +23,36 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/sidebar.js"></script>
     <link rel="copyright" title="Copyright" href="copyright.html" />
     <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="index.html" />
     <link rel="next" title="6. Mô-đun" href="modules.html" />
-    <link rel="prev" title="4. Điều khiển luồng" href="controlflow.html" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <link rel="shortcut icon" type="image/png" href="_static/favicon.png" />
-    <meta name="viewport" content="width=device-width,initial-scale=0.8">
-    
-
+    <link rel="prev" title="4. Điều khiển luồng" href="controlflow.html" /> 
   </head>
   <body role="document">
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
-        <li><a href="index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="6. Mô-đun"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="controlflow.html" title="4. Điều khiển luồng"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-    
+	    
         <div class="badge">
-            <a href="https://github.com/sonempty/py3vn">Fork me on Github</a>
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
             <img src="_static/right-red@2x.png">
         </div>
-    
-  
+      
 
     <div class="document">
       <div class="documentwrapper">
@@ -55,11 +60,11 @@
           <div class="body" role="main">
             
   <div class="section" id="cau-truc-du-lieu">
-<span id="tut-structures"></span><h1>5. Cấu trúc dữ liệu<a class="headerlink" href="#cau-truc-du-lieu" title="Permalink to this headline">¶</a></h1>
+<span id="tut-structures"></span><h1>Cấu trúc dữ liệu<a class="headerlink" href="#cau-truc-du-lieu" title="Permalink to this headline">¶</a></h1>
 <p>This chapter describes some things you&#8217;ve learned about already in more detail,
 and adds some new things as well.</p>
 <div class="section" id="tim-hieu-them-ve-lists">
-<span id="tut-morelists"></span><h2>5.1. Tìm hiểu thêm về Lists<a class="headerlink" href="#tim-hieu-them-ve-lists" title="Permalink to this headline">¶</a></h2>
+<span id="tut-morelists"></span><h2>Tìm hiểu thêm về Lists<a class="headerlink" href="#tim-hieu-them-ve-lists" title="Permalink to this headline">¶</a></h2>
 <p>The list data type has some more methods.  Here are all of the methods of list
 objects:</p>
 <dl class="method">
@@ -123,7 +128,7 @@ error if there is no such item.</p>
 <dt>
 <code class="descclassname">list.</code><code class="descname">sort</code><span class="sig-paren">(</span><em>key=None</em>, <em>reverse=False</em><span class="sig-paren">)</span></dt>
 <dd><p>Sort the items of the list in place (the arguments can be used for sort
-customization, see <code class="xref py py-func docutils literal"><span class="pre">sorted()</span></code> for their explanation).</p>
+customization, see <a class="reference internal" href="library/functions.html#sorted" title="sorted"><code class="xref py py-func docutils literal"><span class="pre">sorted()</span></code></a> for their explanation).</p>
 </dd></dl>
 
 <dl class="method">
@@ -168,7 +173,7 @@ only modify the list have no return value printed &#8211; they return the defaul
 <code class="docutils literal"><span class="pre">None</span></code>. <a class="footnote-reference" href="#id3" id="id1">[1]</a>  This is a design principle for all mutable data structures in
 Python.</p>
 <div class="section" id="su-dung-lists-nhu-ngan-xep">
-<span id="tut-lists-as-stacks"></span><h3>5.1.1. Sử dụng Lists như ngăn xếp<a class="headerlink" href="#su-dung-lists-nhu-ngan-xep" title="Permalink to this headline">¶</a></h3>
+<span id="tut-lists-as-stacks"></span><h3>Sử dụng Lists như ngăn xếp<a class="headerlink" href="#su-dung-lists-nhu-ngan-xep" title="Permalink to this headline">¶</a></h3>
 <p>The list methods make it very easy to use a list as a stack, where the last
 element added is the first element retrieved (&#8220;last-in, first-out&#8221;).  To add an
 item to the top of the stack, use <code class="xref py py-meth docutils literal"><span class="pre">append()</span></code>.  To retrieve an item from the
@@ -192,7 +197,7 @@ top of the stack, use <code class="xref py py-meth docutils literal"><span class
 </div>
 </div>
 <div class="section" id="su-dung-list-nhu-hang-doi">
-<span id="tut-lists-as-queues"></span><h3>5.1.2. Sử dụng List như hàng đợi<a class="headerlink" href="#su-dung-list-nhu-hang-doi" title="Permalink to this headline">¶</a></h3>
+<span id="tut-lists-as-queues"></span><h3>Sử dụng List như hàng đợi<a class="headerlink" href="#su-dung-list-nhu-hang-doi" title="Permalink to this headline">¶</a></h3>
 <p>It is also possible to use a list as a queue, where the first element added is
 the first element retrieved (&#8220;first-in, first-out&#8221;); however, lists are not
 efficient for this purpose.  While appends and pops from the end of list are
@@ -214,7 +219,7 @@ have fast appends and pops from both ends.  For example:</p>
 </div>
 </div>
 <div class="section" id="cac-cach-tao-list-nhanh-chong">
-<span id="tut-listcomps"></span><h3>5.1.3. Các cách tạo List nhanh chóng<a class="headerlink" href="#cac-cach-tao-list-nhanh-chong" title="Permalink to this headline">¶</a></h3>
+<span id="tut-listcomps"></span><h3>Các cách tạo List nhanh chóng<a class="headerlink" href="#cac-cach-tao-list-nhanh-chong" title="Permalink to this headline">¶</a></h3>
 <p>List comprehensions provide a concise way to create lists.
 Common applications are to make new lists where each element is the result of
 some operations applied to each member of another sequence or iterable, or to
@@ -301,7 +306,7 @@ it must be parenthesized.</p>
 </div>
 </div>
 <div class="section" id="lists-trong-lists">
-<h3>5.1.4. Lists trong Lists<a class="headerlink" href="#lists-trong-lists" title="Permalink to this headline">¶</a></h3>
+<h3>Lists trong Lists<a class="headerlink" href="#lists-trong-lists" title="Permalink to this headline">¶</a></h3>
 <p>The initial expression in a list comprehension can be any arbitrary expression,
 including another list comprehension.</p>
 <p>Consider the following example of a 3x4 matrix implemented as a list of
@@ -343,7 +348,7 @@ equivalent to:</p>
 </pre></div>
 </div>
 <p>In the real world, you should prefer built-in functions to complex flow statements.
-The <code class="xref py py-func docutils literal"><span class="pre">zip()</span></code> function would do a great job for this use case:</p>
+The <a class="reference internal" href="library/functions.html#zip" title="zip"><code class="xref py py-func docutils literal"><span class="pre">zip()</span></code></a> function would do a great job for this use case:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">matrix</span><span class="p">))</span>
 <span class="go">[(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]</span>
 </pre></div>
@@ -352,7 +357,7 @@ The <code class="xref py py-func docutils literal"><span class="pre">zip()</span
 </div>
 </div>
 <div class="section" id="cau-lenh-del">
-<span id="tut-del"></span><h2>5.2. Câu lệnh <a class="reference internal" href="reference/simple_stmts.html#del"><code class="xref std std-keyword docutils literal"><span class="pre">del</span></code></a><a class="headerlink" href="#cau-lenh-del" title="Permalink to this headline">¶</a></h2>
+<span id="tut-del"></span><h2>Câu lệnh <a class="reference internal" href="reference/simple_stmts.html#del"><code class="xref std std-keyword docutils literal"><span class="pre">del</span></code></a><a class="headerlink" href="#cau-lenh-del" title="Permalink to this headline">¶</a></h2>
 <p>There is a way to remove an item from a list given its index instead of its
 value: the <a class="reference internal" href="reference/simple_stmts.html#del"><code class="xref std std-keyword docutils literal"><span class="pre">del</span></code></a> statement.  This differs from the <code class="xref py py-meth docutils literal"><span class="pre">pop()</span></code> method
 which returns a value.  The <a class="reference internal" href="reference/simple_stmts.html#del"><code class="xref std std-keyword docutils literal"><span class="pre">del</span></code></a> statement can also be used to remove
@@ -378,10 +383,10 @@ of an empty list to the slice).  For example:</p>
 is assigned to it).  We&#8217;ll find other uses for <a class="reference internal" href="reference/simple_stmts.html#del"><code class="xref std std-keyword docutils literal"><span class="pre">del</span></code></a> later.</p>
 </div>
 <div class="section" id="tuples-kieu-du-lieu-co-trinh-tu-sequences">
-<span id="tut-tuples"></span><h2>5.3. Tuples - kiểu dữ liệu có trình tự (Sequences)<a class="headerlink" href="#tuples-kieu-du-lieu-co-trinh-tu-sequences" title="Permalink to this headline">¶</a></h2>
+<span id="tut-tuples"></span><h2>Tuples - kiểu dữ liệu có trình tự (Sequences)<a class="headerlink" href="#tuples-kieu-du-lieu-co-trinh-tu-sequences" title="Permalink to this headline">¶</a></h2>
 <p>We saw that lists and strings have many common properties, such as indexing and
 slicing operations.  They are two examples of <em>sequence</em> data types (see
-<span class="xref std std-ref">typesseq</span>).  Since Python is an evolving language, other sequence data
+<a class="reference internal" href="library/stdtypes.html#typesseq"><span class="std std-ref">Sequence Types &#8212; list, tuple, range</span></a>).  Since Python is an evolving language, other sequence data
 types may be added.  There is also another standard sequence data type: the
 <em>tuple</em>.</p>
 <p>A tuple consists of a number of values separated by commas, for instance:</p>
@@ -446,13 +451,13 @@ sequence.  Note that multiple assignment is really just a combination of tuple
 packing and sequence unpacking.</p>
 </div>
 <div class="section" id="bo">
-<span id="tut-sets"></span><h2>5.4. Bộ<a class="headerlink" href="#bo" title="Permalink to this headline">¶</a></h2>
+<span id="tut-sets"></span><h2>Bộ<a class="headerlink" href="#bo" title="Permalink to this headline">¶</a></h2>
 <p>Tác giả: Chú ý phân biệt Bộ (Sets) và Dãy (Sequences)</p>
 <p>Python also includes a data type for <em>sets</em>.  A set is an unordered collection
 with no duplicate elements.  Basic uses include membership testing and
 eliminating duplicate entries.  Set objects also support mathematical operations
 like union, intersection, difference, and symmetric difference.</p>
-<p>Curly braces or the <code class="xref py py-func docutils literal"><span class="pre">set()</span></code> function can be used to create sets.  Note: to
+<p>Curly braces or the <a class="reference internal" href="library/stdtypes.html#set" title="set"><code class="xref py py-func docutils literal"><span class="pre">set()</span></code></a> function can be used to create sets.  Note: to
 create an empty set you have to use <code class="docutils literal"><span class="pre">set()</span></code>, not <code class="docutils literal"><span class="pre">{}</span></code>; the latter creates an
 empty dictionary, a data structure that we discuss in the next section.</p>
 <p>Here is a brief demonstration:</p>
@@ -489,9 +494,9 @@ are also supported:</p>
 </div>
 </div>
 <div class="section" id="kieu-tu-dien">
-<span id="tut-dictionaries"></span><h2>5.5. Kiểu từ điển<a class="headerlink" href="#kieu-tu-dien" title="Permalink to this headline">¶</a></h2>
+<span id="tut-dictionaries"></span><h2>Kiểu từ điển<a class="headerlink" href="#kieu-tu-dien" title="Permalink to this headline">¶</a></h2>
 <p>Another useful data type built into Python is the <em>dictionary</em> (see
-<span class="xref std std-ref">typesmapping</span>). Dictionaries are sometimes found in other languages as
+<a class="reference internal" href="library/stdtypes.html#typesmapping"><span class="std std-ref">Mapping Types &#8212; dict</span></a>). Dictionaries are sometimes found in other languages as
 &#8220;associative memories&#8221; or &#8220;associative arrays&#8221;.  Unlike sequences, which are
 indexed by a range of numbers, dictionaries are indexed by <em>keys</em>, which can be
 any immutable type; strings and numbers can always be keys.  Tuples can be used
@@ -535,7 +540,7 @@ dictionary, use the <a class="reference internal" href="reference/expressions.ht
 <span class="go">False</span>
 </pre></div>
 </div>
-<p>The <code class="xref py py-func docutils literal"><span class="pre">dict()</span></code> constructor builds dictionaries directly from sequences of
+<p>The <a class="reference internal" href="library/stdtypes.html#dict" title="dict"><code class="xref py py-func docutils literal"><span class="pre">dict()</span></code></a> constructor builds dictionaries directly from sequences of
 key-value pairs:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">dict</span><span class="p">([(</span><span class="s1">&#39;sape&#39;</span><span class="p">,</span> <span class="mi">4139</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;guido&#39;</span><span class="p">,</span> <span class="mi">4127</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;jack&#39;</span><span class="p">,</span> <span class="mi">4098</span><span class="p">)])</span>
 <span class="go">{&#39;sape&#39;: 4139, &#39;jack&#39;: 4098, &#39;guido&#39;: 4127}</span>
@@ -555,7 +560,7 @@ keyword arguments:</p>
 </div>
 </div>
 <div class="section" id="cac-ky-thuat-lap">
-<span id="tut-loopidioms"></span><h2>5.6. Các kỹ thuật lặp<a class="headerlink" href="#cac-ky-thuat-lap" title="Permalink to this headline">¶</a></h2>
+<span id="tut-loopidioms"></span><h2>Các kỹ thuật lặp<a class="headerlink" href="#cac-ky-thuat-lap" title="Permalink to this headline">¶</a></h2>
 <p>When looping through dictionaries, the key and corresponding value can be
 retrieved at the same time using the <code class="xref py py-meth docutils literal"><span class="pre">items()</span></code> method.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">knights</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;gallahad&#39;</span><span class="p">:</span> <span class="s1">&#39;the pure&#39;</span><span class="p">,</span> <span class="s1">&#39;robin&#39;</span><span class="p">:</span> <span class="s1">&#39;the brave&#39;</span><span class="p">}</span>
@@ -567,7 +572,7 @@ retrieved at the same time using the <code class="xref py py-meth docutils liter
 </pre></div>
 </div>
 <p>When looping through a sequence, the position index and corresponding value can
-be retrieved at the same time using the <code class="xref py py-func docutils literal"><span class="pre">enumerate()</span></code> function.</p>
+be retrieved at the same time using the <a class="reference internal" href="library/functions.html#enumerate" title="enumerate"><code class="xref py py-func docutils literal"><span class="pre">enumerate()</span></code></a> function.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="s1">&#39;tic&#39;</span><span class="p">,</span> <span class="s1">&#39;tac&#39;</span><span class="p">,</span> <span class="s1">&#39;toe&#39;</span><span class="p">]):</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
 <span class="gp">...</span>
@@ -577,7 +582,7 @@ be retrieved at the same time using the <code class="xref py py-func docutils li
 </pre></div>
 </div>
 <p>To loop over two or more sequences at the same time, the entries can be paired
-with the <code class="xref py py-func docutils literal"><span class="pre">zip()</span></code> function.</p>
+with the <a class="reference internal" href="library/functions.html#zip" title="zip"><code class="xref py py-func docutils literal"><span class="pre">zip()</span></code></a> function.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">questions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;quest&#39;</span><span class="p">,</span> <span class="s1">&#39;favorite color&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">answers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;lancelot&#39;</span><span class="p">,</span> <span class="s1">&#39;the holy grail&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">q</span><span class="p">,</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">questions</span><span class="p">,</span> <span class="n">answers</span><span class="p">):</span>
@@ -589,7 +594,7 @@ with the <code class="xref py py-func docutils literal"><span class="pre">zip()<
 </pre></div>
 </div>
 <p>To loop over a sequence in reverse, first specify the sequence in a forward
-direction and then call the <code class="xref py py-func docutils literal"><span class="pre">reversed()</span></code> function.</p>
+direction and then call the <a class="reference internal" href="library/functions.html#reversed" title="reversed"><code class="xref py py-func docutils literal"><span class="pre">reversed()</span></code></a> function.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)):</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 <span class="gp">...</span>
@@ -600,7 +605,7 @@ direction and then call the <code class="xref py py-func docutils literal"><span
 <span class="go">1</span>
 </pre></div>
 </div>
-<p>To loop over a sequence in sorted order, use the <code class="xref py py-func docutils literal"><span class="pre">sorted()</span></code> function which
+<p>To loop over a sequence in sorted order, use the <a class="reference internal" href="library/functions.html#sorted" title="sorted"><code class="xref py py-func docutils literal"><span class="pre">sorted()</span></code></a> function which
 returns a new sorted list while leaving the source unaltered.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">basket</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;pear&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">basket</span><span class="p">)):</span>
@@ -627,7 +632,7 @@ however, it is often simpler and safer to create a new list instead.</p>
 </div>
 </div>
 <div class="section" id="cac-cau-lenh-dieu-kien">
-<span id="tut-conditions"></span><h2>5.7. Các câu lệnh điều kiện<a class="headerlink" href="#cac-cau-lenh-dieu-kien" title="Permalink to this headline">¶</a></h2>
+<span id="tut-conditions"></span><h2>Các câu lệnh điều kiện<a class="headerlink" href="#cac-cau-lenh-dieu-kien" title="Permalink to this headline">¶</a></h2>
 <p>The conditions used in <code class="docutils literal"><span class="pre">while</span></code> and <code class="docutils literal"><span class="pre">if</span></code> statements can contain any
 operators, not just comparisons.</p>
 <p>The comparison operators <code class="docutils literal"><span class="pre">in</span></code> and <code class="docutils literal"><span class="pre">not</span> <span class="pre">in</span></code> check whether a value occurs
@@ -663,7 +668,7 @@ encountered in C programs: typing <code class="docutils literal"><span class="pr
 intended.</p>
 </div>
 <div class="section" id="so-sanh-day-va-kieu-du-lieu-khac">
-<span id="tut-comparing"></span><h2>5.8. So sánh dãy và kiểu dữ liệu khác<a class="headerlink" href="#so-sanh-day-va-kieu-du-lieu-khac" title="Permalink to this headline">¶</a></h2>
+<span id="tut-comparing"></span><h2>So sánh dãy và kiểu dữ liệu khác<a class="headerlink" href="#so-sanh-day-va-kieu-du-lieu-khac" title="Permalink to this headline">¶</a></h2>
 <p>Sequence objects may be compared to other objects with the same sequence type.
 The comparison uses <em>lexicographical</em> ordering: first the first two items are
 compared, and if they differ this determines the outcome of the comparison; if
@@ -714,9 +719,33 @@ are not independent of the original dictionary &#8211; it is only a <em>view</em
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-    <a id="sidebar-anchor"></a>
-    
+  <h3><a href="index.html">Nội dung bài học</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">5. Cấu trúc dữ liệu</a><ul>
+<li><a class="reference internal" href="#tim-hieu-them-ve-lists">5.1. Tìm hiểu thêm về Lists</a><ul>
+<li><a class="reference internal" href="#su-dung-lists-nhu-ngan-xep">5.1.1. Sử dụng Lists như ngăn xếp</a></li>
+<li><a class="reference internal" href="#su-dung-list-nhu-hang-doi">5.1.2. Sử dụng List như hàng đợi</a></li>
+<li><a class="reference internal" href="#cac-cach-tao-list-nhanh-chong">5.1.3. Các cách tạo List nhanh chóng</a></li>
+<li><a class="reference internal" href="#lists-trong-lists">5.1.4. Lists trong Lists</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cau-lenh-del">5.2. Câu lệnh <code class="docutils literal"><span class="pre">del</span></code></a></li>
+<li><a class="reference internal" href="#tuples-kieu-du-lieu-co-trinh-tu-sequences">5.3. Tuples - kiểu dữ liệu có trình tự (Sequences)</a></li>
+<li><a class="reference internal" href="#bo">5.4. Bộ</a></li>
+<li><a class="reference internal" href="#kieu-tu-dien">5.5. Kiểu từ điển</a></li>
+<li><a class="reference internal" href="#cac-ky-thuat-lap">5.6. Các kỹ thuật lặp</a></li>
+<li><a class="reference internal" href="#cac-cau-lenh-dieu-kien">5.7. Các câu lệnh điều kiện</a></li>
+<li><a class="reference internal" href="#so-sanh-day-va-kieu-du-lieu-khac">5.8. So sánh dãy và kiểu dữ liệu khác</a></li>
+</ul>
+</li>
+</ul>
 
+  <h4>Bài trước</h4>
+  <p class="topless"><a href="controlflow.html"
+                        title="Bài trước">4. Điều khiển luồng</a></p>
+  <h4>Bài tiếp theo</h4>
+  <p class="topless"><a href="modules.html"
+                        title="Bài tiếp theo">6. Mô-đun</a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Tìm kiếm</h3>
     <form class="search" action="search.html" method="get">
@@ -726,65 +755,38 @@ are not independent of the original dictionary &#8211; it is only a <em>view</em
       <input type="hidden" name="area" value="default" />
     </form>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="index.html">Nội dung bài học</a></h3>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="appetite.html">1. Lời tựa</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interpreter.html">2. Sử dụng trình thông dịch Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">3. Gới thiệu ngôn ngữ lập trình Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="controlflow.html">4. Điều khiển luồng</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Cấu trúc dữ liệu</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#tim-hieu-them-ve-lists">5.1. Tìm hiểu thêm về Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cau-lenh-del">5.2. Câu lệnh <code class="docutils literal"><span class="pre">del</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tuples-kieu-du-lieu-co-trinh-tu-sequences">5.3. Tuples - kiểu dữ liệu có trình tự (Sequences)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#bo">5.4. Bộ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#kieu-tu-dien">5.5. Kiểu từ điển</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cac-ky-thuat-lap">5.6. Các kỹ thuật lặp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cac-cau-lenh-dieu-kien">5.7. Các câu lệnh điều kiện</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#so-sanh-day-va-kieu-du-lieu-khac">5.8. So sánh dãy và kiểu dữ liệu khác</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">6. Mô-đun</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inputoutput.html">7. Input and Output</a></li>
-<li class="toctree-l1"><a class="reference internal" href="errors.html">8. Lỗi và ngoại lệ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="classes.html">9. Lớp (Classes)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="stdlib.html">10. Brief Tour of the Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="stdlib2.html">11. Brief Tour of the Standard Library &#8211; Part II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="venv.html">12. Virtual Environments and Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="whatnow.html">13. What Now?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interactive.html">14. Interactive Input Editing and History Substitution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="floatingpoint.html">15. Floating Point Arithmetic:  Issues and Limitations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="appendix.html">16. Appendix</a></li>
-</ul>
-
-  <div role="note" aria-label="source link">
-    <h3>Thực hành </h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/datastructures.txt"
-            rel="nofollow">Bài tập chương này</a></li>
-    </ul>
-   </div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="modules.html" title="6. Mô-đun"
-             accesskey="N">next</a> |</li>
+             >next</a> |</li>
         <li class="right" >
           <a href="controlflow.html" title="4. Điều khiển luồng"
-             accesskey="P">previous</a> |</li>
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-
+	    
+        <div class="badge">
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
+            <img src="_static/right-red@2x.png">
+        </div>
+    
     <div class="footer" role="contentinfo">
         &#169; <a href="copyright.html">Copyright</a> 2016, Trần Viết Sơn.
-      Update lần cuối vào Nov 15, 2016.
+      Update lần cuối vào Nov 16, 2016.
       Webste được xây dựng bằng <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
     </div>
   </body>

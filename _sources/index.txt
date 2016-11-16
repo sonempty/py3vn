@@ -4,7 +4,6 @@
   Tài liệu Python 3.5 - Tiếng Việt
 ###################################
 
-
 Được sử dụng trong rất nhiều lĩnh vực như : Phân tích dữ liệu, lập trình ứng
 dụng, phát triển Web, trí tuệ nhân tạo...Ngày nay Python phát triển cực mạnh
 với một cộng đồng và các thư viện rộng lớn.
@@ -18,7 +17,8 @@ tập cho mỗi chương để người đọc thực hành.
 **Tài liệu được cập nhật liên tục** . Update lần cuối vào Nov 2016
 
 .. toctree::
-   :numbered:
+   :caption: Nội dung chi tiết
+   :maxdepth: 2
 
    appetite.txt
    interpreter.txt
@@ -36,4 +36,6 @@ tập cho mỗi chương để người đọc thực hành.
    interactive.txt
    floatingpoint.txt
    appendix.txt
+
+
 

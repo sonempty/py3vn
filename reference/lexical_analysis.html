@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,30 +23,28 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/sidebar.js"></script>
     <link rel="copyright" title="Copyright" href="../copyright.html" />
-    <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="../index.html" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <link rel="shortcut icon" type="image/png" href="../_static/favicon.png" />
-    <meta name="viewport" content="width=device-width,initial-scale=0.8">
-    
-
+    <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="../index.html" /> 
   </head>
   <body role="document">
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
-        <li><a href="../index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-    
+	    
         <div class="badge">
-            <a href="https://github.com/sonempty/py3vn">Fork me on Github</a>
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
             <img src="../_static/right-red@2x.png">
         </div>
-    
-  
+      
 
     <div class="document">
       <div class="documentwrapper">
@@ -307,7 +306,7 @@ characters:</p>
 <dt><code class="docutils literal"><span class="pre">_*</span></code></dt>
 <dd><p class="first">Not imported by <code class="docutils literal"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">*</span></code>.  The special identifier <code class="docutils literal"><span class="pre">_</span></code> is used
 in the interactive interpreter to store the result of the last evaluation; it is
-stored in the <code class="xref py py-mod docutils literal"><span class="pre">builtins</span></code> module.  When not in interactive mode, <code class="docutils literal"><span class="pre">_</span></code>
+stored in the <a class="reference internal" href="../library/builtins.html#module-builtins" title="builtins: The module that provides the built-in namespace."><code class="xref py py-mod docutils literal"><span class="pre">builtins</span></code></a> module.  When not in interactive mode, <code class="docutils literal"><span class="pre">_</span></code>
 has no special meaning and is not defined. See section <a class="reference internal" href="simple_stmts.html#import"><span class="std std-ref">The import statement</span></a>.</p>
 <div class="last admonition note">
 <p class="first admonition-title">Note</p>
@@ -371,7 +370,7 @@ of three single or double quotes (these are generally referred to as
 characters that otherwise have a special meaning, such as newline, backslash
 itself, or the quote character.</p>
 <p>Bytes literals are always prefixed with <code class="docutils literal"><span class="pre">'b'</span></code> or <code class="docutils literal"><span class="pre">'B'</span></code>; they produce an
-instance of the <code class="xref py py-class docutils literal"><span class="pre">bytes</span></code> type instead of the <code class="xref py py-class docutils literal"><span class="pre">str</span></code> type.  They
+instance of the <a class="reference internal" href="../library/functions.html#bytes" title="bytes"><code class="xref py py-class docutils literal"><span class="pre">bytes</span></code></a> type instead of the <a class="reference internal" href="../library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal"><span class="pre">str</span></code></a> type.  They
 may only contain ASCII characters; bytes with a numeric value of 128 or greater
 must be expressed with escapes.</p>
 <p>As of Python 3.3 it is possible again to prefix string literals with a
@@ -670,8 +669,41 @@ occurrence outside string literals and comments is an unconditional error:</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-    <a id="sidebar-anchor"></a>
-    
+  <h3><a href="../index.html">Nội dung bài học</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">2. Lexical analysis</a><ul>
+<li><a class="reference internal" href="#line-structure">2.1. Line structure</a><ul>
+<li><a class="reference internal" href="#logical-lines">2.1.1. Logical lines</a></li>
+<li><a class="reference internal" href="#physical-lines">2.1.2. Physical lines</a></li>
+<li><a class="reference internal" href="#comments">2.1.3. Comments</a></li>
+<li><a class="reference internal" href="#encoding-declarations">2.1.4. Encoding declarations</a></li>
+<li><a class="reference internal" href="#explicit-line-joining">2.1.5. Explicit line joining</a></li>
+<li><a class="reference internal" href="#implicit-line-joining">2.1.6. Implicit line joining</a></li>
+<li><a class="reference internal" href="#blank-lines">2.1.7. Blank lines</a></li>
+<li><a class="reference internal" href="#indentation">2.1.8. Indentation</a></li>
+<li><a class="reference internal" href="#whitespace-between-tokens">2.1.9. Whitespace between tokens</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-tokens">2.2. Other tokens</a></li>
+<li><a class="reference internal" href="#identifiers">2.3. Identifiers and keywords</a><ul>
+<li><a class="reference internal" href="#keywords">2.3.1. Keywords</a></li>
+<li><a class="reference internal" href="#reserved-classes-of-identifiers">2.3.2. Reserved classes of identifiers</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#literals">2.4. Literals</a><ul>
+<li><a class="reference internal" href="#string-and-bytes-literals">2.4.1. String and Bytes literals</a></li>
+<li><a class="reference internal" href="#string-literal-concatenation">2.4.2. String literal concatenation</a></li>
+<li><a class="reference internal" href="#numeric-literals">2.4.3. Numeric literals</a></li>
+<li><a class="reference internal" href="#integer-literals">2.4.4. Integer literals</a></li>
+<li><a class="reference internal" href="#floating-point-literals">2.4.5. Floating point literals</a></li>
+<li><a class="reference internal" href="#imaginary-literals">2.4.6. Imaginary literals</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operators">2.5. Operators</a></li>
+<li><a class="reference internal" href="#delimiters">2.6. Delimiters</a></li>
+</ul>
+</li>
+</ul>
 
 <div id="searchbox" style="display: none" role="search">
   <h3>Tìm kiếm</h3>
@@ -682,49 +714,32 @@ occurrence outside string literals and comments is an unconditional error:</p>
       <input type="hidden" name="area" value="default" />
     </form>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../index.html">Nội dung bài học</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../appetite.html">1. Lời tựa</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../interpreter.html">2. Sử dụng trình thông dịch Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction.html">3. Gới thiệu ngôn ngữ lập trình Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../controlflow.html">4. Điều khiển luồng</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datastructures.html">5. Cấu trúc dữ liệu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modules.html">6. Mô-đun</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../inputoutput.html">7. Input and Output</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../errors.html">8. Lỗi và ngoại lệ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../classes.html">9. Lớp (Classes)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../stdlib.html">10. Brief Tour of the Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../stdlib2.html">11. Brief Tour of the Standard Library &#8211; Part II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../venv.html">12. Virtual Environments and Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../whatnow.html">13. What Now?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../interactive.html">14. Interactive Input Editing and History Substitution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../floatingpoint.html">15. Floating Point Arithmetic:  Issues and Limitations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix.html">16. Appendix</a></li>
-</ul>
-
-  <div role="note" aria-label="source link">
-    <h3>Thực hành </h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/reference/lexical_analysis.txt"
-            rel="nofollow">Bài tập chương này</a></li>
-    </ul>
-   </div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-
+	    
+        <div class="badge">
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
+            <img src="../_static/right-red@2x.png">
+        </div>
+    
     <div class="footer" role="contentinfo">
         &#169; <a href="../copyright.html">Copyright</a> 2016, Trần Viết Sơn.
-      Update lần cuối vào Nov 15, 2016.
+      Update lần cuối vào Nov 16, 2016.
       Webste được xây dựng bằng <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
     </div>
   </body>

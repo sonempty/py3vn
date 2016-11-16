@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,32 +23,36 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/sidebar.js"></script>
     <link rel="copyright" title="Copyright" href="copyright.html" />
     <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="index.html" />
-    <link rel="next" title="3. Gới thiệu ngôn ngữ lập trình Python" href="introduction.html" />
-    <link rel="prev" title="1. Lời tựa" href="appetite.html" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <link rel="shortcut icon" type="image/png" href="_static/favicon.png" />
-    <meta name="viewport" content="width=device-width,initial-scale=0.8">
-    
-
+    <link rel="next" title="Gới thiệu ngôn ngữ lập trình Python" href="introduction.html" />
+    <link rel="prev" title="Lời tựa" href="appetite.html" /> 
   </head>
   <body role="document">
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
-        <li><a href="index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="introduction.html" title="Gới thiệu ngôn ngữ lập trình Python"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="appetite.html" title="Lời tựa"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-    
+	    
         <div class="badge">
-            <a href="https://github.com/sonempty/py3vn">Fork me on Github</a>
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
             <img src="_static/right-red@2x.png">
         </div>
-    
-  
+      
 
     <div class="document">
       <div class="documentwrapper">
@@ -55,9 +60,9 @@
           <div class="body" role="main">
             
   <div class="section" id="su-dung-trinh-thong-dich-python">
-<span id="tut-using"></span><h1>2. Sử dụng trình thông dịch Python<a class="headerlink" href="#su-dung-trinh-thong-dich-python" title="Permalink to this headline">¶</a></h1>
+<span id="tut-using"></span><h1>Sử dụng trình thông dịch Python<a class="headerlink" href="#su-dung-trinh-thong-dich-python" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="chay-trinh-thong-dich">
-<span id="tut-invoking"></span><h2>2.1. Chạy trình thông dịch<a class="headerlink" href="#chay-trinh-thong-dich" title="Permalink to this headline">¶</a></h2>
+<span id="tut-invoking"></span><h2>Chạy trình thông dịch<a class="headerlink" href="#chay-trinh-thong-dich" title="Permalink to this headline">¶</a></h2>
 <p>Trình thông dịch Python thường được cài đặt tại <code class="file docutils literal"><span class="pre">/usr/local/bin/python3.5</span></code>;
 Bổ sung đường dẫn <code class="file docutils literal"><span class="pre">/usr/local/bin</span></code> vào Unix shell&#8217;s
 (Command line của các HĐH Unix)
@@ -104,12 +109,10 @@ chạy chương trình và chuyển sang chế độ tương tác ngay sau đó.
 hiện được bằng cách dùng  Option <code class="xref std std-option docutils literal"><span class="pre">-i</span></code></p>
 <p>Xem tất cả các Options tại mục <strong>Command line and environment</strong>.</p>
 <div class="section" id="truyen-tham-so">
-<span id="tut-argpassing"></span><h3>2.1.1. Truyền tham số<a class="headerlink" href="#truyen-tham-so" title="Permalink to this headline">¶</a></h3>
-<dl class="docutils">
-<dt>Bộ thông dịch nhận biết tên chương trình và các tham số khác được truyền vào</dt>
-<dd>chương trình trong biến  <code class="docutils literal"><span class="pre">sys.arvg</span></code> dưới dạng một danh sách các chuỗi.</dd>
-</dl>
-<p>Độ dài tối thiểu là một; khi không có kịch bản hoặc thông số truyền vào,
+<span id="tut-argpassing"></span><h3>Truyền tham số<a class="headerlink" href="#truyen-tham-so" title="Permalink to this headline">¶</a></h3>
+<p>Bộ thông dịch nhận biết tên chương trình và các tham số khác được truyền vào
+chương trình trong biến  <code class="docutils literal"><span class="pre">sys.arvg</span></code> dưới dạng một danh sách các chuỗi.
+Độ dài tối thiểu là một; khi không có kịch bản hoặc thông số truyền vào,
 <code class="docutils literal"><span class="pre">sys.argv[0]</span></code> là một chuỗi rỗng. Khi tên kịch bản được truyền vào là <code class="docutils literal"><span class="pre">'-'</span></code>
 (có nghĩa là đầu vào chuẩn),  <code class="docutils literal"><span class="pre">sys.argv[0]</span></code> được gán thành <code class="docutils literal"><span class="pre">'-'</span></code>. Khi
 <code class="docutils literal"><span class="pre">-c</span></code> command được sử dụng, <code class="docutils literal"><span class="pre">sys.argv[0]</span></code> được gán thành &#8216;-c&#8217;. Khi <code class="docutils literal"><span class="pre">-m</span></code>
@@ -119,7 +122,7 @@ trình thông dịch Python mà truyền vào <code class="docutils literal"><sp
 xử lý.</p>
 </div>
 <div class="section" id="che-do-tuong-tac">
-<h3>2.1.2. Chế độ tương tác<a class="headerlink" href="#che-do-tuong-tac" title="Permalink to this headline">¶</a></h3>
+<h3>Chế độ tương tác<a class="headerlink" href="#che-do-tuong-tac" title="Permalink to this headline">¶</a></h3>
 <p>Khi các lệnh được đọc từ một tty, trình thông dịch được xem là đang trong
 <code class="docutils literal"><span class="pre">chế</span> <span class="pre">độ</span> <span class="pre">tương</span> <span class="pre">tác</span></code>. Trong chế độ này nó nhắc lệnh tiếp theo với dấu nhắc
 chính (primary prompt), thường là ba dấu lớn hơn (<code class="docutils literal"><span class="pre">&gt;&gt;&gt;</span></code>); với các dòng
@@ -146,9 +149,9 @@ dụ dưới, chú ý câu lệnh <a class="reference internal" href="reference/
 </div>
 </div>
 <div class="section" id="trinh-thong-dich-va-moi-truong">
-<span id="tut-interp"></span><h2>2.2. Trình thông dịch và môi trường<a class="headerlink" href="#trinh-thong-dich-va-moi-truong" title="Permalink to this headline">¶</a></h2>
+<span id="tut-interp"></span><h2>Trình thông dịch và môi trường<a class="headerlink" href="#trinh-thong-dich-va-moi-truong" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="ma-hoa-ma-nguon">
-<span id="tut-source-encoding"></span><h3>2.2.1. Mã hóa mã nguồn<a class="headerlink" href="#ma-hoa-ma-nguon" title="Permalink to this headline">¶</a></h3>
+<span id="tut-source-encoding"></span><h3>Mã hóa mã nguồn<a class="headerlink" href="#ma-hoa-ma-nguon" title="Permalink to this headline">¶</a></h3>
 <p>Mặc định, Python sử dụng bãng mã UTF-8 , do đó bao gồm cả những ký tự đặc biệt,
 và hầu hết các ký tự như chữ Ả Rập, China. Riêng việc định danh thì các thư
 viện chuẩn thì chỉ sử dụng bảng mã ASCII nhé. Để Editor mà bạn dùng hiển thị
@@ -187,9 +190,28 @@ nhầm nhé.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-    <a id="sidebar-anchor"></a>
-    
+  <h3><a href="index.html">Nội dung bài học</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">2. Sử dụng trình thông dịch Python</a><ul>
+<li><a class="reference internal" href="#chay-trinh-thong-dich">2.1. Chạy trình thông dịch</a><ul>
+<li><a class="reference internal" href="#truyen-tham-so">2.1.1. Truyền tham số</a></li>
+<li><a class="reference internal" href="#che-do-tuong-tac">2.1.2. Chế độ tương tác</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#trinh-thong-dich-va-moi-truong">2.2. Trình thông dịch và môi trường</a><ul>
+<li><a class="reference internal" href="#ma-hoa-ma-nguon">2.2.1. Mã hóa mã nguồn</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
+  <h4>Bài trước</h4>
+  <p class="topless"><a href="appetite.html"
+                        title="Bài trước">Lời tựa</a></p>
+  <h4>Bài tiếp theo</h4>
+  <p class="topless"><a href="introduction.html"
+                        title="Bài tiếp theo">Gới thiệu ngôn ngữ lập trình Python</a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Tìm kiếm</h3>
     <form class="search" action="search.html" method="get">
@@ -199,59 +221,38 @@ nhầm nhé.</p>
       <input type="hidden" name="area" value="default" />
     </form>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="index.html">Nội dung bài học</a></h3>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="appetite.html">1. Lời tựa</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Sử dụng trình thông dịch Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#chay-trinh-thong-dich">2.1. Chạy trình thông dịch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#trinh-thong-dich-va-moi-truong">2.2. Trình thông dịch và môi trường</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">3. Gới thiệu ngôn ngữ lập trình Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="controlflow.html">4. Điều khiển luồng</a></li>
-<li class="toctree-l1"><a class="reference internal" href="datastructures.html">5. Cấu trúc dữ liệu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">6. Mô-đun</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inputoutput.html">7. Input and Output</a></li>
-<li class="toctree-l1"><a class="reference internal" href="errors.html">8. Lỗi và ngoại lệ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="classes.html">9. Lớp (Classes)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="stdlib.html">10. Brief Tour of the Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="stdlib2.html">11. Brief Tour of the Standard Library &#8211; Part II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="venv.html">12. Virtual Environments and Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="whatnow.html">13. What Now?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interactive.html">14. Interactive Input Editing and History Substitution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="floatingpoint.html">15. Floating Point Arithmetic:  Issues and Limitations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="appendix.html">16. Appendix</a></li>
-</ul>
-
-  <div role="note" aria-label="source link">
-    <h3>Thực hành </h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/interpreter.txt"
-            rel="nofollow">Bài tập chương này</a></li>
-    </ul>
-   </div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+             >index</a></li>
         <li class="right" >
-          <a href="introduction.html" title="3. Gới thiệu ngôn ngữ lập trình Python"
-             accesskey="N">next</a> |</li>
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
-          <a href="appetite.html" title="1. Lời tựa"
-             accesskey="P">previous</a> |</li>
+          <a href="introduction.html" title="Gới thiệu ngôn ngữ lập trình Python"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="appetite.html" title="Lời tựa"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-
+	    
+        <div class="badge">
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
+            <img src="_static/right-red@2x.png">
+        </div>
+    
     <div class="footer" role="contentinfo">
         &#169; <a href="copyright.html">Copyright</a> 2016, Trần Viết Sơn.
-      Update lần cuối vào Nov 15, 2016.
+      Update lần cuối vào Nov 16, 2016.
       Webste được xây dựng bằng <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
     </div>
   </body>

@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,32 +23,36 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/sidebar.js"></script>
     <link rel="copyright" title="Copyright" href="copyright.html" />
     <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="index.html" />
     <link rel="next" title="8. Lỗi và ngoại lệ" href="errors.html" />
-    <link rel="prev" title="6. Mô-đun" href="modules.html" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <link rel="shortcut icon" type="image/png" href="_static/favicon.png" />
-    <meta name="viewport" content="width=device-width,initial-scale=0.8">
-    
-
+    <link rel="prev" title="6. Mô-đun" href="modules.html" /> 
   </head>
   <body role="document">
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
-        <li><a href="index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="errors.html" title="8. Lỗi và ngoại lệ"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="6. Mô-đun"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-    
+	    
         <div class="badge">
-            <a href="https://github.com/sonempty/py3vn">Fork me on Github</a>
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
             <img src="_static/right-red@2x.png">
         </div>
-    
-  
+      
 
     <div class="document">
       <div class="documentwrapper">
@@ -55,14 +60,14 @@
           <div class="body" role="main">
             
   <div class="section" id="input-and-output">
-<span id="tut-io"></span><h1>7. Input and Output<a class="headerlink" href="#input-and-output" title="Permalink to this headline">¶</a></h1>
+<span id="tut-io"></span><h1>Input and Output<a class="headerlink" href="#input-and-output" title="Permalink to this headline">¶</a></h1>
 <p>There are several ways to present the output of a program; data can be printed
 in a human-readable form, or written to a file for future use. This chapter will
 discuss some of the possibilities.</p>
 <div class="section" id="dinh-dang-output-ro-rang">
-<span id="tut-formatting"></span><h2>7.1. Định dạng Output rõ ràng<a class="headerlink" href="#dinh-dang-output-ro-rang" title="Permalink to this headline">¶</a></h2>
+<span id="tut-formatting"></span><h2>Định dạng Output rõ ràng<a class="headerlink" href="#dinh-dang-output-ro-rang" title="Permalink to this headline">¶</a></h2>
 <p>So far we&#8217;ve encountered two ways of writing values: <em>expression statements</em> and
-the <code class="xref py py-func docutils literal"><span class="pre">print()</span></code> function.  (A third way is using the <code class="xref py py-meth docutils literal"><span class="pre">write()</span></code> method
+the <a class="reference internal" href="library/functions.html#print" title="print"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a> function.  (A third way is using the <code class="xref py py-meth docutils literal"><span class="pre">write()</span></code> method
 of file objects; the standard output file can be referenced as <code class="docutils literal"><span class="pre">sys.stdout</span></code>.
 See the Library Reference for more information on this.)</p>
 <p>Often you&#8217;ll want more control over the formatting of your output than simply
@@ -71,18 +76,18 @@ first way is to do all the string handling yourself; using string slicing and
 concatenation operations you can create any layout you can imagine.  The
 string type has some methods that perform useful operations for padding
 strings to a given column width; these will be discussed shortly.  The second
-way is to use the <code class="xref py py-meth docutils literal"><span class="pre">str.format()</span></code> method.</p>
+way is to use the <a class="reference internal" href="library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal"><span class="pre">str.format()</span></code></a> method.</p>
 <p>The <code class="xref py py-mod docutils literal"><span class="pre">string</span></code> module contains a <code class="xref py py-class docutils literal"><span class="pre">Template</span></code> class which offers
 yet another way to substitute values into strings.</p>
 <p>One question remains, of course: how do you convert values to strings? Luckily,
-Python has ways to convert any value to a string: pass it to the <code class="xref py py-func docutils literal"><span class="pre">repr()</span></code>
-or <code class="xref py py-func docutils literal"><span class="pre">str()</span></code> functions.</p>
-<p>The <code class="xref py py-func docutils literal"><span class="pre">str()</span></code> function is meant to return representations of values which are
-fairly human-readable, while <code class="xref py py-func docutils literal"><span class="pre">repr()</span></code> is meant to generate representations
+Python has ways to convert any value to a string: pass it to the <a class="reference internal" href="library/functions.html#repr" title="repr"><code class="xref py py-func docutils literal"><span class="pre">repr()</span></code></a>
+or <a class="reference internal" href="library/stdtypes.html#str" title="str"><code class="xref py py-func docutils literal"><span class="pre">str()</span></code></a> functions.</p>
+<p>The <a class="reference internal" href="library/stdtypes.html#str" title="str"><code class="xref py py-func docutils literal"><span class="pre">str()</span></code></a> function is meant to return representations of values which are
+fairly human-readable, while <a class="reference internal" href="library/functions.html#repr" title="repr"><code class="xref py py-func docutils literal"><span class="pre">repr()</span></code></a> is meant to generate representations
 which can be read by the interpreter (or will force a <code class="xref py py-exc docutils literal"><span class="pre">SyntaxError</span></code> if
 there is no equivalent syntax).  For objects which don&#8217;t have a particular
-representation for human consumption, <code class="xref py py-func docutils literal"><span class="pre">str()</span></code> will return the same value as
-<code class="xref py py-func docutils literal"><span class="pre">repr()</span></code>.  Many values, such as numbers or structures like lists and
+representation for human consumption, <a class="reference internal" href="library/stdtypes.html#str" title="str"><code class="xref py py-func docutils literal"><span class="pre">str()</span></code></a> will return the same value as
+<a class="reference internal" href="library/functions.html#repr" title="repr"><code class="xref py py-func docutils literal"><span class="pre">repr()</span></code></a>.  Many values, such as numbers or structures like lists and
 dictionaries, have the same representation using either function.  Strings, in
 particular, have two distinct representations.</p>
 <p>Some examples:</p>
@@ -141,17 +146,17 @@ particular, have two distinct representations.</p>
 </pre></div>
 </div>
 <p>(Note that in the first example, one space between each column was added by the
-way <code class="xref py py-func docutils literal"><span class="pre">print()</span></code> works: it always adds spaces between its arguments.)</p>
-<p>This example demonstrates the <code class="xref py py-meth docutils literal"><span class="pre">str.rjust()</span></code> method of string
+way <a class="reference internal" href="library/functions.html#print" title="print"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a> works: it always adds spaces between its arguments.)</p>
+<p>This example demonstrates the <a class="reference internal" href="library/stdtypes.html#str.rjust" title="str.rjust"><code class="xref py py-meth docutils literal"><span class="pre">str.rjust()</span></code></a> method of string
 objects, which right-justifies a string in a field of a given width by padding
-it with spaces on the left.  There are similar methods <code class="xref py py-meth docutils literal"><span class="pre">str.ljust()</span></code> and
-<code class="xref py py-meth docutils literal"><span class="pre">str.center()</span></code>.  These methods do not write anything, they just return a
+it with spaces on the left.  There are similar methods <a class="reference internal" href="library/stdtypes.html#str.ljust" title="str.ljust"><code class="xref py py-meth docutils literal"><span class="pre">str.ljust()</span></code></a> and
+<a class="reference internal" href="library/stdtypes.html#str.center" title="str.center"><code class="xref py py-meth docutils literal"><span class="pre">str.center()</span></code></a>.  These methods do not write anything, they just return a
 new string.  If the input string is too long, they don&#8217;t truncate it, but
 return it unchanged; this will mess up your column lay-out but that&#8217;s usually
 better than the alternative, which would be lying about a value.  (If you
 really want truncation you can always add a slice operation, as in
 <code class="docutils literal"><span class="pre">x.ljust(n)[:n]</span></code>.)</p>
-<p>There is another method, <code class="xref py py-meth docutils literal"><span class="pre">str.zfill()</span></code>, which pads a numeric string on the
+<p>There is another method, <a class="reference internal" href="library/stdtypes.html#str.zfill" title="str.zfill"><code class="xref py py-meth docutils literal"><span class="pre">str.zfill()</span></code></a>, which pads a numeric string on the
 left with zeros.  It understands about plus and minus signs:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;12&#39;</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="go">&#39;00012&#39;</span>
@@ -161,22 +166,22 @@ left with zeros.  It understands about plus and minus signs:</p>
 <span class="go">&#39;3.14159265359&#39;</span>
 </pre></div>
 </div>
-<p>Basic usage of the <code class="xref py py-meth docutils literal"><span class="pre">str.format()</span></code> method looks like this:</p>
+<p>Basic usage of the <a class="reference internal" href="library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal"><span class="pre">str.format()</span></code></a> method looks like this:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We are the </span><span class="si">{}</span><span class="s1"> who say &quot;</span><span class="si">{}</span><span class="s1">!&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;knights&#39;</span><span class="p">,</span> <span class="s1">&#39;Ni&#39;</span><span class="p">))</span>
 <span class="go">We are the knights who say &quot;Ni!&quot;</span>
 </pre></div>
 </div>
 <p>The brackets and characters within them (called format fields) are replaced with
-the objects passed into the <code class="xref py py-meth docutils literal"><span class="pre">str.format()</span></code> method.  A number in the
+the objects passed into the <a class="reference internal" href="library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal"><span class="pre">str.format()</span></code></a> method.  A number in the
 brackets can be used to refer to the position of the object passed into the
-<code class="xref py py-meth docutils literal"><span class="pre">str.format()</span></code> method.</p>
+<a class="reference internal" href="library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal"><span class="pre">str.format()</span></code></a> method.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1"> and </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="s1">&#39;eggs&#39;</span><span class="p">))</span>
 <span class="go">spam and eggs</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{1}</span><span class="s1"> and </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="s1">&#39;eggs&#39;</span><span class="p">))</span>
 <span class="go">eggs and spam</span>
 </pre></div>
 </div>
-<p>If keyword arguments are used in the <code class="xref py py-meth docutils literal"><span class="pre">str.format()</span></code> method, their values
+<p>If keyword arguments are used in the <a class="reference internal" href="library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal"><span class="pre">str.format()</span></code></a> method, their values
 are referred to by using the name of the argument.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This </span><span class="si">{food}</span><span class="s1"> is </span><span class="si">{adjective}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
 <span class="gp">... </span>      <span class="n">food</span><span class="o">=</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="n">adjective</span><span class="o">=</span><span class="s1">&#39;absolutely horrible&#39;</span><span class="p">))</span>
@@ -189,8 +194,8 @@ are referred to by using the name of the argument.</p>
 <span class="go">The story of Bill, Manfred, and Georg.</span>
 </pre></div>
 </div>
-<p><code class="docutils literal"><span class="pre">'!a'</span></code> (apply <code class="xref py py-func docutils literal"><span class="pre">ascii()</span></code>), <code class="docutils literal"><span class="pre">'!s'</span></code> (apply <code class="xref py py-func docutils literal"><span class="pre">str()</span></code>) and <code class="docutils literal"><span class="pre">'!r'</span></code>
-(apply <code class="xref py py-func docutils literal"><span class="pre">repr()</span></code>) can be used to convert the value before it is formatted:</p>
+<p><code class="docutils literal"><span class="pre">'!a'</span></code> (apply <a class="reference internal" href="library/functions.html#ascii" title="ascii"><code class="xref py py-func docutils literal"><span class="pre">ascii()</span></code></a>), <code class="docutils literal"><span class="pre">'!s'</span></code> (apply <a class="reference internal" href="library/stdtypes.html#str" title="str"><code class="xref py py-func docutils literal"><span class="pre">str()</span></code></a>) and <code class="docutils literal"><span class="pre">'!r'</span></code>
+(apply <a class="reference internal" href="library/functions.html#repr" title="repr"><code class="xref py py-func docutils literal"><span class="pre">repr()</span></code></a>) can be used to convert the value before it is formatted:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">contents</span> <span class="o">=</span> <span class="s1">&#39;eels&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;My hovercraft is full of </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">contents</span><span class="p">))</span>
 <span class="go">My hovercraft is full of eels.</span>
@@ -235,11 +240,11 @@ notation.</p>
 </pre></div>
 </div>
 <p>This is particularly useful in combination with the built-in function
-<code class="xref py py-func docutils literal"><span class="pre">vars()</span></code>, which returns a dictionary containing all local variables.</p>
-<p>For a complete overview of string formatting with <code class="xref py py-meth docutils literal"><span class="pre">str.format()</span></code>, see
+<a class="reference internal" href="library/functions.html#vars" title="vars"><code class="xref py py-func docutils literal"><span class="pre">vars()</span></code></a>, which returns a dictionary containing all local variables.</p>
+<p>For a complete overview of string formatting with <a class="reference internal" href="library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal"><span class="pre">str.format()</span></code></a>, see
 <span class="xref std std-ref">formatstrings</span>.</p>
 <div class="section" id="kieu-dinh-dang-chuoi-hay-dung">
-<h3>7.1.1. Kiểu định dạng chuỗi hay dùng<a class="headerlink" href="#kieu-dinh-dang-chuoi-hay-dung" title="Permalink to this headline">¶</a></h3>
+<h3>Kiểu định dạng chuỗi hay dùng<a class="headerlink" href="#kieu-dinh-dang-chuoi-hay-dung" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal"><span class="pre">%</span></code> operator can also be used for string formatting. It interprets the
 left argument much like a <code class="xref c c-func docutils literal"><span class="pre">sprintf()</span></code>-style format string to be applied
 to the right argument, and returns the string resulting from this formatting
@@ -249,12 +254,12 @@ operation. For example:</p>
 <span class="go">The value of PI is approximately 3.142.</span>
 </pre></div>
 </div>
-<p>More information can be found in the <span class="xref std std-ref">old-string-formatting</span> section.</p>
+<p>More information can be found in the <a class="reference internal" href="library/stdtypes.html#old-string-formatting"><span class="std std-ref">printf-style String Formatting</span></a> section.</p>
 </div>
 </div>
 <div class="section" id="doc-va-ghi-files">
-<span id="tut-files"></span><h2>7.2. Đọc và ghi Files<a class="headerlink" href="#doc-va-ghi-files" title="Permalink to this headline">¶</a></h2>
-<p id="index-0"><code class="xref py py-func docutils literal"><span class="pre">open()</span></code> returns a <a class="reference internal" href="glossary.html#term-file-object"><span class="xref std std-term">file object</span></a>, and is most commonly used with
+<span id="tut-files"></span><h2>Đọc và ghi Files<a class="headerlink" href="#doc-va-ghi-files" title="Permalink to this headline">¶</a></h2>
+<p id="index-0"><a class="reference internal" href="library/functions.html#open" title="open"><code class="xref py py-func docutils literal"><span class="pre">open()</span></code></a> returns a <a class="reference internal" href="glossary.html#term-file-object"><span class="xref std std-term">file object</span></a>, and is most commonly used with
 two arguments: <code class="docutils literal"><span class="pre">open(filename,</span> <span class="pre">mode)</span></code>.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;workfile&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
 </pre></div>
@@ -270,7 +275,7 @@ omitted.</p>
 <p>Normally, files are opened in <em class="dfn">text mode</em>, that means, you read and write
 strings from and to the file, which are encoded in a specific encoding. If
 encoding is not specified, the default is platform dependent (see
-<code class="xref py py-func docutils literal"><span class="pre">open()</span></code>). <code class="docutils literal"><span class="pre">'b'</span></code> appended to the mode opens the file in
+<a class="reference internal" href="library/functions.html#open" title="open"><code class="xref py py-func docutils literal"><span class="pre">open()</span></code></a>). <code class="docutils literal"><span class="pre">'b'</span></code> appended to the mode opens the file in
 <em class="dfn">binary mode</em>: now the data is read and written in the form of bytes
 objects.  This mode should be used for all files that don&#8217;t contain text.</p>
 <p>In text mode, the default when reading is to convert platform-specific line
@@ -281,7 +286,7 @@ to file data is fine for text files, but will corrupt binary data like that in
 <code class="file docutils literal"><span class="pre">JPEG</span></code> or <code class="file docutils literal"><span class="pre">EXE</span></code> files.  Be very careful to use binary mode when
 reading and writing such files.</p>
 <div class="section" id="cac-phuong-thuc-tuong-tac-voi-doi-tuong-file">
-<span id="tut-filemethods"></span><h3>7.2.1. Các phương thức tương tác với đối tượng File<a class="headerlink" href="#cac-phuong-thuc-tuong-tac-voi-doi-tuong-file" title="Permalink to this headline">¶</a></h3>
+<span id="tut-filemethods"></span><h3>Các phương thức tương tác với đối tượng File<a class="headerlink" href="#cac-phuong-thuc-tuong-tac-voi-doi-tuong-file" title="Permalink to this headline">¶</a></h3>
 <p>The rest of the examples in this section will assume that a file object called
 <code class="docutils literal"><span class="pre">f</span></code> has already been created.</p>
 <p>To read a file&#8217;s contents, call <code class="docutils literal"><span class="pre">f.read(size)</span></code>, which reads some quantity of
@@ -389,10 +394,10 @@ shorter than writing equivalent <a class="reference internal" href="reference/co
 Reference for a complete guide to file objects.</p>
 </div>
 <div class="section" id="luu-du-lieu-co-cau-truc-voi-with-json">
-<span id="tut-json"></span><h3>7.2.2. Lưu dữ liệu có cấu trúc với with <code class="xref py py-mod docutils literal"><span class="pre">json</span></code><a class="headerlink" href="#luu-du-lieu-co-cau-truc-voi-with-json" title="Permalink to this headline">¶</a></h3>
+<span id="tut-json"></span><h3>Lưu dữ liệu có cấu trúc với with <code class="xref py py-mod docutils literal"><span class="pre">json</span></code><a class="headerlink" href="#luu-du-lieu-co-cau-truc-voi-with-json" title="Permalink to this headline">¶</a></h3>
 <p id="index-1">Strings can easily be written to and read from a file.  Numbers take a bit more
 effort, since the <code class="xref py py-meth docutils literal"><span class="pre">read()</span></code> method only returns strings, which will have to
-be passed to a function like <code class="xref py py-func docutils literal"><span class="pre">int()</span></code>, which takes a string like <code class="docutils literal"><span class="pre">'123'</span></code>
+be passed to a function like <a class="reference internal" href="library/functions.html#int" title="int"><code class="xref py py-func docutils literal"><span class="pre">int()</span></code></a>, which takes a string like <code class="docutils literal"><span class="pre">'123'</span></code>
 and returns its numeric value 123.  When you want to save more complex data
 types like nested lists and dictionaries, parsing and serializing by hand
 becomes complicated.</p>
@@ -450,9 +455,28 @@ arbitrary code, if the data was crafted by a skilled attacker.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-    <a id="sidebar-anchor"></a>
-    
+  <h3><a href="index.html">Nội dung bài học</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">7. Input and Output</a><ul>
+<li><a class="reference internal" href="#dinh-dang-output-ro-rang">7.1. Định dạng Output rõ ràng</a><ul>
+<li><a class="reference internal" href="#kieu-dinh-dang-chuoi-hay-dung">7.1.1. Kiểu định dạng chuỗi hay dùng</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#doc-va-ghi-files">7.2. Đọc và ghi Files</a><ul>
+<li><a class="reference internal" href="#cac-phuong-thuc-tuong-tac-voi-doi-tuong-file">7.2.1. Các phương thức tương tác với đối tượng File</a></li>
+<li><a class="reference internal" href="#luu-du-lieu-co-cau-truc-voi-with-json">7.2.2. Lưu dữ liệu có cấu trúc với with <code class="docutils literal"><span class="pre">json</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
+  <h4>Bài trước</h4>
+  <p class="topless"><a href="modules.html"
+                        title="Bài trước">6. Mô-đun</a></p>
+  <h4>Bài tiếp theo</h4>
+  <p class="topless"><a href="errors.html"
+                        title="Bài tiếp theo">8. Lỗi và ngoại lệ</a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Tìm kiếm</h3>
     <form class="search" action="search.html" method="get">
@@ -462,59 +486,38 @@ arbitrary code, if the data was crafted by a skilled attacker.</p>
       <input type="hidden" name="area" value="default" />
     </form>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="index.html">Nội dung bài học</a></h3>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="appetite.html">1. Lời tựa</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interpreter.html">2. Sử dụng trình thông dịch Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">3. Gới thiệu ngôn ngữ lập trình Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="controlflow.html">4. Điều khiển luồng</a></li>
-<li class="toctree-l1"><a class="reference internal" href="datastructures.html">5. Cấu trúc dữ liệu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">6. Mô-đun</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Input and Output</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#dinh-dang-output-ro-rang">7.1. Định dạng Output rõ ràng</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#doc-va-ghi-files">7.2. Đọc và ghi Files</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="errors.html">8. Lỗi và ngoại lệ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="classes.html">9. Lớp (Classes)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="stdlib.html">10. Brief Tour of the Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="stdlib2.html">11. Brief Tour of the Standard Library &#8211; Part II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="venv.html">12. Virtual Environments and Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="whatnow.html">13. What Now?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interactive.html">14. Interactive Input Editing and History Substitution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="floatingpoint.html">15. Floating Point Arithmetic:  Issues and Limitations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="appendix.html">16. Appendix</a></li>
-</ul>
-
-  <div role="note" aria-label="source link">
-    <h3>Thực hành </h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/inputoutput.txt"
-            rel="nofollow">Bài tập chương này</a></li>
-    </ul>
-   </div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="errors.html" title="8. Lỗi và ngoại lệ"
-             accesskey="N">next</a> |</li>
+             >next</a> |</li>
         <li class="right" >
           <a href="modules.html" title="6. Mô-đun"
-             accesskey="P">previous</a> |</li>
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-
+	    
+        <div class="badge">
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
+            <img src="_static/right-red@2x.png">
+        </div>
+    
     <div class="footer" role="contentinfo">
         &#169; <a href="copyright.html">Copyright</a> 2016, Trần Viết Sơn.
-      Update lần cuối vào Nov 15, 2016.
+      Update lần cuối vào Nov 16, 2016.
       Webste được xây dựng bằng <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
     </div>
   </body>

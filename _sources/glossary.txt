@@ -316,7 +316,7 @@ Glossary
 
       See :pep:`302`, :pep:`420` and :pep:`451` for much more detail.
 
-   floor division
+   Chia lấy phần nguyên
       Mathematical division that rounds down to nearest integer.  The floor
       division operator is ``//``.  For example, the expression ``11 // 4``
       evaluates to ``2`` in contrast to the ``2.75`` returned by float true

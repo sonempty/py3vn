@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,32 +23,36 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/sidebar.js"></script>
     <link rel="copyright" title="Copyright" href="copyright.html" />
     <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="index.html" />
     <link rel="next" title="9. Lớp (Classes)" href="classes.html" />
-    <link rel="prev" title="7. Input and Output" href="inputoutput.html" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <link rel="shortcut icon" type="image/png" href="_static/favicon.png" />
-    <meta name="viewport" content="width=device-width,initial-scale=0.8">
-    
-
+    <link rel="prev" title="7. Input and Output" href="inputoutput.html" /> 
   </head>
   <body role="document">
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
-        <li><a href="index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="classes.html" title="9. Lớp (Classes)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="inputoutput.html" title="7. Input and Output"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-    
+	    
         <div class="badge">
-            <a href="https://github.com/sonempty/py3vn">Fork me on Github</a>
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
             <img src="_static/right-red@2x.png">
         </div>
-    
-  
+      
 
     <div class="document">
       <div class="documentwrapper">
@@ -55,12 +60,12 @@
           <div class="body" role="main">
             
   <div class="section" id="loi-va-ngoai-le">
-<span id="tut-errors"></span><h1>8. Lỗi và ngoại lệ<a class="headerlink" href="#loi-va-ngoai-le" title="Permalink to this headline">¶</a></h1>
+<span id="tut-errors"></span><h1>Lỗi và ngoại lệ<a class="headerlink" href="#loi-va-ngoai-le" title="Permalink to this headline">¶</a></h1>
 <p>Until now error messages haven&#8217;t been more than mentioned, but if you have tried
 out the examples you have probably seen some.  There are (at least) two
 distinguishable kinds of errors: <em>syntax errors</em> and <em>exceptions</em>.</p>
 <div class="section" id="loi-cu-phap">
-<span id="tut-syntaxerrors"></span><h2>8.1. Lỗi cú pháp<a class="headerlink" href="#loi-cu-phap" title="Permalink to this headline">¶</a></h2>
+<span id="tut-syntaxerrors"></span><h2>Lỗi cú pháp<a class="headerlink" href="#loi-cu-phap" title="Permalink to this headline">¶</a></h2>
 <p>Syntax errors, also known as parsing errors, are perhaps the most common kind of
 complaint you get while you are still learning Python:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="kc">True</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello world&#39;</span><span class="p">)</span>
@@ -73,12 +78,12 @@ complaint you get while you are still learning Python:</p>
 <p>The parser repeats the offending line and displays a little &#8216;arrow&#8217; pointing at
 the earliest point in the line where the error was detected.  The error is
 caused by (or at least detected at) the token <em>preceding</em> the arrow: in the
-example, the error is detected at the function <code class="xref py py-func docutils literal"><span class="pre">print()</span></code>, since a colon
+example, the error is detected at the function <a class="reference internal" href="library/functions.html#print" title="print"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>, since a colon
 (<code class="docutils literal"><span class="pre">':'</span></code>) is missing before it.  File name and line number are printed so you
 know where to look in case the input came from a script.</p>
 </div>
 <div class="section" id="ngoai-le">
-<span id="tut-exceptions"></span><h2>8.2. Ngoại lệ<a class="headerlink" href="#ngoai-le" title="Permalink to this headline">¶</a></h2>
+<span id="tut-exceptions"></span><h2>Ngoại lệ<a class="headerlink" href="#ngoai-le" title="Permalink to this headline">¶</a></h2>
 <p>Even if a statement or expression is syntactically correct, it may cause an
 error when an attempt is made to execute it. Errors detected during execution
 are called <em>exceptions</em> and are not unconditionally fatal: you will soon learn
@@ -114,7 +119,7 @@ standard input.</p>
 <p><span class="xref std std-ref">bltin-exceptions</span> lists the built-in exceptions and their meanings.</p>
 </div>
 <div class="section" id="xu-ly-ngoai-le">
-<span id="tut-handling"></span><h2>8.3. Xử lý ngoại lệ<a class="headerlink" href="#xu-ly-ngoai-le" title="Permalink to this headline">¶</a></h2>
+<span id="tut-handling"></span><h2>Xử lý ngoại lệ<a class="headerlink" href="#xu-ly-ngoai-le" title="Permalink to this headline">¶</a></h2>
 <p>It is possible to write programs that handle selected exceptions. Look at the
 following example, which asks the user for input until a valid integer has been
 entered, but allows the user to interrupt the program (using <code class="kbd docutils literal"><span class="pre">Control-C</span></code> or
@@ -261,7 +266,7 @@ indirectly) in the try clause. For example:</p>
 </div>
 </div>
 <div class="section" id="goi-ngoai-le">
-<span id="tut-raising"></span><h2>8.4. Gọi ngoại lệ<a class="headerlink" href="#goi-ngoai-le" title="Permalink to this headline">¶</a></h2>
+<span id="tut-raising"></span><h2>Gọi ngoại lệ<a class="headerlink" href="#goi-ngoai-le" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference internal" href="reference/simple_stmts.html#raise"><code class="xref std std-keyword docutils literal"><span class="pre">raise</span></code></a> statement allows the programmer to force a specified
 exception to occur. For example:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span><span class="s1">&#39;HiThere&#39;</span><span class="p">)</span>
@@ -294,7 +299,7 @@ re-raise the exception:</p>
 </div>
 </div>
 <div class="section" id="ngoai-le-do-ban-dinh-nghia">
-<span id="tut-userexceptions"></span><h2>8.5. Ngoại lệ do bạn định nghĩa<a class="headerlink" href="#ngoai-le-do-ban-dinh-nghia" title="Permalink to this headline">¶</a></h2>
+<span id="tut-userexceptions"></span><h2>Ngoại lệ do bạn định nghĩa<a class="headerlink" href="#ngoai-le-do-ban-dinh-nghia" title="Permalink to this headline">¶</a></h2>
 <p>Programs may name their own exceptions by creating a new exception class (see
 <a class="reference internal" href="classes.html#tut-classes"><span class="std std-ref">Lớp (Classes)</span></a> for more about Python classes).  Exceptions should typically
 be derived from the <code class="xref py py-exc docutils literal"><span class="pre">Exception</span></code> class, either directly or indirectly.</p>
@@ -343,7 +348,7 @@ occur in functions they define.  More information on classes is presented in
 chapter <a class="reference internal" href="classes.html#tut-classes"><span class="std std-ref">Lớp (Classes)</span></a>.</p>
 </div>
 <div class="section" id="dinh-nghia-cach-xu-ly">
-<span id="tut-cleanup"></span><h2>8.6. Định nghĩa cách xử lý<a class="headerlink" href="#dinh-nghia-cach-xu-ly" title="Permalink to this headline">¶</a></h2>
+<span id="tut-cleanup"></span><h2>Định nghĩa cách xử lý<a class="headerlink" href="#dinh-nghia-cach-xu-ly" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference internal" href="reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal"><span class="pre">try</span></code></a> statement has another optional clause which is intended to
 define clean-up actions that must be executed under all circumstances.  For
 example:</p>
@@ -400,7 +405,7 @@ releasing external resources (such as files or network connections), regardless
 of whether the use of the resource was successful.</p>
 </div>
 <div class="section" id="cac-cach-xu-ly-da-co-san">
-<span id="tut-cleanup-with"></span><h2>8.7. Các cách xử lý đã có sẵn<a class="headerlink" href="#cac-cach-xu-ly-da-co-san" title="Permalink to this headline">¶</a></h2>
+<span id="tut-cleanup-with"></span><h2>Các cách xử lý đã có sẵn<a class="headerlink" href="#cac-cach-xu-ly-da-co-san" title="Permalink to this headline">¶</a></h2>
 <p>Some objects define standard clean-up actions to be undertaken when the object
 is no longer needed, regardless of whether or not the operation using the object
 succeeded or failed. Look at the following example, which tries to open a file
@@ -431,9 +436,26 @@ provide predefined clean-up actions will indicate this in their documentation.</
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-    <a id="sidebar-anchor"></a>
-    
+  <h3><a href="index.html">Nội dung bài học</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">8. Lỗi và ngoại lệ</a><ul>
+<li><a class="reference internal" href="#loi-cu-phap">8.1. Lỗi cú pháp</a></li>
+<li><a class="reference internal" href="#ngoai-le">8.2. Ngoại lệ</a></li>
+<li><a class="reference internal" href="#xu-ly-ngoai-le">8.3. Xử lý ngoại lệ</a></li>
+<li><a class="reference internal" href="#goi-ngoai-le">8.4. Gọi ngoại lệ</a></li>
+<li><a class="reference internal" href="#ngoai-le-do-ban-dinh-nghia">8.5. Ngoại lệ do bạn định nghĩa</a></li>
+<li><a class="reference internal" href="#dinh-nghia-cach-xu-ly">8.6. Định nghĩa cách xử lý</a></li>
+<li><a class="reference internal" href="#cac-cach-xu-ly-da-co-san">8.7. Các cách xử lý đã có sẵn</a></li>
+</ul>
+</li>
+</ul>
 
+  <h4>Bài trước</h4>
+  <p class="topless"><a href="inputoutput.html"
+                        title="Bài trước">7. Input and Output</a></p>
+  <h4>Bài tiếp theo</h4>
+  <p class="topless"><a href="classes.html"
+                        title="Bài tiếp theo">9. Lớp (Classes)</a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Tìm kiếm</h3>
     <form class="search" action="search.html" method="get">
@@ -443,64 +465,38 @@ provide predefined clean-up actions will indicate this in their documentation.</
       <input type="hidden" name="area" value="default" />
     </form>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="index.html">Nội dung bài học</a></h3>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="appetite.html">1. Lời tựa</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interpreter.html">2. Sử dụng trình thông dịch Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">3. Gới thiệu ngôn ngữ lập trình Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="controlflow.html">4. Điều khiển luồng</a></li>
-<li class="toctree-l1"><a class="reference internal" href="datastructures.html">5. Cấu trúc dữ liệu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">6. Mô-đun</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inputoutput.html">7. Input and Output</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Lỗi và ngoại lệ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#loi-cu-phap">8.1. Lỗi cú pháp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ngoai-le">8.2. Ngoại lệ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#xu-ly-ngoai-le">8.3. Xử lý ngoại lệ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#goi-ngoai-le">8.4. Gọi ngoại lệ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ngoai-le-do-ban-dinh-nghia">8.5. Ngoại lệ do bạn định nghĩa</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#dinh-nghia-cach-xu-ly">8.6. Định nghĩa cách xử lý</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cac-cach-xu-ly-da-co-san">8.7. Các cách xử lý đã có sẵn</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="classes.html">9. Lớp (Classes)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="stdlib.html">10. Brief Tour of the Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="stdlib2.html">11. Brief Tour of the Standard Library &#8211; Part II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="venv.html">12. Virtual Environments and Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="whatnow.html">13. What Now?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interactive.html">14. Interactive Input Editing and History Substitution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="floatingpoint.html">15. Floating Point Arithmetic:  Issues and Limitations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="appendix.html">16. Appendix</a></li>
-</ul>
-
-  <div role="note" aria-label="source link">
-    <h3>Thực hành </h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/errors.txt"
-            rel="nofollow">Bài tập chương này</a></li>
-    </ul>
-   </div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="classes.html" title="9. Lớp (Classes)"
-             accesskey="N">next</a> |</li>
+             >next</a> |</li>
         <li class="right" >
           <a href="inputoutput.html" title="7. Input and Output"
-             accesskey="P">previous</a> |</li>
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-
+	    
+        <div class="badge">
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
+            <img src="_static/right-red@2x.png">
+        </div>
+    
     <div class="footer" role="contentinfo">
         &#169; <a href="copyright.html">Copyright</a> 2016, Trần Viết Sơn.
-      Update lần cuối vào Nov 15, 2016.
+      Update lần cuối vào Nov 16, 2016.
       Webste được xây dựng bằng <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
     </div>
   </body>

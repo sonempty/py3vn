@@ -1,12 +1,14 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- Python Documentation contents
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+********************************
+ Mục lục chi tiết
+********************************
 
 .. toctree::
+   :includehidden:
 
-   index.txt
    reference/index.txt
-
-
-.. to include legacy packaging docs in build
+   library/builtins.txt
+   library/stdtypes.txt
+   library/functions.txt
+   library/decimal.txt
+   library/fractions.txt
 

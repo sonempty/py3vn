@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,30 +23,28 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/sidebar.js"></script>
     <link rel="copyright" title="Copyright" href="../copyright.html" />
-    <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="../index.html" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <link rel="shortcut icon" type="image/png" href="../_static/favicon.png" />
-    <meta name="viewport" content="width=device-width,initial-scale=0.8">
-    
-
+    <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="../index.html" /> 
   </head>
   <body role="document">
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
-        <li><a href="../index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-    
+	    
         <div class="badge">
-            <a href="https://github.com/sonempty/py3vn">Fork me on Github</a>
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
             <img src="../_static/right-red@2x.png">
         </div>
-    
-  
+      
 
     <div class="document">
       <div class="documentwrapper">
@@ -64,7 +63,7 @@ cases.</p>
 is invoked, it is useful to have a notion of a complete Python program.  A
 complete Python program is executed in a minimally initialized environment: all
 built-in and standard modules are available, but none have been initialized,
-except for <code class="xref py py-mod docutils literal"><span class="pre">sys</span></code> (various system services), <code class="xref py py-mod docutils literal"><span class="pre">builtins</span></code> (built-in
+except for <code class="xref py py-mod docutils literal"><span class="pre">sys</span></code> (various system services), <a class="reference internal" href="../library/builtins.html#module-builtins" title="builtins: The module that provides the built-in namespace."><code class="xref py py-mod docutils literal"><span class="pre">builtins</span></code></a> (built-in
 functions, exceptions and <code class="docutils literal"><span class="pre">None</span></code>) and <code class="xref py py-mod docutils literal"><span class="pre">__main__</span></code>.  The latter is used to
 provide the local and global namespace for execution of the complete program.</p>
 <p>The syntax for a complete Python program is that for file input, described in
@@ -90,7 +89,7 @@ executes the file as a complete program.</p>
 <ul class="simple">
 <li>when parsing a complete Python program (from a file or from a string);</li>
 <li>when parsing a module;</li>
-<li>when parsing a string passed to the <code class="xref py py-func docutils literal"><span class="pre">exec()</span></code> function;</li>
+<li>when parsing a string passed to the <a class="reference internal" href="../library/functions.html#exec" title="exec"><code class="xref py py-func docutils literal"><span class="pre">exec()</span></code></a> function;</li>
 </ul>
 </div>
 <div class="section" id="interactive-input">
@@ -104,8 +103,8 @@ interactive mode; this is needed to help the parser detect the end of the input.
 </div>
 <div class="section" id="expression-input">
 <span id="id2"></span><h2>9.4. Expression input<a class="headerlink" href="#expression-input" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="index-5"></span><p id="index-6"><code class="xref py py-func docutils literal"><span class="pre">eval()</span></code> is used for expression input.  It ignores leading whitespace. The
-string argument to <code class="xref py py-func docutils literal"><span class="pre">eval()</span></code> must have the following form:</p>
+<span class="target" id="index-5"></span><p id="index-6"><a class="reference internal" href="../library/functions.html#eval" title="eval"><code class="xref py py-func docutils literal"><span class="pre">eval()</span></code></a> is used for expression input.  It ignores leading whitespace. The
+string argument to <a class="reference internal" href="../library/functions.html#eval" title="eval"><code class="xref py py-func docutils literal"><span class="pre">eval()</span></code></a> must have the following form:</p>
 <pre>
 <strong id="grammar-token-eval_input">eval_input</strong> ::=  <a class="reference internal" href="expressions.html#grammar-token-expression_list"><code class="xref docutils literal"><span class="pre">expression_list</span></code></a> NEWLINE*
 </pre>
@@ -118,8 +117,16 @@ string argument to <code class="xref py py-func docutils literal"><span class="p
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-    <a id="sidebar-anchor"></a>
-    
+  <h3><a href="../index.html">Nội dung bài học</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">9. Top-level components</a><ul>
+<li><a class="reference internal" href="#complete-python-programs">9.1. Complete Python programs</a></li>
+<li><a class="reference internal" href="#file-input">9.2. File input</a></li>
+<li><a class="reference internal" href="#interactive-input">9.3. Interactive input</a></li>
+<li><a class="reference internal" href="#expression-input">9.4. Expression input</a></li>
+</ul>
+</li>
+</ul>
 
 <div id="searchbox" style="display: none" role="search">
   <h3>Tìm kiếm</h3>
@@ -130,49 +137,32 @@ string argument to <code class="xref py py-func docutils literal"><span class="p
       <input type="hidden" name="area" value="default" />
     </form>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../index.html">Nội dung bài học</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../appetite.html">1. Lời tựa</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../interpreter.html">2. Sử dụng trình thông dịch Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction.html">3. Gới thiệu ngôn ngữ lập trình Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../controlflow.html">4. Điều khiển luồng</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datastructures.html">5. Cấu trúc dữ liệu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modules.html">6. Mô-đun</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../inputoutput.html">7. Input and Output</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../errors.html">8. Lỗi và ngoại lệ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../classes.html">9. Lớp (Classes)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../stdlib.html">10. Brief Tour of the Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../stdlib2.html">11. Brief Tour of the Standard Library &#8211; Part II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../venv.html">12. Virtual Environments and Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../whatnow.html">13. What Now?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../interactive.html">14. Interactive Input Editing and History Substitution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../floatingpoint.html">15. Floating Point Arithmetic:  Issues and Limitations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix.html">16. Appendix</a></li>
-</ul>
-
-  <div role="note" aria-label="source link">
-    <h3>Thực hành </h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/reference/toplevel_components.txt"
-            rel="nofollow">Bài tập chương này</a></li>
-    </ul>
-   </div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-
+	    
+        <div class="badge">
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
+            <img src="../_static/right-red@2x.png">
+        </div>
+    
     <div class="footer" role="contentinfo">
         &#169; <a href="../copyright.html">Copyright</a> 2016, Trần Viết Sơn.
-      Update lần cuối vào Nov 15, 2016.
+      Update lần cuối vào Nov 16, 2016.
       Webste được xây dựng bằng <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
     </div>
   </body>

@@ -51,11 +51,9 @@ Một cách nữa để chạy trình thông dịch từ CMD là dùng lệnh
 * :option:`-c` là một option để thông báo cho Shell là chạy câu lệnh.
 
 * **command** là câu lệnh của bạn, câu lệnh phải nằm trong hai dấu `"`  nhé.
-
 VD ``python -c "print('Chao ban')"``
 
 * **arg** là biến mà bạn truyền vào. Phần này bạn nào mới bắt đầu thì thấy khó
-
 hiểu, sau này chạy vài chương trình rồi bạn sẽ hiểu rõ.
 
 Tương tự như thực thi file, thực thi module từ CMD bằng lệnh :
@@ -74,7 +72,7 @@ Truyền tham số
 --------------
 
 Bộ thông dịch nhận biết tên chương trình và các tham số khác được truyền vào
- chương trình trong biến  ``sys.arvg`` dưới dạng một danh sách các chuỗi.
+chương trình trong biến  ``sys.arvg`` dưới dạng một danh sách các chuỗi.
 Độ dài tối thiểu là một; khi không có kịch bản hoặc thông số truyền vào, 
 ``sys.argv[0]`` là một chuỗi rỗng. Khi tên kịch bản được truyền vào là ``'-'``
 (có nghĩa là đầu vào chuẩn),  ``sys.argv[0]`` được gán thành ``'-'``. Khi

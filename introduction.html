@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>3. Gới thiệu ngôn ngữ lập trình Python &#8212; Tài liệu Python tiếng Việt   V3.5 documentation</title>
+    <title>Gới thiệu ngôn ngữ lập trình Python &#8212; Tài liệu Python tiếng Việt   V3.5 documentation</title>
     
     <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -22,32 +23,36 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/sidebar.js"></script>
     <link rel="copyright" title="Copyright" href="copyright.html" />
     <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="index.html" />
     <link rel="next" title="4. Điều khiển luồng" href="controlflow.html" />
-    <link rel="prev" title="2. Sử dụng trình thông dịch Python" href="interpreter.html" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <link rel="shortcut icon" type="image/png" href="_static/favicon.png" />
-    <meta name="viewport" content="width=device-width,initial-scale=0.8">
-    
-
+    <link rel="prev" title="2. Sử dụng trình thông dịch Python" href="interpreter.html" /> 
   </head>
   <body role="document">
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
-        <li><a href="index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="controlflow.html" title="4. Điều khiển luồng"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="interpreter.html" title="2. Sử dụng trình thông dịch Python"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-    
+	    
         <div class="badge">
-            <a href="https://github.com/sonempty/py3vn">Fork me on Github</a>
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
             <img src="_static/right-red@2x.png">
         </div>
-    
-  
+      
 
     <div class="document">
       <div class="documentwrapper">
@@ -55,21 +60,19 @@
           <div class="body" role="main">
             
   <div class="section" id="goi-thieu-ngon-ngu-lap-trinh-python">
-<span id="tut-informal"></span><h1>3. Gới thiệu ngôn ngữ lập trình Python<a class="headerlink" href="#goi-thieu-ngon-ngu-lap-trinh-python" title="Permalink to this headline">¶</a></h1>
-<p>In the following examples, input and output are distinguished by the presence or
-absence of prompts (<a class="reference internal" href="glossary.html#term"><span class="xref std std-term">&gt;&gt;&gt;</span></a> and <a class="reference internal" href="glossary.html#term-1"><span class="xref std std-term">...</span></a>): to repeat the example, you must type
-everything after the prompt, when the prompt appears; lines that do not begin
-with a prompt are output from the interpreter. Note that a secondary prompt on a
-line by itself in an example means you must type a blank line; this is used to
-end a multi-line command.</p>
-<p>Many of the examples in this manual, even those entered at the interactive
-prompt, include comments.  Comments in Python start with the hash character,
-<code class="docutils literal"><span class="pre">#</span></code>, and extend to the end of the physical line.  A comment may appear at the
-start of a line or following whitespace or code, but not within a string
-literal.  A hash character within a string literal is just a hash character.
-Since comments are to clarify code and are not interpreted by Python, they may
-be omitted when typing in examples.</p>
-<p>Some examples:</p>
+<span id="tut-informal"></span><h1>Gới thiệu ngôn ngữ lập trình Python<a class="headerlink" href="#goi-thieu-ngon-ngu-lap-trinh-python" title="Permalink to this headline">¶</a></h1>
+<p>Trong các ví dụ bên dưới, input và output được phân biệt bởi sự hiện diện của
+dấu nhắc  (<a class="reference internal" href="glossary.html#term"><span class="xref std std-term">&gt;&gt;&gt;</span></a> và <a class="reference internal" href="glossary.html#term-1"><span class="xref std std-term">...</span></a>): để lặp lại ví tụ, bạn cần nhập vào mọi
+thứ sau dấu nhắc, khi dấu nhắc xuất hiện; các dòng không bắt đầu bằng một dấu
+nhắc là kết quả xuất từ trình thông dịch. Lưu ý rằng dấu nhắc thứ (<em>secondary prompt</em>)
+trên một dòng riêng nó có nghĩa là bạn phải nhận một dòng trống; dòng này dùng
+để kết thúc một lệnh nhiều dòng</p>
+<p>Nhiều ví dụ trong tài liệu này, ngay cả những ví dụ nhập từ dòng lệnh tương tác,
+có cả chú thích. Các chú thích trong Python bắt đầu bằng một dấu thăng, <code class="docutils literal"><span class="pre">#</span></code>,
+và kéo dài tới hết dòng. Một chú thích có thể xuất hiện ở đầu dòng, hoặc theo
+sau khoảng trắng hoặc mã, nhưng không phải trong một chuỗi. Một dấu thăng trong
+một chuỗi chỉ là một dấu thăng.</p>
+<p>Một vài ví dụ:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># this is the first comment</span>
 <span class="n">spam</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># and this is the second comment</span>
           <span class="c1"># ... and now a third!</span>
@@ -77,77 +80,72 @@ be omitted when typing in examples.</p>
 </pre></div>
 </div>
 <div class="section" id="su-dung-python-nhu-la-may-tinh">
-<span id="tut-calculator"></span><h2>3.1. Sử dụng Python như là máy tính<a class="headerlink" href="#su-dung-python-nhu-la-may-tinh" title="Permalink to this headline">¶</a></h2>
-<p>Let&#8217;s try some simple Python commands.  Start the interpreter and wait for the
-primary prompt, <code class="docutils literal"><span class="pre">&gt;&gt;&gt;</span></code>.  (It shouldn&#8217;t take long.)</p>
+<span id="tut-calculator"></span><h2>Sử dụng Python như là máy tính<a class="headerlink" href="#su-dung-python-nhu-la-may-tinh" title="Permalink to this headline">¶</a></h2>
+<p>Hãy thử một vài lệnh Python đơn giản. Khởi động trình thông dịch và chờ dấu nhắc
+chính, <code class="docutils literal"><span class="pre">&gt;&gt;&gt;</span></code>.</p>
 <div class="section" id="so">
-<span id="tut-numbers"></span><h3>3.1.1. Số<a class="headerlink" href="#so" title="Permalink to this headline">¶</a></h3>
-<p>The interpreter acts as a simple calculator: you can type an expression at it
-and it will write the value.  Expression syntax is straightforward: the
-operators <code class="docutils literal"><span class="pre">+</span></code>, <code class="docutils literal"><span class="pre">-</span></code>, <code class="docutils literal"><span class="pre">*</span></code> and <code class="docutils literal"><span class="pre">/</span></code> work just like in most other languages
-(for example, Pascal or C); parentheses (<code class="docutils literal"><span class="pre">()</span></code>) can be used for grouping.
-For example:</p>
+<span id="tut-numbers"></span><h3>Số<a class="headerlink" href="#so" title="Permalink to this headline">¶</a></h3>
+<p>Trình thông dịch đóng vài trò là một máy tính đơn giản: bạn nhập một biểu thức
+và nó sẽ trả về giá trị. Cú pháp biểu thức rất dễ hiểu:
+các toán tử  <code class="docutils literal"><span class="pre">+</span></code>, <code class="docutils literal"><span class="pre">-</span></code>, <code class="docutils literal"><span class="pre">*</span></code> and <code class="docutils literal"><span class="pre">/</span></code> hoạt động như trong hầu hết các ngôn
+ngữ khác (ví dụ Pascal hay C); dấu ngoặc tròn (<code class="docutils literal"><span class="pre">()</span></code>) dùng để gộp nhóm.</p>
+<p>Ví dụ:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
 <span class="go">4</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="mi">50</span> <span class="o">-</span> <span class="mi">5</span><span class="o">*</span><span class="mi">6</span>
 <span class="go">20</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">50</span> <span class="o">-</span> <span class="mi">5</span><span class="o">*</span><span class="mi">6</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span>
 <span class="go">5.0</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="mi">8</span> <span class="o">/</span> <span class="mi">5</span>  <span class="c1"># division always returns a floating point number</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">8</span> <span class="o">/</span> <span class="mi">5</span>  <span class="c1"># Phép chia luôn trả về số thực</span>
 <span class="go">1.6</span>
 </pre></div>
 </div>
-<p>The integer numbers (e.g. <code class="docutils literal"><span class="pre">2</span></code>, <code class="docutils literal"><span class="pre">4</span></code>, <code class="docutils literal"><span class="pre">20</span></code>) have type <code class="xref py py-class docutils literal"><span class="pre">int</span></code>,
-the ones with a fractional part (e.g. <code class="docutils literal"><span class="pre">5.0</span></code>, <code class="docutils literal"><span class="pre">1.6</span></code>) have type
-<code class="xref py py-class docutils literal"><span class="pre">float</span></code>.  We will see more about numeric types later in the tutorial.</p>
-<p>Division (<code class="docutils literal"><span class="pre">/</span></code>) always returns a float.  To do <a class="reference internal" href="glossary.html#term-floor-division"><span class="xref std std-term">floor division</span></a> and
-get an integer result (discarding any fractional result) you can use the <code class="docutils literal"><span class="pre">//</span></code>
-operator; to calculate the remainder you can use <code class="docutils literal"><span class="pre">%</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">17</span> <span class="o">/</span> <span class="mi">3</span>  <span class="c1"># classic division returns a float</span>
+<p>Số nguyên (VD. <code class="docutils literal"><span class="pre">2</span></code>, <code class="docutils literal"><span class="pre">4</span></code>, <code class="docutils literal"><span class="pre">20</span></code>) là kiểu <a class="reference internal" href="library/functions.html#int" title="int"><code class="xref py py-class docutils literal"><span class="pre">int</span></code></a>, các số thập phân
+(như <code class="docutils literal"><span class="pre">5.0</span></code>, <code class="docutils literal"><span class="pre">1.6</span></code>) là kiểu <a class="reference internal" href="library/functions.html#float" title="float"><code class="xref py py-class docutils literal"><span class="pre">float</span></code></a>.</p>
+<p>Phép chia (<code class="docutils literal"><span class="pre">/</span></code>) luôn trả về số thực.  Để <a class="reference internal" href="glossary.html#term-chia-lay-phan-nguyen"><span class="xref std std-term">Chia lấy phần nguyên</span></a>
+sử dụng <code class="docutils literal"><span class="pre">//</span></code> ; Để lấy phần dư dùng <code class="docutils literal"><span class="pre">%</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">17</span> <span class="o">/</span> <span class="mi">3</span>  <span class="c1"># Phép / trả về số thực</span>
 <span class="go">5.666666666666667</span>
 <span class="go">&gt;&gt;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="mi">17</span> <span class="o">//</span> <span class="mi">3</span>  <span class="c1"># floor division discards the fractional part</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">17</span> <span class="o">//</span> <span class="mi">3</span>  <span class="c1"># Phép // trả về phần nguyên</span>
 <span class="go">5</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="mi">17</span> <span class="o">%</span> <span class="mi">3</span>  <span class="c1"># the % operator returns the remainder of the division</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">17</span> <span class="o">%</span> <span class="mi">3</span>  <span class="c1"># Phép % trả về số dư</span>
 <span class="go">2</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span>  <span class="c1"># result * divisor + remainder</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span>  <span class="c1"># Phần nguyên * số bị chia + phần dư</span>
 <span class="go">17</span>
 </pre></div>
 </div>
-<p>With Python, it is possible to use the <code class="docutils literal"><span class="pre">**</span></code> operator to calculate powers <a class="footnote-reference" href="#id3" id="id1">[1]</a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">**</span> <span class="mi">2</span>  <span class="c1"># 5 squared</span>
+<p>Phép lũy thừa dùng dấu <code class="docutils literal"><span class="pre">**</span></code>  <a class="footnote-reference" href="#id3" id="id1">[1]</a>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">**</span> <span class="mi">2</span>  <span class="c1"># 5 bình phương</span>
 <span class="go">25</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">**</span> <span class="mi">7</span>  <span class="c1"># 2 to the power of 7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">**</span> <span class="mi">7</span>  <span class="c1"># 2 mũ 7</span>
 <span class="go">128</span>
 </pre></div>
 </div>
-<p>The equal sign (<code class="docutils literal"><span class="pre">=</span></code>) is used to assign a value to a variable. Afterwards, no
-result is displayed before the next interactive prompt:</p>
+<p>Dấu (<code class="docutils literal"><span class="pre">=</span></code>) dùng để gán giá trị cho biến, không có output ra màn hình nhé:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">width</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">height</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">9</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
 <span class="go">900</span>
 </pre></div>
 </div>
-<p>If a variable is not &#8220;defined&#8221; (assigned a value), trying to use it will
-give you an error:</p>
+<p>Nếu biến chưa được &#8220;định nghĩa&#8221; (Chưa gán giá trị nào) mà bạn đem ra dùng thì
+sẽ báo lỗi:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">n</span>  <span class="c1"># try to access an undefined variable</span>
 <span class="gt">Traceback (most recent call last):</span>
   File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
 <span class="gr">NameError</span>: <span class="n">name &#39;n&#39; is not defined</span>
 </pre></div>
 </div>
-<p>There is full support for floating point; operators with mixed type operands
-convert the integer operand to floating point:</p>
+<p>Nếu trong biểu thức có số thực sẽ trả về số thực:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">*</span> <span class="mf">3.75</span> <span class="o">/</span> <span class="mf">1.5</span>
 <span class="go">7.5</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="mf">7.0</span> <span class="o">/</span> <span class="mi">2</span>
 <span class="go">3.5</span>
 </pre></div>
 </div>
-<p>In interactive mode, the last printed expression is assigned to the variable
-<code class="docutils literal"><span class="pre">_</span></code>.  This means that when you are using Python as a desk calculator, it is
-somewhat easier to continue calculations, for example:</p>
+<p>Trong chế độ tương tác, giá trị cuối cùng được in ra sẽ được gán cho biến <code class="docutils literal"><span class="pre">_</span></code>.
+Ví dụ:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tax</span> <span class="o">=</span> <span class="mf">12.5</span> <span class="o">/</span> <span class="mi">100</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">price</span> <span class="o">=</span> <span class="mf">100.50</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">price</span> <span class="o">*</span> <span class="n">tax</span>
@@ -158,21 +156,18 @@ somewhat easier to continue calculations, for example:</p>
 <span class="go">113.06</span>
 </pre></div>
 </div>
-<p>This variable should be treated as read-only by the user.  Don&#8217;t explicitly
-assign a value to it &#8212; you would create an independent local variable with the
-same name masking the built-in variable with its magic behavior.</p>
-<p>In addition to <code class="xref py py-class docutils literal"><span class="pre">int</span></code> and <code class="xref py py-class docutils literal"><span class="pre">float</span></code>, Python supports other types of
-numbers, such as <code class="xref py py-class docutils literal"><span class="pre">Decimal</span></code> and <code class="xref py py-class docutils literal"><span class="pre">Fraction</span></code>.
-Python also has built-in support for <span class="xref std std-ref">complex numbers</span>,
-and uses the <code class="docutils literal"><span class="pre">j</span></code> or <code class="docutils literal"><span class="pre">J</span></code> suffix to indicate the imaginary part
-(e.g. <code class="docutils literal"><span class="pre">3+5j</span></code>).</p>
+<p>Việc dùng biến <code class="docutils literal"><span class="pre">_</span></code> dễ gây nhầm lẫn &#8212; Tốt nhất đừng sử dụng.</p>
+<p>Lớp <a class="reference internal" href="library/functions.html#int" title="int"><code class="xref py py-class docutils literal"><span class="pre">int</span></code></a> và <a class="reference internal" href="library/functions.html#float" title="float"><code class="xref py py-class docutils literal"><span class="pre">float</span></code></a> cũng hỗ trợ các kiểu số khác như <a class="reference internal" href="library/decimal.html#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal"><span class="pre">Decimal</span></code></a>
+và <a class="reference internal" href="library/fractions.html#fractions.Fraction" title="fractions.Fraction"><code class="xref py py-class docutils literal"><span class="pre">Fraction</span></code></a>.
+Python cũng hỗ trợ số phức <a class="reference internal" href="library/stdtypes.html#typesnumeric"><span class="std std-ref">complex numbers</span></a>,
+và sử dụng chữ <code class="docutils literal"><span class="pre">j</span></code> hoặc <code class="docutils literal"><span class="pre">J</span></code> để biểu diễn phần ảo.
+(VD <code class="docutils literal"><span class="pre">3+5j</span></code>).</p>
 </div>
 <div class="section" id="chuoi">
-<span id="tut-strings"></span><h3>3.1.2. Chuỗi<a class="headerlink" href="#chuoi" title="Permalink to this headline">¶</a></h3>
-<p>Besides numbers, Python can also manipulate strings, which can be expressed
-in several ways.  They can be enclosed in single quotes (<code class="docutils literal"><span class="pre">'...'</span></code>) or
-double quotes (<code class="docutils literal"><span class="pre">&quot;...&quot;</span></code>) with the same result <a class="footnote-reference" href="#id4" id="id2">[2]</a>.  <code class="docutils literal"><span class="pre">\</span></code> can be used
-to escape quotes:</p>
+<span id="tut-strings"></span><h3>Chuỗi<a class="headerlink" href="#chuoi" title="Permalink to this headline">¶</a></h3>
+<p>Ngoài số, Python còn làm việc được với chuỗi, có thể được biểu hiện theo nhiều cách.
+Chúng có thể được kẹp trong dấu nháy đơn (<code class="docutils literal"><span class="pre">'...'</span></code>) hoặc nháy kép (<code class="docutils literal"><span class="pre">&quot;...&quot;</span></code>)
+với kết quả như nhau <a class="footnote-reference" href="#id4" id="id2">[2]</a>. Dấu <code class="docutils literal"><span class="pre">\</span></code> là một dấu escape, xem ví dụ:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;spam eggs&#39;</span>  <span class="c1"># single quotes</span>
 <span class="go">&#39;spam eggs&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;doesn</span><span class="se">\&#39;</span><span class="s1">t&#39;</span>  <span class="c1"># use \&#39; to escape the single quote...</span>
@@ -192,7 +187,7 @@ special characters are escaped with backslashes.  While this might sometimes
 look different from the input (the enclosing quotes could change), the two
 strings are equivalent.  The string is enclosed in double quotes if
 the string contains a single quote and no double quotes, otherwise it is
-enclosed in single quotes.  The <code class="xref py py-func docutils literal"><span class="pre">print()</span></code> function produces a more
+enclosed in single quotes.  The <a class="reference internal" href="library/functions.html#print" title="print"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a> function produces a more
 readable output, by omitting the enclosing quotes and by printing escaped
 and special characters:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;&quot;Isn</span><span class="se">\&#39;</span><span class="s1">t,&quot; she said.&#39;</span>
@@ -365,7 +360,7 @@ Therefore, assigning to an indexed position in the string results in an error:</
 <span class="go">&#39;Pypy&#39;</span>
 </pre></div>
 </div>
-<p>The built-in function <code class="xref py py-func docutils literal"><span class="pre">len()</span></code> returns the length of a string:</p>
+<p>The built-in function <a class="reference internal" href="library/functions.html#len" title="len"><code class="xref py py-func docutils literal"><span class="pre">len()</span></code></a> returns the length of a string:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;supercalifragilisticexpialidocious&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="go">34</span>
@@ -374,22 +369,22 @@ Therefore, assigning to an indexed position in the string results in an error:</
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <dl class="last docutils">
-<dt><span class="xref std std-ref">textseq</span></dt>
+<dt><a class="reference internal" href="library/stdtypes.html#textseq"><span class="std std-ref">Text Sequence Type &#8212; str</span></a></dt>
 <dd>Strings are examples of <em>sequence types</em>, and support the common
 operations supported by such types.</dd>
-<dt><span class="xref std std-ref">string-methods</span></dt>
+<dt><a class="reference internal" href="library/stdtypes.html#string-methods"><span class="std std-ref">String Methods</span></a></dt>
 <dd>Strings support a large number of methods for
 basic transformations and searching.</dd>
 <dt><span class="xref std std-ref">formatstrings</span></dt>
-<dd>Information about string formatting with <code class="xref py py-meth docutils literal"><span class="pre">str.format()</span></code>.</dd>
-<dt><span class="xref std std-ref">old-string-formatting</span></dt>
+<dd>Information about string formatting with <a class="reference internal" href="library/stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal"><span class="pre">str.format()</span></code></a>.</dd>
+<dt><a class="reference internal" href="library/stdtypes.html#old-string-formatting"><span class="std std-ref">printf-style String Formatting</span></a></dt>
 <dd>The old formatting operations invoked when strings and Unicode strings are
 the left operand of the <code class="docutils literal"><span class="pre">%</span></code> operator are described in more detail here.</dd>
 </dl>
 </div>
 </div>
 <div class="section" id="danh-sach-lists">
-<span id="tut-lists"></span><h3>3.1.3. Danh sách (Lists)<a class="headerlink" href="#danh-sach-lists" title="Permalink to this headline">¶</a></h3>
+<span id="tut-lists"></span><h3>Danh sách (Lists)<a class="headerlink" href="#danh-sach-lists" title="Permalink to this headline">¶</a></h3>
 <p>Python knows a number of <em>compound</em> data types, used to group together other
 values.  The most versatile is the <em>list</em>, which can be written as a list of
 comma-separated values (items) between square brackets.  Lists might contain
@@ -457,7 +452,7 @@ list or clear it entirely:</p>
 <span class="go">[]</span>
 </pre></div>
 </div>
-<p>The built-in function <code class="xref py py-func docutils literal"><span class="pre">len()</span></code> also applies to lists:</p>
+<p>The built-in function <a class="reference internal" href="library/functions.html#len" title="len"><code class="xref py py-func docutils literal"><span class="pre">len()</span></code></a> also applies to lists:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
 <span class="go">4</span>
@@ -479,7 +474,7 @@ example:</p>
 </div>
 </div>
 <div class="section" id="nhung-buoc-lap-trinh-dau-tien">
-<span id="tut-firststeps"></span><h2>3.2. Những bước lập trình đầu tiên<a class="headerlink" href="#nhung-buoc-lap-trinh-dau-tien" title="Permalink to this headline">¶</a></h2>
+<span id="tut-firststeps"></span><h2>Những bước lập trình đầu tiên<a class="headerlink" href="#nhung-buoc-lap-trinh-dau-tien" title="Permalink to this headline">¶</a></h2>
 <p>Of course, we can use Python for more complicated tasks than adding two and two
 together.  For instance, we can write an initial sub-sequence of the <em>Fibonacci</em>
 series as follows:</p>
@@ -524,7 +519,7 @@ followed by a blank line to indicate completion (since the parser cannot
 guess when you have typed the last line).  Note that each line within a basic
 block must be indented by the same amount.</p>
 </li>
-<li><p class="first">The <code class="xref py py-func docutils literal"><span class="pre">print()</span></code> function writes the value of the argument(s) it is given.
+<li><p class="first">The <a class="reference internal" href="library/functions.html#print" title="print"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a> function writes the value of the argument(s) it is given.
 It differs from just writing the expression you want to write (as we did
 earlier in the calculator examples) in the way it handles multiple arguments,
 floating point quantities, and strings.  Strings are printed without quotes,
@@ -574,9 +569,26 @@ need to escape <code class="docutils literal"><span class="pre">&quot;</span></c
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-    <a id="sidebar-anchor"></a>
-    
+  <h3><a href="index.html">Nội dung bài học</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Gới thiệu ngôn ngữ lập trình Python</a><ul>
+<li><a class="reference internal" href="#su-dung-python-nhu-la-may-tinh">Sử dụng Python như là máy tính</a><ul>
+<li><a class="reference internal" href="#so">Số</a></li>
+<li><a class="reference internal" href="#chuoi">Chuỗi</a></li>
+<li><a class="reference internal" href="#danh-sach-lists">Danh sách (Lists)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nhung-buoc-lap-trinh-dau-tien">Những bước lập trình đầu tiên</a></li>
+</ul>
+</li>
+</ul>
 
+  <h4>Bài trước</h4>
+  <p class="topless"><a href="interpreter.html"
+                        title="Bài trước">2. Sử dụng trình thông dịch Python</a></p>
+  <h4>Bài tiếp theo</h4>
+  <p class="topless"><a href="controlflow.html"
+                        title="Bài tiếp theo">4. Điều khiển luồng</a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Tìm kiếm</h3>
     <form class="search" action="search.html" method="get">
@@ -586,59 +598,38 @@ need to escape <code class="docutils literal"><span class="pre">&quot;</span></c
       <input type="hidden" name="area" value="default" />
     </form>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="index.html">Nội dung bài học</a></h3>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="appetite.html">1. Lời tựa</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interpreter.html">2. Sử dụng trình thông dịch Python</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Gới thiệu ngôn ngữ lập trình Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#su-dung-python-nhu-la-may-tinh">3.1. Sử dụng Python như là máy tính</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#nhung-buoc-lap-trinh-dau-tien">3.2. Những bước lập trình đầu tiên</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="controlflow.html">4. Điều khiển luồng</a></li>
-<li class="toctree-l1"><a class="reference internal" href="datastructures.html">5. Cấu trúc dữ liệu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">6. Mô-đun</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inputoutput.html">7. Input and Output</a></li>
-<li class="toctree-l1"><a class="reference internal" href="errors.html">8. Lỗi và ngoại lệ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="classes.html">9. Lớp (Classes)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="stdlib.html">10. Brief Tour of the Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="stdlib2.html">11. Brief Tour of the Standard Library &#8211; Part II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="venv.html">12. Virtual Environments and Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="whatnow.html">13. What Now?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interactive.html">14. Interactive Input Editing and History Substitution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="floatingpoint.html">15. Floating Point Arithmetic:  Issues and Limitations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="appendix.html">16. Appendix</a></li>
-</ul>
-
-  <div role="note" aria-label="source link">
-    <h3>Thực hành </h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/introduction.txt"
-            rel="nofollow">Bài tập chương này</a></li>
-    </ul>
-   </div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="controlflow.html" title="4. Điều khiển luồng"
-             accesskey="N">next</a> |</li>
+             >next</a> |</li>
         <li class="right" >
           <a href="interpreter.html" title="2. Sử dụng trình thông dịch Python"
-             accesskey="P">previous</a> |</li>
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-
+	    
+        <div class="badge">
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
+            <img src="_static/right-red@2x.png">
+        </div>
+    
     <div class="footer" role="contentinfo">
         &#169; <a href="copyright.html">Copyright</a> 2016, Trần Viết Sơn.
-      Update lần cuối vào Nov 15, 2016.
+      Update lần cuối vào Nov 16, 2016.
       Webste được xây dựng bằng <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
     </div>
   </body>

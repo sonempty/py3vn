@@ -1,5 +1,6 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -23,30 +24,28 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/sidebar.js"></script>
     <link rel="copyright" title="Copyright" href="copyright.html" />
-    <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="index.html" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <link rel="shortcut icon" type="image/png" href="_static/favicon.png" />
-    <meta name="viewport" content="width=device-width,initial-scale=0.8">
-    
-
+    <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="index.html" /> 
   </head>
   <body role="document">
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
-        <li><a href="index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-    
+	    
         <div class="badge">
-            <a href="https://github.com/sonempty/py3vn">Fork me on Github</a>
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
             <img src="_static/right-red@2x.png">
         </div>
-    
-  
+      
 
     <div class="document">
       <div class="documentwrapper">
@@ -71,6 +70,10 @@
   </dt>
 
       
+  <dt><a href="library/stdtypes.html#memoryview.f_contiguous">f_contiguous (memoryview attribute)</a>
+  </dt>
+
+      
   <dt><a href="reference/datamodel.html#index-59">f_globals (frame attribute)</a>
   </dt>
 
@@ -91,7 +94,15 @@
   </dt>
 
       
-  <dt><a href="reference/datamodel.html#index-11">False</a>
+  <dt><a href="library/stdtypes.html#index-5">False</a>, <a href="library/stdtypes.html#index-55">[1]</a>, <a href="reference/datamodel.html#index-11">[2]</a>
+  </dt>
+
+      
+  <dt><a href="library/stdtypes.html#index-1">false</a>
+  </dt>
+
+      
+  <dt><a href="library/stdtypes.html#index-3">False (Built-in object)</a>
   </dt>
 
       
@@ -109,8 +120,18 @@
   <dt><a href="glossary.html#term-file-object"><strong>file object</strong></a>
   </dt>
 
+      <dd><dl>
+        
+  <dt><a href="library/functions.html#index-5">open() built-in function</a>
+  </dt>
+
+      </dl></dd>
       
   <dt><a href="glossary.html#term-file-like-object"><strong>file-like object</strong></a>
+  </dt>
+
+      
+  <dt><a href="library/functions.html#filter">filter() (built-in function)</a>
   </dt>
 
       
@@ -121,6 +142,20 @@
       <dd><dl>
         
   <dt><a href="reference/compound_stmts.html#index-10">keyword</a>, <a href="reference/compound_stmts.html#index-14">[1]</a>, <a href="reference/simple_stmts.html#index-22">[2]</a>, <a href="reference/simple_stmts.html#index-29">[3]</a>, <a href="reference/simple_stmts.html#index-30">[4]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="library/stdtypes.html#bytearray.find">find() (bytearray method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="library/stdtypes.html#bytes.find">(bytes method)</a>
+  </dt>
+
+        
+  <dt><a href="library/stdtypes.html#str.find">(str method)</a>
   </dt>
 
       </dl></dd>
@@ -145,8 +180,6 @@
   </dt>
 
       </dl></dd>
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt>
     float
@@ -154,10 +187,14 @@
 
       <dd><dl>
         
-  <dt><a href="reference/datamodel.html#index-87">built-in function</a>
+  <dt><a href="library/stdtypes.html#index-14">built-in function</a>, <a href="reference/datamodel.html#index-87">[1]</a>
   </dt>
 
       </dl></dd>
+      
+  <dt><a href="library/functions.html#float">float (built-in class)</a>
+  </dt>
+
       
   <dt>
     floating point
@@ -165,11 +202,15 @@
 
       <dd><dl>
         
+  <dt><a href="library/stdtypes.html#index-13">literals</a>
+  </dt>
+
+        
   <dt><a href="reference/datamodel.html#index-13">number</a>
   </dt>
 
         
-  <dt><a href="reference/datamodel.html#index-13">object</a>
+  <dt><a href="library/stdtypes.html#index-12">object</a>, <a href="reference/datamodel.html#index-13">[1]</a>
   </dt>
 
       </dl></dd>
@@ -178,9 +219,25 @@
   </dt>
 
       
-  <dt><a href="glossary.html#term-floor-division"><strong>floor division</strong></a>
+  <dt><a href="library/decimal.html#decimal.FloatOperation">FloatOperation (class in decimal)</a>
   </dt>
 
+      
+  <dt><a href="library/stdtypes.html#index-16">floor() (in module math)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="library/decimal.html#decimal.Context.fma">fma() (decimal.Context method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="library/decimal.html#decimal.Decimal.fma">(decimal.Decimal method)</a>
+  </dt>
+
+      </dl></dd>
       
   <dt>
     for
@@ -204,8 +261,11 @@
 
       </dl></dd>
       
-  <dt>
-    format() (built-in function)
+  <dt><a href="library/stdtypes.html#memoryview.format">format (memoryview attribute)</a>
+  </dt>
+
+      
+  <dt><a href="library/functions.html#format">format() (built-in function)</a>
   </dt>
 
       <dd><dl>
@@ -215,7 +275,35 @@
 
       </dl></dd>
       
+  <dt><a href="library/stdtypes.html#str.format">format() (str method)</a>
+  </dt>
+
+      
+  <dt><a href="library/stdtypes.html#str.format_map">format_map() (str method)</a>
+  </dt>
+
+      
+  <dt><a href="library/stdtypes.html#index-42">formatting, bytearray (%)</a>
+  </dt>
+
+      
+  <dt><a href="library/stdtypes.html#index-42">formatting, bytes (%)</a>
+  </dt>
+
+      
+  <dt><a href="library/stdtypes.html#index-34">formatting, string (%)</a>
+  </dt>
+
+      
   <dt><a href="glossary.html#index-6">Fortran contiguous</a>
+  </dt>
+
+      
+  <dt><a href="library/fractions.html#fractions.Fraction">Fraction (class in fractions)</a>
+  </dt>
+
+      
+  <dt><a href="library/fractions.html#module-fractions">fractions (module)</a>
   </dt>
 
       
@@ -260,6 +348,42 @@
 
       </dl></dd>
       
+  <dt><a href="library/stdtypes.html#int.from_bytes">from_bytes() (int class method)</a>
+  </dt>
+
+      
+  <dt><a href="library/fractions.html#fractions.Fraction.from_decimal">from_decimal() (fractions.Fraction method)</a>
+  </dt>
+
+      
+  <dt><a href="library/decimal.html#decimal.Decimal.from_float">from_float() (decimal.Decimal method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="library/fractions.html#fractions.Fraction.from_float">(fractions.Fraction method)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="library/stdtypes.html#bytearray.fromhex">fromhex() (bytearray class method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="library/stdtypes.html#bytes.fromhex">(bytes class method)</a>
+  </dt>
+
+        
+  <dt><a href="library/stdtypes.html#float.fromhex">(float class method)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="library/stdtypes.html#dict.fromkeys">fromkeys() (dict class method)</a>
+  </dt>
+
+      
   <dt>
     frozenset
   </dt>
@@ -270,6 +394,10 @@
   </dt>
 
       </dl></dd>
+      
+  <dt><a href="library/stdtypes.html#frozenset">frozenset (built-in class)</a>
+  </dt>
+
       
   <dt><a href="glossary.html#term-function"><strong>function</strong></a>
   </dt>
@@ -340,8 +468,39 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-    <a id="sidebar-anchor"></a>
-    
+   <h4>Index</h4>
+   <p><a href="genindex-Symbols.html"><strong>Symbols</strong></a>
+     | <a href="genindex-_.html"><strong>_</strong></a>
+     | <a href="genindex-A.html"><strong>A</strong></a>
+     | <a href="genindex-B.html"><strong>B</strong></a>
+     | <a href="genindex-C.html"><strong>C</strong></a>
+     | <a href="genindex-D.html"><strong>D</strong></a>
+     | <a href="genindex-E.html"><strong>E</strong></a>
+     | <a href="#"><strong>F</strong></a>
+     | <a href="genindex-G.html"><strong>G</strong></a>
+     | <a href="genindex-H.html"><strong>H</strong></a>
+     | <a href="genindex-I.html"><strong>I</strong></a>
+     | <a href="genindex-J.html"><strong>J</strong></a>
+     | <a href="genindex-K.html"><strong>K</strong></a>
+     | <a href="genindex-L.html"><strong>L</strong></a>
+     | <a href="genindex-M.html"><strong>M</strong></a>
+     | <a href="genindex-N.html"><strong>N</strong></a>
+     | <a href="genindex-O.html"><strong>O</strong></a>
+     | <a href="genindex-P.html"><strong>P</strong></a>
+     | <a href="genindex-Q.html"><strong>Q</strong></a>
+     | <a href="genindex-R.html"><strong>R</strong></a>
+     | <a href="genindex-S.html"><strong>S</strong></a>
+     | <a href="genindex-T.html"><strong>T</strong></a>
+     | <a href="genindex-U.html"><strong>U</strong></a>
+     | <a href="genindex-V.html"><strong>V</strong></a>
+     | <a href="genindex-W.html"><strong>W</strong></a>
+     | <a href="genindex-X.html"><strong>X</strong></a>
+     | <a href="genindex-Y.html"><strong>Y</strong></a>
+     | <a href="genindex-Z.html"><strong>Z</strong></a>
+     </p>
+
+   <p><a href="genindex-all.html"><strong>Xem toàn bộ</strong></a></p>
+   
 
 <div id="searchbox" style="display: none" role="search">
   <h3>Tìm kiếm</h3>
@@ -352,42 +511,32 @@
       <input type="hidden" name="area" value="default" />
     </form>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="index.html">Nội dung bài học</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="appetite.html">1. Lời tựa</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interpreter.html">2. Sử dụng trình thông dịch Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">3. Gới thiệu ngôn ngữ lập trình Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="controlflow.html">4. Điều khiển luồng</a></li>
-<li class="toctree-l1"><a class="reference internal" href="datastructures.html">5. Cấu trúc dữ liệu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">6. Mô-đun</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inputoutput.html">7. Input and Output</a></li>
-<li class="toctree-l1"><a class="reference internal" href="errors.html">8. Lỗi và ngoại lệ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="classes.html">9. Lớp (Classes)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="stdlib.html">10. Brief Tour of the Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="stdlib2.html">11. Brief Tour of the Standard Library &#8211; Part II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="venv.html">12. Virtual Environments and Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="whatnow.html">13. What Now?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interactive.html">14. Interactive Input Editing and History Substitution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="floatingpoint.html">15. Floating Point Arithmetic:  Issues and Limitations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="appendix.html">16. Appendix</a></li>
-</ul>
-
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-
+	    
+        <div class="badge">
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
+            <img src="_static/right-red@2x.png">
+        </div>
+    
     <div class="footer" role="contentinfo">
         &#169; <a href="copyright.html">Copyright</a> 2016, Trần Viết Sơn.
-      Update lần cuối vào Nov 15, 2016.
+      Update lần cuối vào Nov 16, 2016.
       Webste được xây dựng bằng <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
     </div>
   </body>

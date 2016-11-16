@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,30 +23,28 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/sidebar.js"></script>
     <link rel="copyright" title="Copyright" href="../copyright.html" />
-    <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="../index.html" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <link rel="shortcut icon" type="image/png" href="../_static/favicon.png" />
-    <meta name="viewport" content="width=device-width,initial-scale=0.8">
-    
-
+    <link rel="top" title="Tài liệu Python tiếng Việt   V3.5 documentation" href="../index.html" /> 
   </head>
   <body role="document">
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
-        <li><a href="../index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-    
+	    
         <div class="badge">
-            <a href="https://github.com/sonempty/py3vn">Fork me on Github</a>
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
             <img src="../_static/right-red@2x.png">
         </div>
-    
-  
+      
 
     <div class="document">
       <div class="documentwrapper">
@@ -78,7 +77,7 @@ mostly because it wouldn&#8217;t be clear to which <a class="reference internal"
 </pre></div>
 </div>
 <p>Also note that the semicolon binds tighter than the colon in this context, so
-that in the following example, either all or none of the <code class="xref py py-func docutils literal"><span class="pre">print()</span></code> calls are
+that in the following example, either all or none of the <a class="reference internal" href="../library/functions.html#print" title="print"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a> calls are
 executed:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">z</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
 </pre></div>
@@ -170,7 +169,7 @@ those made in the suite of the for-loop:</p>
 </div>
 <p id="index-8">Names in the target list are not deleted when the loop is finished, but if the
 sequence is empty, they will not have been assigned to at all by the loop.  Hint:
-the built-in function <code class="xref py py-func docutils literal"><span class="pre">range()</span></code> returns an iterator of integers suitable to
+the built-in function <a class="reference internal" href="../library/stdtypes.html#range" title="range"><code class="xref py py-func docutils literal"><span class="pre">range()</span></code></a> returns an iterator of integers suitable to
 emulate the effect of Pascal&#8217;s <code class="docutils literal"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">:=</span> <span class="pre">a</span> <span class="pre">to</span> <span class="pre">b</span> <span class="pre">do</span></code>; e.g., <code class="docutils literal"><span class="pre">list(range(3))</span></code>
 returns the list <code class="docutils literal"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2]</span></code>.</p>
 <div class="admonition note">
@@ -485,7 +484,7 @@ access the local variables of the function containing the def.  See section
 gives a list of base classes (see <a class="reference internal" href="datamodel.html#metaclasses"><span class="std std-ref">Customizing class creation</span></a> for more advanced uses), so
 each item in the list should evaluate to a class object which allows
 subclassing.  Classes without an inheritance list inherit, by default, from the
-base class <code class="xref py py-class docutils literal"><span class="pre">object</span></code>; hence,</p>
+base class <a class="reference internal" href="../library/functions.html#object" title="object"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a>; hence,</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
     <span class="k">pass</span>
 </pre></div>
@@ -671,8 +670,25 @@ transformed into the namespace&#8217;s <code class="docutils literal"><span clas
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-    <a id="sidebar-anchor"></a>
-    
+  <h3><a href="../index.html">Nội dung bài học</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">8. Compound statements</a><ul>
+<li><a class="reference internal" href="#the-if-statement">8.1. The <code class="docutils literal"><span class="pre">if</span></code> statement</a></li>
+<li><a class="reference internal" href="#the-while-statement">8.2. The <code class="docutils literal"><span class="pre">while</span></code> statement</a></li>
+<li><a class="reference internal" href="#the-for-statement">8.3. The <code class="docutils literal"><span class="pre">for</span></code> statement</a></li>
+<li><a class="reference internal" href="#the-try-statement">8.4. The <code class="docutils literal"><span class="pre">try</span></code> statement</a></li>
+<li><a class="reference internal" href="#the-with-statement">8.5. The <code class="docutils literal"><span class="pre">with</span></code> statement</a></li>
+<li><a class="reference internal" href="#function-definitions">8.6. Function definitions</a></li>
+<li><a class="reference internal" href="#class-definitions">8.7. Class definitions</a></li>
+<li><a class="reference internal" href="#coroutines">8.8. Coroutines</a><ul>
+<li><a class="reference internal" href="#coroutine-function-definition">8.8.1. Coroutine function definition</a></li>
+<li><a class="reference internal" href="#the-async-for-statement">8.8.2. The <code class="docutils literal"><span class="pre">async</span> <span class="pre">for</span></code> statement</a></li>
+<li><a class="reference internal" href="#the-async-with-statement">8.8.3. The <code class="docutils literal"><span class="pre">async</span> <span class="pre">with</span></code> statement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
 <div id="searchbox" style="display: none" role="search">
   <h3>Tìm kiếm</h3>
@@ -683,49 +699,32 @@ transformed into the namespace&#8217;s <code class="docutils literal"><span clas
       <input type="hidden" name="area" value="default" />
     </form>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../index.html">Nội dung bài học</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../appetite.html">1. Lời tựa</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../interpreter.html">2. Sử dụng trình thông dịch Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction.html">3. Gới thiệu ngôn ngữ lập trình Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../controlflow.html">4. Điều khiển luồng</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datastructures.html">5. Cấu trúc dữ liệu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modules.html">6. Mô-đun</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../inputoutput.html">7. Input and Output</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../errors.html">8. Lỗi và ngoại lệ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../classes.html">9. Lớp (Classes)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../stdlib.html">10. Brief Tour of the Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../stdlib2.html">11. Brief Tour of the Standard Library &#8211; Part II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../venv.html">12. Virtual Environments and Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../whatnow.html">13. What Now?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../interactive.html">14. Interactive Input Editing and History Substitution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../floatingpoint.html">15. Floating Point Arithmetic:  Issues and Limitations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix.html">16. Appendix</a></li>
-</ul>
-
-  <div role="note" aria-label="source link">
-    <h3>Thực hành </h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/reference/compound_stmts.txt"
-            rel="nofollow">Bài tập chương này</a></li>
-    </ul>
-   </div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Tài liệu Python tiếng Việt - V3.5</a> &#187;</li> 
       </ul>
     </div>
-
+	    
+        <div class="badge">
+            <a href="https://github.com/sonempty/py3vn">Fork me on GitHub</a>
+            <img src="../_static/right-red@2x.png">
+        </div>
+    
     <div class="footer" role="contentinfo">
         &#169; <a href="../copyright.html">Copyright</a> 2016, Trần Viết Sơn.
-      Update lần cuối vào Nov 15, 2016.
+      Update lần cuối vào Nov 16, 2016.
       Webste được xây dựng bằng <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
     </div>
   </body>
